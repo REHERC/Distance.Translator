@@ -12,10 +12,14 @@ namespace Distance.Translator
         public static string LANGUAGE_NAME;
         public static string LANGUAGE_AUTHOR;
 
-        public static string DIALOGS_YES;
-        public static string DIALOGS_NO;
-        public static string DIALOGS_OK;
-        public static string DIALOGS_CANCEL;
+        public static string BUTTON_APPLY;
+        public static string BUTTON_BACK;
+        public static string BUTTON_YES;
+        public static string BUTTON_NO;
+        public static string BUTTON_OK;
+        public static string BUTTON_CANCEL;
+        public static string BUTTON_START;
+        public static string BUTTON_DELETE;
 
         public static string MAINMENU_PRESSKEY;
 
@@ -44,6 +48,15 @@ namespace Distance.Translator
         public static string MULTIPLAYER_ONLINE;
         public static string MULTIPLAYER_SPLITSCREEN;
 
+        public static string WORKSHOP_VISIT;
+        public static string WORKSHOP_VISIT_DESCRIPTION;
+        public static string WORKSHOP_DOWNLOAD;
+        public static string WORKSHOP_DOWNLOAD_DESCRIPTION;
+        public static string WORKSHOP_UPDATE;
+        public static string WORKSHOP_UPDATE_DESCRIPTION;
+        public static string WORKSHOP_UNSUBSCRIBE;
+        public static string WORKSHOP_UNSUBSCRIBE_DESCRIPTION;
+
         public static string OPTIONS_AUDIO;
         public static string OPTIONS_GENERAL;
         public static string OPTIONS_CONTROLS;
@@ -59,11 +72,15 @@ namespace Distance.Translator
         {
             LANGUAGE_NAME = GetLine("language.name","language.name");
             LANGUAGE_AUTHOR = GetLine("language.author","language.author");
-            
-            DIALOGS_YES = GetLine("dialogs.yes", "Yes");
-            DIALOGS_NO = GetLine("dialogs.no", "No");
-            DIALOGS_OK = GetLine("dialogs.ok", "Ok");
-            DIALOGS_CANCEL = GetLine("dialogs.cancel", "Cancel");
+
+            BUTTON_BACK = GetLine("button.back", "Back");
+            BUTTON_APPLY = GetLine("button.apply", "Apply");
+            BUTTON_YES = GetLine("button.yes", "Yes");
+            BUTTON_NO = GetLine("button.no", "No");
+            BUTTON_OK = GetLine("button.ok", "Ok");
+            BUTTON_CANCEL = GetLine("button.cancel", "Cancel");
+            BUTTON_START = GetLine("button.start", "Start");
+            BUTTON_DELETE = GetLine("button.delete", "Delete");
 
             MAINMENU_PRESSKEY = GetLine("mainmenu.presskey", "Press any button to start", true,1);
 
@@ -91,6 +108,15 @@ namespace Distance.Translator
 
             MULTIPLAYER_ONLINE = GetLine("multiplayer.online", "Online");
             MULTIPLAYER_SPLITSCREEN = GetLine("multiplayer.splitscreen", "Split-Screen");
+
+            WORKSHOP_VISIT = GetLine("workshop.visit", "Visit Workshop");
+            WORKSHOP_VISIT_DESCRIPTION = GetLine("workshop.visit.description", "Discover new community-created content on Steam Workshop.");
+            WORKSHOP_DOWNLOAD = GetLine("workshop.download", "Download New");
+            WORKSHOP_DOWNLOAD_DESCRIPTION = GetLine("workshop.download.description", "Check for any newly subscribed levels.");
+            WORKSHOP_UPDATE = GetLine("workshop.update", "Update All");
+            WORKSHOP_UPDATE_DESCRIPTION = GetLine("workshop.update.description", "Check for updates to each one of your subscriptions.");
+            WORKSHOP_UNSUBSCRIBE = GetLine("workshop.unsubscribe", "Unsubscribe All");
+            WORKSHOP_UNSUBSCRIBE_DESCRIPTION = GetLine("workshop.unsubscribe.description", "Unsubscribe to all of your subscriptions.");
 
             OPTIONS_AUDIO = GetLine("options.audio", "Audio");
             OPTIONS_GENERAL = GetLine("options.general", "General");

@@ -21,15 +21,15 @@ namespace Distance.Translator
             static void Postfix(MessagePanelLogic __instance,string message, string title = "", string returnText = "", MessagePanelLogic.OnButtonClicked okDelegate = null, MessagePanelLogic.OnButtonClicked cancelDelegate = null, bool okCancel = false, UIWidget.Pivot textPivot = UIWidget.Pivot.Center, float time = 0f, bool yesNo = false) {
                 if (yesNo)
                 {
-                    __instance.okRightLabel_.text = Language.DIALOGS_YES;
-                    __instance.okCenterLabel_.text = Language.DIALOGS_YES;
-                    __instance.cancelLeftLabel_.text = Language.DIALOGS_NO;
+                    __instance.okRightLabel_.text = Language.BUTTON_YES;
+                    __instance.okCenterLabel_.text = Language.BUTTON_YES;
+                    __instance.cancelLeftLabel_.text = Language.BUTTON_NO;
                 }
                 else
                 {
-                    __instance.okRightLabel_.text = Language.DIALOGS_OK;
-                    __instance.okCenterLabel_.text = Language.DIALOGS_OK;
-                    __instance.cancelLeftLabel_.text = Language.DIALOGS_CANCEL;
+                    __instance.okRightLabel_.text = Language.BUTTON_OK;
+                    __instance.okCenterLabel_.text = Language.BUTTON_OK;
+                    __instance.cancelLeftLabel_.text = Language.BUTTON_CANCEL;
                 }
             }
         }

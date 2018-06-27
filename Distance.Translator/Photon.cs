@@ -4,6 +4,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using Distance.Translator.Utilities;
 using Harmony;
 using Spectrum.API;
 using Spectrum.API.Configuration;
@@ -21,9 +22,9 @@ namespace Distance.Translator
         public void Initialize(IManager manager)
         {
             Console.WriteLine("Initializing ...");
+            
             CurrentPlugin.initialize();
             CurrentPlugin.Log.Info("Initialization done!");
-
             CurrentPlugin.Log.Warning("Currently using \"" + CurrentPlugin.Config.GetItem<string>("LanguageFile") + ".json\"");
             CurrentPlugin.Log.Warning(Language.LANGUAGE_NAME + " by " + Language.LANGUAGE_AUTHOR);
             try
@@ -40,8 +41,6 @@ namespace Distance.Translator
                 CurrentPlugin.Log.Error("Failed to patch the assemblies !");
                 CurrentPlugin.Log.Exception(VirusSpirit);
             }
-
-            
         }
     }
 }

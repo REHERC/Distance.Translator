@@ -70,16 +70,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Patches\MainMenuLogic\Start.cs" />
     <Compile Include="Patches\MessagePanelLogic\ShowMessage.cs" />
+    <Compile Include="Patches\Unity.UILabel\Start.cs" />
+    <Compile Include="Patches\Unity.UIWidget\Unity.UIWidget.Start.cs" />
     <Compile Include="Photon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Storage\Language.cs" />
     <Compile Include="Storage\PrintData.cs" />
-    <Compile Include="Storage\Utilities.cs" />
-    <Compile Include="THE TRASH CAN.cs" />
+    <Compile Include="Storage\CurrentPlugin.cs" />
+    <None Include="THE TRASH CAN.afk" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Distance.Translator.Utilities\Distance.Translator.Utilities.vbproj">
+      <Project>{4f9c2646-a5f3-4137-9a9b-b6bdd26d8d34}</Project>
+      <Name>Distance.Translator.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

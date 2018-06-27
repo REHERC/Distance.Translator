@@ -26,3 +26,10 @@
 
                 }
 */
+
+// From "Patches/Unity.UILabel/Start.cs | Postfix()"
+/*
+ //CurrentPlugin.Log.Error("  - " + __instance.name + " : \"" + __instance.text + "\"");
+                //var parent = __instance.parent.parent;
+                //CurrentPlugin.Log.Error("  - " + __instance.name + " : \"" + __instance.text + "\"" + " | " + parent.name + " (" + parent.GetType().FullName + ")");
+ */

@@ -17,8 +17,9 @@ namespace Distance.Translator
             Config = new Settings("Config");
             Lang = new Settings(Config.GetItem<String>("LanguageFile"));
             Language.Initialize();
+            
         }
-
+        
         public static Logger Log;
         public static Settings Config;
         public static Settings Lang;

@@ -71,6 +71,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Patches\MessagePanelLogic\ShowMessage.cs" />
+    <Compile Include="Patches\TrickClassifier\GetTrickPartName.cs" />
     <Compile Include="Patches\Unity.UILabel\Start.cs" />
     <Compile Include="Patches\Unity.UIWidget\Unity.UIWidget.Start.cs" />
     <Compile Include="Photon.cs" />

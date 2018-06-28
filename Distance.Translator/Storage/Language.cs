@@ -64,6 +64,20 @@ namespace Distance.Translator
         public static string OPTIONS_PROFILES;
         public static string OPTIONS_REPLAY;
         public static string OPTIONS_CHEATS;
+
+        public static string TRICK_FREESTYLE;
+        public static string TRICK_BARRELROLL;
+        public static string TRICK_FRONTFLIP;
+        public static string TRICK_BACKFLIP;
+        public static string TRICK_FRISBEE;
+        public static string TRICK_FRONTTWIST;
+        public static string TRICK_BACKTWIST;
+        public static string TRICK_WALLRIDE;
+        public static string TRICK_CEILINGRIDE;
+        public static string TRICK_GRIND;
+        public static string TRICK_WHEELIE;
+        public static string TRICK_SIDEWHEELIE;
+        public static string TRICK_NOSESTAND;
     }
 
     public static partial class Language
@@ -125,7 +139,21 @@ namespace Distance.Translator
             OPTIONS_PROFILES = GetLine("options.profiles", "Profiles");
             OPTIONS_REPLAY = GetLine("options.replays", "Replay");
             OPTIONS_CHEATS = GetLine("options.cheats", "Cheats");
-        }
+            
+            TRICK_FREESTYLE = GetLine("trick.freestyle", "Freestyle");
+            TRICK_BARRELROLL = GetLine("trick.barrelroll", "Barrel Roll");
+            TRICK_FRONTFLIP = GetLine("trick.frontflip", "Front Flip");
+            TRICK_BACKFLIP = GetLine("trick.backflip", "Back Flip");
+            TRICK_FRISBEE = GetLine("trick.frisbee", "Frisbee");
+            TRICK_FRONTTWIST = GetLine("trick.fronttwist", "Front Twist");
+            TRICK_BACKTWIST = GetLine("trick.backtwist", "Back Twist");
+            TRICK_WALLRIDE = GetLine("trick.wallride", "Wall Ride");
+            TRICK_CEILINGRIDE = GetLine("trick.ceilingride", "Ceiling Ride");
+            TRICK_GRIND = GetLine("trick.grind", "Grind");
+            TRICK_WHEELIE = GetLine("trick.wheelie", "Wheelie");
+            TRICK_SIDEWHEELIE = GetLine("trick.sidewheelie", "Side Wheelie");
+            TRICK_NOSESTAND = GetLine("trick.nosestand", "Nose Stand");
+    }
 
 
         public static string GetLine(string Line,string Default, Boolean uppercase = false,int aestheticspaces = 0)

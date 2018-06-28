@@ -22,17 +22,6 @@ namespace Distance.Translator
         {
             public static void Postfix(UIWidget __instance)
             {
-                
-                if (__instance.gameObject.HasComponent<UILabel>())
-                {
-                    var go = __instance.gameObject;
-                    string caption = go.GetComponents<UILabel>()[0].text;
-                    if (caption.ToUpper().Contains("P R E S S"))
-                    {
-                        CurrentPlugin.Log.Warning("PRESS ANY KEY : " + __instance.name + " in " + __instance.parent.name);
-                    }
-                }
-                
                 switch (__instance.name)
                 {
                     case "MainButtons":

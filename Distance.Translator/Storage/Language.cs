@@ -32,6 +32,13 @@ namespace Distance.Translator
         public static string MENUBUTTON_BUGREPORT;
         public static string MENUBUTTON_OPTIONS;
         public static string MENUBUTTON_QUIT;
+        public static string MENUBUTTON_GOMENU;
+        public static string MENUBUTTON_GOEDITOR;
+        public static string MENUBUTTON_GOLOBBY;
+        public static string MENUBUTTON_NEXTLEVEL;
+        public static string MENUBUTTON_RESTART;
+        public static string MENUBUTTON_RESUME;
+        public static string MENUBUTTON_SPECTATE;
 
         public static string ADVENTURE_PREVIEW;
         public static string ADVENTURE_PREVIEW_DESCRIPTION;
@@ -107,6 +114,15 @@ namespace Distance.Translator
             MENUBUTTON_BUGREPORT = GetLine("menubutton.bugreport", "Bug Report",true);
             MENUBUTTON_OPTIONS = GetLine("menubutton.options", "Options",true);
             MENUBUTTON_QUIT = GetLine("menubutton.quit", "Quit", true);
+            MENUBUTTON_GOMENU = GetLine("menubutton.gomenu", "Main Menu", true);
+            MENUBUTTON_GOEDITOR = GetLine("menubutton.goeditor", "Back To Editor", true);
+            MENUBUTTON_RESTART = GetLine("menubutton.restart", "Restart", true);
+            MENUBUTTON_RESUME = GetLine("menubutton.resume", "Resume", true);
+            MENUBUTTON_GOMENU = GetLine("menubutton.gomenu", "Main Menu", true);
+            MENUBUTTON_GOEDITOR = GetLine("menubutton.goeditor", "Back To Editor", true);
+            MENUBUTTON_GOLOBBY = GetLine("menubutton.golobby", "Back To Lobby", true);
+            MENUBUTTON_NEXTLEVEL = GetLine("menubutton.nextlevel", "Next Level", true);
+
 
             ADVENTURE_PREVIEW = GetLine("adventure.preview", "Preview");
             ADVENTURE_PREVIEW_DESCRIPTION = GetLine("adventure.preview.description", "Early version of Adventure mode. Final campaign coming when Distance exits Beta.");
@@ -153,10 +169,18 @@ namespace Distance.Translator
             TRICK_WHEELIE = GetLine("trick.wheelie", "Wheelie");
             TRICK_SIDEWHEELIE = GetLine("trick.sidewheelie", "Side Wheelie");
             TRICK_NOSESTAND = GetLine("trick.nosestand", "Nose Stand");
-    }
+        }
 
+        public static List<string> Rainbow = new List<String>(){
+            "F70001",
+            "FEA700",
+            "FFFF00",
+            "008100",
+            "0000FE",
+            "840083"
+        };
 
-        public static string GetLine(string Line,string Default, Boolean uppercase = false,int aestheticspaces = 0)
+        public static string GetLine(string Line,string Default, Boolean uppercase = false,int aestheticspaces = 0,bool rainbow = false)
         {
             string result = "";
             try
@@ -165,8 +189,10 @@ namespace Distance.Translator
             }
             catch (Exception VirusSpirit)
             {
-                CurrentPlugin.Log.Exception(VirusSpirit);
-                CurrentPlugin.Log.Error("Impossible to find the translation key for \"" + Line + "\" in \"" + CurrentPlugin.Config.GetItem<String>("LanguageFile") + ".json\"");
+                if (!(Line == "nothing")) {
+                    CurrentPlugin.Log.Exception(VirusSpirit);
+                    CurrentPlugin.Log.Error("Impossible to find the translation key for \"" + Line + "\" in \"" + CurrentPlugin.Config.GetItem<String>("LanguageFile") + ".json\"");
+                }
                 result = Default;
             }
             if ((result == "") || (result == null) || (result == string.Empty)) {
@@ -186,6 +212,28 @@ namespace Distance.Translator
                 {
                     processedaesthetic = processedaesthetic.TrimEnd(' ');
                 }
+            }
+            if (rainbow || (bool)CurrentPlugin.Config.GetItem<bool>("Rainbow"))
+            {
+                int index = 0;
+                string rainbowresult = "";
+                foreach (char chr in result)
+                {
+                    if (!(chr == ' '))
+                    {
+                        rainbowresult = rainbowresult + "[" + Rainbow[index] + "]" + chr + "[-]";
+                        index++;
+                        if (index > Rainbow.Count - 1)
+                        {
+                            index = 0;
+                        }
+                    }
+                    else
+                    {
+                        rainbowresult = rainbowresult + " ";
+                    }
+                }
+                result = rainbowresult;
             }
             //CurrentPlugin.Log.Info("Loaded text for \"" + Line + "\" = \"" +  result + "\"");
             return result;

@@ -70,9 +70,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Patches\MessagePanelLogic\ShowMessage.cs" />
-    <Compile Include="Patches\TrickClassifier\GetTrickPartName.cs" />
-    <Compile Include="Patches\Unity.UILabel\Start.cs" />
+    <Compile Include="Patches\MessagePanelLogic\MessagePanelLogic.ShowMessage.cs" />
+    <Compile Include="Patches\PauseMenuLogic\PauseMenuLogic.Start.cs" />
+    <Compile Include="Patches\TrickClassifier\TGetTrickPartName.cs" />
+    <Compile Include="Patches\Unity.UILabel\Unity.UILabel.Start.cs" />
     <Compile Include="Patches\Unity.UIWidget\Unity.UIWidget.Start.cs" />
     <Compile Include="Photon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -80,6 +81,7 @@
     <Compile Include="Storage\PrintData.cs" />
     <Compile Include="Storage\CurrentPlugin.cs" />
     <Compile Include="Text Files\BootLogo.cs" />
+    <Compile Include="Events Subscribers\Events.Game.PauseToggled.cs" />
     <None Include="THE TRASH CAN.afk" />
   </ItemGroup>
   <ItemGroup>
@@ -88,6 +90,7 @@
       <Name>Distance.Translator.Utilities</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

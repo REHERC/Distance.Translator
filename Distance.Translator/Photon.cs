@@ -16,10 +16,7 @@ namespace Distance.Translator
 {
     public partial class Photon : IPlugin
     {
-        public string IPCIdentifier{get{return "DistanceTranslator";}set{}}
-        
-
-        public void Initialize(IManager manager)
+        public void Initialize(IManager manager, string ipcIdentifier)
         {
             Console.WriteLine("Initializing ...");
             CurrentPlugin.initialize();
@@ -38,7 +35,18 @@ namespace Distance.Translator
             }
             catch (Exception VirusSpirit)
             {
-                CurrentPlugin.Log.Error("Failed to patch the assemblies !");
+                CurrentPlugin.Log.Error("Failed to patch the assemblies!");
+                CurrentPlugin.Log.Exception(VirusSpirit);
+            }
+            try
+            {
+                CurrentPlugin.Log.Info("Subscribing to game Events ...");
+                //Events.Game.PauseToggled.Subscribe(EventListeners.Game_PauseToggled);
+                CurrentPlugin.Log.Info("Subscribed to Events!");
+            }
+            catch (Exception VirusSpirit)
+            {
+                CurrentPlugin.Log.Error("Failed to subscribe to Events!");
                 CurrentPlugin.Log.Exception(VirusSpirit);
             }
         }

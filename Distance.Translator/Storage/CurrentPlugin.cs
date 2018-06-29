@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Spectrum.API.Configuration;
 using Spectrum.API.Logging;
+using Spectrum.API.Storage;
 
 namespace Distance.Translator
 {
@@ -17,7 +18,6 @@ namespace Distance.Translator
             Config = new Settings("Config");
             Lang = new Settings(Config.GetItem<String>("LanguageFile"));
             Language.Initialize();
-            
         }
         
         public static Logger Log;

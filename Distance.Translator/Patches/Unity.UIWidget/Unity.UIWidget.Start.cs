@@ -106,9 +106,7 @@ namespace Distance.Translator
                         GameObject.Find("StartButton").GetComponentsInChildren<UILabel>()[0].text = Language.BUTTON_START.ToUpper();
                         break;
                     case "UIPanel - PressAnyButton":
-                        //GameObject.Find("UILabel - PressAnyButton").GetComponentsInChildren<UILabel>()[0].text = Language.MAINMENU_PRESSKEY;
-                    case "UIPanel - DistanceTitle":
-                        GameObject.Find("UILabel - DistanceTitle").GetComponentsInChildren<UILabel>()[0].text = Language.GetLine("nothing","D  I  S  T  A  N  C  E",true,0,true);
+                        GameObject.Find("UILabel - PressAnyButton").GetComponentsInChildren<UILabel>()[0].text = Language.MAINMENU_PRESSKEY;
                         break;
                 }
             }

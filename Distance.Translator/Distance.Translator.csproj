@@ -79,6 +79,7 @@
     <Compile Include="Storage\Language.cs" />
     <Compile Include="Storage\PrintData.cs" />
     <Compile Include="Storage\CurrentPlugin.cs" />
+    <Compile Include="Text Files\BootLogo.cs" />
     <None Include="THE TRASH CAN.afk" />
   </ItemGroup>
   <ItemGroup>

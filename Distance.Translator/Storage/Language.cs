@@ -23,15 +23,15 @@ namespace Distance.Translator
 
         public static string MAINMENU_PRESSKEY;
 
-        public static string MAINMENU_ADVENTURE;
-        public static string MAINMENU_ARCADE;
-        public static string MAINMENU_MULTIPLAYER;
-        public static string MAINMENU_LEVELEDITOR;
-        public static string MAINMENU_WORKSHOP;
-        public static string MAINMENU_GARAGE;
-        public static string MAINMENU_BUGREPORT;
-        public static string MAINMENU_OPTIONS;
-        public static string MAINMENU_QUIT;
+        public static string MENUBUTTON_ADVENTURE;
+        public static string MENUBUTTON_ARCADE;
+        public static string MENUBUTTON_MULTIPLAYER;
+        public static string MENUBUTTON_LEVELEDITOR;
+        public static string MENUBUTTON_WORKSHOP;
+        public static string MENUBUTTON_GARAGE;
+        public static string MENUBUTTON_BUGREPORT;
+        public static string MENUBUTTON_OPTIONS;
+        public static string MENUBUTTON_QUIT;
 
         public static string ADVENTURE_PREVIEW;
         public static string ADVENTURE_PREVIEW_DESCRIPTION;
@@ -98,15 +98,15 @@ namespace Distance.Translator
 
             MAINMENU_PRESSKEY = GetLine("mainmenu.presskey", "Press any button to start", true,1);
 
-            MAINMENU_ADVENTURE = GetLine("mainmenu.adventure", "Adventure",true);
-            MAINMENU_ARCADE = GetLine("mainmenu.arcade", "Arcade",true);
-            MAINMENU_MULTIPLAYER = GetLine("mainmenu.multiplayer", "Multiplayer",true);
-            MAINMENU_LEVELEDITOR = GetLine("mainmenu.leveleditor", "Level Editor",true);
-            MAINMENU_WORKSHOP = GetLine("mainmenu.workshop", "Workshop",true);
-            MAINMENU_GARAGE = GetLine("mainmenu.garage", "Garage",true);
-            MAINMENU_BUGREPORT = GetLine("mainmenu.bugreport", "Bug Report",true);
-            MAINMENU_OPTIONS = GetLine("mainmenu.options", "Options",true);
-            MAINMENU_QUIT = GetLine("mainmenu.quit", "Quit", true);
+            MENUBUTTON_ADVENTURE = GetLine("menubutton.adventure", "Adventure",true);
+            MENUBUTTON_ARCADE = GetLine("menubutton.arcade", "Arcade",true);
+            MENUBUTTON_MULTIPLAYER = GetLine("menubutton.multiplayer", "Multiplayer",true);
+            MENUBUTTON_LEVELEDITOR = GetLine("menubutton.leveleditor", "Level Editor",true);
+            MENUBUTTON_WORKSHOP = GetLine("menubutton.workshop", "Workshop",true);
+            MENUBUTTON_GARAGE = GetLine("menubutton.garage", "Garage",true);
+            MENUBUTTON_BUGREPORT = GetLine("menubutton.bugreport", "Bug Report",true);
+            MENUBUTTON_OPTIONS = GetLine("menubutton.options", "Options",true);
+            MENUBUTTON_QUIT = GetLine("menubutton.quit", "Quit", true);
 
             ADVENTURE_PREVIEW = GetLine("adventure.preview", "Preview");
             ADVENTURE_PREVIEW_DESCRIPTION = GetLine("adventure.preview.description", "Early version of Adventure mode. Final campaign coming when Distance exits Beta.");

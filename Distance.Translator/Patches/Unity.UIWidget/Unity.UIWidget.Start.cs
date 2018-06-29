@@ -26,15 +26,15 @@ namespace Distance.Translator
                 {
                     case "MainButtons":
                         Spectrum.Interop.Game.Game.WatermarkText += "\nDISTANCE TRANSLATOR ([00DDFF]" + Language.LANGUAGE_NAME.ToUpper() + "[-] BY [FF9000]" + Language.LANGUAGE_AUTHOR.ToUpper() + "[-])";
-                        GameObject.Find("Adventure").GetComponentsInChildren<UILabel>()[0].text = Language.MAINMENU_ADVENTURE;
-                        GameObject.Find("Arcade").GetComponentsInChildren<UILabel>()[0].text = Language.MAINMENU_ARCADE;
-                        GameObject.Find("Multiplayer").GetComponentsInChildren<UILabel>()[0].text = Language.MAINMENU_MULTIPLAYER;
-                        GameObject.Find("Level Editor").GetComponentsInChildren<UILabel>()[0].text = Language.MAINMENU_LEVELEDITOR;
-                        GameObject.Find("Steam Workshop").GetComponentsInChildren<UILabel>()[0].text = Language.MAINMENU_WORKSHOP;
-                        GameObject.Find("Garage").GetComponentsInChildren<UILabel>()[0].text = Language.MAINMENU_GARAGE;
-                        GameObject.Find("Report Bug").GetComponentsInChildren<UILabel>()[0].text = Language.MAINMENU_BUGREPORT;
-                        GameObject.Find("Options").GetComponentsInChildren<UILabel>()[0].text = Language.MAINMENU_OPTIONS;
-                        GameObject.Find("Quit").GetComponentsInChildren<UILabel>()[0].text = Language.MAINMENU_QUIT;
+                        GameObject.Find("Adventure").GetComponentsInChildren<UILabel>()[0].text = Language.MENUBUTTON_ADVENTURE;
+                        GameObject.Find("Arcade").GetComponentsInChildren<UILabel>()[0].text = Language.MENUBUTTON_ARCADE;
+                        GameObject.Find("Multiplayer").GetComponentsInChildren<UILabel>()[0].text = Language.MENUBUTTON_MULTIPLAYER;
+                        GameObject.Find("Level Editor").GetComponentsInChildren<UILabel>()[0].text = Language.MENUBUTTON_LEVELEDITOR;
+                        GameObject.Find("Steam Workshop").GetComponentsInChildren<UILabel>()[0].text = Language.MENUBUTTON_WORKSHOP;
+                        GameObject.Find("Garage").GetComponentsInChildren<UILabel>()[0].text = Language.MENUBUTTON_GARAGE;
+                        GameObject.Find("Report Bug").GetComponentsInChildren<UILabel>()[0].text = Language.MENUBUTTON_BUGREPORT;
+                        GameObject.Find("Options").GetComponentsInChildren<UILabel>()[0].text = Language.MENUBUTTON_OPTIONS;
+                        GameObject.Find("Quit").GetComponentsInChildren<UILabel>()[0].text = Language.MENUBUTTON_QUIT;
                         break;
                     case "AdventureButtonsPanel":
                         GameObject.Find("Campaign").GetComponentsInChildren<UILabel>()[0].text = Language.ADVENTURE_PREVIEW;

@@ -50,7 +50,7 @@ namespace Distance.Translator
                 CurrentPlugin.Log.Exception(VirusSpirit);
             }
         }
-
+        
         public void PrintLogo()
         {
             foreach(string line in BootLogo.GetText().Split(Environment.NewLine[0]))
@@ -58,5 +58,7 @@ namespace Distance.Translator
                 CurrentPlugin.Log.Info(line);
             }
         }
+
+        
     }
 }

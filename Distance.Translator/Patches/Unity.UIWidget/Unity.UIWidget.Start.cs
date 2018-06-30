@@ -60,30 +60,7 @@ namespace Distance.Translator
                         // I use this piece of code that i'm not proud of
                         foreach (UILabel label in __instance.GetComponentsInChildren<UILabel>())
                         {
-                            switch(label.text.ToUpper())
-                            {
-                                case "AUDIO":
-                                    label.text = Language.OPTIONS_AUDIO;
-                                    break;
-                                case "GENERAL":
-                                    label.text = Language.OPTIONS_GENERAL;
-                                    break;
-                                case "CONTROLS":
-                                    label.text = Language.OPTIONS_CONTROLS;
-                                    break;
-                                case "GRAPHICS":
-                                    label.text = Language.OPTIONS_GRAPHICS;
-                                    break;
-                                case "PROFILES":
-                                    label.text = Language.OPTIONS_PROFILES;
-                                    break;
-                                case "REPLAY":
-                                    label.text = Language.OPTIONS_REPLAY;
-                                    break;
-                                case "CHEATS":
-                                    label.text = Language.OPTIONS_CHEATS;
-                                    break;
-                            }
+                            Translate.OptionsPanelButtons(label);
                         }
                         break;
                     case "WorkshopButtonsPanel":

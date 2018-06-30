@@ -91,8 +91,8 @@ namespace Distance.Translator
     {
         public static void Initialize()
         {
-            LANGUAGE_NAME = GetLine("language.name","language.name");
-            LANGUAGE_AUTHOR = GetLine("language.author","language.author");
+            LANGUAGE_NAME = GetLine("language.name","Default");
+            LANGUAGE_AUTHOR = GetLine("language.author","Refract");
 
             BUTTON_BACK = GetLine("button.back", "Back");
             BUTTON_APPLY = GetLine("button.apply", "Apply");
@@ -212,11 +212,12 @@ namespace Distance.Translator
                 {
                     processedaesthetic = processedaesthetic.TrimEnd(' ');
                 }
+                result = processedaesthetic;
             }
             if (rainbow || (bool)CurrentPlugin.Config.GetItem<bool>("Rainbow"))
             {
                 int index = 0;
-                string rainbowresult = "";
+                string rainbowresult = result;
                 foreach (char chr in result)
                 {
                     if (!(chr == ' '))
@@ -234,6 +235,10 @@ namespace Distance.Translator
                     }
                 }
                 result = rainbowresult;
+            }
+            if (CurrentPlugin.Config.GetItem<bool>("Dump"))
+            {
+                CurrentPlugin.LangDump[Line] = Default;
             }
             //CurrentPlugin.Log.Info("Loaded text for \"" + Line + "\" = \"" +  result + "\"");
             return result;

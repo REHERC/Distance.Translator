@@ -28,11 +28,14 @@ namespace Distance.Translator
                 __instance.backToEditorButton_.GetComponentsInChildren<UILabel>()[0].text = Language.MENUBUTTON_GOEDITOR;
                 __instance.backToLobbyButton_.GetComponentsInChildren<UILabel>()[0].text = Language.MENUBUTTON_GOLOBBY;
                 __instance.mainMenuButton_.GetComponentsInChildren<UILabel>()[0].text = Language.MENUBUTTON_GOMENU;
-                __instance.optionsButtons_.GetComponentsInChildren<UILabel>()[0].text = Language.MENUBUTTON_OPTIONS;
-                __instance.optionButtonsPanel_.GetComponentsInChildren<UILabel>()[0].text = Language.MENUBUTTON_NEXTLEVEL;
+                __instance.optionsButton_.GetComponentsInChildren<UILabel>()[0].text = Language.MENUBUTTON_OPTIONS;
+                __instance.nextLevelButton_.GetComponentsInChildren<UILabel>()[0].text = Language.MENUBUTTON_NEXTLEVEL;
                 __instance.reportBugButton_.GetComponentsInChildren<UILabel>()[0].text = Language.MENUBUTTON_BUGREPORT;
                 __instance.quitButton_.GetComponentsInChildren<UILabel>()[0].text = Language.MENUBUTTON_QUIT;
-
+                foreach (UIExButton button in __instance.optionButtonsPanel_.GetComponentsInChildren<UIExButton>())
+                {
+                    Translate.OptionsPanelButtons(button.GetComponentsInChildren<UILabel>()[0]);
+                }
             }
         }
     }

@@ -17,11 +17,29 @@ namespace Distance.Translator
             Log.WriteToConsole = true;
             Config = new Settings("Config");
             Lang = new Settings(Config.GetItem<String>("LanguageFile"));
+            if (Config.GetItem<bool>("Dump"))
+            {
+                LangDump = new Settings("EN-en");
+                LangDump.Save();
+            }
+            
             Language.Initialize();
+            SaveDump();
         }
-        
+
+        public static void SaveDump()
+        {
+            if (CurrentPlugin.Config.GetItem<bool>("Dump"))
+            {
+                CurrentPlugin.LangDump.Save();
+                CurrentPlugin.Config["Dump"] = false;
+                CurrentPlugin.Config.Save();
+            }
+        }
+
         public static Logger Log;
         public static Settings Config;
         public static Settings Lang;
+        public static Settings LangDump;
     }
 }

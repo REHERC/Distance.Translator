@@ -199,10 +199,10 @@ namespace Distance.Translator
             OPTIONS_AUDIO_ANNOUNCER = GetLine("options.audio.announcer", "Announcer:", true);
             OPTIONS_AUDIO_MUSIC = GetLine("options.audio.music", "Music:", true);
             OPTIONS_AUDIO_ANNOUNCERSETTINGS = GetLine("options.audio.announcersettings", "Announcer Settings:", true);
-            OPTIONS_AUDIO_ANNOUNCERSETTINGS_ALLMODES = GetLine("options.audio.announcersettings.allmodes", "All Modes", true);
-            OPTIONS_AUDIO_ANNOUNCERSETTINGS_ARCADEONLY = GetLine("options.audio.announcersettings.arcadeonly", "Arcade Only", true);
-            OPTIONS_AUDIO_ANNOUNCERSETTINGS_STUNTONLY = GetLine("options.audio.announcersettings.stuntonly", "Stunt Only", true);
-            OPTIONS_AUDIO_ANNOUNCERSETTINGS_DISABLED = GetLine("options.audio.announcersettings.disabled", "Disabled", true);
+            OPTIONS_AUDIO_ANNOUNCERSETTINGS_ALLMODES = GetLine("options.audio.announcersettings.allmodes", "All Modes");
+            OPTIONS_AUDIO_ANNOUNCERSETTINGS_ARCADEONLY = GetLine("options.audio.announcersettings.arcadeonly", "Arcade Only");
+            OPTIONS_AUDIO_ANNOUNCERSETTINGS_STUNTONLY = GetLine("options.audio.announcersettings.stuntonly", "Stunt Only");
+            OPTIONS_AUDIO_ANNOUNCERSETTINGS_DISABLED = GetLine("options.audio.announcersettings.disabled", "Disabled");
             OPTIONS_AUDIO_CUSTOMMUSIC = GetLine("options.audio.custommusic", "Enable Custom Music:", true);
             OPTIONS_AUDIO_CUSTOMMUSIC_FOLDER = GetLine("options.audio.custommusic.folder", "Set Music Folder:", true);
             OPTIONS_AUDIO_CUSTOMMUSIC_TRACK = GetLine("options.audio.custommusic.track", "Select A Track:", true);

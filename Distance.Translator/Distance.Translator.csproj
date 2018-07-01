@@ -73,8 +73,7 @@
     <Compile Include="Patches\MessagePanelLogic\MessagePanelLogic.ShowMessage.cs" />
     <Compile Include="Patches\PauseMenuLogic\PauseMenuLogic.Start.cs" />
     <Compile Include="Patches\TrickClassifier\TGetTrickPartName.cs" />
-    <Compile Include="Patches\Unity.UILabel\Unity.UILabel.Start.cs" />
-    <Compile Include="Patches\Unity.UIWidget\Unity.UIWidget.Start.cs" />
+    <Compile Include="Patches\Unity.UIWidget\Unity.UIWidget.Update.cs" />
     <Compile Include="Photon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Storage\Language.cs" />

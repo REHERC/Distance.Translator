@@ -33,14 +33,11 @@ namespace Distance.Translator
                         GameObject.Find("VolumeOptions/Announcer").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_AUDIO_ANNOUNCER;
                         GameObject.Find("VolumeOptions/Music").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_AUDIO_MUSIC;
                         GameObject.Find("VolumeOptions/Announcer Options").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_AUDIO_ANNOUNCERSETTINGS;
-                        
                         GameObject.Find("VolumeOptions/Custom Music Group/EnableCustomMusic").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_AUDIO_CUSTOMMUSIC;
-
                         GameObject.Find("VolumeOptions/Custom Music Group/UIPanel - CustomMusicPanel/CustomMusicPath").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_AUDIO_CUSTOMMUSIC_FOLDER;
                         GameObject.Find("VolumeOptions/Custom Music Group/UIPanel - CustomMusicPanel/SelectATrack").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_AUDIO_CUSTOMMUSIC_TRACK;
                         GameObject.Find("VolumeOptions/Custom Music Group/UIPanel - CustomMusicPanel/Shuffle").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_AUDIO_CUSTOMMUSIC_SHUFFLETRACKS;
                         GameObject.Find("VolumeOptions/Custom Music Group/UIPanel - CustomMusicPanel/Loop").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_AUDIO_CUSTOMMUSIC_LOOPTRACKS;
-
                         GameObject.Find("MenuTitleTemplate/UILabel - Title").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_AUDIO_TITLE;
                         break;
                     case "Panel - Idle":
@@ -111,6 +108,7 @@ namespace Distance.Translator
                         //GameObject.Find("StartButton").GetComponentsInChildren<UILabel>()[0].text = Language.BUTTON_START.ToUpper();
                         break;
                     case "UIPanel - PressAnyButton":
+                        GameObject.Find("UILabel - DistanceTitle").GetComponentsInChildren<UILabel>()[0].text = Language.MAINMENU_GAMETITLEIDLE;
                         GameObject.Find("UILabel - PressAnyButton").GetComponentsInChildren<UILabel>()[0].text = Language.MAINMENU_PRESSKEY;
                         break;
                 }

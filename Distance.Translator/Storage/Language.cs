@@ -11,7 +11,7 @@ namespace Distance.Translator
     {
         public static string LANGUAGE_NAME;
         public static string LANGUAGE_AUTHOR;
-
+        
         public static string BUTTON_APPLY;
         public static string BUTTON_BACK;
         public static string BUTTON_YES;
@@ -22,6 +22,7 @@ namespace Distance.Translator
         public static string BUTTON_DELETE;
 
         public static string MAINMENU_PRESSKEY;
+        public static string MAINMENU_GAMETITLEIDLE;
 
         public static string MENUBUTTON_ADVENTURE;
         public static string MENUBUTTON_ARCADE;
@@ -113,6 +114,8 @@ namespace Distance.Translator
             LANGUAGE_NAME = GetLine("language.name","Default");
             LANGUAGE_AUTHOR = GetLine("language.author","Refract");
 
+
+
             BUTTON_BACK = GetLine("button.back", "Back");
             BUTTON_APPLY = GetLine("button.apply", "Apply");
             BUTTON_YES = GetLine("button.yes", "Yes");
@@ -123,6 +126,7 @@ namespace Distance.Translator
             BUTTON_DELETE = GetLine("button.delete", "Delete");
 
             MAINMENU_PRESSKEY = GetLine("mainmenu.presskey", "Press any button to start", true,1);
+            MAINMENU_GAMETITLEIDLE = GetLine("mainmenu.gametitleidle", "DISTANCE", true, 2);
 
             MENUBUTTON_ADVENTURE = GetLine("menubutton.adventure", "Adventure",true);
             MENUBUTTON_ARCADE = GetLine("menubutton.arcade", "Arcade",true);

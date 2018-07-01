@@ -83,6 +83,7 @@
     <Compile Include="Storage\Reusable\OptionsButtonPanel.cs" />
     <Compile Include="Text Files\BootLogo.cs" />
     <Compile Include="Events Subscribers\Events.Game.PauseToggled.cs" />
+    <Compile Include="Patches\Unity.UIPanel\Unity.UIPanel.Start.cs" />
     <None Include="THE TRASH CAN.afk" />
   </ItemGroup>
   <ItemGroup>

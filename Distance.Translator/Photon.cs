@@ -10,12 +10,18 @@ using Spectrum.API;
 using Spectrum.API.Configuration;
 using Spectrum.API.Interfaces.Plugins;
 using Spectrum.API.Interfaces.Systems;
+using Spectrum.API.IPC;
 using Spectrum.API.Logging;
 
 namespace Distance.Translator
 {
-    public partial class Photon : IPlugin
+    public partial class Photon : IPlugin,IIPCEnabled
     {
+        public void HandleIPCData(IPCData data)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Initialize(IManager manager, string ipcIdentifier)
         {
             Console.WriteLine("Initializing ...");

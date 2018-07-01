@@ -85,6 +85,25 @@ namespace Distance.Translator
         public static string TRICK_WHEELIE;
         public static string TRICK_SIDEWHEELIE;
         public static string TRICK_NOSESTAND;
+
+        public static string OPTIONS_AUDIO_TITLE;
+        public static string OPTIONS_AUDIO_MASTER;
+        public static string OPTIONS_AUDIO_CAR;
+        public static string OPTIONS_AUDIO_ENVIRONMENT;
+        public static string OPTIONS_AUDIO_OBSTACLES;
+        public static string OPTIONS_AUDIO_MENUS;
+        public static string OPTIONS_AUDIO_ANNOUNCER;
+        public static string OPTIONS_AUDIO_MUSIC;
+        public static string OPTIONS_AUDIO_ANNOUNCERSETTINGS;
+        public static string OPTIONS_AUDIO_ANNOUNCERSETTINGS_ALLMODES;
+        public static string OPTIONS_AUDIO_ANNOUNCERSETTINGS_ARCADEONLY;
+        public static string OPTIONS_AUDIO_ANNOUNCERSETTINGS_STUNTONLY;
+        public static string OPTIONS_AUDIO_ANNOUNCERSETTINGS_DISABLED;
+        public static string OPTIONS_AUDIO_CUSTOMMUSIC;
+        public static string OPTIONS_AUDIO_CUSTOMMUSIC_FOLDER;
+        public static string OPTIONS_AUDIO_CUSTOMMUSIC_TRACK;
+        public static string OPTIONS_AUDIO_CUSTOMMUSIC_SHUFFLETRACKS;
+        public static string OPTIONS_AUDIO_CUSTOMMUSIC_LOOPTRACKS;
     }
 
     public static partial class Language
@@ -122,6 +141,7 @@ namespace Distance.Translator
             MENUBUTTON_GOEDITOR = GetLine("menubutton.goeditor", "Back To Editor", true);
             MENUBUTTON_GOLOBBY = GetLine("menubutton.golobby", "Back To Lobby", true);
             MENUBUTTON_NEXTLEVEL = GetLine("menubutton.nextlevel", "Next Level", true);
+            MENUBUTTON_SPECTATE = GetLine("menubutton.spectate", "Spectate", true);
 
 
             ADVENTURE_PREVIEW = GetLine("adventure.preview", "Preview");
@@ -169,6 +189,25 @@ namespace Distance.Translator
             TRICK_WHEELIE = GetLine("trick.wheelie", "Wheelie");
             TRICK_SIDEWHEELIE = GetLine("trick.sidewheelie", "Side Wheelie");
             TRICK_NOSESTAND = GetLine("trick.nosestand", "Nose Stand");
+
+            OPTIONS_AUDIO_TITLE = GetLine("options.audio.title", "Audio Options", true);
+            OPTIONS_AUDIO_MASTER = GetLine("options.audio.master", "Master:", true);
+            OPTIONS_AUDIO_CAR = GetLine("options.audio.car", "Car:", true);
+            OPTIONS_AUDIO_ENVIRONMENT = GetLine("options.audio.environment", "Environment:", true);
+            OPTIONS_AUDIO_OBSTACLES = GetLine("options.audio.obstacles", "Obstacles:", true);
+            OPTIONS_AUDIO_MENUS = GetLine("options.audio.menus", "Menus:", true);
+            OPTIONS_AUDIO_ANNOUNCER = GetLine("options.audio.announcer", "Announcer:", true);
+            OPTIONS_AUDIO_MUSIC = GetLine("options.audio.music", "Music:", true);
+            OPTIONS_AUDIO_ANNOUNCERSETTINGS = GetLine("options.audio.announcersettings", "Announcer Settings:", true);
+            OPTIONS_AUDIO_ANNOUNCERSETTINGS_ALLMODES = GetLine("options.audio.announcersettings.allmodes", "All Modes", true);
+            OPTIONS_AUDIO_ANNOUNCERSETTINGS_ARCADEONLY = GetLine("options.audio.announcersettings.arcadeonly", "Arcade Only", true);
+            OPTIONS_AUDIO_ANNOUNCERSETTINGS_STUNTONLY = GetLine("options.audio.announcersettings.stuntonly", "Stunt Only", true);
+            OPTIONS_AUDIO_ANNOUNCERSETTINGS_DISABLED = GetLine("options.audio.announcersettings.disabled", "Disabled", true);
+            OPTIONS_AUDIO_CUSTOMMUSIC = GetLine("options.audio.custommusic", "Enable Custom Music:", true);
+            OPTIONS_AUDIO_CUSTOMMUSIC_FOLDER = GetLine("options.audio.custommusic.folder", "Set Music Folder:", true);
+            OPTIONS_AUDIO_CUSTOMMUSIC_TRACK = GetLine("options.audio.custommusic.track", "Select A Track:", true);
+            OPTIONS_AUDIO_CUSTOMMUSIC_SHUFFLETRACKS = GetLine("options.audio.custommusic.shuffletracks", "Shuffle Tracks", true);
+            OPTIONS_AUDIO_CUSTOMMUSIC_LOOPTRACKS = GetLine("options.audio.custommusic.looptracks", "Loop Tracks:", true);
         }
 
         public static List<string> Rainbow = new List<String>(){
@@ -180,7 +219,7 @@ namespace Distance.Translator
             "840083"
         };
 
-        public static string GetLine(string Line,string Default, Boolean uppercase = false,int aestheticspaces = 0,bool rainbow = false)
+        public static string GetLine(String Line,String Default, bool uppercase = false,int aestheticspaces = 0,bool rainbow = false)
         {
             string result = "";
             try

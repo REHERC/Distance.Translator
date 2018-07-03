@@ -22,7 +22,7 @@ namespace Distance.Translator
         public static string BUTTON_DELETE;
 
         public static string MAINMENU_PRESSKEY;
-        public static string MAINMENU_GAMETITLEIDLE;
+        //public static string MAINMENU_GAMETITLEIDLE;
 
         public static string MENUBUTTON_ADVENTURE;
         public static string MENUBUTTON_ARCADE;
@@ -105,6 +105,19 @@ namespace Distance.Translator
         public static string OPTIONS_AUDIO_CUSTOMMUSIC_TRACK;
         public static string OPTIONS_AUDIO_CUSTOMMUSIC_SHUFFLETRACKS;
         public static string OPTIONS_AUDIO_CUSTOMMUSIC_LOOPTRACKS;
+
+        public static string OPTIONS_REPLAYS_TITLE;
+        public static string OPTIONS_REPLAYS_TYPE;
+        public static string OPTIONS_REPLAYS_TYPE_DISABLED;
+        public static string OPTIONS_REPLAYS_TYPE_LOCAL;
+        public static string OPTIONS_REPLAYS_TYPE_FRIENDS;
+        public static string OPTIONS_REPLAYS_TYPE_NEARMYRANKING;
+        public static string OPTIONS_REPLAYS_TYPE_GLOBALBEST;
+        public static string OPTIONS_REPLAYS_COUNT;
+        public static string OPTIONS_REPLAYS_BRIGHTNESS;
+        public static string OPTIONS_REPLAYS_NAMESVISIBLE;
+        public static string OPTIONS_REPLAYS_PLAYBACKSPEED;
+
     }
 
     public static partial class Language
@@ -113,9 +126,7 @@ namespace Distance.Translator
         {
             LANGUAGE_NAME = GetLine("language.name","Default");
             LANGUAGE_AUTHOR = GetLine("language.author","Refract");
-
-
-
+            
             BUTTON_BACK = GetLine("button.back", "Back");
             BUTTON_APPLY = GetLine("button.apply", "Apply");
             BUTTON_YES = GetLine("button.yes", "Yes");
@@ -126,7 +137,7 @@ namespace Distance.Translator
             BUTTON_DELETE = GetLine("button.delete", "Delete");
 
             MAINMENU_PRESSKEY = GetLine("mainmenu.presskey", "Press any button to start", true,1);
-            MAINMENU_GAMETITLEIDLE = GetLine("mainmenu.gametitleidle", "DISTANCE", true, 2);
+            //MAINMENU_GAMETITLEIDLE = GetLine("mainmenu.gametitleidle", "DISTANCE", true, 2);
 
             MENUBUTTON_ADVENTURE = GetLine("menubutton.adventure", "Adventure",true);
             MENUBUTTON_ARCADE = GetLine("menubutton.arcade", "Arcade",true);
@@ -212,6 +223,18 @@ namespace Distance.Translator
             OPTIONS_AUDIO_CUSTOMMUSIC_TRACK = GetLine("options.audio.custommusic.track", "Select A Track:", true);
             OPTIONS_AUDIO_CUSTOMMUSIC_SHUFFLETRACKS = GetLine("options.audio.custommusic.shuffletracks", "Shuffle Tracks", true);
             OPTIONS_AUDIO_CUSTOMMUSIC_LOOPTRACKS = GetLine("options.audio.custommusic.looptracks", "Loop Tracks:", true);
+
+            OPTIONS_REPLAYS_TITLE = GetLine("options.replays.title", "Replay and Ghosts Options");
+            OPTIONS_REPLAYS_TYPE = GetLine("options.replays.type", "Ghosts In Arcade Type:", true);
+            OPTIONS_REPLAYS_TYPE_DISABLED = GetLine("options.replays.type.disabled", "Disabled");
+            OPTIONS_REPLAYS_TYPE_LOCAL = GetLine("options.replays.type.local", "Local");
+            OPTIONS_REPLAYS_TYPE_FRIENDS = GetLine("options.replays.type.friends", "Friends");
+            OPTIONS_REPLAYS_TYPE_NEARMYRANKING = GetLine("options.replays.type.nearmyranking", "Near My Ranking");
+            OPTIONS_REPLAYS_TYPE_GLOBALBEST = GetLine("options.replays.type.globalbest", "Global Best");
+            OPTIONS_REPLAYS_COUNT = GetLine("options.replays.count", "Ghosts In Arcade Count:", true);
+            OPTIONS_REPLAYS_BRIGHTNESS = GetLine("options.replays.brightness", "Ghosts Brightness:", true);
+            OPTIONS_REPLAYS_NAMESVISIBLE = GetLine("options.replays.namesvisible", "Ghosts Names Visible:", true);
+            OPTIONS_REPLAYS_PLAYBACKSPEED = GetLine("options.replays.playbackspeed", "Playback Speed Affects Music:", true);
         }
 
         public static List<string> Rainbow = new List<String>(){

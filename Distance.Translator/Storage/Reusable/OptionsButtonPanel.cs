@@ -35,5 +35,27 @@ namespace Distance.Translator
                     break;
             }
         }
+
+        public static void ReplaysPanelButtons(UILabel label)
+        {
+            switch (label.gameObject.name.ToUpper())
+            {
+                case "GHOSTS IN ARCADE TYPE":
+                    label.text = Language.OPTIONS_REPLAYS_TYPE;
+                    break;
+                case "GHOSTS IN ARCADE COUNT":
+                    label.text = Language.OPTIONS_REPLAYS_COUNT;
+                    break;
+                case "GHOSTS BRIGHTNESS":
+                    label.text = Language.OPTIONS_REPLAYS_BRIGHTNESS;
+                    break;
+                case "GHOSTS NAMES VISIBLE":
+                    label.text = Language.OPTIONS_REPLAYS_NAMESVISIBLE;
+                    break;
+                case "PLAYBACK SPEED AFFECTS MUSIC":
+                    label.text = Language.OPTIONS_REPLAYS_PLAYBACKSPEED;
+                    break;
+            }
+        }
     }
 }

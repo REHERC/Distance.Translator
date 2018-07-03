@@ -22,6 +22,7 @@ namespace Distance.Translator
         {
             public static void Postfix(UIPanel __instance)
             {
+                //CurrentPlugin.Log.Error(__instance.name);
 				switch (__instance.name)
                 {
                     case "Panel - Audio":
@@ -40,8 +41,17 @@ namespace Distance.Translator
                         GameObject.Find("VolumeOptions/Custom Music Group/UIPanel - CustomMusicPanel/Loop").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_AUDIO_CUSTOMMUSIC_LOOPTRACKS;
                         GameObject.Find("MenuTitleTemplate/UILabel - Title").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_AUDIO_TITLE;
                         break;
+                    case "Replay":
+                        GameObject.Find("Replay/Options/OptionsTable/GHOSTS IN ARCADE TYPE").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_REPLAYS_TYPE;
+                        GameObject.Find("Replay/Options/OptionsTable/GHOSTS IN ARCADE COUNT").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_REPLAYS_COUNT;
+                        GameObject.Find("Replay/Options/OptionsTable/GHOST BRIGHTNESS").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_REPLAYS_BRIGHTNESS;
+                        GameObject.Find("Replay/Options/OptionsTable/GHOSTS NAMES VISIBLE").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_REPLAYS_NAMESVISIBLE;
+                        GameObject.Find("Replay/Options/OptionsTable/PLAYBACK SPEED AFFECTS MUSIC").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_REPLAYS_PLAYBACKSPEED;
+                        //GameObject.Find("MenuTitleTemplate/UILabel - Title").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_REPLAYS_TITLE;
+                        // 
+                        break;
                     case "Panel - Idle":
-                        //GameObject.Find("UIPanel - DistanceTitle/UILabel - DistanceTitle").GetComponentsInChildren<UILabel>()[0].text = "GAME TITLE HERE TO MAKE SILLY THINGS (USE 2 SPACES BETWEEN LETTERS)";
+                        //GameObject.Find("UIPanel - DistanceTitle/UILabel - DistanceTitle").GetComponentsInChildren<UILabel>()[0].text = "GAME TITLE HERE TO MAKE SILLY THINGS (USE 2 SPACES BETWEEN LETTERS LMAO)";
                         GameObject.Find("UIPanel - PressAnyButton/UILabel - PressAnyButton").GetComponentsInChildren<UILabel>()[0].text = Language.MAINMENU_PRESSKEY;
                         break;
 
@@ -108,7 +118,7 @@ namespace Distance.Translator
                         //GameObject.Find("StartButton").GetComponentsInChildren<UILabel>()[0].text = Language.BUTTON_START.ToUpper();
                         break;
                     case "UIPanel - PressAnyButton":
-                        GameObject.Find("UILabel - DistanceTitle").GetComponentsInChildren<UILabel>()[0].text = Language.MAINMENU_GAMETITLEIDLE;
+                        //GameObject.Find("UILabel - DistanceTitle").GetComponentsInChildren<UILabel>()[0].text = Language.MAINMENU_GAMETITLEIDLE;
                         GameObject.Find("UILabel - PressAnyButton").GetComponentsInChildren<UILabel>()[0].text = Language.MAINMENU_PRESSKEY;
                         break;
                 }

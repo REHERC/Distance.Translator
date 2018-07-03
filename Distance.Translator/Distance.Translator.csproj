@@ -70,6 +70,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Patches\Menus\ENABLE CHEATS MENU\EnableCheats.cs" />
+    <Compile Include="Patches\Menus\ENABLE EXPERIMENTAL MENU\EnableExperimental.cs" />
+    <Compile Include="Patches\Menus\ENABLE PS4 GRAPHICS MENU\EnablePS4Graphics.cs" />
+    <Compile Include="Patches\Menus\ENABLE VR MENU\EnableVR.cs" />
     <Compile Include="Patches\MessagePanelLogic\MessagePanelLogic.ShowMessage.cs" />
     <Compile Include="Patches\PauseMenuLogic\PauseMenuLogic.Start.cs" />
     <Compile Include="Patches\TrickClassifier\TGetTrickPartName.cs" />

@@ -47,6 +47,31 @@ namespace Distance.Translator
                             popup.items[2] = Language.OPTIONS_AUDIO_ANNOUNCERSETTINGS_STUNTONLY;
                             popup.items[3] = Language.OPTIONS_AUDIO_ANNOUNCERSETTINGS_DISABLED;
                             break;
+                        case "GHOSTS IN ARCADE TYPE":
+                            switch (popup.value.ToUpper())
+                            {
+                                case "DISABLED":
+                                    popup.value = Language.OPTIONS_REPLAYS_TYPE_DISABLED;
+                                    break;
+                                case "LOCAL":
+                                    popup.value = Language.OPTIONS_REPLAYS_TYPE_LOCAL;
+                                    break;
+                                case "FRIENDS":
+                                    popup.value = Language.OPTIONS_REPLAYS_TYPE_FRIENDS;
+                                    break;
+                                case "NEAR MY RANKING":
+                                    popup.value = Language.OPTIONS_REPLAYS_TYPE_NEARMYRANKING;
+                                    break;
+                                case "GLOBAL BEST":
+                                    popup.value = Language.OPTIONS_REPLAYS_TYPE_GLOBALBEST;
+                                    break;
+                            }
+                            popup.items[0] = Language.OPTIONS_REPLAYS_TYPE_DISABLED;
+                            popup.items[1] = Language.OPTIONS_REPLAYS_TYPE_LOCAL;
+                            popup.items[2] = Language.OPTIONS_REPLAYS_TYPE_FRIENDS;
+                            popup.items[3] = Language.OPTIONS_REPLAYS_TYPE_NEARMYRANKING;
+                            popup.items[4] = Language.OPTIONS_REPLAYS_TYPE_GLOBALBEST;
+                            break;
                     }
                 }
             }

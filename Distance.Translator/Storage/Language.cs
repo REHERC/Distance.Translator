@@ -72,6 +72,8 @@ namespace Distance.Translator
         public static string OPTIONS_PROFILES;
         public static string OPTIONS_REPLAY;
         public static string OPTIONS_CHEATS;
+        public static string OPTIONS_VR;
+        public static string OPTIONS_EXPERIMENTAL;
 
         public static string TRICK_FREESTYLE;
         public static string TRICK_BARRELROLL;
@@ -190,7 +192,8 @@ namespace Distance.Translator
             OPTIONS_PROFILES = GetLine("options.profiles", "Profiles");
             OPTIONS_REPLAY = GetLine("options.replays", "Replay");
             OPTIONS_CHEATS = GetLine("options.cheats", "Cheats");
-            
+            OPTIONS_VR = GetLine("options.vr", "VR Options");
+
             TRICK_FREESTYLE = GetLine("trick.freestyle", "Freestyle");
             TRICK_BARRELROLL = GetLine("trick.barrelroll", "Barrel Roll");
             TRICK_FRONTFLIP = GetLine("trick.frontflip", "Front Flip");

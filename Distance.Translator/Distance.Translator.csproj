@@ -84,10 +84,11 @@
     <Compile Include="Storage\PrintData.cs" />
     <Compile Include="Storage\CurrentPlugin.cs" />
     <Compile Include="Storage\Reusable\OptionsButtonPanel.cs" />
+    <Compile Include="Storage\Reusable\ReplaysButtonPanel.cs" />
     <Compile Include="Text Files\BootLogo.cs" />
     <Compile Include="Events Subscribers\Events.Game.PauseToggled.cs" />
     <Compile Include="Patches\Unity.UIPanel\Unity.UIPanel.Start.cs" />
-    <None Include="THE TRASH CAN.afk" />
+    <None Include="THE TRASH CAN" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Distance.Translator.Utilities\Distance.Translator.Utilities.vbproj">

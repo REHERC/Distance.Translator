@@ -17,7 +17,7 @@ namespace Distance.Translator
 {
     public partial class Photon
     {
-        [HarmonyPatch(typeof(UIWidget), "Update")]
+        //[HarmonyPatch(typeof(UIWidget), "Update")]
         internal class UIWidget_Update_Patch : UIWidget
         {
             public static void Postfix(UIWidget __instance)

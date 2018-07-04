@@ -84,10 +84,12 @@
     <Compile Include="Storage\PrintData.cs" />
     <Compile Include="Storage\CurrentPlugin.cs" />
     <Compile Include="Storage\Reusable\OptionsButtonPanel.cs" />
-    <Compile Include="Storage\Reusable\ReplaysButtonPanel.cs" />
+    <Compile Include="Storage\Reusable\Translate.UILabel\Translate.AnnouncerOptions.PopupList.cs" />
+    <Compile Include="Storage\Reusable\Translate.UILabel\Translate.GhostType.PopupList.cs" />
     <Compile Include="Text Files\BootLogo.cs" />
     <Compile Include="Events Subscribers\Events.Game.PauseToggled.cs" />
     <Compile Include="Patches\Unity.UIPanel\Unity.UIPanel.Start.cs" />
+    <Compile Include="Patches\Unity.UILabel\Unity.UILabel.Update.cs" />
     <None Include="THE TRASH CAN" />
   </ItemGroup>
   <ItemGroup>

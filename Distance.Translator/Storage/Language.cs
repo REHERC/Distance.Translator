@@ -108,6 +108,24 @@ namespace Distance.Translator
         public static string OPTIONS_AUDIO_CUSTOMMUSIC_SHUFFLETRACKS;
         public static string OPTIONS_AUDIO_CUSTOMMUSIC_LOOPTRACKS;
 
+        public static string OPTIONS_GENERAL_TITLE;
+        public static string OPTIONS_GENERAL_UNITS;
+        public static string OPTIONS_GENERAL_UNITS_METRIC;
+        public static string OPTIONS_GENERAL_UNITS_IMPERIAL;
+        public static string OPTIONS_GENERAL_ALLABILITIES;
+        public static string OPTIONS_GENERAL_RATINGPRIVACY;
+        public static string OPTIONS_GENERAL_AUTODOWNLOAD;
+        public static string OPTIONS_GENERAL_MENUANIMATIONS;
+        public static string OPTIONS_GENERAL_BOOMBOX;
+        public static string OPTIONS_GENERAL_BOOMBOX_BLOOM;
+        public static string OPTIONS_GENERAL_BOOMBOX_SHAKE;
+        public static string OPTIONS_GENERAL_VISUALIZER;
+        public static string OPTIONS_GENERAL_VISUALIZER_OFF;
+        public static string OPTIONS_GENERAL_VISUALIZER_CIRCLE;
+        public static string OPTIONS_GENERAL_VISUALIZER_BARS;
+        public static string OPTIONS_GENERAL_SHUFFLELEVELS;
+        public static string OPTIONS_GENERAL_SHOWTRICKTEXT;
+
         public static string OPTIONS_REPLAYS_TITLE;
         public static string OPTIONS_REPLAYS_TYPE;
         public static string OPTIONS_REPLAYS_TYPE_DISABLED;
@@ -226,6 +244,24 @@ namespace Distance.Translator
             OPTIONS_AUDIO_CUSTOMMUSIC_TRACK = GetLine("options.audio.custommusic.track", "Select A Track:", true);
             OPTIONS_AUDIO_CUSTOMMUSIC_SHUFFLETRACKS = GetLine("options.audio.custommusic.shuffletracks", "Shuffle Tracks", true);
             OPTIONS_AUDIO_CUSTOMMUSIC_LOOPTRACKS = GetLine("options.audio.custommusic.looptracks", "Loop Tracks:", true);
+
+            OPTIONS_GENERAL_TITLE = GetLine("options.general.title", "General Menu");
+            OPTIONS_GENERAL_UNITS = GetLine("options.general.units", "Units:", true);
+            OPTIONS_GENERAL_UNITS_METRIC = GetLine("options.general.units.metric", "Metric");
+            OPTIONS_GENERAL_UNITS_IMPERIAL = GetLine("options.general.units.imperial", "Imperial");
+            OPTIONS_GENERAL_ALLABILITIES = GetLine("options.general.allabilities", "All Abilities In Adventure Mode:", true);
+            OPTIONS_GENERAL_RATINGPRIVACY = GetLine("options.general.ratingprivacy", "Workshop Rating Privacy:", true);
+            OPTIONS_GENERAL_AUTODOWNLOAD = GetLine("options.general.autodownload", "Workshop Level Auto-Download:", true);
+            OPTIONS_GENERAL_MENUANIMATIONS = GetLine("options.general.menuanimations", "Enable Menu Animations:", true);
+            OPTIONS_GENERAL_BOOMBOX = GetLine("options.general.boombox", "Enable Boom Box Mode:", true);
+            OPTIONS_GENERAL_BOOMBOX_BLOOM = GetLine("options.general.boombox.bloom", "Boom Box Bloom Intensity:", true);
+            OPTIONS_GENERAL_BOOMBOX_SHAKE = GetLine("options.general.boombox.shake", "Boom Box Shake Intensity:", true);
+            OPTIONS_GENERAL_VISUALIZER = GetLine("options.general.visualizer", "Car Screen Visualizer:", true);
+            OPTIONS_GENERAL_VISUALIZER_OFF = GetLine("options.general.visualizer.off", "off");
+            OPTIONS_GENERAL_VISUALIZER_CIRCLE = GetLine("options.general.visualizer.circle", "Circle");
+            OPTIONS_GENERAL_VISUALIZER_BARS = GetLine("options.general.visualizer.bars", "Bars");
+            OPTIONS_GENERAL_SHUFFLELEVELS = GetLine("options.general.shufflelevels", "Shuffle Levels:", true);
+            OPTIONS_GENERAL_SHOWTRICKTEXT = GetLine("options.general.showtricktext", "Show Trick Text:", true);
 
             OPTIONS_REPLAYS_TITLE = GetLine("options.replays.title", "Replay and Ghosts Options");
             OPTIONS_REPLAYS_TYPE = GetLine("options.replays.type", "Ghosts In Arcade Type:", true);

@@ -46,12 +46,13 @@ namespace Distance.Translator
                     case "Announcer Options":
                         Translate.AnnouncerOptionsTranslate(ref __instance);
                         break;
-                    case "CAR SCREEN VISUALIZER":
-                        Translate.VisualizerTranslate(ref __instance);
-                        break;
                     case "UNITS":
                         Translate.UnitsTranslate(ref __instance);
                         break;
+                    case "CAR SCREEN VISUALIZER":
+                        Translate.VisualizerTranslate(ref __instance);
+                        break;
+                    
                     case "GHOSTS IN ARCADE TYPE":
                         Translate.GhostTypeTranslate(ref __instance);
                         break;

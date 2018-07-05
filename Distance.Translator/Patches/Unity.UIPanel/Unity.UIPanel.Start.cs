@@ -22,7 +22,6 @@ namespace Distance.Translator
         {
             public static void Postfix(UIPanel __instance)
             {
-                //CurrentPlugin.Log.Error(__instance.name);
 				switch (__instance.name)
                 {
                     case "Panel - Audio":
@@ -48,7 +47,21 @@ namespace Distance.Translator
                         GameObject.Find("Options/OptionsTable/GHOST NAMES VISIBLE/NameLabel").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_REPLAYS_NAMESVISIBLE;
                         GameObject.Find("Options/OptionsTable/PLAYBACK SPEED AFFECTS MUSIC/NameLabel").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_REPLAYS_PLAYBACKSPEED;
                         GameObject.Find("MenuTitleTemplate/UILabel - Title").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_REPLAYS_TITLE;
-                        // 
+                        break;
+                    case "General":
+                        GameObject.Find("Options/OptionsTable/UNITS/NameLabel").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_GENERAL_UNITS;
+                        GameObject.Find("Options/OptionsTable/ALL ABILITIES IN ADVENTURE MODE/NameLabel").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_GENERAL_ALLABILITIES;
+                        GameObject.Find("Options/OptionsTable/WORKSHOP RATING PRIVACY MODE/NameLabel").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_GENERAL_RATINGPRIVACY;
+                        GameObject.Find("Options/OptionsTable/WORKSHOP LEVEL AUTO-DOWNLOAD/NameLabel").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_GENERAL_AUTODOWNLOAD;
+                        GameObject.Find("Options/OptionsTable/ENABLE MENU ANIMATIONS/NameLabel").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_GENERAL_MENUANIMATIONS;
+                        GameObject.Find("Options/OptionsTable/ENABLE BOOM BOX MODE/NameLabel").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_GENERAL_BOOMBOX;
+                        GameObject.Find("Options/OptionsTable/BOOM BOX BLOOM INTENSITY/NameLabel").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_GENERAL_BOOMBOX_BLOOM;
+                        GameObject.Find("Options/OptionsTable/BOOM BOX SHAKE INTENSITY/NameLabel").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_GENERAL_BOOMBOX_SHAKE;
+                        GameObject.Find("Options/OptionsTable/CAR SCREEN VISUALIZER/NameLabel").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_GENERAL_VISUALIZER;
+                        GameObject.Find("Options/OptionsTable/SHUFFLE LEVELS/NameLabel").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_GENERAL_SHUFFLELEVELS;
+                        GameObject.Find("Options/OptionsTable/SHOW TRICK TEXT/NameLabel").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_GENERAL_SHOWTRICKTEXT;
+                        GameObject.Find("MenuTitleTemplate/UILabel - Title").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_GENERAL_TITLE;
+
                         break;
                     case "Panel - Idle":
                         //GameObject.Find("UIPanel - DistanceTitle/UILabel - DistanceTitle").GetComponentsInChildren<UILabel>()[0].text = "GAME TITLE HERE TO MAKE SILLY THINGS (USE 2 SPACES BETWEEN LETTERS LMAO)";

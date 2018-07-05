@@ -25,13 +25,19 @@ namespace Distance.Translator
                 if (__instance.gameObject.HasComponent<UIEventListener>() && __instance.gameObject.transform.parent.gameObject.name == "Drop-down List")
                 {
                     GameObject MenuPanel = __instance.gameObject.transform.parent.parent.parent.gameObject;
-					switch (MenuPanel.name)
+                    switch (MenuPanel.name)
                     {
 						case "Panel - Audio":
                             Translate.AnnouncerOptionsTranslate(ref __instance);
                             break;
                         case "Panel - Options":
+                            //General menu
+                            Translate.UnitsTranslate(ref __instance);
+
+                            // Replay menu
                             Translate.GhostTypeTranslate(ref __instance);
+                            Translate.VisualizerTranslate(ref __instance);
+                            
                             break;
                     }
                 }
@@ -39,6 +45,12 @@ namespace Distance.Translator
                 {
                     case "Announcer Options":
                         Translate.AnnouncerOptionsTranslate(ref __instance);
+                        break;
+                    case "CAR SCREEN VISUALIZER":
+                        Translate.VisualizerTranslate(ref __instance);
+                        break;
+                    case "UNITS":
+                        Translate.UnitsTranslate(ref __instance);
                         break;
                     case "GHOSTS IN ARCADE TYPE":
                         Translate.GhostTypeTranslate(ref __instance);

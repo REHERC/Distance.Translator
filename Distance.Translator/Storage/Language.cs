@@ -126,6 +126,27 @@ namespace Distance.Translator
         public static string OPTIONS_GENERAL_SHUFFLELEVELS;
         public static string OPTIONS_GENERAL_SHOWTRICKTEXT;
 
+        public static string OPTIONS_CONTROLS_TITLE;
+        public static string OPTIONS_CONTROLS_SUBTITLE;
+        public static string OPTIONS_CONTROLS_DEVICE;
+        public static string OPTIONS_CONTROLS_SCHEME;
+        public static string OPTIONS_CONTROLS_SCHEME_SELECTED;
+        public static string OPTIONS_CONTROLS_SCHEME_EDIT;
+        public static string OPTIONS_CONTROLS_SCHEME_DELETE;
+        public static string OPTIONS_CONTROLS_SCHEME_DUPLICATE;
+        public static string OPTIONS_CONTROLS_SCHEME_RENAME;
+        public static string OPTIONS_CONTROLS_INVERTY;
+        public static string OPTIONS_CONTROLS_SELFRIGHTING;
+        public static string OPTIONS_CONTROLS_LANDINGASSIST;
+        public static string OPTIONS_CONTROLS_RUMBLEINTENSITY;
+        public static string OPTIONS_CONTROLS_STEERINGSENSITIVITY;
+        public static string OPTIONS_CONTROLS_FLIGHTSENSITIVITY;
+        public static string OPTIONS_CONTROLS_INPUTSMOOTHING;
+        public static string OPTIONS_CONTROLS_TAB_BASIC;
+        public static string OPTIONS_CONTROLS_TAB_FLIGHT;
+        public static string OPTIONS_CONTROLS_TAB_CAMERA;
+        public static string OPTIONS_CONTROLS_TAB_MENU;
+
         public static string OPTIONS_REPLAYS_TITLE;
         public static string OPTIONS_REPLAYS_TYPE;
         public static string OPTIONS_REPLAYS_TYPE_DISABLED;
@@ -177,8 +198,7 @@ namespace Distance.Translator
             MENUBUTTON_GOLOBBY = GetLine("menubutton.golobby", "Back To Lobby", true);
             MENUBUTTON_NEXTLEVEL = GetLine("menubutton.nextlevel", "Next Level", true);
             MENUBUTTON_SPECTATE = GetLine("menubutton.spectate", "Spectate", true);
-
-
+            
             ADVENTURE_PREVIEW = GetLine("adventure.preview", "Preview");
             ADVENTURE_PREVIEW_DESCRIPTION = GetLine("adventure.preview.description", "Early version of Adventure mode. Final campaign coming when Distance exits Beta.");
 
@@ -262,6 +282,25 @@ namespace Distance.Translator
             OPTIONS_GENERAL_VISUALIZER_BARS = GetLine("options.general.visualizer.bars", "Bars");
             OPTIONS_GENERAL_SHUFFLELEVELS = GetLine("options.general.shufflelevels", "Shuffle Levels:", true);
             OPTIONS_GENERAL_SHOWTRICKTEXT = GetLine("options.general.showtricktext", "Show Trick Text:", true);
+
+            OPTIONS_CONTROLS_TITLE = GetLine("options.controls.title", "Controls Options", true);
+            OPTIONS_CONTROLS_SUBTITLE = GetLine("options.controls.subtitle", "Editing {0}'s controls");
+            OPTIONS_CONTROLS_DEVICE = GetLine("options.controls.device", "Device", true);
+            OPTIONS_CONTROLS_SCHEME_SELECTED = GetLine("options.controls.scheme.selected", "Selected Scheme:", true);
+            OPTIONS_CONTROLS_SCHEME_EDIT = GetLine("options.controls.scheme.edit", "Edit Scheme", true);
+            OPTIONS_CONTROLS_SCHEME_DELETE = GetLine("options.controls.scheme.delete", "Delete", true);
+            OPTIONS_CONTROLS_SCHEME_DUPLICATE = GetLine("options.controls.scheme.duplicate", "Duplicate", true);
+            OPTIONS_CONTROLS_SCHEME_RENAME = GetLine("options.controls.scheme.rename", "Rename", true);
+            OPTIONS_CONTROLS_INVERTY = GetLine("options.controls.inverty", "Invert Y (Flying):", true);
+            OPTIONS_CONTROLS_SELFRIGHTING = GetLine("options.controls.selfrighting", "Tipped Over Self-Righting:", true);
+            OPTIONS_CONTROLS_LANDINGASSIST = GetLine("options.controls.landingassist", "Flight Landing Assist:", true);
+            OPTIONS_CONTROLS_RUMBLEINTENSITY = GetLine("options.controls.rumbleintensity", "Rumble Intensity:", true);
+            OPTIONS_CONTROLS_STEERINGSENSITIVITY = GetLine("options.controls.steeringsensitivity", "Steering Sensitivity:", true);
+            OPTIONS_CONTROLS_FLIGHTSENSITIVITY = GetLine("options.controls.flightsensitivity", "Flight Sensitivity:", true);
+            OPTIONS_CONTROLS_TAB_BASIC = GetLine("options.controls.tab.basic", "Basic");
+            OPTIONS_CONTROLS_TAB_FLIGHT = GetLine("options.controls.tab.flight", "Flight");
+            OPTIONS_CONTROLS_TAB_CAMERA = GetLine("options.controls.tab.camera", "Camera");
+            OPTIONS_CONTROLS_TAB_MENU = GetLine("options.controls.tab.menu", "Menu");
 
             OPTIONS_REPLAYS_TITLE = GetLine("options.replays.title", "Replay and Ghosts Options");
             OPTIONS_REPLAYS_TYPE = GetLine("options.replays.type", "Ghosts In Arcade Type:", true);

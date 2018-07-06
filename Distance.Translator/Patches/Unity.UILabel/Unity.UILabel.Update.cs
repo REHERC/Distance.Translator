@@ -52,7 +52,6 @@ namespace Distance.Translator
                     case "CAR SCREEN VISUALIZER":
                         Translate.VisualizerTranslate(ref __instance);
                         break;
-                    
                     case "GHOSTS IN ARCADE TYPE":
                         Translate.GhostTypeTranslate(ref __instance);
                         break;

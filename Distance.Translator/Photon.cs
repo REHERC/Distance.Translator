@@ -17,7 +17,7 @@ namespace Distance.Translator
     {
         public void HandleIPCData(IPCData data)
         {
-            throw new NotImplementedException();
+            
         }
 
         public void Initialize(IManager manager, string ipcIdentifier)

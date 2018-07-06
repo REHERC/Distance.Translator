@@ -78,8 +78,6 @@
     <Compile Include="Patches\PauseMenuLogic\PauseMenuLogic.Start.cs" />
     <Compile Include="Patches\TrickClassifier\TGetTrickPartName.cs" />
     <Compile Include="Photon.cs" />
-    <Compile Include="PluginMenu\CreateMenu.cs" />
-    <Compile Include="PluginMenu\LanguageMenu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Storage\Language.cs" />
     <Compile Include="Storage\PrintData.cs" />
@@ -93,11 +91,6 @@
     <Compile Include="Events Subscribers\Events.Game.PauseToggled.cs" />
     <Compile Include="Patches\Unity.UIPanel\Unity.UIPanel.Start.cs" />
     <Compile Include="Patches\Unity.UILabel\Unity.UILabel.Update.cs" />
-    <Compile Include="UI\OptionsSubmenu\MainOptionsSubmenuButton.cs" />
-    <Compile Include="UI\OptionsSubmenu\OptionsSubmenuButton.cs" />
-    <Compile Include="UI\OptionsSubmenu\PauseOptionsSubmenuButton.cs" />
-    <Compile Include="UI\SpectrumMenu.cs" />
-    <Compile Include="Util.cs" />
     <None Include="THE TRASH CAN" />
   </ItemGroup>
   <ItemGroup />

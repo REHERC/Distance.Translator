@@ -297,6 +297,7 @@ namespace Distance.Translator
             OPTIONS_CONTROLS_RUMBLEINTENSITY = GetLine("options.controls.rumbleintensity", "Rumble Intensity:", true);
             OPTIONS_CONTROLS_STEERINGSENSITIVITY = GetLine("options.controls.steeringsensitivity", "Steering Sensitivity:", true);
             OPTIONS_CONTROLS_FLIGHTSENSITIVITY = GetLine("options.controls.flightsensitivity", "Flight Sensitivity:", true);
+            OPTIONS_CONTROLS_INPUTSMOOTHING = GetLine("options.controls.inputsmoothing", "", true);
             OPTIONS_CONTROLS_TAB_BASIC = GetLine("options.controls.tab.basic", "Basic");
             OPTIONS_CONTROLS_TAB_FLIGHT = GetLine("options.controls.tab.flight", "Flight");
             OPTIONS_CONTROLS_TAB_CAMERA = GetLine("options.controls.tab.camera", "Camera");

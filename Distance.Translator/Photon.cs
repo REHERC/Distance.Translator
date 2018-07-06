@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-using System.Threading.Tasks;
-using Distance.Translator.Utilities;
 using Harmony;
 using Spectrum.API;
 using Spectrum.API.Configuration;
@@ -38,6 +36,7 @@ namespace Distance.Translator
                 CurrentPlugin.Log.Info("Patching assemblies ...");
                 Harmony.PatchAll(Assembly.GetExecutingAssembly());
                 CurrentPlugin.Log.Info("Assemblies patched!");
+                
             }
             catch (Exception VirusSpirit)
             {

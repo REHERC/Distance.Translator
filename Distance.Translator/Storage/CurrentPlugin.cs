@@ -16,10 +16,13 @@ namespace Distance.Translator
             Log = new Logger("Distance.Translator.log");
             Log.WriteToConsole = true;
             Config = new Settings("Config");
-            Lang = new Settings(Config.GetItem<String>("LanguageFile"));
+            InitConfig();
+
+
+            Lang = new Settings("Languages/" + Config.GetItem<String>("LanguageFile"));
             if (Config.GetItem<bool>("Dump"))
             {
-                LangDump = new Settings("EN-en");
+                LangDump = new Settings("Language-defaults");
                 LangDump.Save();
             }
             
@@ -35,6 +38,25 @@ namespace Distance.Translator
                 CurrentPlugin.Config["Dump"] = false;
                 CurrentPlugin.Config.Save();
             }
+        }
+
+        public static void InitConfig()
+        {
+            var DefaultConfig = new Dictionary<string, object>
+            {
+                {"LanguageFile", "nothing"},
+                {"Rainbow", false},
+                {"Dump", false}
+            };
+
+            foreach (var entry in DefaultConfig)
+            {
+                if (!Config.ContainsKey(entry.Key))
+                {
+                    Config.Add(entry.Key, entry.Value);
+                }
+            }
+            Config.Save();
         }
 
         public static Logger Log;

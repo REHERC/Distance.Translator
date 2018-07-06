@@ -61,9 +61,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Menu.cs" />
     <Compile Include="Photon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Menu\LanguageMenu.cs" />
     <Compile Include="Storage\CurrentPlugin.cs" />
+    <Compile Include="UI\OptionsSubmenu\MainOptionsSubmenuButton.cs" />
+    <Compile Include="UI\OptionsSubmenu\OptionsSubmenuButton.cs" />
+    <Compile Include="UI\OptionsSubmenu\PauseOptionsSubmenuButton.cs" />
+    <Compile Include="UI\SpectrumMenu.cs" />
+    <Compile Include="Util.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

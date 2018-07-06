@@ -13,17 +13,13 @@ using Spectrum.API.Logging;
 
 namespace Distance.Translator
 {
-    public partial class Photon : IPlugin,IIPCEnabled
+    public partial class Photon : IPlugin
     {
-        public void HandleIPCData(IPCData data)
-        {
-            
-        }
-
         public void Initialize(IManager manager, string ipcIdentifier)
         {
             Console.WriteLine("Initializing ...");
             CurrentPlugin.initialize();
+            //IPC.IPCAntenna.initialize(manager,ipcIdentifier);
             CurrentPlugin.Log.Info("Initialization done!");
             PrintLogo();
             CurrentPlugin.Log.Warning("Currently using \"" + CurrentPlugin.Config.GetItem<string>("LanguageFile") + ".json\"");
@@ -36,24 +32,14 @@ namespace Distance.Translator
                 CurrentPlugin.Log.Info("Patching assemblies ...");
                 Harmony.PatchAll(Assembly.GetExecutingAssembly());
                 CurrentPlugin.Log.Info("Assemblies patched!");
-                
             }
             catch (Exception VirusSpirit)
             {
                 CurrentPlugin.Log.Error("Failed to patch the assemblies!");
                 CurrentPlugin.Log.Exception(VirusSpirit);
             }
-            try
-            {
-                CurrentPlugin.Log.Info("Subscribing to game Events ...");
-                //Events.Game.PauseToggled.Subscribe(EventListeners.Game_PauseToggled);
-                CurrentPlugin.Log.Info("Subscribed to Events!");
-            }
-            catch (Exception VirusSpirit)
-            {
-                CurrentPlugin.Log.Error("Failed to subscribe to Events!");
-                CurrentPlugin.Log.Exception(VirusSpirit);
-            }
+            //LanguageManager.DetectLanguages();
+            //LanguageManager.SendLanguageList();
         }
         
         public void PrintLogo()
@@ -63,7 +49,5 @@ namespace Distance.Translator
                 CurrentPlugin.Log.Info(line);
             }
         }
-
-        
     }
 }

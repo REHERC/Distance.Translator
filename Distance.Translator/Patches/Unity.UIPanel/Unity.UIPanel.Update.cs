@@ -17,12 +17,11 @@ namespace Distance.Translator
 {
     public partial class Photon
     {
-        [HarmonyPatch(typeof(UIPanel), "Update")]
-        internal class UIPanel_Update_Patch : UIPanel
+        [HarmonyPatch(typeof(UIPanel), "Start")]
+        internal class UIPanel_Start_Patch : UIPanel
         {
             public static void Postfix(UIPanel __instance)
             {
-                Console.WriteLine("OOPDATING DA UI PANEL LOGIC DOOD !");
 				switch (__instance.name)
                 {
                     case "Panel - Audio":

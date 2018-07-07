@@ -49,12 +49,14 @@ namespace Distance.Translator
             }
         }
 
-        public static void SendLanguageList()
+        public static void SendLanguages()
         {
             foreach (LanguageInfo language in Languages)
             {
                 IPCAntenna.SendLanguageAdd("DistanceTranslatorOptionsMenu",language.Name,language.Author);
             }
+            IPCAntenna.SendIPCEnd("DistanceTranslatorOptionsMenu");
+
         }
     }
 }

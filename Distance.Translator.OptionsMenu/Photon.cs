@@ -9,12 +9,18 @@ using Spectrum.API.IPC;
 
 namespace Distance.Translator.OptionsMenu
 {
-    public class Photon : IPlugin
+    public class Photon : IPlugin,IIPCEnabled
     {
+        public void HandleIPCData(IPCData data)
+        {
+            IPCAntenna.RecieveData(data);
+        }
+
         public void Initialize(IManager manager, string ipcIdentifier)
         {
             Console.WriteLine("Initializing ...");
             CurrentPlugin.initialize();
+            IPCAntenna.initialize(manager,ipcIdentifier);
             CurrentPlugin.Log.Info("Initialization done!");
             CurrentPlugin.Log.Info("Subscribing to game Events ...");
             Events.Scene.LoadFinish.Subscribe((data) =>
@@ -25,9 +31,11 @@ namespace Distance.Translator.OptionsMenu
                 }
             });
             CurrentPlugin.Log.Info("Subscribed to Events!");
+            CurrentPlugin.Log.Info("Sending IPC request ...");
+            IPCAntenna.SendAwake("DistanceTranslator");
+            CurrentPlugin.Log.Info("IPC request sent!");
 
 
-            
         }
     }
 }

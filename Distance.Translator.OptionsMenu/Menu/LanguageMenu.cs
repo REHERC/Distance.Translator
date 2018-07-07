@@ -4,17 +4,21 @@ namespace Distance.Translator.OptionsMenu
 {
     public class LanguageMenu : SpectrumMenu
     {
-        public override string MenuTitleName_ => "Language Settings";
-        public override string Name_ => "Language";
+        public override string MenuTitleName_ => Language.PLUGIN_MENU_TITLE;
+        public override string Name_ => Language.PLUGIN_MENU_NAME;
 
         public override bool DisplayInMenu(bool isPauseMenu) => true;
 
         public override void InitializeVirtual()
         {
-            TweakAction("TweakAction", () => { }, "Action");
-            TweakBool("TweakBool",true,(value) => { },"Boolean");
-            TweakFloat("TweakFloat",0, (value) => { }, "Float");
-            TweakInt("TweakInt",5,0,10,5, (value) => { }, "Integer");
+            TweakBool(Language.PLUGIN_MENU_RAINBOWMODE,true,(bool value) => { Console.WriteLine("RAINBOW MODE : " + value); }, Language.PLUGIN_MENU_RAINBOWMODE_DESCRIPTION);
+
+            base.InitializeVirtual();
+        }
+
+        public override void OnPanelPop()
+        {
+            base.OnPanelPop();
         }
     }
 }

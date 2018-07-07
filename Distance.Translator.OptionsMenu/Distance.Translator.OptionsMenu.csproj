@@ -61,11 +61,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IPC\IPCAntenna.cs" />
     <Compile Include="Menu.cs" />
     <Compile Include="Photon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Menu\LanguageMenu.cs" />
     <Compile Include="Storage\CurrentPlugin.cs" />
+    <Compile Include="Storage\Language\Language.cs" />
+    <Compile Include="Storage\Language\SharedSettings.cs" />
     <Compile Include="UI\OptionsSubmenu\MainOptionsSubmenuButton.cs" />
     <Compile Include="UI\OptionsSubmenu\OptionsSubmenuButton.cs" />
     <Compile Include="UI\OptionsSubmenu\PauseOptionsSubmenuButton.cs" />

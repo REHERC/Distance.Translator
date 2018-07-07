@@ -13,13 +13,18 @@ using Spectrum.API.Logging;
 
 namespace Distance.Translator
 {
-    public partial class Photon : IPlugin
+    public partial class Photon : IPlugin,IIPCEnabled
     {
+        public void HandleIPCData(IPCData data)
+        {
+            IPCAntenna.RecieveData(data);
+        }
+
         public void Initialize(IManager manager, string ipcIdentifier)
         {
             Console.WriteLine("Initializing ...");
             CurrentPlugin.initialize();
-            //IPC.IPCAntenna.initialize(manager,ipcIdentifier);
+            IPCAntenna.initialize(manager,ipcIdentifier);
             CurrentPlugin.Log.Info("Initialization done!");
             PrintLogo();
             CurrentPlugin.Log.Warning("Currently using \"" + CurrentPlugin.Config.GetItem<string>("LanguageFile") + ".json\"");

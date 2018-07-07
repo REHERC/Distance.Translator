@@ -11,7 +11,14 @@ namespace Distance.Translator
     {
         public static string LANGUAGE_NAME;
         public static string LANGUAGE_AUTHOR;
-        
+
+        public static string PLUGIN_MENU_NAME;
+        public static string PLUGIN_MENU_TITLE;
+        public static string PLUGIN_MENU_LANGUAGE;
+        public static string PLUGIN_MENU_LANGUAGE_DESCRIPTION;
+        public static string PLUGIN_MENU_RAINBOWMODE;
+        public static string PLUGIN_MENU_RAINBOWMODE_DESCRIPTION;
+
         public static string BUTTON_APPLY;
         public static string BUTTON_BACK;
         public static string BUTTON_YES;
@@ -21,8 +28,9 @@ namespace Distance.Translator
         public static string BUTTON_START;
         public static string BUTTON_DELETE;
 
+        public static string HEADER_DESCRIPTION;
+
         public static string MAINMENU_PRESSKEY;
-        //public static string MAINMENU_GAMETITLEIDLE;
 
         public static string MENUBUTTON_ADVENTURE;
         public static string MENUBUTTON_ARCADE;
@@ -158,7 +166,6 @@ namespace Distance.Translator
         public static string OPTIONS_REPLAYS_BRIGHTNESS;
         public static string OPTIONS_REPLAYS_NAMESVISIBLE;
         public static string OPTIONS_REPLAYS_PLAYBACKSPEED;
-
     }
 
     public static partial class Language
@@ -167,7 +174,14 @@ namespace Distance.Translator
         {
             LANGUAGE_NAME = GetLine("language.name","Default");
             LANGUAGE_AUTHOR = GetLine("language.author","Refract");
-            
+
+            PLUGIN_MENU_NAME = GetLine("plugin.menu.name", "Language");
+            PLUGIN_MENU_TITLE = GetLine("plugin.menu.title", "Language Settings");
+            PLUGIN_MENU_LANGUAGE = GetLine("plugin.menu.language", "Language:", true);
+            PLUGIN_MENU_LANGUAGE_DESCRIPTION = GetLine("plugin.menu.language.description", "Language\n[FF0000]The game needs to be restarted for this setting to take effect.[-]");
+            PLUGIN_MENU_RAINBOWMODE = GetLine("plugin.menu.rainbowmode", "Rainbow Mode:", true);
+            PLUGIN_MENU_RAINBOWMODE_DESCRIPTION = GetLine("plugin.menu.rainbowmode.description", "Rainbow Mode\n[FF0000]The game needs to be restarted for this setting to take effect.[-]");
+
             BUTTON_BACK = GetLine("button.back", "Back");
             BUTTON_APPLY = GetLine("button.apply", "Apply");
             BUTTON_YES = GetLine("button.yes", "Yes");
@@ -177,9 +191,10 @@ namespace Distance.Translator
             BUTTON_START = GetLine("button.start", "Start");
             BUTTON_DELETE = GetLine("button.delete", "Delete");
 
-            MAINMENU_PRESSKEY = GetLine("mainmenu.presskey", "Press any button to start", true,1);
-            //MAINMENU_GAMETITLEIDLE = GetLine("mainmenu.gametitleidle", "DISTANCE", true, 2);
+            HEADER_DESCRIPTION = GetLine("header.description", "Description", true);
 
+            MAINMENU_PRESSKEY = GetLine("mainmenu.presskey", "Press any button to start", true,1);
+            
             MENUBUTTON_ADVENTURE = GetLine("menubutton.adventure", "Adventure",true);
             MENUBUTTON_ARCADE = GetLine("menubutton.arcade", "Arcade",true);
             MENUBUTTON_MULTIPLAYER = GetLine("menubutton.multiplayer", "Multiplayer",true);
@@ -330,11 +345,12 @@ namespace Distance.Translator
             string result = "";
             try
             {
+                if (CurrentPlugin.Config.GetItem<string>("LanguageFile") == ":default:") { throw new Exception("default language"); }
                 result = CurrentPlugin.Lang.GetItem<string>(Line);
             }
             catch (Exception VirusSpirit)
             {
-                if (!(Line == "nothing")) {
+                if (Line != "nothing" && VirusSpirit.Message != "default language") {
                     CurrentPlugin.Log.Exception(VirusSpirit);
                     CurrentPlugin.Log.Error("Impossible to find the translation key for \"" + Line + "\" in \"" + CurrentPlugin.Config.GetItem<String>("LanguageFile") + ".json\"");
                 }
@@ -385,7 +401,7 @@ namespace Distance.Translator
             {
                 CurrentPlugin.LangDump[Line] = Default;
             }
-            //CurrentPlugin.Log.Info("Loaded text for \"" + Line + "\" = \"" +  result + "\"");
+            //Console.WriteLine("Loaded text for \"" + Line + "\" = \"" +  result + "\"");
             return result;
         }
     }

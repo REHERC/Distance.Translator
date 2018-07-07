@@ -27,12 +27,13 @@ namespace Distance.Translator
             _manager.SendIPC(ipcIdentifier, data);
         }
 
-        public static void SendLanguageAdd(string ipcIdentifier, string LanguageName, string Author)
+        public static void SendLanguageAdd(string ipcIdentifier, string Name, string Author, string File)
         {
             IPCData data = new IPCData(_ipcIdentifier);
             data["request"] = "language-add";
-            data["languagename"] = LanguageName;
+            data["name"] = Name;
             data["author"] = Author;
+            data["file"] = File;
             _manager.SendIPC(ipcIdentifier, data);
         }
 
@@ -42,13 +43,6 @@ namespace Distance.Translator
             data["request"] = "setting";
             data["setting"] = Setting;
             data["value"] = Value;
-            _manager.SendIPC(ipcIdentifier, data);
-        }
-
-        public static void SendIPCEnd(string ipcIdentifier)
-        {
-            IPCData data = new IPCData(_ipcIdentifier);
-            data["request"] = "ipc-end";
             _manager.SendIPC(ipcIdentifier, data);
         }
     }
@@ -61,6 +55,19 @@ namespace Distance.Translator
             {
                 switch (data["request"].ToString())
                 {
+                    case "setting":
+                        switch (data["setting"].ToString())
+                        {
+                            case "config.language":
+                                CurrentPlugin.Config["LanguageFile"] = (string)data["value"].ToString();
+                                CurrentPlugin.Config.Save();
+                                break;
+                            case "config.rainbow":
+                                CurrentPlugin.Config["Rainbow"] = (bool)data["value"];
+                                CurrentPlugin.Config.Save();
+                                break;
+                        }
+                        break;
                     case "awake":
                         if (data.SourceIdentifier == "DistanceTranslatorOptionsMenu") {
                             SendTranslation("DistanceTranslatorOptionsMenu", "header.description", Language.HEADER_DESCRIPTION);
@@ -71,11 +78,12 @@ namespace Distance.Translator
                             SendTranslation("DistanceTranslatorOptionsMenu", "plugin.menu.language.description", Language.PLUGIN_MENU_LANGUAGE_DESCRIPTION);
                             SendTranslation("DistanceTranslatorOptionsMenu", "plugin.menu.rainbowmode", Language.PLUGIN_MENU_RAINBOWMODE);
                             SendTranslation("DistanceTranslatorOptionsMenu", "plugin.menu.rainbowmode.description", Language.PLUGIN_MENU_RAINBOWMODE_DESCRIPTION);
+                            
+                            //LanguageManager.DetectLanguages();
+                            //LanguageManager.SendLanguages();
 
-                            SendSetting("DistanceTranslatorOptionsMenu","", CurrentPlugin.Config.GetItem<string>("LanguageFile"));
-
-                            LanguageManager.DetectLanguages();
-                            LanguageManager.SendLanguages();
+                            SendSetting("DistanceTranslatorOptionsMenu", "config.language", CurrentPlugin.Config.GetItem<string>("LanguageFile"));
+                            SendSetting("DistanceTranslatorOptionsMenu", "config.rainbow", CurrentPlugin.Config.GetItem<bool>("Rainbow"));
                         }
                         break;
                 }

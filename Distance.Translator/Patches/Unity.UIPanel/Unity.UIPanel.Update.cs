@@ -22,7 +22,11 @@ namespace Distance.Translator
         {
             public static void Postfix(UIPanel __instance)
             {
-				switch (__instance.name)
+                if (__instance.name == Language.PLUGIN_MENU_NAME)
+                {
+                    GameObject.Find("Options/DescriptionArea/Title").GetComponentsInChildren<UILabel>()[0].text = Language.HEADER_DESCRIPTION;
+                }
+                switch (__instance.name)
                 {
                     case "Panel - Audio":
                         GameObject.Find("VolumeOptions/Master").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_AUDIO_MASTER;

@@ -20,6 +20,7 @@ namespace Distance.Translator.OptionsMenu
         {
             Console.WriteLine("Initializing ...");
             CurrentPlugin.initialize();
+            LanguageManager.InitLanguages();
             IPCAntenna.initialize(manager,ipcIdentifier);
             CurrentPlugin.Log.Info("Initialization done!");
             CurrentPlugin.Log.Info("Subscribing to game Events ...");
@@ -31,11 +32,9 @@ namespace Distance.Translator.OptionsMenu
                 }
             });
             CurrentPlugin.Log.Info("Subscribed to Events!");
-            CurrentPlugin.Log.Info("Sending IPC request ...");
+            CurrentPlugin.Log.Info("Starting IPC ...");
             IPCAntenna.SendAwake("DistanceTranslator");
-            CurrentPlugin.Log.Info("IPC request sent!");
-
-
+            CurrentPlugin.Log.Info("IPC done!");
         }
     }
 }

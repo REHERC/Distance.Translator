@@ -11,5 +11,6 @@ namespace Distance.Translator.OptionsMenu
     {
         public static string SELECTED_LANGUAGE;
         public static bool RAINBOW_MODE;
+        public static LanguageInfo CURRENT_LANGUAGE;
     }
 }

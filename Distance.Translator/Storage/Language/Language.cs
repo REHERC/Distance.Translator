@@ -178,9 +178,9 @@ namespace Distance.Translator
             PLUGIN_MENU_NAME = GetLine("plugin.menu.name", "Language");
             PLUGIN_MENU_TITLE = GetLine("plugin.menu.title", "Language Settings");
             PLUGIN_MENU_LANGUAGE = GetLine("plugin.menu.language", "Language:", true);
-            PLUGIN_MENU_LANGUAGE_DESCRIPTION = GetLine("plugin.menu.language.description", "Language\n[FF0000]The game needs to be restarted for this setting to take effect.[-]");
+            PLUGIN_MENU_LANGUAGE_DESCRIPTION = GetLine("plugin.menu.language.description", "Selected language: The language displayed by the game.\n[FF0000]The game needs to be restarted for this setting to take effect.[-]");
             PLUGIN_MENU_RAINBOWMODE = GetLine("plugin.menu.rainbowmode", "Rainbow Mode:", true);
-            PLUGIN_MENU_RAINBOWMODE_DESCRIPTION = GetLine("plugin.menu.rainbowmode.description", "Rainbow Mode\n[FF0000]The game needs to be restarted for this setting to take effect.[-]");
+            PLUGIN_MENU_RAINBOWMODE_DESCRIPTION = GetLine("plugin.menu.rainbowmode.description", "Rainbow Mode: Applies a rainbow-like effect to every text translated by the plugin.\n[FF0000]The game needs to be restarted for this setting to take effect.[-]");
 
             BUTTON_BACK = GetLine("button.back", "Back");
             BUTTON_APPLY = GetLine("button.apply", "Apply");
@@ -378,7 +378,7 @@ namespace Distance.Translator
             if (rainbow || (bool)CurrentPlugin.Config.GetItem<bool>("Rainbow"))
             {
                 int index = 0;
-                string rainbowresult = result;
+                string rainbowresult = "";
                 foreach (char chr in result)
                 {
                     if (!(chr == ' '))

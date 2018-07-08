@@ -95,7 +95,7 @@
     <None Include="THE TRASH CAN" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CONTRIBUTORS.txt" />
+    <None Include="CONTRIBUTORS.md" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

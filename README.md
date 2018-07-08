@@ -27,8 +27,9 @@ Big thanks to y'all dudes !
 >	GitHub: https://github.com/Ciastex
 
 - <b>Nico</b> :
-> 	Discord: <b>@Nico#5480</b>
-
+> 	Discord: <b>@Nico#5480</b><br>
+>   GitHub: https://github.com/Larnin
+>   
 - <b>Peng</b> :
 >	Discord: <b>@pigpenguin#3078</b><br>
 >   GitHub: https://github.com/PigPenguin

@@ -4,13 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{778817BC-393A-43ED-B62C-CFD9ED29D4C3}</ProjectGuid>
+    <ProjectGuid>{255B2E88-D7EA-4A10-A508-3FC744EAB0C1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Options.Menu</RootNamespace>
-    <AssemblyName>Options.Menu</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <RootNamespace>Distance.Translator.Menu</RootNamespace>
+    <AssemblyName>Distance.Translator.Menu</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -49,9 +50,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="UnityEngine">
       <HintPath>..\Referenced Assemblies\UnityEngine.dll</HintPath>
@@ -68,19 +67,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IPC\IPCAntenna.cs" />
-    <Compile Include="LanguageMenu.cs" />
-    <Compile Include="Menu\Custom Menus\LanguageSettingsMenu.cs" />
-    <Compile Include="Menu\Menu System\UI\OptionsSubmenu\MainOptionsSubmenuButton.cs" />
-    <Compile Include="Menu\Menu System\UI\OptionsSubmenu\OptionsSubmenuButton.cs" />
-    <Compile Include="Menu\Menu System\UI\OptionsSubmenu\PauseOptionsSubmenuButton.cs" />
-    <Compile Include="Menu\Menu System\UI\SpectrumMenu.cs" />
-    <Compile Include="Menu\Menu System\Util.cs" />
     <Compile Include="Photon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Storage\CurrentPlugin.cs" />
-    <Compile Include="Storage\Language\LanguageKeys.cs" />
+    <Compile Include="Storage\Language\Language.cs" />
     <Compile Include="Storage\Language\LanguageManager.cs" />
     <Compile Include="Storage\SharedSettings.cs" />
+    <Compile Include="UI\Menus\LanguageSettingsMenu.cs" />
+    <Compile Include="UI\OptionsSubmenu\MainOptionsSubmenuButton.cs" />
+    <Compile Include="UI\OptionsSubmenu\OptionsSubmenuButton.cs" />
+    <Compile Include="UI\OptionsSubmenu\PauseOptionsSubmenuButton.cs" />
+    <Compile Include="UI\SpectrumMenu.cs" />
     <Compile Include="Util.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

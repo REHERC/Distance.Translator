@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
-namespace Spectrum.MenuSystem
+namespace Spectrum.Menu
 {
     public class MainOptionsSubmenuButton : OptionsSubmenuButton
     {

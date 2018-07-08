@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Distance.Translator
+﻿namespace Distance.Translator
 {
     public static partial class Translate
     {
@@ -13,16 +7,16 @@ namespace Distance.Translator
             switch (label.text.ToUpper())
             {
                 case "ALL MODES":
-                    label.text = Language.OPTIONS_AUDIO_ANNOUNCERSETTINGS_ALLMODES;
+                    label.text = LanguageKeys.OPTIONS_AUDIO_ANNOUNCERSETTINGS_ALLMODES;
                     break;
                 case "ARCADE ONLY":
-                    label.text = Language.OPTIONS_AUDIO_ANNOUNCERSETTINGS_ARCADEONLY;
+                    label.text = LanguageKeys.OPTIONS_AUDIO_ANNOUNCERSETTINGS_ARCADEONLY;
                     break;
                 case "STUNT ONLY":
-                    label.text = Language.OPTIONS_AUDIO_ANNOUNCERSETTINGS_STUNTONLY;
+                    label.text = LanguageKeys.OPTIONS_AUDIO_ANNOUNCERSETTINGS_STUNTONLY;
                     break;
                 case "DISABLED":
-                    label.text = Language.OPTIONS_AUDIO_ANNOUNCERSETTINGS_DISABLED;
+                    label.text = LanguageKeys.OPTIONS_AUDIO_ANNOUNCERSETTINGS_DISABLED;
                     break;
             }
         }

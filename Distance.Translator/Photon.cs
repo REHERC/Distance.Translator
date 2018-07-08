@@ -22,13 +22,13 @@ namespace Distance.Translator
 
         public void Initialize(IManager manager, string ipcIdentifier)
         {
-            Console.WriteLine("Initializing ...");
+            Console.WriteLine($"Initializing ... ({ipcIdentifier})");
             CurrentPlugin.initialize();
             IPCAntenna.initialize(manager,ipcIdentifier);
             CurrentPlugin.Log.Info("Initialization done!");
             PrintLogo();
             CurrentPlugin.Log.Warning("Currently using \"" + CurrentPlugin.Config.GetItem<string>("LanguageFile") + ".json\"");
-            CurrentPlugin.Log.Warning(Language.LANGUAGE_NAME + " by " + Language.LANGUAGE_AUTHOR);
+            CurrentPlugin.Log.Warning(LanguageKeys.LANGUAGE_NAME + " by " + LanguageKeys.LANGUAGE_AUTHOR);
             try
             {
                 CurrentPlugin.Log.Info("Instantiating Harmony Patcher ...");

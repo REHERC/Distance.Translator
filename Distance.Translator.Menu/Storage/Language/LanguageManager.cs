@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Spectrum.API.Configuration;
-using Spectrum.API.Storage;
+﻿using System.Collections.Generic;
 
-namespace Options.Menu
+namespace Distance.Translator.Menu
 {
     public class LanguageInfo
     {

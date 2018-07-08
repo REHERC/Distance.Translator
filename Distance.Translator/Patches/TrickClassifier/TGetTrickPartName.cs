@@ -1,18 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 using System.Reflection.Emit;
-using System.Text;
-using System.Threading.Tasks;
 using Harmony;
-using Spectrum.API;
-using Spectrum.API.Configuration;
-using Spectrum.API.Interfaces.Plugins;
-using Spectrum.API.Interfaces.Systems;
-using Spectrum.API.Logging;
-using UnityEngine;
-using UnityEngine.UI;
 
 namespace Distance.Translator
 {
@@ -30,25 +20,25 @@ namespace Distance.Translator
                     {
                         switch(codes[i].operand.ToString()) {
                             case "Freestyle":
-                                codes[i].operand = Language.TRICK_FREESTYLE;
+                                codes[i].operand = LanguageKeys.TRICK_FREESTYLE;
                                 break;
                             case "Barrel Roll":
-                                codes[i].operand = Language.TRICK_BARRELROLL;
+                                codes[i].operand = LanguageKeys.TRICK_BARRELROLL;
                                 break;
                             case "Back Flip":
-                                codes[i].operand = Language.TRICK_BACKFLIP;
+                                codes[i].operand = LanguageKeys.TRICK_BACKFLIP;
                                 break;
                             case "Front Flip":
-                                codes[i].operand = Language.TRICK_FRONTFLIP;
+                                codes[i].operand = LanguageKeys.TRICK_FRONTFLIP;
                                 break;
                             case "Back Twist":
-                                codes[i].operand = Language.TRICK_BACKTWIST;
+                                codes[i].operand = LanguageKeys.TRICK_BACKTWIST;
                                 break;
                             case "Front Twist":
-                                codes[i].operand = Language.TRICK_FRONTTWIST;
+                                codes[i].operand = LanguageKeys.TRICK_FRONTTWIST;
                                 break;
                             case "Frisbee":
-                                codes[i].operand = Language.TRICK_FRISBEE;
+                                codes[i].operand = LanguageKeys.TRICK_FRISBEE;
                                 break;
                         }
                     }
@@ -70,22 +60,22 @@ namespace Distance.Translator
                         switch (codes[i].operand.ToString())
                         {
                             case "Freestyle":
-                                codes[i].operand = Language.TRICK_FREESTYLE;
+                                codes[i].operand = LanguageKeys.TRICK_FREESTYLE;
                                 break;
                             case "Wall Ride":
-                                codes[i].operand = Language.TRICK_WALLRIDE;
+                                codes[i].operand = LanguageKeys.TRICK_WALLRIDE;
                                 break;
                             case "Ceiling Ride":
-                                codes[i].operand = Language.TRICK_CEILINGRIDE;
+                                codes[i].operand = LanguageKeys.TRICK_CEILINGRIDE;
                                 break;
                             case "Grind":
-                                codes[i].operand = Language.TRICK_GRIND;
+                                codes[i].operand = LanguageKeys.TRICK_GRIND;
                                 break;
                             case "Wheelie":
-                                codes[i].operand = Language.TRICK_WHEELIE;
+                                codes[i].operand = LanguageKeys.TRICK_WHEELIE;
                                 break;
                             case "Side Wheelie":
-                                codes[i].operand = Language.TRICK_SIDEWHEELIE;
+                                codes[i].operand = LanguageKeys.TRICK_SIDEWHEELIE;
                                 break;
                         }
                     }
@@ -107,10 +97,10 @@ namespace Distance.Translator
                         switch (codes[i].operand.ToString())
                         {
                             case "Freestyle":
-                                codes[i].operand = Language.TRICK_FREESTYLE;
+                                codes[i].operand = LanguageKeys.TRICK_FREESTYLE;
                                 break;
                             case "Nose Stand":
-                                codes[i].operand = Language.TRICK_NOSESTAND;
+                                codes[i].operand = LanguageKeys.TRICK_NOSESTAND;
                                 break;
                         }
                     }

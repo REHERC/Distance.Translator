@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using Spectrum.API.Configuration;
 
 namespace Distance.Translator
 {
-    public static partial class Language
+    public static partial class LanguageKeys
     {
         public static string LANGUAGE_NAME;
         public static string LANGUAGE_AUTHOR;
@@ -168,7 +165,7 @@ namespace Distance.Translator
         public static string OPTIONS_REPLAYS_PLAYBACKSPEED;
     }
 
-    public static partial class Language
+    public static partial class LanguageKeys
     {
         public static void Initialize()
         {

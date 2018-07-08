@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Spectrum.API.Configuration;
-using Spectrum.API.Logging;
-using Spectrum.API.Storage;
+﻿using Spectrum.API.Logging;
 
-namespace Options.Menu
+namespace Distance.Translator.Menu
 {
     public static class CurrentPlugin
     {

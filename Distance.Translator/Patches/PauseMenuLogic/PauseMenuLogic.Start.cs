@@ -3,15 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-using System.Threading.Tasks;
 using Harmony;
-using Spectrum.API;
-using Spectrum.API.Configuration;
-using Spectrum.API.Interfaces.Plugins;
-using Spectrum.API.Interfaces.Systems;
-using Spectrum.API.Logging;
-using UnityEngine;
-using UnityEngine.UI;
 
 namespace Distance.Translator
 {
@@ -22,16 +14,16 @@ namespace Distance.Translator
         {
             public static void Postfix(PauseMenuLogic __instance)
             {
-                __instance.resumeButton_.GetComponentsInChildren<UILabel>()[0].text = Language.MENUBUTTON_RESUME;
-                __instance.restartButton_.GetComponentsInChildren<UILabel>()[0].text = Language.MENUBUTTON_RESTART;
-                __instance.spectateButton_.GetComponentsInChildren<UILabel>()[0].text = Language.MENUBUTTON_SPECTATE;
-                __instance.backToEditorButton_.GetComponentsInChildren<UILabel>()[0].text = Language.MENUBUTTON_GOEDITOR;
-                __instance.backToLobbyButton_.GetComponentsInChildren<UILabel>()[0].text = Language.MENUBUTTON_GOLOBBY;
-                __instance.mainMenuButton_.GetComponentsInChildren<UILabel>()[0].text = Language.MENUBUTTON_GOMENU;
-                __instance.optionsButton_.GetComponentsInChildren<UILabel>()[0].text = Language.MENUBUTTON_OPTIONS;
-                __instance.nextLevelButton_.GetComponentsInChildren<UILabel>()[0].text = Language.MENUBUTTON_NEXTLEVEL;
-                __instance.reportBugButton_.GetComponentsInChildren<UILabel>()[0].text = Language.MENUBUTTON_BUGREPORT;
-                __instance.quitButton_.GetComponentsInChildren<UILabel>()[0].text = Language.MENUBUTTON_QUIT;
+                __instance.resumeButton_.GetComponentsInChildren<UILabel>()[0].text = LanguageKeys.MENUBUTTON_RESUME;
+                __instance.restartButton_.GetComponentsInChildren<UILabel>()[0].text = LanguageKeys.MENUBUTTON_RESTART;
+                __instance.spectateButton_.GetComponentsInChildren<UILabel>()[0].text = LanguageKeys.MENUBUTTON_SPECTATE;
+                __instance.backToEditorButton_.GetComponentsInChildren<UILabel>()[0].text = LanguageKeys.MENUBUTTON_GOEDITOR;
+                __instance.backToLobbyButton_.GetComponentsInChildren<UILabel>()[0].text = LanguageKeys.MENUBUTTON_GOLOBBY;
+                __instance.mainMenuButton_.GetComponentsInChildren<UILabel>()[0].text = LanguageKeys.MENUBUTTON_GOMENU;
+                __instance.optionsButton_.GetComponentsInChildren<UILabel>()[0].text = LanguageKeys.MENUBUTTON_OPTIONS;
+                __instance.nextLevelButton_.GetComponentsInChildren<UILabel>()[0].text = LanguageKeys.MENUBUTTON_NEXTLEVEL;
+                __instance.reportBugButton_.GetComponentsInChildren<UILabel>()[0].text = LanguageKeys.MENUBUTTON_BUGREPORT;
+                __instance.quitButton_.GetComponentsInChildren<UILabel>()[0].text = LanguageKeys.MENUBUTTON_QUIT;
                 foreach (UIExButton button in __instance.optionButtonsPanel_.GetComponentsInChildren<UIExButton>())
                 {
                     Translate.OptionsPanelButtons(button.GetComponentsInChildren<UILabel>()[0]);

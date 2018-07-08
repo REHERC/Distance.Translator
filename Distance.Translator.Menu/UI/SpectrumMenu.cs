@@ -1,6 +1,6 @@
 ﻿using Spectrum.API.Interfaces.Systems;
 
-namespace Spectrum.MenuSystem.UI
+namespace Spectrum.Menu.UI
 {
     public abstract class SpectrumMenu : SuperMenu
     {

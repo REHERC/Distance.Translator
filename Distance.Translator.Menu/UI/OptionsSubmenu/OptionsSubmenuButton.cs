@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 
-namespace Spectrum.MenuSystem
+namespace Spectrum.Menu
 {
     public abstract class OptionsSubmenuButton
     {

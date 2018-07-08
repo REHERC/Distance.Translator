@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Spectrum.API.Interfaces.Systems;
+﻿using Spectrum.API.Interfaces.Systems;
 using Spectrum.API.IPC;
 
 namespace Distance.Translator
 {
     public static partial class IPCAntenna
     {
-        public const string OPTIONS_MENU_IPC = "TranslatorOptionsMenu";
+        public const string OPTIONS_MENU_IPC = "DistanceTranslatorMenu";
 
         private static string _ipcIdentifier;
         private static IManager _manager;
@@ -78,17 +73,17 @@ namespace Distance.Translator
                         }
                         break;
                     case "awake":
-                        if (data.SourceIdentifier == "DistanceTranslatorOptionsMenu") {
+                        if (data.SourceIdentifier == OPTIONS_MENU_IPC) {
                             SendAwake(OPTIONS_MENU_IPC);
 
-                            SendTranslation(OPTIONS_MENU_IPC, "header.description", Language.HEADER_DESCRIPTION);
+                            SendTranslation(OPTIONS_MENU_IPC, "header.description", LanguageKeys.HEADER_DESCRIPTION);
                             
-                            SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.name", Language.PLUGIN_MENU_NAME);
-                            SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.title", Language.PLUGIN_MENU_TITLE);
-                            SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.language", Language.PLUGIN_MENU_LANGUAGE);
-                            SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.language.description", Language.PLUGIN_MENU_LANGUAGE_DESCRIPTION);
-                            SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.rainbowmode", Language.PLUGIN_MENU_RAINBOWMODE);
-                            SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.rainbowmode.description", Language.PLUGIN_MENU_RAINBOWMODE_DESCRIPTION);
+                            SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.name", LanguageKeys.PLUGIN_MENU_NAME);
+                            SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.title", LanguageKeys.PLUGIN_MENU_TITLE);
+                            SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.language", LanguageKeys.PLUGIN_MENU_LANGUAGE);
+                            SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.language.description", LanguageKeys.PLUGIN_MENU_LANGUAGE_DESCRIPTION);
+                            SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.rainbowmode", LanguageKeys.PLUGIN_MENU_RAINBOWMODE);
+                            SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.rainbowmode.description", LanguageKeys.PLUGIN_MENU_RAINBOWMODE_DESCRIPTION);
                             
                             //LanguageManager.DetectLanguages();
                             //LanguageManager.SendLanguages();

@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-
 namespace Distance.Translator
 {
     public static partial class Translate
@@ -13,10 +11,10 @@ namespace Distance.Translator
             switch (label.text.ToUpper())
             {
                 case "METRIC":
-                    label.text = Language.OPTIONS_GENERAL_UNITS_METRIC;
+                    label.text = LanguageKeys.OPTIONS_GENERAL_UNITS_METRIC;
                     break;
                 case "IMPERIAL":
-                    label.text = Language.OPTIONS_GENERAL_UNITS_IMPERIAL;
+                    label.text = LanguageKeys.OPTIONS_GENERAL_UNITS_IMPERIAL;
                     break;
             }
         }

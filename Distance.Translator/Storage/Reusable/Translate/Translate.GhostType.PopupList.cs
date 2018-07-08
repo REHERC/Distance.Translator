@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Distance.Translator
+﻿namespace Distance.Translator
 {
     public static partial class Translate
     {
@@ -13,19 +7,19 @@ namespace Distance.Translator
             switch (label.text.ToUpper())
             {
                 case "DISABLED":
-                    label.text = Language.OPTIONS_REPLAYS_TYPE_DISABLED;
+                    label.text = LanguageKeys.OPTIONS_REPLAYS_TYPE_DISABLED;
                     break;
                 case "LOCAL":
-                    label.text = Language.OPTIONS_REPLAYS_TYPE_LOCAL;
+                    label.text = LanguageKeys.OPTIONS_REPLAYS_TYPE_LOCAL;
                     break;
                 case "FRIENDS":
-                    label.text = Language.OPTIONS_REPLAYS_TYPE_FRIENDS;
+                    label.text = LanguageKeys.OPTIONS_REPLAYS_TYPE_FRIENDS;
                     break;
                 case "NEAR MY RANKING":
-                    label.text = Language.OPTIONS_REPLAYS_TYPE_NEARMYRANKING;
+                    label.text = LanguageKeys.OPTIONS_REPLAYS_TYPE_NEARMYRANKING;
                     break;
                 case "GLOBAL BEST":
-                    label.text = Language.OPTIONS_REPLAYS_TYPE_GLOBALBEST;
+                    label.text = LanguageKeys.OPTIONS_REPLAYS_TYPE_GLOBALBEST;
                     break;
             }
         }

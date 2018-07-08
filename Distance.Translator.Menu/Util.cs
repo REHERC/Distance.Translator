@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Options.Menu
+namespace Spectrum.Menu
 {
     internal class Util
     {

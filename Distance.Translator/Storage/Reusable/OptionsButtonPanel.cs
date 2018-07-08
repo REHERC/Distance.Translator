@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Distance.Translator
+﻿namespace Distance.Translator
 {
     public static partial class Translate
     {
@@ -13,28 +7,28 @@ namespace Distance.Translator
             switch (label.text.ToUpper())
             {
                 case "AUDIO":
-                    label.text = Language.OPTIONS_AUDIO;
+                    label.text = LanguageKeys.OPTIONS_AUDIO;
                     break;
                 case "GENERAL":
-                    label.text = Language.OPTIONS_GENERAL;
+                    label.text = LanguageKeys.OPTIONS_GENERAL;
                     break;
                 case "CONTROLS":
-                    label.text = Language.OPTIONS_CONTROLS;
+                    label.text = LanguageKeys.OPTIONS_CONTROLS;
                     break;
                 case "GRAPHICS":
-                    label.text = Language.OPTIONS_GRAPHICS;
+                    label.text = LanguageKeys.OPTIONS_GRAPHICS;
                     break;
                 case "PROFILES":
-                    label.text = Language.OPTIONS_PROFILES;
+                    label.text = LanguageKeys.OPTIONS_PROFILES;
                     break;
                 case "REPLAY":
-                    label.text = Language.OPTIONS_REPLAY;
+                    label.text = LanguageKeys.OPTIONS_REPLAY;
                     break;
                 case "CHEATS":
-                    label.text = Language.OPTIONS_CHEATS;
+                    label.text = LanguageKeys.OPTIONS_CHEATS;
                     break;
                 case "VR OPTIONS":
-                    label.text = Language.OPTIONS_VR;
+                    label.text = LanguageKeys.OPTIONS_VR;
                     break;
             }
         }

@@ -1,7 +1,8 @@
-﻿using Spectrum.MenuSystem.UI;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using Distance.Translator.Menu;
+using Spectrum.Menu.UI;
 
-namespace Options.Menu
+namespace Spectrum.Menu.Menus
 {
     public enum Language
     {
@@ -13,10 +14,10 @@ namespace Options.Menu
         Spanish
     }
 
-    public class SpectrumSettingsMenu : SpectrumMenu
+    public class LanguageSettingsMenu : SpectrumMenu
     {
-        public override string MenuTitleName_ => "Spectrum Extension System";
-        public override string Name_ => "Spectrum";
+        public override string MenuTitleName_ => "Language Settings";
+        public override string Name_ => "Language";
 
         public override bool DisplayInMenu(bool isPauseMenu) => true;
 
@@ -31,11 +32,13 @@ namespace Options.Menu
 
         public override void InitializeVirtual()
         {
+            TweakBool(LanguageKeys.PLUGIN_MENU_RAINBOWMODE, SharedSettings.RAINBOW_MODE, (bool value) => { SharedSettings.RAINBOW_MODE = value; IPCAntenna.SendSetting("DistanceTranslator", "config.rainbow", value); }, LanguageKeys.PLUGIN_MENU_RAINBOWMODE_DESCRIPTION);
+
+
             TweakEnum<Language>("Language"
                                , () => Language.English
                                , (lang) => { }
                                , displayNames);
-
         }
 
         public override void OnPanelPop()
@@ -44,4 +47,3 @@ namespace Options.Menu
         }
     }
 }
-//TweakBool(LanguageKeys.PLUGIN_MENU_RAINBOWMODE, SharedSettings.RAINBOW_MODE, (bool value) => { SharedSettings.RAINBOW_MODE = value; IPCAntenna.SendSetting("DistanceTranslator", "config.rainbow", value); }, LanguageKeys.PLUGIN_MENU_RAINBOWMODE_DESCRIPTION);

@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Spectrum.API.Configuration;
 using Spectrum.API.Logging;
-using Spectrum.API.Storage;
 
 namespace Distance.Translator
 {
@@ -26,7 +22,7 @@ namespace Distance.Translator
                 LangDump.Save();
             }
             
-            Language.Initialize();
+            LanguageKeys.Initialize();
             SaveDump();
         }
 

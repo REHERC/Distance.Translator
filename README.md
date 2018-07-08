@@ -25,17 +25,18 @@ A Spectrum plugin meant to allow peoples to translate the game with custom langu
 # Contributors of this project
 Big thanks to y'all dudes !
 - <b>Ciastex</b> :
-<BR> |	Discord : @Ciastex#6170
-<BR> |	GitHub : https://github.com/Ciastex
+>	Discord: <b>@Ciastex#6170</b><br>
+>	GitHub: https://github.com/Ciastex
 
 - <b>Nico</b> :
-<BR> |	Discord : @Nico#5480
+> 	Discord: <b>@Nico#5480</b>
 
 - <b>Peng</b> :
-<BR> |	Discord : @pigpenguin#3078
+>	Discord: <b>@pigpenguin#3078</b><br>
+>   GitHub: https://github.com/PigPenguin
 
 <br><br>
 <center><a href="https://discordapp.com/invite/Distance"><img src="https://img.shields.io/badge/Distance%20discord%20server-Discord%20invitation-7289da.svg" alt="Spectrum - GitHub" /></a></center>
 
 -----
-<b>If you helped me and i forgot to list you on this page, send me a private message on discord and i'll add you (please no spam)</b>
+<center><b>If you helped me and i forgot to list you on this page, send me a private message on discord and i'll add you (please no spam)</b></center>

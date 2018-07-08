@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Distance.Translator.OptionsMenu
+namespace Options.Menu
 {
     internal class Util
     {

@@ -7,7 +7,7 @@ using Spectrum.API.Configuration;
 using Spectrum.API.Logging;
 using Spectrum.API.Storage;
 
-namespace Distance.Translator.OptionsMenu
+namespace Options.Menu
 {
     public static class CurrentPlugin
     {

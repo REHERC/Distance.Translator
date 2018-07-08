@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Spectrum.API.Configuration;
 
-namespace Distance.Translator.OptionsMenu
+namespace Options.Menu
 {
-    public static partial class Language
+    public static partial class LanguageKeys
     {
         public static string HEADER_DESCRIPTION;
 

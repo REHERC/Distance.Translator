@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Spectrum.API.Interfaces.Systems;
 using Spectrum.API.IPC;
 
-namespace Distance.Translator.OptionsMenu
+namespace Options.Menu
 {
     public static partial class IPCAntenna
     {
@@ -50,25 +50,25 @@ namespace Distance.Translator.OptionsMenu
                         switch (data["key"].ToString())
                         {
                             case "header.description":
-                                Language.HEADER_DESCRIPTION = (string)data["value"];
+                                LanguageKeys.HEADER_DESCRIPTION = (string)data["value"];
                                 break;
                             case "plugin.menu.name":
-                                Language.PLUGIN_MENU_NAME = (string)data["value"];
+                                LanguageKeys.PLUGIN_MENU_NAME = (string)data["value"];
                                 break;
                             case "plugin.menu.title":
-                                Language.PLUGIN_MENU_TITLE = (string)data["value"];
+                                LanguageKeys.PLUGIN_MENU_TITLE = (string)data["value"];
                                 break;
                             case "plugin.menu.language":
-                                Language.PLUGIN_MENU_LANGUAGE = (string)data["value"].ToString().TrimEnd(':');
+                                LanguageKeys.PLUGIN_MENU_LANGUAGE = (string)data["value"].ToString().TrimEnd(':');
                                 break;
                             case "plugin.menu.language.description":
-                                Language.PLUGIN_MENU_LANGUAGE_DESCRIPTION = (string)data["value"];
+                                LanguageKeys.PLUGIN_MENU_LANGUAGE_DESCRIPTION = (string)data["value"];
                                 break;
                             case "plugin.menu.rainbowmode":
-                                Language.PLUGIN_MENU_RAINBOWMODE = (string)data["value"].ToString().TrimEnd(':');
+                                LanguageKeys.PLUGIN_MENU_RAINBOWMODE = (string)data["value"].ToString().TrimEnd(':');
                                 break;
                             case "plugin.menu.rainbowmode.description":
-                                Language.PLUGIN_MENU_RAINBOWMODE_DESCRIPTION = (string)data["value"];
+                                LanguageKeys.PLUGIN_MENU_RAINBOWMODE_DESCRIPTION = (string)data["value"];
                                 break;
                         }
                         break;

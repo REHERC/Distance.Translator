@@ -17,7 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Referenced Assemblies", "Re
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Distance.Translator", "Distance.Translator\Distance.Translator.csproj", "{212EDCFB-EFB5-424E-985F-6C464D1967C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Distance.Translator.OptionsMenu", "Distance.Translator.OptionsMenu\Distance.Translator.OptionsMenu.csproj", "{C403C0E2-9480-4288-AB49-49B1A416F33F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Options.Menu", "Options.Menu\Options.Menu.csproj", "{778817BC-393A-43ED-B62C-CFD9ED29D4C3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{212EDCFB-EFB5-424E-985F-6C464D1967C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{212EDCFB-EFB5-424E-985F-6C464D1967C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{212EDCFB-EFB5-424E-985F-6C464D1967C2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C403C0E2-9480-4288-AB49-49B1A416F33F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C403C0E2-9480-4288-AB49-49B1A416F33F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C403C0E2-9480-4288-AB49-49B1A416F33F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C403C0E2-9480-4288-AB49-49B1A416F33F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{778817BC-393A-43ED-B62C-CFD9ED29D4C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{778817BC-393A-43ED-B62C-CFD9ED29D4C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{778817BC-393A-43ED-B62C-CFD9ED29D4C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{778817BC-393A-43ED-B62C-CFD9ED29D4C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

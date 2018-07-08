@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Spectrum.API.Configuration;
 using Spectrum.API.Storage;
 
-namespace Distance.Translator.OptionsMenu
+namespace Options.Menu
 {
     public class LanguageInfo
     {

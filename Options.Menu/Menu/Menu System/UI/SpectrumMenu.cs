@@ -1,6 +1,6 @@
 ﻿using Spectrum.API.Interfaces.Systems;
 
-namespace Distance.Translator.OptionsMenu
+namespace Spectrum.MenuSystem.UI
 {
     public abstract class SpectrumMenu : SuperMenu
     {
@@ -15,7 +15,7 @@ namespace Distance.Translator.OptionsMenu
         {
             menuBlueprint_ = Util.FindByName("SuperMenuBlueprint");
         }
-        
+
         public void SetManager(IManager manager)
         {
             Manager = manager;
@@ -28,7 +28,7 @@ namespace Distance.Translator.OptionsMenu
 
         public override void OnPanelPop()
         {
-            
+
         }
     }
 }

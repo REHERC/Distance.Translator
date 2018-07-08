@@ -1,7 +1,15 @@
 [submodule "Spectrum"]
-	path = Spectrum
+	path = "Referenced Assemblies/Spectrum.API.dll"
+	url = https://github.com/Ciastex/Spectrum
+	ignore = dirty
+[submodule "Spectrum"]
+	path = "Referenced Assemblies/Spectrum.Interop.dll"
+	url = https://github.com/Ciastex/Spectrum
+	ignore = dirty
+[submodule "Spectrum"]
+	path = "Referenced Assemblies/Spectrum.Manager.dll"
 	url = https://github.com/Ciastex/Spectrum
 	ignore = dirty
 [submodule "Harmony"]
-	path = Harmony
+	path = "Referenced Assemblies/0Harmony.dll"
 	url = https://github.com/pardeike/Harmony

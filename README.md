@@ -1,4 +1,10 @@
 # Distance.Translator
+
+<p align="center">
+    ![Repository logo](/logo.png)
+</p>
+
+
 A Spectrum plugin meant to allow peoples to translate the game with custom language files
 
 # Technologies used

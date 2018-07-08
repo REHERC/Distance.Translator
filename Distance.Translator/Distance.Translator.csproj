@@ -89,6 +89,7 @@
     <Compile Include="Storage\Reusable\Translate\Translate.Units.PopupList.cs" />
     <Compile Include="Storage\Reusable\Translate\Translate.GhostType.PopupList.cs" />
     <Compile Include="Storage\Reusable\Translate\Translate.Visualizer.PopupList.cs" />
+    <Compile Include="Storage\SharedSettings.cs" />
     <Compile Include="Text Files\BootLogo.cs" />
     <Compile Include="Events Subscribers\Events.Game.PauseToggled.cs" />
     <Compile Include="Patches\Unity.UIPanel\Unity.UIPanel.Update.cs" />

@@ -74,6 +74,8 @@ namespace Distance.Translator
                         break;
                     case "awake":
                         if (data.SourceIdentifier == OPTIONS_MENU_IPC) {
+                            SharedSettings.MENUPLUGIN_DETECTED = true;
+
                             SendAwake(OPTIONS_MENU_IPC);
 
                             SendTranslation(OPTIONS_MENU_IPC, "header.description", LanguageKeys.HEADER_DESCRIPTION);

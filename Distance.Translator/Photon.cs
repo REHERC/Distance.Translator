@@ -43,10 +43,21 @@ namespace Distance.Translator
                 CurrentPlugin.Log.Error("Failed to patch the assemblies!");
                 CurrentPlugin.Log.Exception(VirusSpirit);
             }
+            CurrentPlugin.Log.Info("Subscribing to Events ...");
+            Events.Scene.LoadFinish.Subscribe((data) =>
+            {
+                if (data.sceneName == "MainMenu")
+                {
+                    Spectrum.Interop.Game.Game.WatermarkText += (SharedSettings.MENUPLUGIN_DETECTED) ? "\nDISTANCE TRANSLATOR+" : "\nDISTANCE TRANSLATOR";
+                    Spectrum.Interop.Game.Game.WatermarkText += " ([00DDFF]" + LanguageKeys.LANGUAGE_NAME.ToUpper() + "[-] BY [FF9000]" + LanguageKeys.LANGUAGE_AUTHOR.ToUpper() + "[-])";
+                }
+            });
+            CurrentPlugin.Log.Info("Subscribed to Events!");
+
             //LanguageManager.DetectLanguages();
             //LanguageManager.SendLanguageList();
         }
-        
+
         public void PrintLogo()
         {
             foreach(string line in BootLogo.GetText().Split(Environment.NewLine[0]))

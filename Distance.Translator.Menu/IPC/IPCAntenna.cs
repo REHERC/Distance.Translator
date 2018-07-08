@@ -46,31 +46,24 @@ namespace Distance.Translator.Menu
                         {
                             case "header.description":
                                 LanguageKeys.HEADER_DESCRIPTION = (string)data["value"].ToString();
-                                CurrentPlugin.Log.Warning(LanguageKeys.HEADER_DESCRIPTION);
                                 break;
                             case "plugin.menu.name":
                                 LanguageKeys.PLUGIN_MENU_NAME = (string)data["value"].ToString();
-                                CurrentPlugin.Log.Warning(LanguageKeys.PLUGIN_MENU_NAME);
                                 break;
                             case "plugin.menu.title":
                                 LanguageKeys.PLUGIN_MENU_TITLE = (string)data["value"].ToString();
-                                CurrentPlugin.Log.Warning(LanguageKeys.PLUGIN_MENU_TITLE);
                                 break;
                             case "plugin.menu.language":
                                 LanguageKeys.PLUGIN_MENU_LANGUAGE = (string)data["value"].ToString().TrimEnd(':');
-                                CurrentPlugin.Log.Warning(LanguageKeys.PLUGIN_MENU_LANGUAGE);
                                 break;
                             case "plugin.menu.language.description":
                                 LanguageKeys.PLUGIN_MENU_LANGUAGE_DESCRIPTION = (string)data["value"].ToString();
-                                CurrentPlugin.Log.Warning(LanguageKeys.PLUGIN_MENU_LANGUAGE_DESCRIPTION);
                                 break;
                             case "plugin.menu.rainbowmode":
                                 LanguageKeys.PLUGIN_MENU_RAINBOWMODE = (string)data["value"].ToString().TrimEnd(':');
-                                CurrentPlugin.Log.Warning(LanguageKeys.PLUGIN_MENU_RAINBOWMODE);
                                 break;
                             case "plugin.menu.rainbowmode.description":
                                 LanguageKeys.PLUGIN_MENU_RAINBOWMODE_DESCRIPTION = (string)data["value"].ToString();
-                                CurrentPlugin.Log.Warning(LanguageKeys.PLUGIN_MENU_RAINBOWMODE_DESCRIPTION);
                                 break;
                         }
                         break;

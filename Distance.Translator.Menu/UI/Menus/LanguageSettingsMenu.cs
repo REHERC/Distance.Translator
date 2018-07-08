@@ -16,8 +16,8 @@ namespace Spectrum.Menu.Menus
 
     public class LanguageSettingsMenu : SpectrumMenu
     {
-        public override string MenuTitleName_ => "Language Settings";
-        public override string Name_ => "Language";
+        public override string MenuTitleName_ => LanguageKeys.PLUGIN_MENU_TITLE;
+        public override string Name_ => LanguageKeys.PLUGIN_MENU_NAME;
 
         public override bool DisplayInMenu(bool isPauseMenu) => true;
 
@@ -32,13 +32,14 @@ namespace Spectrum.Menu.Menus
 
         public override void InitializeVirtual()
         {
+            TweakEnum<Language>(LanguageKeys.PLUGIN_MENU_LANGUAGE
+                               , () => Language.English
+                               , (lang) => { }
+                               , LanguageKeys.PLUGIN_MENU_LANGUAGE_DESCRIPTION
+                               , displayNames);
             TweakBool(LanguageKeys.PLUGIN_MENU_RAINBOWMODE, SharedSettings.RAINBOW_MODE, (bool value) => { SharedSettings.RAINBOW_MODE = value; IPCAntenna.SendSetting("DistanceTranslator", "config.rainbow", value); }, LanguageKeys.PLUGIN_MENU_RAINBOWMODE_DESCRIPTION);
 
 
-            TweakEnum<Language>("Language"
-                               , () => Language.English
-                               , (lang) => { }
-                               , displayNames);
         }
 
         public override void OnPanelPop()

@@ -85,7 +85,6 @@ namespace Distance.Translator
                         GameObject.Find("UIPanel - PressAnyButton/UILabel - PressAnyButton").GetComponentsInChildren<UILabel>()[0].text = LanguageKeys.MAINMENU_PRESSKEY;
                         break;
                     case "MainButtons":
-                        Spectrum.Interop.Game.Game.WatermarkText += "\nDISTANCE TRANSLATOR ([00DDFF]" + LanguageKeys.LANGUAGE_NAME.ToUpper() + "[-] BY [FF9000]" + LanguageKeys.LANGUAGE_AUTHOR.ToUpper() + "[-])";
                         GameObject.Find("Adventure").GetComponentsInChildren<UILabel>()[0].text = LanguageKeys.MENUBUTTON_ADVENTURE;
                         GameObject.Find("Arcade").GetComponentsInChildren<UILabel>()[0].text = LanguageKeys.MENUBUTTON_ARCADE;
                         GameObject.Find("Multiplayer").GetComponentsInChildren<UILabel>()[0].text = LanguageKeys.MENUBUTTON_MULTIPLAYER;

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Spectrum.API.Interfaces.Plugins;
 using Spectrum.API.Interfaces.Systems;
+using Spectrum.API.IPC;
 using Spectrum.Menu;
 using Spectrum.Menu.Menus;
 using Spectrum.Menu.UI;
@@ -9,8 +10,13 @@ using UnityEngine;
 
 namespace Distance.Translator.Menu
 {
-    public class Photon : IPlugin
+    public class Photon : IPlugin, IIPCEnabled
     {
+        public void HandleIPCData(IPCData data)
+        {
+            IPCAntenna.RecieveData(data);
+        }
+
         public void Initialize(IManager manager, string ipcIdentifier)
         {
             Console.WriteLine($"Initializing ... ({ipcIdentifier})");
@@ -18,7 +24,7 @@ namespace Distance.Translator.Menu
             LanguageManager.InitLanguages();
             IPCAntenna.initialize(manager, ipcIdentifier);
             CurrentPlugin.Log.Info("Initialization done!");
-            CurrentPlugin.Log.Info("Subscribing to game Events ...");
+            CurrentPlugin.Log.Info("Subscribing to Events ...");
             Events.Scene.LoadFinish.Subscribe((data) =>
             {
                 if (data.sceneName == "MainMenu")

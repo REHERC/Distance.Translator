@@ -1,7 +1,7 @@
 # Distance.Translator
 
 <p align="center">
-    ![Repository logo](/logo.png)
+    ![Repository logo](/../master/logo.png?raw=true)
 </p>
 
 

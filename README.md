@@ -1,8 +1,6 @@
 # Distance.Translator
 A Spectrum plugin meant to allow peoples to translate the game with custom language files
 
-![Repository logo](logo.png "Repository logo")
-
 <p align="center">
   <a href="https://github.com/REHERC/Distance.Translator/releases">
     <img src="https://img.shields.io/badge/Releases-Downloads-4BC51D.svg" alt="Releases - Downloads" />

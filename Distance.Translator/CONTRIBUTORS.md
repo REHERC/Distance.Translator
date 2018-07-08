@@ -13,3 +13,6 @@ Big thanks to y'all dudes !
 
 - Peng :
 <BR> |	Discord : @pigpenguin#3078
+
+-----
+<b>If you helped me and i forgot to list you on this page, send me a private message on discord and i'll add you (please no spam)</b>

@@ -26,7 +26,7 @@ namespace Distance.Translator.OptionsMenu
             CurrentPlugin.Log.Info("Subscribing to game Events ...");
             Events.Scene.LoadFinish.Subscribe((data) =>
             {
-                if (data.sceneName == "MainMenu")
+                if (data.sceneName == "MainMenu" && SharedSettings.MAINPLUGIN_DETECTED)
                 {
                     Menu.CreateMenu(manager, "LanguageSettingsObject", "OptionsFrontRoot", "MainMenuFrontRoot");
                 }

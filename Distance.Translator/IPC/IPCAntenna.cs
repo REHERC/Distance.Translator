@@ -17,7 +17,14 @@ namespace Distance.Translator
             _manager = manager;
             _ipcIdentifier = ipcIdentifier;
         }
-        
+
+        public static void SendAwake(string ipcIdentifier)
+        {
+            IPCData data = new IPCData(_ipcIdentifier);
+            data["request"] = "awake";
+            _manager.SendIPC(ipcIdentifier, data);
+        }
+
         public static void SendTranslation(string ipcIdentifier,string key,string value)
         {
             IPCData data = new IPCData(_ipcIdentifier);
@@ -70,6 +77,8 @@ namespace Distance.Translator
                         break;
                     case "awake":
                         if (data.SourceIdentifier == "DistanceTranslatorOptionsMenu") {
+                            SendAwake("DistanceTranslatorOptionsMenu");
+
                             SendTranslation("DistanceTranslatorOptionsMenu", "header.description", Language.HEADER_DESCRIPTION);
                             
                             SendTranslation("DistanceTranslatorOptionsMenu", "plugin.menu.name", Language.PLUGIN_MENU_NAME);

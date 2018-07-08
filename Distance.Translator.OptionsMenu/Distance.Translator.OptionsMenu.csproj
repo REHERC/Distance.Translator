@@ -69,7 +69,7 @@
     <Compile Include="Storage\CurrentPlugin.cs" />
     <Compile Include="Storage\Language\Language.cs" />
     <Compile Include="Storage\Language\LanguageManager.cs" />
-    <Compile Include="Storage\Language\SharedSettings.cs" />
+    <Compile Include="Storage\SharedSettings.cs" />
     <Compile Include="UI\OptionsSubmenu\MainOptionsSubmenuButton.cs" />
     <Compile Include="UI\OptionsSubmenu\OptionsSubmenuButton.cs" />
     <Compile Include="UI\OptionsSubmenu\PauseOptionsSubmenuButton.cs" />

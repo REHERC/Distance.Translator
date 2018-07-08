@@ -43,6 +43,9 @@ namespace Distance.Translator.OptionsMenu
             {
                 switch (data["request"].ToString())
                 {
+                    case "awake":
+                        SharedSettings.MAINPLUGIN_DETECTED = true;
+                        break;
                     case "translate":
                         switch (data["key"].ToString())
                         {

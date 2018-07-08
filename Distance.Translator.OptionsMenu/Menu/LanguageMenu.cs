@@ -10,21 +10,38 @@ namespace Distance.Translator.OptionsMenu
         public override string Name_ => Language.PLUGIN_MENU_NAME;
 
         public override bool DisplayInMenu(bool isPauseMenu) => true;
-
-        public int langID = 0;
-
-        public KeyValuePair<string,LanguageInfo>[] LanguageEntries()
+        
+        public override void OnPanelPop()
         {
-            return LanguageManager.Languages.ToArray();
+
         }
 
         public override void InitializeVirtual()
         {
             TweakBool(Language.PLUGIN_MENU_RAINBOWMODE,SharedSettings.RAINBOW_MODE,(bool value) => { SharedSettings.RAINBOW_MODE = value; IPCAntenna.SendSetting("DistanceTranslator", "config.rainbow", value); }, Language.PLUGIN_MENU_RAINBOWMODE_DESCRIPTION);
-            
 
-            //TweakEnum<int>("Language", () => { return langID; }, x => langID = x, "Some language", new KeyValuePair<String, int>[] { new KeyValuePair<string, int>("FR", 0), new KeyValuePair<string, int>("EN", 1) });
-            
+            TweakEnum<Languages>("Language"
+                                , () => Languages.English
+                                , (units) => { }
+                                , displayNames);
         }
+
+
+        public KeyValuePair<string, Languages>[] displayNames =
+ new KeyValuePair<string, Languages>[] { KVP<string,Languages>("English",Languages.English)
+                                                  , KVP<string,Languages>("Français",Languages.French)
+                                                  , KVP<string,Languages>("Deutsch",Languages.German)
+                                                  , KVP<string,Languages>("日本語",Languages.Japanese)
+                                                  , KVP<string,Languages>("中文",Languages.Chinese)
+                                                  };
+    }
+
+    public enum Languages
+    {
+        English,
+        French,
+        German,
+        Japanese,
+        Chinese
     }
 }

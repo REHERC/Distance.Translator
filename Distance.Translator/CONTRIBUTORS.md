@@ -1,4 +1,4 @@
-﻿# Just a reminder of who helped me
+﻿# Contributors of this project
 
 -----
 

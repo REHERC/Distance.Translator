@@ -12,12 +12,12 @@ A Spectrum plugin meant to allow peoples to translate the game with custom langu
 
 
 # Technologies used
-<center>
+<p align="center">
 <br>Spectrum plugin framework : <br>
 <a href="https://github.com/Ciastex/Spectrum"><img src="https://img.shields.io/badge/Ciastex/Spectrum-GitHub-268CCC.svg" alt="Spectrum - GitHub" /></a><br>
 <br>Harmony .NET Assembly patcher : <br>
 <a href="https://github.com/pardeike/Harmony"><img src="https://img.shields.io/badge/Pardeike/Harmony-GitHub-268CCC.svg" alt="Spectrum - GitHub" /></a><br>
-</center>
+</p>
 <br>
 
 # Contributors of this project
@@ -34,7 +34,7 @@ Big thanks to y'all dudes !
 >   GitHub: https://github.com/PigPenguin
 
 <br><br>
-<center><a href="https://discordapp.com/invite/Distance"><img src="https://img.shields.io/badge/Distance%20discord%20server-Discord%20invitation-7289da.svg" alt="Spectrum - GitHub" /></a></center>
+<p align="center"><a href="https://discordapp.com/invite/Distance"><img src="https://img.shields.io/badge/Distance%20discord%20server-Discord%20invitation-7289da.svg" alt="Spectrum - GitHub" /></a></p>
 
 -----
-<center><b>If you helped me and i forgot to list you on this page, send me a private message on discord and i'll add you (please no spam)</b></center>
+<p align="center"><b>If you helped me and i forgot to list you on this page, send me a private message on discord and i'll add you (please no spam)</b></p>

@@ -36,7 +36,7 @@ namespace Distance.Translator
             {
                 string file = LanguageFile.Split('\\').Last();
                 file = file.Substring(0,file.Length - 5);
-                Language = new Settings(file);
+                Language = new Settings($@"Languages\{file}");
                 
                 string name = "language name";
                 string author = "language author";
@@ -57,7 +57,6 @@ namespace Distance.Translator
         {
             foreach (LanguageInfo language in Languages)
             {
-                CurrentPlugin.Log.Warning($"Sending language | {language.Name}");
                 IPCAntenna.SendLanguage(IPCAntenna.OPTIONS_MENU_IPC,language.Name,language.Author,language.File, (bool)(language.File == SharedSettings.CURRENT_LANGUAGE_FILE));
             }
         }

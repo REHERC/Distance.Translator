@@ -38,6 +38,7 @@ namespace Distance.Translator
             data["name"] = Name;
             data["author"] = Author;
             data["file"] = File;
+            data["current"] = Current;
             _manager.SendIPC(ipcIdentifier, data);
         }
 

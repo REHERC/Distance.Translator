@@ -21,7 +21,8 @@ namespace Distance.Translator
             IPCAntenna.initialize(manager,ipcIdentifier);
             CurrentPlugin.Log.Info("Initialization done!");
             PrintLogo();
-            CurrentPlugin.Log.Warning("Currently using \"" + CurrentPlugin.Config.GetItem<string>("LanguageFile") + ".json\"");
+            string LanguageFile = CurrentPlugin.Config.GetItem<string>("LanguageFile");
+            CurrentPlugin.Log.Warning("Currently using \"" + LanguageFile + (LanguageFile == ":default:" ? "\"" : ".json\""));
             CurrentPlugin.Log.Warning(Language.LANGUAGE_NAME + " by " + Language.LANGUAGE_AUTHOR);
             try
             {

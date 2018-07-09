@@ -16,7 +16,7 @@ namespace Distance.Translator
 
             SharedSettings.CURRENT_LANGUAGE_FILE = Config.GetItem<String>("LanguageFile");
 
-            Lang = new Settings($"Languages/{SharedSettings.CURRENT_LANGUAGE_FILE}");
+            Lang = new Settings($@"Languages\{SharedSettings.CURRENT_LANGUAGE_FILE}");
             if (Config.GetItem<bool>("Dump"))
             {
                 LangDump = new Settings("Language-defaults");

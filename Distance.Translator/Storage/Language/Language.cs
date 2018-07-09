@@ -169,15 +169,15 @@ namespace Distance.Translator
     {
         public static void Initialize()
         {
-            LANGUAGE_NAME = GetLine("language.name","Default");
+            LANGUAGE_NAME = GetLine("language.name","English");
             LANGUAGE_AUTHOR = GetLine("language.author", "Refract Studios");
 
             PLUGIN_MENU_NAME = GetLine("plugin.menu.name", "Language");
             PLUGIN_MENU_TITLE = GetLine("plugin.menu.title", "Language Settings");
-            PLUGIN_MENU_LANGUAGE = GetLine("plugin.menu.language", "Language:", true);
+            PLUGIN_MENU_LANGUAGE = GetLine("plugin.menu.language", "Language", true);
             PLUGIN_MENU_LANGUAGE_DESCRIPTION = GetLine("plugin.menu.language.description", "Selected language: The language displayed by the game.\n[FF0000]The game needs to be restarted for this setting to take effect.[-]");
-            PLUGIN_MENU_RAINBOWMODE = GetLine("plugin.menu.rainbowmode", "Rainbow Mode:", true);
-            PLUGIN_MENU_RAINBOWMODE_DESCRIPTION = GetLine("plugin.menu.rainbowmode.description", "Rainbow Mode: Applies a rainbow-like effect to every text translated by the plugin.\n[FF0000]The game needs to be restarted for this setting to take effect.[-]");
+            PLUGIN_MENU_RAINBOWMODE = GetLine("plugin.menu.rainbowmode", "Rainbow Mode", true);
+            PLUGIN_MENU_RAINBOWMODE_DESCRIPTION = GetLine("plugin.menu.rainbowmode.description", "Rainbow Mode: Applies a rainbow-like effect to some texts of the game.\n[FF0000]The game needs to be restarted for this setting to take effect.[-]");
 
             BUTTON_BACK = GetLine("button.back", "Back");
             BUTTON_APPLY = GetLine("button.apply", "Apply");
@@ -328,6 +328,7 @@ namespace Distance.Translator
             OPTIONS_REPLAYS_PLAYBACKSPEED = GetLine("options.replays.playbackspeed", "Playback Speed Affects Music:", true);
         }
 
+        // List of colors (in order) used in the rainbow effect (colors from the randomize button in the garage menu)
         public static List<string> Rainbow = new List<String>(){
             "F70001",
             "FEA700",
@@ -337,12 +338,28 @@ namespace Distance.Translator
             "840083"
         };
 
+        // List of translation keys that can't be affected by the rainbow effect
         public static List<string> RainbowProof = new List<String>(){
             "language.name",
-            "language.author"
+            "language.author",
+            "plugin.menu.rainbowmode.description",
+            "plugin.menu.language.description",
+            "options.audio.announcersettings.allmodes",
+            "options.audio.announcersettings.arcadeonly",
+            "options.audio.announcersettings.stuntonly",
+            "options.audio.announcersettings.disabled",
+            "options.general.units.metric",
+            "options.general.units.imperial",
+            "options.general.visualizer.off",
+            "options.general.visualizer.circle",
+            "options.general.visualizer.bars",
+            "options.replays.type.disabled",
+            "options.replays.type.local",
+            "options.replays.type.friends",
+            "options.replays.type.nearmyranking",
+            "options.replays.type.globalbest",
         };
-
-
+        
         public static string GetLine(String Line,String Default, bool uppercase = false,int aestheticspaces = 0,bool rainbow = false)
         {
             string result = "";
@@ -404,7 +421,6 @@ namespace Distance.Translator
             {
                 CurrentPlugin.LangDump[Line] = Default;
             }
-            //Console.WriteLine("Loaded text for \"" + Line + "\" = \"" +  result + "\"");
             return result;
         }
     }

@@ -83,8 +83,7 @@ namespace Distance.Translator.Menu
                         string lang_author = (string)data["author"].ToString();
                         string lang_file = (string)data["file"].ToString();
                         bool lang_current = (bool)data["current"];
-                        CurrentPlugin.Log.Warning($"Recieving language | {lang_name}");
-                        LanguageManager.Languages.Add(new KeyValuePair<string, string>($"[5CA5DC]{lang_name}[-] - [AADC98]{lang_author}[-]", lang_file));
+                        LanguageManager.Languages.Add(new KeyValuePair<string, string>($"{lang_name} [AADC98]({lang_author})[-]", lang_file));
                         if (lang_current) { SharedSettings.CURRENT_LANGUAGE = lang_file; }
                         break;
                 }

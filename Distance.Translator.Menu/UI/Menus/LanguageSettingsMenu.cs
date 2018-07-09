@@ -29,6 +29,7 @@ namespace Spectrum.Menu.Menus
                          IPCAntenna.SendSetting("DistanceTranslator", "config.rainbow", value);
                      }
                      , LanguageKeys.PLUGIN_MENU_RAINBOWMODE_DESCRIPTION);
+            
         }
 
         public override void OnPanelPop()

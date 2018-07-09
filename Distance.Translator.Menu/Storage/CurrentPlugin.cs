@@ -6,7 +6,7 @@ namespace Distance.Translator.Menu
     {
         public static void initialize()
         {
-            Log = new Logger("Distance.Translator.OptionsMenu.log");
+            Log = new Logger("Distance.Translator.Menu.log");
             Log.WriteToConsole = true;
         }
 

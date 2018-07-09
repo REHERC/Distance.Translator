@@ -20,25 +20,25 @@ namespace Distance.Translator
                     {
                         switch(codes[i].operand.ToString()) {
                             case "Freestyle":
-                                codes[i].operand = LanguageKeys.TRICK_FREESTYLE;
+                                codes[i].operand = Language.TRICK_FREESTYLE;
                                 break;
                             case "Barrel Roll":
-                                codes[i].operand = LanguageKeys.TRICK_BARRELROLL;
+                                codes[i].operand = Language.TRICK_BARRELROLL;
                                 break;
                             case "Back Flip":
-                                codes[i].operand = LanguageKeys.TRICK_BACKFLIP;
+                                codes[i].operand = Language.TRICK_BACKFLIP;
                                 break;
                             case "Front Flip":
-                                codes[i].operand = LanguageKeys.TRICK_FRONTFLIP;
+                                codes[i].operand = Language.TRICK_FRONTFLIP;
                                 break;
                             case "Back Twist":
-                                codes[i].operand = LanguageKeys.TRICK_BACKTWIST;
+                                codes[i].operand = Language.TRICK_BACKTWIST;
                                 break;
                             case "Front Twist":
-                                codes[i].operand = LanguageKeys.TRICK_FRONTTWIST;
+                                codes[i].operand = Language.TRICK_FRONTTWIST;
                                 break;
                             case "Frisbee":
-                                codes[i].operand = LanguageKeys.TRICK_FRISBEE;
+                                codes[i].operand = Language.TRICK_FRISBEE;
                                 break;
                         }
                     }
@@ -60,22 +60,22 @@ namespace Distance.Translator
                         switch (codes[i].operand.ToString())
                         {
                             case "Freestyle":
-                                codes[i].operand = LanguageKeys.TRICK_FREESTYLE;
+                                codes[i].operand = Language.TRICK_FREESTYLE;
                                 break;
                             case "Wall Ride":
-                                codes[i].operand = LanguageKeys.TRICK_WALLRIDE;
+                                codes[i].operand = Language.TRICK_WALLRIDE;
                                 break;
                             case "Ceiling Ride":
-                                codes[i].operand = LanguageKeys.TRICK_CEILINGRIDE;
+                                codes[i].operand = Language.TRICK_CEILINGRIDE;
                                 break;
                             case "Grind":
-                                codes[i].operand = LanguageKeys.TRICK_GRIND;
+                                codes[i].operand = Language.TRICK_GRIND;
                                 break;
                             case "Wheelie":
-                                codes[i].operand = LanguageKeys.TRICK_WHEELIE;
+                                codes[i].operand = Language.TRICK_WHEELIE;
                                 break;
                             case "Side Wheelie":
-                                codes[i].operand = LanguageKeys.TRICK_SIDEWHEELIE;
+                                codes[i].operand = Language.TRICK_SIDEWHEELIE;
                                 break;
                         }
                     }
@@ -97,10 +97,10 @@ namespace Distance.Translator
                         switch (codes[i].operand.ToString())
                         {
                             case "Freestyle":
-                                codes[i].operand = LanguageKeys.TRICK_FREESTYLE;
+                                codes[i].operand = Language.TRICK_FREESTYLE;
                                 break;
                             case "Nose Stand":
-                                codes[i].operand = LanguageKeys.TRICK_NOSESTAND;
+                                codes[i].operand = Language.TRICK_NOSESTAND;
                                 break;
                         }
                     }

@@ -31,10 +31,10 @@ namespace Distance.Translator
             _manager.SendIPC(ipcIdentifier, data);
         }
 
-        public static void SendLanguageAdd(string ipcIdentifier, string Name, string Author, string File)
+        public static void SendLanguage(string ipcIdentifier, string Name, string Author, string File,bool Current)
         {
             IPCData data = new IPCData(_ipcIdentifier);
-            data["request"] = "language-add";
+            data["request"] = "language";
             data["name"] = Name;
             data["author"] = Author;
             data["file"] = File;
@@ -78,19 +78,18 @@ namespace Distance.Translator
 
                             SendAwake(OPTIONS_MENU_IPC);
 
-                            SendTranslation(OPTIONS_MENU_IPC, "header.description", LanguageKeys.HEADER_DESCRIPTION);
+                            SendTranslation(OPTIONS_MENU_IPC, "header.description", Language.HEADER_DESCRIPTION);
                             
-                            SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.name", LanguageKeys.PLUGIN_MENU_NAME);
-                            SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.title", LanguageKeys.PLUGIN_MENU_TITLE);
-                            SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.language", LanguageKeys.PLUGIN_MENU_LANGUAGE);
-                            SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.language.description", LanguageKeys.PLUGIN_MENU_LANGUAGE_DESCRIPTION);
-                            SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.rainbowmode", LanguageKeys.PLUGIN_MENU_RAINBOWMODE);
-                            SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.rainbowmode.description", LanguageKeys.PLUGIN_MENU_RAINBOWMODE_DESCRIPTION);
+                            SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.name", Language.PLUGIN_MENU_NAME);
+                            SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.title", Language.PLUGIN_MENU_TITLE);
+                            SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.language", Language.PLUGIN_MENU_LANGUAGE);
+                            SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.language.description", Language.PLUGIN_MENU_LANGUAGE_DESCRIPTION);
+                            SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.rainbowmode", Language.PLUGIN_MENU_RAINBOWMODE);
+                            SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.rainbowmode.description", Language.PLUGIN_MENU_RAINBOWMODE_DESCRIPTION);
                             
-                            //LanguageManager.DetectLanguages();
-                            //LanguageManager.SendLanguages();
+                            LanguageManager.DetectLanguages();
+                            LanguageManager.SendLanguages();
 
-                            SendSetting(OPTIONS_MENU_IPC, "config.language", CurrentPlugin.Config.GetItem<string>("LanguageFile"));
                             SendSetting(OPTIONS_MENU_IPC, "config.rainbow", CurrentPlugin.Config.GetItem<bool>("Rainbow"));
                         }
                         break;

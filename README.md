@@ -1,4 +1,4 @@
-# Distance.Translator
+# Distance Translator Plugin
 A Spectrum plugin meant to allow peoples to translate the game with custom language files
 
 <p align="center">
@@ -9,7 +9,7 @@ A Spectrum plugin meant to allow peoples to translate the game with custom langu
     <img src="https://img.shields.io/badge/Documentation-Wiki-4BC51D.svg" alt="Documantation - Wiki" />
   </a>
 </p>
-
+   
 
 # Technologies used
 <p align="center">

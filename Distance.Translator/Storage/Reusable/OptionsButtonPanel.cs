@@ -7,28 +7,28 @@
             switch (label.text.ToUpper())
             {
                 case "AUDIO":
-                    label.text = LanguageKeys.OPTIONS_AUDIO;
+                    label.text = Language.OPTIONS_AUDIO;
                     break;
                 case "GENERAL":
-                    label.text = LanguageKeys.OPTIONS_GENERAL;
+                    label.text = Language.OPTIONS_GENERAL;
                     break;
                 case "CONTROLS":
-                    label.text = LanguageKeys.OPTIONS_CONTROLS;
+                    label.text = Language.OPTIONS_CONTROLS;
                     break;
                 case "GRAPHICS":
-                    label.text = LanguageKeys.OPTIONS_GRAPHICS;
+                    label.text = Language.OPTIONS_GRAPHICS;
                     break;
                 case "PROFILES":
-                    label.text = LanguageKeys.OPTIONS_PROFILES;
+                    label.text = Language.OPTIONS_PROFILES;
                     break;
                 case "REPLAY":
-                    label.text = LanguageKeys.OPTIONS_REPLAY;
+                    label.text = Language.OPTIONS_REPLAY;
                     break;
                 case "CHEATS":
-                    label.text = LanguageKeys.OPTIONS_CHEATS;
+                    label.text = Language.OPTIONS_CHEATS;
                     break;
                 case "VR OPTIONS":
-                    label.text = LanguageKeys.OPTIONS_VR;
+                    label.text = Language.OPTIONS_VR;
                     break;
             }
         }

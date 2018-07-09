@@ -7,19 +7,19 @@
             switch (label.text.ToUpper())
             {
                 case "DISABLED":
-                    label.text = LanguageKeys.OPTIONS_REPLAYS_TYPE_DISABLED;
+                    label.text = Language.OPTIONS_REPLAYS_TYPE_DISABLED;
                     break;
                 case "LOCAL":
-                    label.text = LanguageKeys.OPTIONS_REPLAYS_TYPE_LOCAL;
+                    label.text = Language.OPTIONS_REPLAYS_TYPE_LOCAL;
                     break;
                 case "FRIENDS":
-                    label.text = LanguageKeys.OPTIONS_REPLAYS_TYPE_FRIENDS;
+                    label.text = Language.OPTIONS_REPLAYS_TYPE_FRIENDS;
                     break;
                 case "NEAR MY RANKING":
-                    label.text = LanguageKeys.OPTIONS_REPLAYS_TYPE_NEARMYRANKING;
+                    label.text = Language.OPTIONS_REPLAYS_TYPE_NEARMYRANKING;
                     break;
                 case "GLOBAL BEST":
-                    label.text = LanguageKeys.OPTIONS_REPLAYS_TYPE_GLOBALBEST;
+                    label.text = Language.OPTIONS_REPLAYS_TYPE_GLOBALBEST;
                     break;
             }
         }

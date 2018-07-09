@@ -25,14 +25,13 @@ namespace Distance.Translator
 
         public static void DetectLanguages()
         {
-            Languages = new List<LanguageInfo>();
-            Languages.Clear();
+            InitLanguages();
 
             FileSystem FS = new FileSystem();
             string PluginDir = FS.RootDirectory;
             Settings Language;
 
-            Languages.Add(new LanguageInfo("English (default)", "Refract Studios", ":default:"));
+            Languages.Add(new LanguageInfo("English", "Refract Studios", ":default:"));
             foreach (string LanguageFile in Directory.GetFiles(PluginDir + "\\Settings\\Languages","*.json"))
             {
                 string file = LanguageFile.Split('\\').Last();
@@ -42,17 +41,24 @@ namespace Distance.Translator
                 string name = "language name";
                 string author = "language author";
                 if (Language.ContainsKey("language.name")) { name = Language.GetItem<string>("language.name"); }
-                if (Language.ContainsKey("language.author")) { name = Language.GetItem<string>("language.author"); }
+                if (Language.ContainsKey("language.author")) { author = Language.GetItem<string>("language.author"); }
 
-                Languages.Add(new LanguageInfo(name, author,file));
+                Languages.Add(new LanguageInfo(name, author, file));
             }
+        }
+
+        public static void InitLanguages()
+        {
+            Languages = new List<LanguageInfo>();
+            Languages.Clear();
         }
 
         public static void SendLanguages()
         {
             foreach (LanguageInfo language in Languages)
             {
-                IPCAntenna.SendLanguageAdd("DistanceTranslatorOptionsMenu",language.Name,language.Author,language.File);
+                CurrentPlugin.Log.Warning($"Sending language | {language.Name}");
+                IPCAntenna.SendLanguage(IPCAntenna.OPTIONS_MENU_IPC,language.Name,language.Author,language.File, (bool)(language.File == SharedSettings.CURRENT_LANGUAGE_FILE));
             }
         }
     }

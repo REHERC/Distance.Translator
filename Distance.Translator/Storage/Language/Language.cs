@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Distance.Translator
 {
-    public static partial class LanguageKeys
+    public static partial class Language
     {
         public static string LANGUAGE_NAME;
         public static string LANGUAGE_AUTHOR;
@@ -165,12 +165,12 @@ namespace Distance.Translator
         public static string OPTIONS_REPLAYS_PLAYBACKSPEED;
     }
 
-    public static partial class LanguageKeys
+    public static partial class Language
     {
         public static void Initialize()
         {
             LANGUAGE_NAME = GetLine("language.name","Default");
-            LANGUAGE_AUTHOR = GetLine("language.author","Refract");
+            LANGUAGE_AUTHOR = GetLine("language.author", "Refract Studios");
 
             PLUGIN_MENU_NAME = GetLine("plugin.menu.name", "Language");
             PLUGIN_MENU_TITLE = GetLine("plugin.menu.title", "Language Settings");
@@ -337,6 +337,12 @@ namespace Distance.Translator
             "840083"
         };
 
+        public static List<string> RainbowProof = new List<String>(){
+            "language.name",
+            "language.author"
+        };
+
+
         public static string GetLine(String Line,String Default, bool uppercase = false,int aestheticspaces = 0,bool rainbow = false)
         {
             string result = "";
@@ -372,7 +378,7 @@ namespace Distance.Translator
                 }
                 result = processedaesthetic;
             }
-            if (rainbow || (bool)CurrentPlugin.Config.GetItem<bool>("Rainbow"))
+            if ((rainbow || (bool)CurrentPlugin.Config.GetItem<bool>("Rainbow")) && !RainbowProof.Contains(Line))
             {
                 int index = 0;
                 string rainbowresult = "";

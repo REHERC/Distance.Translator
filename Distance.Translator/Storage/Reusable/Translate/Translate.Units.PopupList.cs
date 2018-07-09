@@ -11,10 +11,10 @@ namespace Distance.Translator
             switch (label.text.ToUpper())
             {
                 case "METRIC":
-                    label.text = LanguageKeys.OPTIONS_GENERAL_UNITS_METRIC;
+                    label.text = Language.OPTIONS_GENERAL_UNITS_METRIC;
                     break;
                 case "IMPERIAL":
-                    label.text = LanguageKeys.OPTIONS_GENERAL_UNITS_IMPERIAL;
+                    label.text = Language.OPTIONS_GENERAL_UNITS_IMPERIAL;
                     break;
             }
         }

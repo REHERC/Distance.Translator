@@ -5,7 +5,6 @@ using Spectrum.API.Interfaces.Systems;
 using Spectrum.API.IPC;
 using Spectrum.Menu;
 using Spectrum.Menu.Menus;
-using Spectrum.Menu.UI;
 using UnityEngine;
 
 namespace Distance.Translator.Menu
@@ -27,7 +26,7 @@ namespace Distance.Translator.Menu
             CurrentPlugin.Log.Info("Subscribing to Events ...");
             Events.Scene.LoadFinish.Subscribe((data) =>
             {
-                if (data.sceneName == "MainMenu")
+                if (data.sceneName == "MainMenu" && SharedSettings.MAINPLUGIN_DETECTED)
                 {
                     CreateMenu(manager, "SpectrumSettingsObject", "OptionsFrontRoot", "MainMenuFrontRoot");
                 }

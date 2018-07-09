@@ -1,4 +1,6 @@
-﻿using Spectrum.API.Interfaces.Systems;
+﻿using System;
+using System.Collections.Generic;
+using Spectrum.API.Interfaces.Systems;
 using Spectrum.API.IPC;
 
 namespace Distance.Translator.Menu
@@ -7,6 +9,7 @@ namespace Distance.Translator.Menu
     {
         private static string _ipcIdentifier;
         private static IManager _manager;
+
         public static void initialize(IManager manager, string ipcIdentifier)
         {
             _manager = manager;
@@ -70,29 +73,19 @@ namespace Distance.Translator.Menu
                     case "setting":
                         switch (data["setting"].ToString())
                         {
-                            case "config.language":
-                                SharedSettings.SELECTED_LANGUAGE = (string)data["value"];
-                                LanguageInfo current_lang = new LanguageInfo("English (default)", "Refract Studios", ":default:");
-                                foreach (LanguageInfo lang in LanguageManager.Languages.Values)
-                                {
-                                    if (lang.File == (string)data["value"])
-                                    {
-                                        current_lang = lang;
-                                        break;
-                                    }
-                                }
-                                SharedSettings.CURRENT_LANGUAGE = current_lang;
-                                break;
                             case "config.rainbow":
                                 SharedSettings.RAINBOW_MODE = (bool)data["value"];
                                 break;
                         }
                         break;
-                    case "language-add":
+                    case "language":
                         string lang_name = (string)data["name"].ToString();
                         string lang_author = (string)data["author"].ToString();
                         string lang_file = (string)data["file"].ToString();
-                        LanguageManager.Languages.Add("[00DDFF]" + lang_name + "[-] - [FF9000]" + lang_author + "[-]", new LanguageInfo(lang_name,lang_author,lang_file));
+                        bool lang_current = (bool)data["current"];
+                        CurrentPlugin.Log.Warning($"Recieving language | {lang_name}");
+                        LanguageManager.Languages.Add(new KeyValuePair<string, string>($"[5CA5DC]{lang_name}[-] - [AADC98]{lang_author}[-]", lang_file));
+                        if (lang_current) { SharedSettings.CURRENT_LANGUAGE = lang_file; }
                         break;
                 }
             }

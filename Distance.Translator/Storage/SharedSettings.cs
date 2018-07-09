@@ -8,5 +8,6 @@ namespace Distance.Translator
     public static class SharedSettings
     {
         public static bool MENUPLUGIN_DETECTED = false;
+        public static string CURRENT_LANGUAGE_FILE = ":default:";
     }
 }

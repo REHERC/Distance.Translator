@@ -1,15 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Text;
 using Harmony;
-using Spectrum.API;
-using Spectrum.API.Configuration;
 using Spectrum.API.Interfaces.Plugins;
 using Spectrum.API.Interfaces.Systems;
 using Spectrum.API.IPC;
-using Spectrum.API.Logging;
 
 namespace Distance.Translator
 {
@@ -28,7 +22,7 @@ namespace Distance.Translator
             CurrentPlugin.Log.Info("Initialization done!");
             PrintLogo();
             CurrentPlugin.Log.Warning("Currently using \"" + CurrentPlugin.Config.GetItem<string>("LanguageFile") + ".json\"");
-            CurrentPlugin.Log.Warning(LanguageKeys.LANGUAGE_NAME + " by " + LanguageKeys.LANGUAGE_AUTHOR);
+            CurrentPlugin.Log.Warning(Language.LANGUAGE_NAME + " by " + Language.LANGUAGE_AUTHOR);
             try
             {
                 CurrentPlugin.Log.Info("Instantiating Harmony Patcher ...");
@@ -49,13 +43,10 @@ namespace Distance.Translator
                 if (data.sceneName == "MainMenu")
                 {
                     Spectrum.Interop.Game.Game.WatermarkText += (SharedSettings.MENUPLUGIN_DETECTED) ? "\nDISTANCE TRANSLATOR+" : "\nDISTANCE TRANSLATOR";
-                    Spectrum.Interop.Game.Game.WatermarkText += " ([00DDFF]" + LanguageKeys.LANGUAGE_NAME.ToUpper() + "[-] BY [FF9000]" + LanguageKeys.LANGUAGE_AUTHOR.ToUpper() + "[-])";
+                    Spectrum.Interop.Game.Game.WatermarkText += " ([00DDFF]" + Language.LANGUAGE_NAME.ToUpper() + "[-] BY [FF9000]" + Language.LANGUAGE_AUTHOR.ToUpper() + "[-])";
                 }
             });
             CurrentPlugin.Log.Info("Subscribed to Events!");
-
-            //LanguageManager.DetectLanguages();
-            //LanguageManager.SendLanguageList();
         }
 
         public void PrintLogo()

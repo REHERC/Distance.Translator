@@ -31,6 +31,14 @@ namespace Distance.Translator.Menu
             data["value"] = Value;
             _manager.SendIPC(ipcIdentifier, data);
         }
+
+        public static void SendCommand(string ipcIdentifier, string Command)
+        {
+            IPCData data = new IPCData(_ipcIdentifier);
+            data["request"] = "command";
+            data["command"] = Command;
+            _manager.SendIPC(ipcIdentifier, data);
+        }
     }
 
     public static partial class IPCAntenna

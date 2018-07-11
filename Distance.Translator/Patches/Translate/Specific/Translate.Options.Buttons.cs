@@ -30,6 +30,9 @@
                 case "VR OPTIONS":
                     label.text = Language.OPTIONS_VR;
                     break;
+                case "LANGUAGE":
+                    label.text = Language.PLUGIN_MENU_NAME;
+                    break;
             }
         }
     }

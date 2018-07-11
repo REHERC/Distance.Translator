@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Spectrum.API.Configuration;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Distance.Translator
 {
@@ -169,15 +172,19 @@ namespace Distance.Translator
     {
         public static void Initialize()
         {
+            SharedSettings.CURRENT_LANGUAGE_FILE = CurrentPlugin.Config.GetItem<String>("LanguageFile");
+            CurrentPlugin.Lang = new Settings($@"Languages\{SharedSettings.CURRENT_LANGUAGE_FILE}");
+
+
             LANGUAGE_NAME = GetLine("language.name","English");
             LANGUAGE_AUTHOR = GetLine("language.author", "Refract Studios");
 
             PLUGIN_MENU_NAME = GetLine("plugin.menu.name", "Language");
             PLUGIN_MENU_TITLE = GetLine("plugin.menu.title", "Language Settings");
             PLUGIN_MENU_LANGUAGE = GetLine("plugin.menu.language", "Language", true);
-            PLUGIN_MENU_LANGUAGE_DESCRIPTION = GetLine("plugin.menu.language.description", "The language displayed by the game.\n[FF0000]The game needs to be restarted for this setting to take effect.[-]");
+            PLUGIN_MENU_LANGUAGE_DESCRIPTION = GetLine("plugin.menu.language.description", "The language displayed by the game.");
             PLUGIN_MENU_RAINBOWMODE = GetLine("plugin.menu.rainbowmode", "Rainbow Mode", true);
-            PLUGIN_MENU_RAINBOWMODE_DESCRIPTION = GetLine("plugin.menu.rainbowmode.description", "Applies a rainbow-like effect to some texts of the game.\n[FF0000]The game needs to be restarted for this setting to take effect.[-]");
+            PLUGIN_MENU_RAINBOWMODE_DESCRIPTION = GetLine("plugin.menu.rainbowmode.description", "Applies a rainbow-like effect to some texts of the game.");
 
             BUTTON_BACK = GetLine("button.back", "Back");
             BUTTON_APPLY = GetLine("button.apply", "Apply");
@@ -309,7 +316,7 @@ namespace Distance.Translator
             OPTIONS_CONTROLS_RUMBLEINTENSITY = GetLine("options.controls.rumbleintensity", "Rumble Intensity:", true);
             OPTIONS_CONTROLS_STEERINGSENSITIVITY = GetLine("options.controls.steeringsensitivity", "Steering Sensitivity:", true);
             OPTIONS_CONTROLS_FLIGHTSENSITIVITY = GetLine("options.controls.flightsensitivity", "Flight Sensitivity:", true);
-            OPTIONS_CONTROLS_INPUTSMOOTHING = GetLine("options.controls.inputsmoothing", "", true);
+            OPTIONS_CONTROLS_INPUTSMOOTHING = GetLine("options.controls.inputsmoothing", "Digital Input Smoothing:", true);
             OPTIONS_CONTROLS_TAB_BASIC = GetLine("options.controls.tab.basic", "Basic");
             OPTIONS_CONTROLS_TAB_FLIGHT = GetLine("options.controls.tab.flight", "Flight");
             OPTIONS_CONTROLS_TAB_CAMERA = GetLine("options.controls.tab.camera", "Camera");
@@ -326,6 +333,12 @@ namespace Distance.Translator
             OPTIONS_REPLAYS_BRIGHTNESS = GetLine("options.replays.brightness", "Ghosts Brightness:", true);
             OPTIONS_REPLAYS_NAMESVISIBLE = GetLine("options.replays.namesvisible", "Ghosts Names Visible:", true);
             OPTIONS_REPLAYS_PLAYBACKSPEED = GetLine("options.replays.playbackspeed", "Playback Speed Affects Music:", true);
+        }
+
+        public static void Apply()
+        {
+            Scene scene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(scene.name);
         }
 
         // List of colors (in order) used in the rainbow effect (colors from the randomize button in the garage menu)

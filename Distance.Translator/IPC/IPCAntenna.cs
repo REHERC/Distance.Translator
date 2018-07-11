@@ -1,5 +1,6 @@
 ﻿using Spectrum.API.Interfaces.Systems;
 using Spectrum.API.IPC;
+using UnityEngine;
 
 namespace Distance.Translator
 {
@@ -60,12 +61,22 @@ namespace Distance.Translator
             {
                 switch (data["request"].ToString())
                 {
+                    case "command":
+                        switch (data["command"].ToString())
+                        {
+                            case "command goes here":
+
+                                break;
+                        }
+                        break;
                     case "setting":
                         switch (data["setting"].ToString())
                         {
                             case "config.language":
                                 CurrentPlugin.Config["LanguageFile"] = (string)data["value"].ToString();
                                 CurrentPlugin.Config.Save();
+                                Language.Initialize();
+                                Language.Apply();
                                 break;
                             case "config.rainbow":
                                 CurrentPlugin.Config["Rainbow"] = (bool)data["value"];

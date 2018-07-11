@@ -24,7 +24,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Markdown files", "Markdown 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Distance.Translator.Menu", "Distance.Translator.Menu\Distance.Translator.Menu.csproj", "{255B2E88-D7EA-4A10-A508-3FC744EAB0C1}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Distance.Translator.Shared", "Distance.Translator.Shared\Distance.Translator.Shared.shproj", "{0374D78A-6C00-4172-B7D2-04FC222212F2}"
+EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Distance.Translator.Shared\Distance.Translator.Shared.projitems*{0374d78a-6c00-4172-b7d2-04fc222212f2}*SharedItemsImports = 13
+		Distance.Translator.Shared\Distance.Translator.Shared.projitems*{212edcfb-efb5-424e-985f-6c464d1967c2}*SharedItemsImports = 4
+		Distance.Translator.Shared\Distance.Translator.Shared.projitems*{255b2e88-d7ea-4a10-a508-3fc744eab0c1}*SharedItemsImports = 4
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU

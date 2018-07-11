@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Spectrum.API.Configuration;
 using Spectrum.API.Logging;
 
@@ -7,16 +6,13 @@ namespace Distance.Translator
 {
     public static class CurrentPlugin
     {
-        public static void initialize()
+        public static void Initialize()
         {
             Log = new Logger("Distance.Translator.log");
             Log.WriteToConsole = true;
             Config = new Settings("Config");
             InitConfig();
-
-            SharedSettings.CURRENT_LANGUAGE_FILE = Config.GetItem<String>("LanguageFile");
-
-            Lang = new Settings($@"Languages\{SharedSettings.CURRENT_LANGUAGE_FILE}");
+            
             if (Config.GetItem<bool>("Dump"))
             {
                 LangDump = new Settings("Language-defaults");

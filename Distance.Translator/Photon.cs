@@ -4,7 +4,6 @@ using Harmony;
 using Spectrum.API.Interfaces.Plugins;
 using Spectrum.API.Interfaces.Systems;
 using Spectrum.API.IPC;
-
 namespace Distance.Translator
 {
     public partial class Photon : IPlugin,IIPCEnabled
@@ -17,7 +16,8 @@ namespace Distance.Translator
         public void Initialize(IManager manager, string ipcIdentifier)
         {
             Console.WriteLine($"Initializing ... ({ipcIdentifier})");
-            CurrentPlugin.initialize();
+            ObjectManager.Initialize();
+            CurrentPlugin.Initialize();
             IPCAntenna.initialize(manager,ipcIdentifier);
             CurrentPlugin.Log.Info("Initialization done!");
             PrintLogo();
@@ -39,6 +39,10 @@ namespace Distance.Translator
                 CurrentPlugin.Log.Exception(VirusSpirit);
             }
             CurrentPlugin.Log.Info("Subscribing to Events ...");
+            Events.Scene.StartLoad.Subscribe((data) =>
+            {
+                ObjectManager.Initialize();
+            });
             Events.Scene.LoadFinish.Subscribe((data) =>
             {
                 if (data.sceneName == "MainMenu")

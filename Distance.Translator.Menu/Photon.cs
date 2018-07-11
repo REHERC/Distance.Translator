@@ -19,7 +19,7 @@ namespace Distance.Translator.Menu
         public void Initialize(IManager manager, string ipcIdentifier)
         {
             Console.WriteLine($"Initializing ... ({ipcIdentifier})");
-            CurrentPlugin.initialize();
+            CurrentPlugin.Initialize(manager);
             LanguageManager.InitLanguages();
             IPCAntenna.initialize(manager, ipcIdentifier);
             CurrentPlugin.Log.Info("Initialization done!");
@@ -28,7 +28,7 @@ namespace Distance.Translator.Menu
             {
                 if (data.sceneName == "MainMenu" && SharedSettings.MAINPLUGIN_DETECTED)
                 {
-                    CreateMenu(manager, "SpectrumSettingsObject", "OptionsFrontRoot", "MainMenuFrontRoot");
+                    CreateMenu(CurrentPlugin._manager, "SpectrumSettingsObject", "OptionsFrontRoot", "MainMenuFrontRoot");
                 }
             });
             CurrentPlugin.Log.Info("Subscribed to Events!");
@@ -46,8 +46,13 @@ namespace Distance.Translator.Menu
             var optionsLogic = Util.FindByName(optionsFrontRootName).GetComponent<OptionsMenuLogic>();
             var options = new List<OptionsSubmenu>();
             options.AddRange(optionsLogic.subMenus_);
-            options.Add(menuController);
-            optionsLogic.subMenus_ = options.ToArray();
+            while (!(Array.IndexOf(optionsLogic.subMenus_, menuController) > -1))
+            {
+                options.Add(menuController);
+                optionsLogic.subMenus_ = options.ToArray();
+            }
+            menuController.enabled = true;
+            menuController.DisplayInMenu(false);
 
             var mainMenuLogic = Util.FindByName(mainMenuFrontRootName).GetComponent<MainMenuLogic>();
             List<MenuButtonList.ButtonInfo> buttonInfos = mainMenuLogic.optionsButtons_.GetButtonInfos(optionsLogic, false);

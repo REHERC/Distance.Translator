@@ -7,9 +7,14 @@ namespace Spectrum.Menu.Menus
     public class LanguageSettingsMenu : SpectrumMenu
     {
         public override string MenuTitleName_ => LanguageKeys.PLUGIN_MENU_TITLE;
-        public override string Name_ => LanguageKeys.PLUGIN_MENU_NAME;
+        public override string Name_ => "Language";
 
-        public override bool DisplayInMenu(bool isPauseMenu) => true;
+
+        public override bool DisplayInMenu(bool isPauseMenu)
+        {
+            return true;
+        }
+
 
         public override void InitializeVirtual()
         {
@@ -29,7 +34,6 @@ namespace Spectrum.Menu.Menus
                          IPCAntenna.SendSetting("DistanceTranslator", "config.rainbow", value);
                      }
                      , LanguageKeys.PLUGIN_MENU_RAINBOWMODE_DESCRIPTION);
-            
         }
 
         public override void OnPanelPop()

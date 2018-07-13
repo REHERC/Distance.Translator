@@ -16,6 +16,10 @@ namespace Distance.Translator
         public static string PLUGIN_MENU_TITLE;
         public static string PLUGIN_MENU_LANGUAGE;
         public static string PLUGIN_MENU_LANGUAGE_DESCRIPTION;
+        public static string PLUGIN_MENU_LANGUAGE_UPDATE;
+        public static string PLUGIN_MENU_LANGUAGE_UPDATE_DESCRIPTION;
+        public static string PLUGIN_MENU_LANGUAGE_UPDATE_DIALOG_TITLE;
+        public static string PLUGIN_MENU_LANGUAGE_UPDATE_DIALOG_MESSAGE;
         public static string PLUGIN_MENU_RAINBOWMODE;
         public static string PLUGIN_MENU_RAINBOWMODE_DESCRIPTION;
 
@@ -183,6 +187,11 @@ namespace Distance.Translator
             PLUGIN_MENU_TITLE = GetLine("plugin.menu.title", "Language Settings");
             PLUGIN_MENU_LANGUAGE = GetLine("plugin.menu.language", "Language", true);
             PLUGIN_MENU_LANGUAGE_DESCRIPTION = GetLine("plugin.menu.language.description", "The language displayed by the game.");
+            PLUGIN_MENU_LANGUAGE_UPDATE = GetLine("plugin.menu.language.update", "Refresh language", true);
+            PLUGIN_MENU_LANGUAGE_UPDATE_DESCRIPTION = GetLine("plugin.menu.language.update.description", "Reload the language displayed by the game.");
+            PLUGIN_MENU_LANGUAGE_UPDATE_DIALOG_TITLE = GetLine("plugin.menu.language.update.dialog.title", "Reload language", true);
+            PLUGIN_MENU_LANGUAGE_UPDATE_DIALOG_MESSAGE = GetLine("plugin.menu.language.update.dialog.message", "This operation can take some time on slow computers.");
+
             PLUGIN_MENU_RAINBOWMODE = GetLine("plugin.menu.rainbowmode", "Rainbow Mode", true);
             PLUGIN_MENU_RAINBOWMODE_DESCRIPTION = GetLine("plugin.menu.rainbowmode.description", "Applies a rainbow-like effect to some texts of the game.");
 

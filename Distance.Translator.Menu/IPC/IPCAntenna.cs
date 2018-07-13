@@ -51,6 +51,7 @@ namespace Distance.Translator.Menu
                 {
                     case "awake":
                         SharedSettings.MAINPLUGIN_DETECTED = true;
+                        Patcher.Patch();
                         break;
                     case "translate":
                         switch (data["key"].ToString())
@@ -69,6 +70,18 @@ namespace Distance.Translator.Menu
                                 break;
                             case "plugin.menu.language.description":
                                 LanguageKeys.PLUGIN_MENU_LANGUAGE_DESCRIPTION = (string)data["value"].ToString();
+                                break;
+                            case "plugin.menu.language.update":
+                                LanguageKeys.PLUGIN_MENU_LANGUAGE_UPDATE = (string)data["value"].ToString();
+                                break;
+                            case "plugin.menu.language.update.description":
+                                LanguageKeys.PLUGIN_MENU_LANGUAGE_UPDATE_DESCRIPTION = (string)data["value"].ToString();
+                                break;
+                            case "plugin.menu.language.update.dialog.title":
+                                LanguageKeys.PLUGIN_MENU_LANGUAGE_UPDATE_DIALOG_TITLE = (string)data["value"].ToString();
+                                break;
+                            case "plugin.menu.language.update.dialog.message":
+                                LanguageKeys.PLUGIN_MENU_LANGUAGE_UPDATE_DIALOG_MESSAGE = (string)data["value"].ToString();
                                 break;
                             case "plugin.menu.rainbowmode":
                                 LanguageKeys.PLUGIN_MENU_RAINBOWMODE = (string)data["value"].ToString().TrimEnd(':');

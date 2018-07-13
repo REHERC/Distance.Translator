@@ -64,8 +64,10 @@ namespace Distance.Translator
                     case "command":
                         switch (data["command"].ToString())
                         {
-                            case "command goes here":
-
+                            case "language-reload":
+                                Language.Initialize();
+                                Language.Apply();
+                                SendTranslations();
                                 break;
                         }
                         break;
@@ -75,8 +77,6 @@ namespace Distance.Translator
                             case "config.language":
                                 CurrentPlugin.Config["LanguageFile"] = (string)data["value"].ToString();
                                 CurrentPlugin.Config.Save();
-                                Language.Initialize();
-                                Language.Apply();
                                 break;
                             case "config.rainbow":
                                 CurrentPlugin.Config["Rainbow"] = (bool)data["value"];
@@ -90,15 +90,8 @@ namespace Distance.Translator
 
                             SendAwake(OPTIONS_MENU_IPC);
 
-                            SendTranslation(OPTIONS_MENU_IPC, "header.description", Language.HEADER_DESCRIPTION);
-                            
-                            SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.name", Language.PLUGIN_MENU_NAME);
-                            SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.title", Language.PLUGIN_MENU_TITLE);
-                            SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.language", Language.PLUGIN_MENU_LANGUAGE);
-                            SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.language.description", Language.PLUGIN_MENU_LANGUAGE_DESCRIPTION);
-                            SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.rainbowmode", Language.PLUGIN_MENU_RAINBOWMODE);
-                            SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.rainbowmode.description", Language.PLUGIN_MENU_RAINBOWMODE_DESCRIPTION);
-                            
+                            SendTranslations();
+
                             LanguageManager.DetectLanguages();
                             LanguageManager.SendLanguages();
 
@@ -109,4 +102,26 @@ namespace Distance.Translator
             }
         }
     }
+
+    public static partial class IPCAntenna
+    {
+        public static void SendTranslations()
+        {
+            SendTranslation(OPTIONS_MENU_IPC, "header.description", Language.HEADER_DESCRIPTION);
+
+            SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.name", Language.PLUGIN_MENU_NAME);
+            SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.title", Language.PLUGIN_MENU_TITLE);
+            SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.language", Language.PLUGIN_MENU_LANGUAGE);
+            SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.language.description", Language.PLUGIN_MENU_LANGUAGE_DESCRIPTION);
+
+            SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.language.update", Language.PLUGIN_MENU_LANGUAGE_UPDATE);
+            SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.language.update.description", Language.PLUGIN_MENU_LANGUAGE_UPDATE_DESCRIPTION);
+            SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.language.update.dialog.title", Language.PLUGIN_MENU_LANGUAGE_UPDATE_DIALOG_TITLE);
+            SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.language.update.dialog.message", Language.PLUGIN_MENU_LANGUAGE_UPDATE_DIALOG_MESSAGE);
+
+            SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.rainbowmode", Language.PLUGIN_MENU_RAINBOWMODE);
+            SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.rainbowmode.description", Language.PLUGIN_MENU_RAINBOWMODE_DESCRIPTION);
+        }
+    }
 }
+

@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>..\Referenced Assemblies\0Harmony.dll</HintPath>
+    </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\Referenced Assemblies\Assembly-CSharp.dll</HintPath>
     </Reference>
@@ -67,6 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IPC\IPCAntenna.cs" />
+    <Compile Include="Patches\Patch.cs" />
     <Compile Include="Photon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Storage\CurrentPlugin.cs" />
@@ -78,6 +82,10 @@
     <Compile Include="UI\OptionsSubmenu\OptionsSubmenuButton.cs" />
     <Compile Include="UI\OptionsSubmenu\PauseOptionsSubmenuButton.cs" />
     <Compile Include="UI\SpectrumMenu.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Compile Include="Patches\Harmony\GeneralMenu\GeneralMenu.InitializeVirtual.cs" />
   </ItemGroup>
   <Import Project="..\Distance.Translator.Shared\Distance.Translator.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

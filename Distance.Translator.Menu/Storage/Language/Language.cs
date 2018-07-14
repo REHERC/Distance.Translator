@@ -12,6 +12,8 @@
         public static string PLUGIN_MENU_LANGUAGE_UPDATE_DESCRIPTION;
         public static string PLUGIN_MENU_LANGUAGE_UPDATE_DIALOG_TITLE;
         public static string PLUGIN_MENU_LANGUAGE_UPDATE_DIALOG_MESSAGE;
+        public static string PLUGIN_MENU_LANGUAGE_UPDATE_DIALOG_UNAVAILABLE_TITLE;
+        public static string PLUGIN_MENU_LANGUAGE_UPDATE_DIALOG_UNAVAILABLE_MESSAGE;
         public static string PLUGIN_MENU_RAINBOWMODE;
         public static string PLUGIN_MENU_RAINBOWMODE_DESCRIPTION;
     }

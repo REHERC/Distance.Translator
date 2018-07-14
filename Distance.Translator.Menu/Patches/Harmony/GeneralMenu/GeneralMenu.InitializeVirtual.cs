@@ -13,16 +13,18 @@ namespace Distance.Translator.Menu
         {
             public static void Postfix(OptionsMenuLogic __instance)
             {
-                CurrentPlugin.Log.Error("OPTIONSMENULOGIC AWAKE EVENT");
                 var LanguageSettingsObject = new GameObject("LanguageSettings");
                 var LanguageMenuController = LanguageSettingsObject.AddComponent<LanguageSettingsMenu>();
                 LanguageMenuController.SetManager(CurrentPlugin._manager);
 
-                List<OptionsSubmenu> OPTIONS = new List<OptionsSubmenu>(__instance.subMenus_);
-                OPTIONS.Add(LanguageMenuController);
-
-                __instance.subMenus_ = OPTIONS.ToArray();
-                CurrentPlugin.Log.Error("MENU ADDED");
+                List<OptionsSubmenu> submenus = new List<OptionsSubmenu>(__instance.subMenus_); 
+                while (!submenus.Contains(LanguageMenuController))
+                {
+                    List<OptionsSubmenu> OPTIONS = new List<OptionsSubmenu>(__instance.subMenus_);
+                    OPTIONS.Add(LanguageMenuController);
+                    __instance.subMenus_ = OPTIONS.ToArray();
+                    submenus = new List<OptionsSubmenu>(__instance.subMenus_);
+                }
             }
         }
     }

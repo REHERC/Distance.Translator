@@ -66,8 +66,8 @@ namespace Distance.Translator
                         {
                             case "language-reload":
                                 Language.Initialize();
-                                Language.Apply();
                                 SendTranslations();
+                                Language.Apply();
                                 break;
                         }
                         break;
@@ -89,13 +89,13 @@ namespace Distance.Translator
                             SharedSettings.MENUPLUGIN_DETECTED = true;
 
                             SendAwake(OPTIONS_MENU_IPC);
-
-                            SendTranslations();
-
+                            
                             LanguageManager.DetectLanguages();
                             LanguageManager.SendLanguages();
 
                             SendSetting(OPTIONS_MENU_IPC, "config.rainbow", CurrentPlugin.Config.GetItem<bool>("Rainbow"));
+
+                            SendTranslations();
                         }
                         break;
                 }
@@ -118,6 +118,8 @@ namespace Distance.Translator
             SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.language.update.description", Language.PLUGIN_MENU_LANGUAGE_UPDATE_DESCRIPTION);
             SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.language.update.dialog.title", Language.PLUGIN_MENU_LANGUAGE_UPDATE_DIALOG_TITLE);
             SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.language.update.dialog.message", Language.PLUGIN_MENU_LANGUAGE_UPDATE_DIALOG_MESSAGE);
+            SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.language.update.dialog.unavailable.title", Language.PLUGIN_MENU_LANGUAGE_UPDATE_DIALOG_UNAVAILABLE_TITLE);
+            SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.language.update.dialog.unavailable.message", Language.PLUGIN_MENU_LANGUAGE_UPDATE_DIALOG_UNAVAILABLE_MESSAGE);
 
             SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.rainbowmode", Language.PLUGIN_MENU_RAINBOWMODE);
             SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.rainbowmode.description", Language.PLUGIN_MENU_RAINBOWMODE_DESCRIPTION);

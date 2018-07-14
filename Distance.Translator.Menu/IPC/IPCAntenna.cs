@@ -83,6 +83,12 @@ namespace Distance.Translator.Menu
                             case "plugin.menu.language.update.dialog.message":
                                 LanguageKeys.PLUGIN_MENU_LANGUAGE_UPDATE_DIALOG_MESSAGE = (string)data["value"].ToString();
                                 break;
+                            case "plugin.menu.language.update.dialog.unavailable.title":
+                                LanguageKeys.PLUGIN_MENU_LANGUAGE_UPDATE_DIALOG_UNAVAILABLE_TITLE = (string)data["value"].ToString();
+                                break;
+                            case "plugin.menu.language.update.dialog.unavailable.message":
+                                LanguageKeys.PLUGIN_MENU_LANGUAGE_UPDATE_DIALOG_UNAVAILABLE_MESSAGE = (string)data["value"].ToString();
+                                break;
                             case "plugin.menu.rainbowmode":
                                 LanguageKeys.PLUGIN_MENU_RAINBOWMODE = (string)data["value"].ToString().TrimEnd(':');
                                 break;

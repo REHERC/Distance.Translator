@@ -20,6 +20,8 @@ namespace Distance.Translator
         public static string PLUGIN_MENU_LANGUAGE_UPDATE_DESCRIPTION;
         public static string PLUGIN_MENU_LANGUAGE_UPDATE_DIALOG_TITLE;
         public static string PLUGIN_MENU_LANGUAGE_UPDATE_DIALOG_MESSAGE;
+        public static string PLUGIN_MENU_LANGUAGE_UPDATE_DIALOG_UNAVAILABLE_TITLE;
+        public static string PLUGIN_MENU_LANGUAGE_UPDATE_DIALOG_UNAVAILABLE_MESSAGE;
         public static string PLUGIN_MENU_RAINBOWMODE;
         public static string PLUGIN_MENU_RAINBOWMODE_DESCRIPTION;
 
@@ -189,9 +191,10 @@ namespace Distance.Translator
             PLUGIN_MENU_LANGUAGE_DESCRIPTION = GetLine("plugin.menu.language.description", "The language displayed by the game.");
             PLUGIN_MENU_LANGUAGE_UPDATE = GetLine("plugin.menu.language.update", "Refresh language", true);
             PLUGIN_MENU_LANGUAGE_UPDATE_DESCRIPTION = GetLine("plugin.menu.language.update.description", "Reload the language displayed by the game.");
-            PLUGIN_MENU_LANGUAGE_UPDATE_DIALOG_TITLE = GetLine("plugin.menu.language.update.dialog.title", "Reload language", true);
+            PLUGIN_MENU_LANGUAGE_UPDATE_DIALOG_TITLE = GetLine("plugin.menu.language.update.dialog.title", "Reload Language", true);
             PLUGIN_MENU_LANGUAGE_UPDATE_DIALOG_MESSAGE = GetLine("plugin.menu.language.update.dialog.message", "This operation can take some time on slow computers.");
-
+            PLUGIN_MENU_LANGUAGE_UPDATE_DIALOG_UNAVAILABLE_TITLE = GetLine("plugin.menu.language.update.dialog.unavailable.title", "Reload Language", true);
+            PLUGIN_MENU_LANGUAGE_UPDATE_DIALOG_UNAVAILABLE_MESSAGE = GetLine("plugin.menu.language.update.dialog.unavailable.message", "This feature isn't available in game mode.");
             PLUGIN_MENU_RAINBOWMODE = GetLine("plugin.menu.rainbowmode", "Rainbow Mode", true);
             PLUGIN_MENU_RAINBOWMODE_DESCRIPTION = GetLine("plugin.menu.rainbowmode.description", "Applies a rainbow-like effect to some texts of the game.");
 
@@ -387,12 +390,16 @@ namespace Distance.Translator
             string result = "";
             try
             {
-                if (CurrentPlugin.Config.GetItem<string>("LanguageFile") == ":default:") { throw new Exception("default language"); }
+                if (CurrentPlugin.Config.GetItem<string>("LanguageFile") == ":default:")
+                {
+                    throw new Exception("default language");
+                }
                 result = CurrentPlugin.Lang.GetItem<string>(Line);
             }
             catch (Exception VirusSpirit)
             {
-                if (Line != "nothing" && VirusSpirit.Message != "default language") {
+                if (Line != "nothing" && VirusSpirit.Message != "default language")
+                {
                     CurrentPlugin.Log.Exception(VirusSpirit);
                     CurrentPlugin.Log.Error("Impossible to find the translation key for \"" + Line + "\" in \"" + CurrentPlugin.Config.GetItem<String>("LanguageFile") + ".json\"");
                 }

@@ -4,7 +4,7 @@
     {
         public static void OptionsPanelButtons(UILabel label)
         {
-            switch (label.text.ToUpper())
+            switch (label.text.ToUpperInvariant())
             {
                 case "AUDIO":
                     label.text = Language.OPTIONS_AUDIO;

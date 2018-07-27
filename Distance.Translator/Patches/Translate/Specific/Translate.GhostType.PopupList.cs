@@ -4,7 +4,7 @@
     {
         public static void GhostTypeTranslate(ref UILabel label)
         {
-            switch (label.text.ToUpper())
+            switch (label.text.ToUpperInvariant())
             {
                 case "DISABLED":
                     label.text = Language.OPTIONS_REPLAYS_TYPE_DISABLED;

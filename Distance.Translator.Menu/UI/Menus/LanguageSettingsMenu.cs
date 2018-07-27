@@ -59,7 +59,7 @@ namespace Spectrum.Menu.Menus
 
         public override void OnPanelPop()
         {
-            CurrentPlugin.Log.Error("LANGUAGESETTINGSMENU::ONPANELPOP");
+
         }
     }
 }

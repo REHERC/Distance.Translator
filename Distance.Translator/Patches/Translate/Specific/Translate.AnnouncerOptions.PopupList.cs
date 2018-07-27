@@ -4,7 +4,7 @@
     {
         public static void AnnouncerOptionsTranslate(ref UILabel label)
         {
-            switch (label.text.ToUpper())
+            switch (label.text.ToUpperInvariant())
             {
                 case "ALL MODES":
                     label.text = Language.OPTIONS_AUDIO_ANNOUNCERSETTINGS_ALLMODES;

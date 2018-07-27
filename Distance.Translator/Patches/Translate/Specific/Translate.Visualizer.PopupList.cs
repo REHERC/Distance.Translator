@@ -4,7 +4,7 @@
     {
         public static void VisualizerTranslate(ref UILabel label)
         {
-            switch (label.text.ToUpper())
+            switch (label.text.ToUpperInvariant())
             {
                 case "OFF":
                     label.text = Language.OPTIONS_GENERAL_VISUALIZER_OFF;

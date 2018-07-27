@@ -48,7 +48,7 @@ namespace Distance.Translator
                 if (data.sceneName == "MainMenu")
                 {
                     Spectrum.Interop.Game.Game.WatermarkText += (SharedSettings.MENUPLUGIN_DETECTED) ? "\nDISTANCE TRANSLATOR+" : "\nDISTANCE TRANSLATOR";
-                    Spectrum.Interop.Game.Game.WatermarkText += " ([00DDFF]" + Language.LANGUAGE_NAME.ToUpper() + "[-] BY [FF9000]" + Language.LANGUAGE_AUTHOR.ToUpper() + "[-])";
+                    Spectrum.Interop.Game.Game.WatermarkText += " ([00DDFF]" + Language.LANGUAGE_NAME.ToUpperInvariant() + "[-] BY [FF9000]" + Language.LANGUAGE_AUTHOR.ToUpper() + "[-])";
                 }
             });
             CurrentPlugin.Log.Info("Subscribed to Events!");

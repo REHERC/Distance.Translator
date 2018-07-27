@@ -8,7 +8,7 @@ namespace Distance.Translator
     {
         public static void UnitsTranslate(ref UILabel label)
         {
-            switch (label.text.ToUpper())
+            switch (label.text.ToUpperInvariant())
             {
                 case "METRIC":
                     label.text = Language.OPTIONS_GENERAL_UNITS_METRIC;

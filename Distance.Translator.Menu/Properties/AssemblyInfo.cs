@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Distance.Translator.Menu")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Distance Translator Menu Plugin")]
+[assembly: AssemblyDescription("Translator menu plugin for Distance")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Distance.Translator.Menu")]
-[assembly: AssemblyCopyright("Copyright ©  2018")]
+[assembly: AssemblyCompany("The distance modding community")]
+[assembly: AssemblyProduct("Distance Translator Menu")]
+[assembly: AssemblyCopyright("General Public License 3.0")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

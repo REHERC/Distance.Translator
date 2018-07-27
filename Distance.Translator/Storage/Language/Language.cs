@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Text;
 using Spectrum.API.Configuration;
-using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace Distance.Translator
@@ -160,6 +159,68 @@ namespace Distance.Translator
         public static string OPTIONS_CONTROLS_TAB_FLIGHT;
         public static string OPTIONS_CONTROLS_TAB_CAMERA;
         public static string OPTIONS_CONTROLS_TAB_MENU;
+
+        public static string OPTIONS_CONTROLS_VIEWING;
+        public static string OPTIONS_CONTROLS_EDITING;
+        public static string OPTIONS_CONTROLS_HELPTEXT;
+
+        public static string CONTROLS_NOTSET;
+
+        public static string CONTROLS_BASIC_GAS;
+        public static string CONTROLS_BASIC_BRAKE;
+        public static string CONTROLS_BASIC_STEER_LEFT;
+        public static string CONTROLS_BASIC_STEER_RIGHT;
+        public static string CONTROLS_BASIC_BOOST;
+        public static string CONTROLS_BASIC_JUMP;
+        public static string CONTROLS_BASIC_WINGS;
+        public static string CONTROLS_BASIC_GRIP;
+        public static string CONTROLS_BASIC_SPECIAL;
+        public static string CONTROLS_BASIC_RESET;
+        public static string CONTROLS_BASIC_PAUSE;
+        public static string CONTROLS_BASIC_HORN;
+        public static string CONTROLS_BASIC_SHOWSCORE;
+        public static string CONTROLS_BASIC_CHAT;
+
+        public static string CONTROLS_FLIGHT_AIRROLL_LEFT;
+        public static string CONTROLS_FLIGHT_AIRROLL_RIGHT;
+        public static string CONTROLS_FLIGHT_AIRPITCH_DOWN;
+        public static string CONTROLS_FLIGHT_AIRPITCH_UP;
+        public static string CONTROLS_FLIGHT_WINGYAW_LEFT;
+        public static string CONTROLS_FLIGHT_WINGYAW_RIGHT;
+        public static string CONTROLS_FLIGHT_WINGPITCH_DOWN;
+        public static string CONTROLS_FLIGHT_WINGPITCH_UP;
+        public static string CONTROLS_FLIGHT_JETROLL_LEFT;
+        public static string CONTROLS_FLIGHT_JETROLL_RIGHT;
+        public static string CONTROLS_FLIGHT_JETPITCH_DOWN;
+        public static string CONTROLS_FLIGHT_JETPITCH_UP;
+        public static string CONTROLS_FLIGHT_WINGROLL_LEFT;
+        public static string CONTROLS_FLIGHT_WINGROLL_RIGHT;
+
+        public static string CONTROLS_CAMERA_CENTER;
+        public static string CONTROLS_CAMERA_LOOKBEHIND;
+        public static string CONTROLS_CAMERA_YAW_LEFT;
+        public static string CONTROLS_CAMERA_YAW_RIGHT;
+        public static string CONTROLS_CAMERA_PITCH_DOWN;
+        public static string CONTROLS_CAMERA_PITCH_UP;
+        public static string CONTROLS_CAMERA_CHANGEVIEW;
+        public static string CONTROLS_CAMERA_NEXTPLAYER;
+
+        public static string CONTROLS_MENU_CONFIRM;
+        public static string CONTROLS_MENU_CANCEL;
+        public static string CONTROLS_MENU_LEFT;
+        public static string CONTROLS_MENU_RIGHT;
+        public static string CONTROLS_MENU_DOWN;
+        public static string CONTROLS_MENU_UP;
+        public static string CONTROLS_MENU_START;
+        public static string CONTROLS_MENU_PAGE_LEFT;
+        public static string CONTROLS_MENU_PAGE_RIGHT;
+        public static string CONTROLS_MENU_PAGE_DOWN;
+        public static string CONTROLS_MENU_PAGE_UP;
+        public static string CONTROLS_MENU_DELETE;
+        public static string CONTROLS_MENU_CREATEPLAYLIST;
+        public static string CONTROLS_MENU_RATELEVEL;
+        public static string CONTROLS_MENU_SORTING;
+        public static string CONTROLS_MENU_TOGGLEVISIBILITY;
 
         public static string OPTIONS_REPLAYS_TITLE;
         public static string OPTIONS_REPLAYS_TYPE;
@@ -334,6 +395,68 @@ namespace Distance.Translator
             OPTIONS_CONTROLS_TAB_CAMERA = GetLine("options.controls.tab.camera", "Camera");
             OPTIONS_CONTROLS_TAB_MENU = GetLine("options.controls.tab.menu", "Menu");
 
+            OPTIONS_CONTROLS_VIEWING = GetLine("options.controls.viewing", "Viewing: [CF9D35]{0}[-]");
+            OPTIONS_CONTROLS_EDITING = GetLine("options.controls.editing", "Editing: [CF9D35]{0}[-]");
+            OPTIONS_CONTROLS_HELPTEXT = GetLine("options.controls.helptext", "[FFFFFF][Enter] Edit  [Del] Clear  [Esc] Revert[-]");
+
+            CONTROLS_NOTSET = GetLine("controls.notset", "(Not Set)");
+
+            CONTROLS_BASIC_GAS = GetLine("controls.basic.gas", "Gas");
+            CONTROLS_BASIC_BRAKE = GetLine("controls.basic.brake", "Brake");
+            CONTROLS_BASIC_STEER_LEFT = GetLine("controls.basic.steer.left", "Steer Left");
+            CONTROLS_BASIC_STEER_RIGHT = GetLine("controls.basic.steer.right", "Steer Right");
+            CONTROLS_BASIC_BOOST = GetLine("controls.basic.boost", "Boost");
+            CONTROLS_BASIC_JUMP = GetLine("controls.basic.jump", "Jump");
+            CONTROLS_BASIC_WINGS = GetLine("controls.basic.wings", "Wings");
+            CONTROLS_BASIC_GRIP = GetLine("controls.basic.grip", "Grip");
+            CONTROLS_BASIC_SPECIAL = GetLine("controls.basic.special", "Special");
+            CONTROLS_BASIC_RESET = GetLine("controls.basic.reset", "Reset");
+            CONTROLS_BASIC_PAUSE = GetLine("controls.basic.pause", "Pause");
+            CONTROLS_BASIC_HORN = GetLine("controls.basic.horn", "Horn");
+            CONTROLS_BASIC_SHOWSCORE = GetLine("controls.basic.showscore", "Show Score");
+            CONTROLS_BASIC_CHAT = GetLine("controls.basic.chat", "Chat");
+
+            CONTROLS_FLIGHT_AIRROLL_LEFT = GetLine("controls.flight.airroll.left", "Air Roll Left");
+            CONTROLS_FLIGHT_AIRROLL_RIGHT = GetLine("controls.flight.airroll.right", "Air Roll Right");
+            CONTROLS_FLIGHT_AIRPITCH_DOWN = GetLine("controls.flight.airpitch.down", "Air Pitch Down");
+            CONTROLS_FLIGHT_AIRPITCH_UP = GetLine("controls.flight.airpitch.up", "Air Pitch Up");
+            CONTROLS_FLIGHT_WINGYAW_LEFT = GetLine("controls.flight.wingyaw.left", "Wing Yaw Left");
+            CONTROLS_FLIGHT_WINGYAW_RIGHT = GetLine("controls.flight.wingyaw.right", "Wing Yaw Right");
+            CONTROLS_FLIGHT_WINGPITCH_DOWN = GetLine("controls.flight.wingpitch.down", "Wing Pitch Down");
+            CONTROLS_FLIGHT_WINGPITCH_UP = GetLine("controls.flight.wingpitch.up", "Wing Pitch Up");
+            CONTROLS_FLIGHT_JETROLL_LEFT = GetLine("controls.flight.jetroll.left", "Jet Roll Left");
+            CONTROLS_FLIGHT_JETROLL_RIGHT = GetLine("controls.flight.jetroll.right", "Jet Roll Right");
+            CONTROLS_FLIGHT_JETPITCH_DOWN = GetLine("controls.flight.jetpitch.down", "Jet Pitch Down");
+            CONTROLS_FLIGHT_JETPITCH_UP = GetLine("controls.flight.jetpitch.up", "Jet Pitch Up");
+            CONTROLS_FLIGHT_WINGROLL_LEFT = GetLine("controls.flight.wingroll.left", "Wing Roll Left");
+            CONTROLS_FLIGHT_WINGROLL_RIGHT = GetLine("controls.flight.wingroll.right", "Wing Roll Right");
+
+            CONTROLS_CAMERA_CENTER = GetLine("controls.camera.center", "Center Camera");
+            CONTROLS_CAMERA_LOOKBEHIND = GetLine("controls.camera.lookbehind", "Camera Look Behind");
+            CONTROLS_CAMERA_YAW_LEFT = GetLine("controls.camera.yaw.left", "Camera Yaw Left");
+            CONTROLS_CAMERA_YAW_RIGHT = GetLine("controls.camera.yaw.right", "Camera Yaw Right");
+            CONTROLS_CAMERA_PITCH_DOWN = GetLine("controls.camera.pitch.down", "Camera Pitch Down");
+            CONTROLS_CAMERA_PITCH_UP = GetLine("controls.camera.pitch.up", "Camera Pitch Up");
+            CONTROLS_CAMERA_CHANGEVIEW = GetLine("controls.camera.changeview", "Change Camera View");
+            CONTROLS_CAMERA_NEXTPLAYER = GetLine("controls.camera.nextplayer", "Spectate Next Player");
+
+            CONTROLS_MENU_CONFIRM = GetLine("controls.menu.confirm", "Menu Confirm");
+            CONTROLS_MENU_CANCEL = GetLine("controls.menu.cancel", "Menu Cancel");
+            CONTROLS_MENU_LEFT = GetLine("controls.menu.left", "Menu Left");
+            CONTROLS_MENU_RIGHT = GetLine("controls.menu.right", "Menu Right");
+            CONTROLS_MENU_DOWN = GetLine("controls.menu.down", "Menu Down");
+            CONTROLS_MENU_UP = GetLine("controls.menu.up", "Menu Up");
+            CONTROLS_MENU_START = GetLine("controls.menu.start", "Menu Start");
+            CONTROLS_MENU_PAGE_LEFT = GetLine("controls.menu.page.left", "Menu Page Left");
+            CONTROLS_MENU_PAGE_RIGHT = GetLine("controls.menu.page.right", "Menu Page Right");
+            CONTROLS_MENU_PAGE_DOWN = GetLine("controls.menu.page.down", "Menu Page Down");
+            CONTROLS_MENU_PAGE_UP = GetLine("controls.menu.page.up", "Menu Page Up");
+            CONTROLS_MENU_DELETE = GetLine("controls.menu.delete", "Menu Delete");
+            CONTROLS_MENU_CREATEPLAYLIST = GetLine("controls.menu.createplaylist", "Menu Create Playlist");
+            CONTROLS_MENU_RATELEVEL = GetLine("controls.menu.ratelevel", "Menu Rate Level");
+            CONTROLS_MENU_SORTING = GetLine("controls.menu.sorting", "Menu Sorting");
+            CONTROLS_MENU_TOGGLEVISIBILITY = GetLine("controls.menu.togglevisibility", "Toggle Menu Visibility");
+
             OPTIONS_REPLAYS_TITLE = GetLine("options.replays.title", "Replay and Ghosts Options");
             OPTIONS_REPLAYS_TYPE = GetLine("options.replays.type", "Ghosts In Arcade Type:", true);
             OPTIONS_REPLAYS_TYPE_DISABLED = GetLine("options.replays.type.disabled", "Disabled");
@@ -408,7 +531,7 @@ namespace Distance.Translator
             if ((result == "") || (result == null) || (result == string.Empty)) {
                 result = Default;
             }
-            if (uppercase) result = result.ToUpper();
+            if (uppercase) result = result.ToUpperInvariant();
             if (aestheticspaces > 0)
             {
                 string processedaesthetic = "";

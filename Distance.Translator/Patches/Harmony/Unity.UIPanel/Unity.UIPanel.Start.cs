@@ -12,7 +12,7 @@ namespace Distance.Translator
             public static void Postfix(UIPanel __instance)
             {
                 Translate.UIPanel(__instance);
-                ObjectManager.AddPanel(Util.GameObjectPath(__instance.transform));
+                //ObjectManager.AddPanel(Util.GameObjectPath(__instance.transform));
             }
         }
     }

@@ -222,6 +222,16 @@ namespace Distance.Translator
         public static string CONTROLS_MENU_SORTING;
         public static string CONTROLS_MENU_TOGGLEVISIBILITY;
 
+        public static string OPTIONS_PROFILES_TITLE;
+        public static string OPTIONS_PROFILES_ADD;
+        public static string OPTIONS_PROFILES_RENAME;
+        public static string OPTIONS_PROFILES_DELETE;
+        public static string OPTIONS_PROFILES_SELECT;
+        public static string OPTIONS_PROFILES_CREATE;
+        public static string OPTIONS_PROFILES_ENTERNAME;
+        public static string OPTIONS_PROFILES_EDIT;
+        public static string OPTIONS_PROFILES_SELECTED;
+
         public static string OPTIONS_REPLAYS_TITLE;
         public static string OPTIONS_REPLAYS_TYPE;
         public static string OPTIONS_REPLAYS_TYPE_DISABLED;
@@ -357,7 +367,7 @@ namespace Distance.Translator
             OPTIONS_AUDIO_CUSTOMMUSIC_SHUFFLETRACKS = GetLine("options.audio.custommusic.shuffletracks", "Shuffle Tracks", true);
             OPTIONS_AUDIO_CUSTOMMUSIC_LOOPTRACKS = GetLine("options.audio.custommusic.looptracks", "Loop Tracks:", true);
 
-            OPTIONS_GENERAL_TITLE = GetLine("options.general.title", "General Menu");
+            OPTIONS_GENERAL_TITLE = GetLine("options.general.title", "General Menu", true);
             OPTIONS_GENERAL_UNITS = GetLine("options.general.units", "Units:", true);
             OPTIONS_GENERAL_UNITS_METRIC = GetLine("options.general.units.metric", "Metric");
             OPTIONS_GENERAL_UNITS_IMPERIAL = GetLine("options.general.units.imperial", "Imperial");
@@ -395,8 +405,8 @@ namespace Distance.Translator
             OPTIONS_CONTROLS_TAB_CAMERA = GetLine("options.controls.tab.camera", "Camera");
             OPTIONS_CONTROLS_TAB_MENU = GetLine("options.controls.tab.menu", "Menu");
 
-            OPTIONS_CONTROLS_VIEWING = GetLine("options.controls.viewing", "Viewing: [CF9D35]{0}[-]");
-            OPTIONS_CONTROLS_EDITING = GetLine("options.controls.editing", "Editing: [CF9D35]{0}[-]");
+            OPTIONS_CONTROLS_VIEWING = GetLine("options.controls.viewing", "Viewing: {0}");
+            OPTIONS_CONTROLS_EDITING = GetLine("options.controls.editing", "Editing: {0}");
             OPTIONS_CONTROLS_HELPTEXT = GetLine("options.controls.helptext", "[FFFFFF][Enter] Edit  [Del] Clear  [Esc] Revert[-]");
 
             CONTROLS_NOTSET = GetLine("controls.notset", "(Not Set)");
@@ -457,7 +467,17 @@ namespace Distance.Translator
             CONTROLS_MENU_SORTING = GetLine("controls.menu.sorting", "Menu Sorting");
             CONTROLS_MENU_TOGGLEVISIBILITY = GetLine("controls.menu.togglevisibility", "Toggle Menu Visibility");
 
-            OPTIONS_REPLAYS_TITLE = GetLine("options.replays.title", "Replay and Ghosts Options");
+            OPTIONS_PROFILES_TITLE = GetLine("options.profiles.title", "Profile Options", true);
+            OPTIONS_PROFILES_ADD = GetLine("options.profiles.add", "Add profile", true);
+            OPTIONS_PROFILES_RENAME = GetLine("options.profiles.rename", "Rename Profile", true);
+            OPTIONS_PROFILES_DELETE = GetLine("options.profiles.delete", "Delete Profile", true);
+            OPTIONS_PROFILES_SELECT = GetLine("options.profiles.select", "Select Primary Profile", true);
+            OPTIONS_PROFILES_CREATE = GetLine("options.profiles.create", "Create A New Profile", true);
+            OPTIONS_PROFILES_ENTERNAME = GetLine("options.profiles.entername", "Enter a name here");
+            OPTIONS_PROFILES_EDIT = GetLine("options.profiles.edit", "Edit selected profile: {0}");
+            OPTIONS_PROFILES_SELECTED = GetLine("options.profiles.selected", "(selected)", true);
+
+            OPTIONS_REPLAYS_TITLE = GetLine("options.replays.title", "Replay and Ghosts Options", true);
             OPTIONS_REPLAYS_TYPE = GetLine("options.replays.type", "Ghosts In Arcade Type:", true);
             OPTIONS_REPLAYS_TYPE_DISABLED = GetLine("options.replays.type.disabled", "Disabled");
             OPTIONS_REPLAYS_TYPE_LOCAL = GetLine("options.replays.type.local", "Local");

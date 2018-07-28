@@ -99,6 +99,7 @@
     <Compile Include="Events Subscribers\Events.Game.PauseToggled.cs" />
     <Compile Include="Patches\Harmony\Unity.UIPanel\Unity.UIPanel.Start.cs" />
     <Compile Include="Patches\Harmony\Unity.UILabel\Unity.UILabel.Update.cs" />
+    <Compile Include="Update\UpdateEveryFrame.cs" />
     <None Include="THE TRASH CAN" />
   </ItemGroup>
   <ItemGroup />

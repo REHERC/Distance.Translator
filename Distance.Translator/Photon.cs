@@ -6,7 +6,7 @@ using Spectrum.API.Interfaces.Systems;
 using Spectrum.API.IPC;
 namespace Distance.Translator
 {
-    public partial class Photon : IPlugin,IIPCEnabled
+    public partial class Photon : IPlugin,IIPCEnabled,IUpdatable
     {
         public void HandleIPCData(IPCData data)
         {
@@ -60,6 +60,11 @@ namespace Distance.Translator
             {
                 CurrentPlugin.Log.Info(line);
             }
+        }
+
+        public void Update()
+        {
+            UpdateEveryFrame.Swoosh();
         }
     }
 }

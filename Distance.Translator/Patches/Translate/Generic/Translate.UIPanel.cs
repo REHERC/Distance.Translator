@@ -66,7 +66,6 @@ namespace Distance.Translator
                         GameObject.Find("Panel - MenuTitle/UILabel - Title").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_CONTROLS_TITLE;
                         GameObject.Find("Panel - MenuTitle/UILabel - Description").GetComponentsInChildren<UILabel>()[0].text = String.Format(Language.OPTIONS_CONTROLS_SUBTITLE, G.Sys.ProfileManager_.CurrentProfile_.Name_);
                         break;
-
                     case "Panel - Profiles":
                         GameObject.Find("MenuTitleTemplate/UILabel - Title").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_PROFILES_TITLE;
                         GameObject.Find("Anchor - Center/Panel - CreateProfile/Add Profile Name Input").GetComponentsInChildren<UIExInput>()[0].defaultText = Language.OPTIONS_PROFILES_ENTERNAME;
@@ -74,10 +73,7 @@ namespace Distance.Translator
                         GameObject.Find("Anchor - Center/Panel - CreateProfile/Add Profile/NameLabel").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_PROFILES_ADD;
                         GameObject.Find("Anchor - Center/Panel - EditProfile/Rename Profile/NameLabel").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_PROFILES_RENAME;
                         GameObject.Find("Anchor - Center/Panel - EditProfile/Delete Profile/NameLabel").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_PROFILES_DELETE;
-                        GameObject.Find("Anchor - Center/Panel - EditProfile/EditSelectedProfileLabel").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_PROFILES_EDIT;
                         GameObject.Find("Anchor - Center/Panel - SelectProfile/SelectPrimaryProfileLabel").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_PROFILES_SELECT;
-                        //GameObject.Find("");
-                        //GameObject.Find("");
                         break;
                     case "Replay":
                         GameObject.Find("Options/OptionsTable/GHOSTS IN ARCADE TYPE/NameLabel").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_REPLAYS_TYPE;

@@ -475,7 +475,7 @@ namespace Distance.Translator
             OPTIONS_PROFILES_CREATE = GetLine("options.profiles.create", "Create A New Profile", true);
             OPTIONS_PROFILES_ENTERNAME = GetLine("options.profiles.entername", "Enter a name here");
             OPTIONS_PROFILES_EDIT = GetLine("options.profiles.edit", "Edit selected profile: {0}");
-            OPTIONS_PROFILES_SELECTED = GetLine("options.profiles.selected", "(selected)", true);
+            OPTIONS_PROFILES_SELECTED = GetLine("options.profiles.selected", "(selected)");
 
             OPTIONS_REPLAYS_TITLE = GetLine("options.replays.title", "Replay and Ghosts Options", true);
             OPTIONS_REPLAYS_TYPE = GetLine("options.replays.type", "Ghosts In Arcade Type:", true);

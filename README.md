@@ -39,3 +39,13 @@ Big thanks to y'all dudes !
 
 -----
 <p align="center"><b>If you helped me and i forgot to list you on this page, send me a private message on discord and i'll add you (please no spam)</b></p>
+
+-----
+# This place where i write stupid things between two coding sessions
+**TO DO LIST** (sort of) **:**
+- This program has winned my personal award of the most unreadable thing i ever wrote ... really, why don't i add comments ? guess i'm too lazy for that.
+- Refract Studios: If you read this and want to implement a translation system please consider make it compatible with the json files used with this plugin.
+- Praise **S W O O S H Y B O I**
+- Why are you reading this ?
+- You'll never know what "Distance.Translator/THE TRASH CAN" contains ...
+- The phrase "the first number not nameable in under ten words" appears to name it in nine words.

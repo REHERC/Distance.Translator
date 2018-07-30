@@ -273,6 +273,35 @@ namespace Distance.Translator
         public static string OPTIONS_GRAPHICS_DETAILEDLIGHTING;
         public static string OPTIONS_GRAPHICS_DETAILEDLIGHTING_DESCRIPTION;
 
+        public static string OPTIONS_GRAPHICS_REFLECTIONS_OFF;
+        public static string OPTIONS_GRAPHICS_REFLECTIONS_LOW;
+        public static string OPTIONS_GRAPHICS_REFLECTIONS_MEDIUM;
+        public static string OPTIONS_GRAPHICS_REFLECTIONS_HIGH;
+        public static string OPTIONS_GRAPHICS_REFLECTIONS_ULTRA;
+
+        public static string OPTIONS_GRAPHICS_ANISOTROPICFILTERING_OFF;
+        public static string OPTIONS_GRAPHICS_ANISOTROPICFILTERING_PARTIAL;
+        public static string OPTIONS_GRAPHICS_ANISOTROPICFILTERING_FULL;
+
+        public static string OPTIONS_GRAPHICS_TEXTUREQUALITY_LOW;
+        public static string OPTIONS_GRAPHICS_TEXTUREQUALITY_MEDIUM;
+        public static string OPTIONS_GRAPHICS_TEXTUREQUALITY_HIGH;
+        public static string OPTIONS_GRAPHICS_TEXTUREQUALITY_ULTRA;
+
+        public static string OPTIONS_GRAPHICS_DRAWDISTANCE_NEAR;
+        public static string OPTIONS_GRAPHICS_DRAWDISTANCE_MEDIUM;
+        public static string OPTIONS_GRAPHICS_DRAWDISTANCE_FAR;
+
+        public static string OPTIONS_GRAPHICS_SHADOWQUALITY_OFF;
+        public static string OPTIONS_GRAPHICS_SHADOWQUALITY_LOW;
+        public static string OPTIONS_GRAPHICS_SHADOWQUALITY_MEDIUM;
+        public static string OPTIONS_GRAPHICS_SHADOWQUALITY_HIGH;
+        public static string OPTIONS_GRAPHICS_SHADOWQUALITY_ULTRA;
+
+        public static string OPTIONS_GRAPHICS_GENERIC_ENABLED;
+        public static string OPTIONS_GRAPHICS_GENERIC_ON;
+        public static string OPTIONS_GRAPHICS_GENERIC_OFF;
+
         public static string OPTIONS_PROFILES_TITLE;
         public static string OPTIONS_PROFILES_ADD;
         public static string OPTIONS_PROFILES_RENAME;
@@ -294,6 +323,8 @@ namespace Distance.Translator
         public static string OPTIONS_REPLAYS_BRIGHTNESS;
         public static string OPTIONS_REPLAYS_NAMESVISIBLE;
         public static string OPTIONS_REPLAYS_PLAYBACKSPEED;
+
+        public static string WARNING_PREFIX;
 
         public static string WARNING_GRAPHICS_DEGRADEPERFORMANCE;
         public static string WARNING_GRAPHICS_BONUSEFFECT;
@@ -572,6 +603,35 @@ namespace Distance.Translator
             OPTIONS_GRAPHICS_DETAILEDLIGHTING = GetLine("options.graphics.detailedlighting", "Detailed Lighting:", true);
             OPTIONS_GRAPHICS_DETAILEDLIGHTING_DESCRIPTION = GetLine("options.graphics.detailedlighting.description", "Improves the quality of environment lighting by enabling additional lights.");
 
+            OPTIONS_GRAPHICS_REFLECTIONS_OFF = GetLine("options.graphics.reflections.off", "Off");
+            OPTIONS_GRAPHICS_REFLECTIONS_LOW = GetLine("options.graphics.reflections.low", "Low");
+            OPTIONS_GRAPHICS_REFLECTIONS_MEDIUM = GetLine("options.graphics.reflections.medium", "Medium");
+            OPTIONS_GRAPHICS_REFLECTIONS_HIGH = GetLine("options.graphics.reflections.high", "High");
+            OPTIONS_GRAPHICS_REFLECTIONS_ULTRA = GetLine("options.graphics.reflections.ultra", "Ultra");
+
+            OPTIONS_GRAPHICS_ANISOTROPICFILTERING_OFF = GetLine("options.graphics.anisotropicfiltering.off", "Off");
+            OPTIONS_GRAPHICS_ANISOTROPICFILTERING_PARTIAL = GetLine("options.graphics.anisotropicfiltering.partial", "Partial");
+            OPTIONS_GRAPHICS_ANISOTROPICFILTERING_FULL = GetLine("options.graphics.anisotropicfiltering.full", "Full");
+
+            OPTIONS_GRAPHICS_TEXTUREQUALITY_LOW = GetLine("options.graphics.texturequality.low", "Low");
+            OPTIONS_GRAPHICS_TEXTUREQUALITY_MEDIUM = GetLine("options.graphics.texturequality.medium", "Medium");
+            OPTIONS_GRAPHICS_TEXTUREQUALITY_HIGH = GetLine("options.graphics.texturequality.high", "High");
+            OPTIONS_GRAPHICS_TEXTUREQUALITY_ULTRA = GetLine("options.graphics.texturequality.ultra", "Ultra");
+
+            OPTIONS_GRAPHICS_DRAWDISTANCE_NEAR = GetLine("options.graphics.drawdistance.near", "Near");
+            OPTIONS_GRAPHICS_DRAWDISTANCE_MEDIUM = GetLine("options.graphics.drawdistance.medium", "Medium");
+            OPTIONS_GRAPHICS_DRAWDISTANCE_FAR = GetLine("options.graphics.drawdistance.far", "Far");
+
+            OPTIONS_GRAPHICS_SHADOWQUALITY_OFF = GetLine("options.graphics.shadowquality.off", "Off");
+            OPTIONS_GRAPHICS_SHADOWQUALITY_LOW = GetLine("options.graphics.shadowquality.low", "Low");
+            OPTIONS_GRAPHICS_SHADOWQUALITY_MEDIUM = GetLine("options.graphics.shadowquality.medium", "Medium");
+            OPTIONS_GRAPHICS_SHADOWQUALITY_HIGH = GetLine("options.graphics.shadowquality.high", "High");
+            OPTIONS_GRAPHICS_SHADOWQUALITY_ULTRA = GetLine("options.graphics.shadowquality.ultra", "Ultra");
+
+            OPTIONS_GRAPHICS_GENERIC_ENABLED = GetLine("options.graphics.generic.enabled", "Enabled");
+            OPTIONS_GRAPHICS_GENERIC_ON = GetLine("options.graphics.generic.on", "On");
+            OPTIONS_GRAPHICS_GENERIC_OFF = GetLine("options.graphics.generic.off", "Off");
+            
             OPTIONS_PROFILES_TITLE = GetLine("options.profiles.title", "Profile Options", true);
             OPTIONS_PROFILES_ADD = GetLine("options.profiles.add", "Add profile", true);
             OPTIONS_PROFILES_RENAME = GetLine("options.profiles.rename", "Rename Profile", true);
@@ -593,7 +653,9 @@ namespace Distance.Translator
             OPTIONS_REPLAYS_BRIGHTNESS = GetLine("options.replays.brightness", "Ghosts Brightness:", true);
             OPTIONS_REPLAYS_NAMESVISIBLE = GetLine("options.replays.namesvisible", "Ghosts Names Visible:", true);
             OPTIONS_REPLAYS_PLAYBACKSPEED = GetLine("options.replays.playbackspeed", "Playback Speed Affects Music:", true);
-            
+
+            WARNING_PREFIX = GetLine("warning.prefix", "Warning: ");
+
             WARNING_GRAPHICS_DEGRADEPERFORMANCE = GetLine("warning.graphics.degradeperformance", "Enabling this may dramatically degrade graphics performance.");
             WARNING_GRAPHICS_BONUSEFFECT = GetLine("warning.graphics.bonuseffect", "This is only a fun bonus effect and not required!");
         }
@@ -708,7 +770,7 @@ namespace Distance.Translator
             {
                 CurrentPlugin.LangDump[Line] = Default;
             }
-            Console.WriteLine($"#LOAD(\"{Line}\")");
+            Console.WriteLine($"\"{Line}\"");
             return result;
         }
     }

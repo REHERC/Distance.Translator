@@ -9,6 +9,7 @@
     <Import_RootNamespace>Distance.Translator.Shared</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Access Private Members\LetMeIn.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Util.cs" />
   </ItemGroup>
 </Project>

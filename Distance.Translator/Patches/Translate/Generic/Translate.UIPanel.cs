@@ -64,6 +64,45 @@ namespace Distance.Translator
                         GameObject.Find("MenuPanel/ControlsDefinitions/TopTabs/ControlPageTabSubPanel/PageTabsTable/1002").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_CONTROLS_TAB_CAMERA;
                         GameObject.Find("MenuPanel/ControlsDefinitions/TopTabs/ControlPageTabSubPanel/PageTabsTable/1003").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_CONTROLS_TAB_MENU;
                         GameObject.Find("Panel - MenuTitle/UILabel - Title").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_CONTROLS_TITLE;
+                        break;
+                    case "Panel - Graphics":
+                        SetMenuDescriptionOnHover MenuDesc;
+
+                        GameObject.Find("OptionsFrontRoot/Panel - Options/Panel - Graphics/Panel - MenuTitle/UILabel - Title").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_GRAPHICS_TITLE;
+                        GameObject.Find("OptionsFrontRoot/Panel - Options/Panel - Graphics/Anchor - Center/APPLY BACK/Apply/NameLabel").GetComponentsInChildren<UILabel>()[0].text = Language.BUTTON_APPLY.ToUpperInvariant();
+                        GameObject.Find("OptionsFrontRoot/Panel - Options/Panel - Graphics/Anchor - Center/APPLY BACK/Back/NameLabel").GetComponentsInChildren<UILabel>()[0].text = Language.BUTTON_BACK.ToUpperInvariant();
+
+                        GameObject.Find("OptionsFrontRoot/Panel - Options/Panel - Graphics/Anchor - Center/VideoSettingsCategory/Title").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_GRAPHICS_VIDEOSETTINGS;
+
+                        GameObject.Find("OptionsFrontRoot/Panel - Options/Panel - Graphics/Anchor - Center/VideoSettingsCategory/Fullscreen/NameLabel").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_GRAPHICS_FULLSCREEN;
+                        GameObject.Find("OptionsFrontRoot/Panel - Options/Panel - Graphics/Anchor - Center/VideoSettingsCategory/Fullscreen").GetComponentsInChildren<SetMenuDescriptionOnHover>()[0].SetText(Language.OPTIONS_GRAPHICS_FULLSCREEN_DESCRIPTION);
+
+                        GameObject.Find("OptionsFrontRoot/Panel - Options/Panel - Graphics/Anchor - Center/VideoSettingsCategory/Resolution/NameLabel").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_GRAPHICS_RESOLUTION;
+                        GameObject.Find("OptionsFrontRoot/Panel - Options/Panel - Graphics/Anchor - Center/VideoSettingsCategory/Resolution").GetComponentsInChildren<SetMenuDescriptionOnHover>()[0].SetText(Language.OPTIONS_GRAPHICS_RESOLUTION_DESCRIPTION);
+
+                        GameObject.Find("OptionsFrontRoot/Panel - Options/Panel - Graphics/Anchor - Center/VideoSettingsCategory/VSync/NameLabel").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_GRAPHICS_VSYNC;
+                        GameObject.Find("OptionsFrontRoot/Panel - Options/Panel - Graphics/Anchor - Center/VideoSettingsCategory/VSync").GetComponentsInChildren<SetMenuDescriptionOnHover>()[0].SetText(Language.OPTIONS_GRAPHICS_VSYNC_DESCRIPTION);
+
+                        GameObject.Find("OptionsFrontRoot/Panel - Options/Panel - Graphics/Anchor - Center/VideoSettingsCategory/Brightness/NameLabel").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_GRAPHICS_BRIGHTNESS;
+                        GameObject.Find("OptionsFrontRoot/Panel - Options/Panel - Graphics/Anchor - Center/VideoSettingsCategory/Brightness").GetComponentsInChildren<SetMenuDescriptionOnHover>()[0].SetText(Language.OPTIONS_GRAPHICS_BRIGHTNESS_DESCRIPTION);
+
+                        GameObject.Find("OptionsFrontRoot/Panel - Options/Panel - Graphics/Anchor - Center/BonusEffectsCategory/Title").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_GRAPHICS_BONUSEFFECTS;
+
+
+                        GameObject.Find("OptionsFrontRoot/Panel - Options/Panel - Graphics/Anchor - Center/BonusEffectsCategory/StylizedOutlines/NameLabel").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_GRAPHICS_OUTLINES;
+                        MenuDesc = GameObject.Find("OptionsFrontRoot/Panel - Options/Panel - Graphics/Anchor - Center/BonusEffectsCategory/StylizedOutlines").GetComponentsInChildren<SetMenuDescriptionOnHover>()[0];
+                        MenuDesc.SetPrivateField("warningText_", Language.WARNING_GRAPHICS_BONUSEFFECT);
+                        MenuDesc.SetText(Language.OPTIONS_GRAPHICS_OUTLINES_DESCRIPTION);
+
+                        GameObject.Find("OptionsFrontRoot/Panel - Options/Panel - Graphics/Anchor - Center/BonusEffectsCategory/FilmNoir/NameLabel").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_GRAPHICS_FILMNOIR;
+                        MenuDesc = GameObject.Find("OptionsFrontRoot/Panel - Options/Panel - Graphics/Anchor - Center/BonusEffectsCategory/FilmNoir").GetComponentsInChildren<SetMenuDescriptionOnHover>()[0];
+                        MenuDesc.SetPrivateField("warningText_", Language.WARNING_GRAPHICS_BONUSEFFECT);
+                        MenuDesc.SetText(Language.OPTIONS_GRAPHICS_FILMNOIR_DESCRIPTION);
+                        
+                        GameObject.Find("OptionsFrontRoot/Panel - Options/Panel - Graphics/Anchor - Center/BonusEffectsCategory/CinematicLetterbox/NameLabel").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_GRAPHICS_LETTERBOX;
+                        MenuDesc = GameObject.Find("OptionsFrontRoot/Panel - Options/Panel - Graphics/Anchor - Center/BonusEffectsCategory/CinematicLetterbox").GetComponentsInChildren<SetMenuDescriptionOnHover>()[0];
+                        MenuDesc.SetPrivateField("warningText_", Language.WARNING_GRAPHICS_BONUSEFFECT);
+                        MenuDesc.SetText(Language.OPTIONS_GRAPHICS_LETTERBOX_DESCRIPTION);
                         
                         break;
                     case "Panel - Profiles":
@@ -85,7 +124,6 @@ namespace Distance.Translator
                         break;
                     case "Panel - Idle":
                         //GameObject.Find("UIPanel - DistanceTitle/UILabel - DistanceTitle").GetComponentsInChildren<UILabel>()[0].text = "GAME TITLE HERE TO MAKE SILLY THINGS (USE 2 SPACES BETWEEN LETTERS)";
-                        
                         GameObject.Find("UIPanel - PressAnyButton/UILabel - PressAnyButton").GetComponentsInChildren<UILabel>()[0].text = Language.MAINMENU_PRESSKEY;
                         break;
                     case "MainButtons":

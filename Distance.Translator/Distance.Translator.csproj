@@ -77,9 +77,10 @@
     <Compile Include="Patches\Harmony\Enable Menus\ENABLE EXPERIMENTAL MENU\EnableExperimental.cs" />
     <Compile Include="Patches\Harmony\Enable Menus\ENABLE PS4 GRAPHICS MENU\EnablePS4Graphics.cs" />
     <Compile Include="Patches\Harmony\Enable Menus\ENABLE VR MENU\EnableVR.cs" />
+    <Compile Include="Patches\Harmony\MenuDescriptionLabel\MenuDescriptionLabel.SetText.cs" />
     <Compile Include="Patches\Harmony\MessagePanelLogic\MessagePanelLogic.ShowMessage.cs" />
     <Compile Include="Patches\Harmony\PauseMenuLogic\PauseMenuLogic.Start.cs" />
-    <Compile Include="Patches\Harmony\TrickClassifier\TGetTrickPartName.cs" />
+    <Compile Include="Patches\Harmony\TrickClassifier\GetTrickPartName.cs" />
     <Compile Include="Patches\Translate\Generic\Translate.DropDown.cs" />
     <Compile Include="Patches\Translate\Generic\Translate.Options.Controls.ListingTable.cs" />
     <Compile Include="Photon.cs" />

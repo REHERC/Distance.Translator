@@ -298,9 +298,9 @@ namespace Distance.Translator
         public static string OPTIONS_GRAPHICS_SHADOWQUALITY_HIGH;
         public static string OPTIONS_GRAPHICS_SHADOWQUALITY_ULTRA;
 
-        public static string OPTIONS_GRAPHICS_GENERIC_ENABLED;
-        public static string OPTIONS_GRAPHICS_GENERIC_ON;
-        public static string OPTIONS_GRAPHICS_GENERIC_OFF;
+        public static string OPTIONS_GENERIC_ENABLED;
+        public static string OPTIONS_GENERIC_ON;
+        public static string OPTIONS_GENERIC_OFF;
 
         public static string OPTIONS_PROFILES_TITLE;
         public static string OPTIONS_PROFILES_ADD;
@@ -627,10 +627,6 @@ namespace Distance.Translator
             OPTIONS_GRAPHICS_SHADOWQUALITY_MEDIUM = GetLine("options.graphics.shadowquality.medium", "Medium");
             OPTIONS_GRAPHICS_SHADOWQUALITY_HIGH = GetLine("options.graphics.shadowquality.high", "High");
             OPTIONS_GRAPHICS_SHADOWQUALITY_ULTRA = GetLine("options.graphics.shadowquality.ultra", "Ultra");
-
-            OPTIONS_GRAPHICS_GENERIC_ENABLED = GetLine("options.graphics.generic.enabled", "Enabled");
-            OPTIONS_GRAPHICS_GENERIC_ON = GetLine("options.graphics.generic.on", "On");
-            OPTIONS_GRAPHICS_GENERIC_OFF = GetLine("options.graphics.generic.off", "Off");
             
             OPTIONS_PROFILES_TITLE = GetLine("options.profiles.title", "Profile Options", true);
             OPTIONS_PROFILES_ADD = GetLine("options.profiles.add", "Add profile", true);
@@ -653,6 +649,10 @@ namespace Distance.Translator
             OPTIONS_REPLAYS_BRIGHTNESS = GetLine("options.replays.brightness", "Ghosts Brightness:", true);
             OPTIONS_REPLAYS_NAMESVISIBLE = GetLine("options.replays.namesvisible", "Ghosts Names Visible:", true);
             OPTIONS_REPLAYS_PLAYBACKSPEED = GetLine("options.replays.playbackspeed", "Playback Speed Affects Music:", true);
+
+            OPTIONS_GENERIC_ENABLED = GetLine("options.generic.enabled", "Enabled");
+            OPTIONS_GENERIC_ON = GetLine("options.generic.on", "On");
+            OPTIONS_GENERIC_OFF = GetLine("options.generic.off", "Off");
 
             WARNING_PREFIX = GetLine("warning.prefix", "Warning: ");
 

@@ -43,10 +43,27 @@ namespace Distance.Translator
                                     }
                                 }
                             }
-                            
+                            // Set the current profile name on the edit header
                             GameObject.Find("OptionsFrontRoot/Panel - Options/Panel - Profiles/Anchor - Center/Panel - EditProfile/EditSelectedProfileLabel").GetComponentsInChildren<UILabel>()[0].text = "[c][848484]" + String.Format(Language.OPTIONS_PROFILES_EDIT, "[-][/c]" + G.Sys.ProfileManager_.CurrentProfile_.Name_);
                         }
-                    } finally { /* Meh it's just so the compiler doesn't complain that there's no catch () {} or finally {} and i didn't wanted to make the same "catch (Exception SWOOSHYBOI) { }" joke ._. */ }
+                    } catch (Exception ONION) { }
+                    try
+                    {
+                        GameObject.Find("OptionsFrontRoot/Panel - Options/Panel - Controls/Panel - MenuTitle/UILabel - Description").GetComponentsInChildren<UILabel>()[0].text = String.Format(Language.OPTIONS_CONTROLS_SUBTITLE, G.Sys.ProfileManager_.CurrentProfile_.Name_);
+                    } catch (Exception ONION) { }
+                    try
+                    {
+                        GameObject MENUTITLE_GO = GameObject.Find("Panel - Main/DistanceTitle");
+                        if (MENUTITLE_GO != null)
+                        {
+                            Transform MENUTITLE_TR = MENUTITLE_GO.GetComponent<Transform>();
+                            if (MENUTITLE_TR != null)
+                            {
+                                //MENUTITLE_TR.RotateAround(MENUTITLE_TR.position, Vector3.forward, 20 * Time.fixedDeltaTime);
+                                MENUTITLE_TR.eulerAngles = new Vector3(0,0,0);
+                            }
+                        }
+                    } finally { }
                     break;
             }
         }

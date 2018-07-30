@@ -64,7 +64,7 @@ namespace Distance.Translator
                         GameObject.Find("MenuPanel/ControlsDefinitions/TopTabs/ControlPageTabSubPanel/PageTabsTable/1002").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_CONTROLS_TAB_CAMERA;
                         GameObject.Find("MenuPanel/ControlsDefinitions/TopTabs/ControlPageTabSubPanel/PageTabsTable/1003").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_CONTROLS_TAB_MENU;
                         GameObject.Find("Panel - MenuTitle/UILabel - Title").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_CONTROLS_TITLE;
-                        GameObject.Find("Panel - MenuTitle/UILabel - Description").GetComponentsInChildren<UILabel>()[0].text = String.Format(Language.OPTIONS_CONTROLS_SUBTITLE, G.Sys.ProfileManager_.CurrentProfile_.Name_);
+                        
                         break;
                     case "Panel - Profiles":
                         GameObject.Find("MenuTitleTemplate/UILabel - Title").GetComponentsInChildren<UILabel>()[0].text = Language.OPTIONS_PROFILES_TITLE;
@@ -85,6 +85,7 @@ namespace Distance.Translator
                         break;
                     case "Panel - Idle":
                         //GameObject.Find("UIPanel - DistanceTitle/UILabel - DistanceTitle").GetComponentsInChildren<UILabel>()[0].text = "GAME TITLE HERE TO MAKE SILLY THINGS (USE 2 SPACES BETWEEN LETTERS)";
+                        
                         GameObject.Find("UIPanel - PressAnyButton/UILabel - PressAnyButton").GetComponentsInChildren<UILabel>()[0].text = Language.MAINMENU_PRESSKEY;
                         break;
                     case "MainButtons":

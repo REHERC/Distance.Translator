@@ -222,6 +222,57 @@ namespace Distance.Translator
         public static string CONTROLS_MENU_SORTING;
         public static string CONTROLS_MENU_TOGGLEVISIBILITY;
 
+        public static string OPTIONS_GRAPHICS_TITLE;
+        public static string OPTIONS_GRAPHICS_VIDEOSETTINGS;
+        public static string OPTIONS_GRAPHICS_FULLSCREEN;
+        public static string OPTIONS_GRAPHICS_FULLSCREEN_DESCRIPTION;
+        public static string OPTIONS_GRAPHICS_RESOLUTION;
+        public static string OPTIONS_GRAPHICS_RESOLUTION_DESCRIPTION;
+        public static string OPTIONS_GRAPHICS_VSYNC;
+        public static string OPTIONS_GRAPHICS_VSYNC_DESCRIPTION;
+        public static string OPTIONS_GRAPHICS_BRIGHTNESS;
+        public static string OPTIONS_GRAPHICS_BRIGHTNESS_DESCRIPTION;
+        public static string OPTIONS_GRAPHICS_BONUSEFFECTS;
+        public static string OPTIONS_GRAPHICS_OUTLINES;
+        public static string OPTIONS_GRAPHICS_OUTLINES_DESCRIPTION;
+        public static string OPTIONS_GRAPHICS_FILMNOIR;
+        public static string OPTIONS_GRAPHICS_FILMNOIR_DESCRIPTION;
+        public static string OPTIONS_GRAPHICS_LETTERBOX;
+        public static string OPTIONS_GRAPHICS_LETTERBOX_DESCRIPTION;
+        public static string OPTIONS_GRAPHICS_ADVANCED;
+        public static string OPTIONS_GRAPHICS_BLOOM;
+        public static string OPTIONS_GRAPHICS_BLOOM_DESCRIPTION;
+        public static string OPTIONS_GRAPHICS_FILMGRAIN;
+        public static string OPTIONS_GRAPHICS_FILMGRAIN_DESCRIPTION;
+        public static string OPTIONS_GRAPHICS_VIGNETTING;
+        public static string OPTIONS_GRAPHICS_VIGNETTING_DESCRIPTION;
+        public static string OPTIONS_GRAPHICS_RADIALBLUR;
+        public static string OPTIONS_GRAPHICS_RADIALBLUR_DESCRIPTION;
+        public static string OPTIONS_GRAPHICS_SUNSHAFTS;
+        public static string OPTIONS_GRAPHICS_SUNSHAFTS_DESCRIPTION;
+        public static string OPTIONS_GRAPHICS_REFLECTIONS;
+        public static string OPTIONS_GRAPHICS_REFLECTIONS_DESCRIPTION;
+        public static string OPTIONS_GRAPHICS_ANISOTROPICFILTERING;
+        public static string OPTIONS_GRAPHICS_ANISOTROPICFILTERING_DESCRIPTION;
+        public static string OPTIONS_GRAPHICS_DEPTHOFFIELD;
+        public static string OPTIONS_GRAPHICS_DEPTHOFFIELD_DESCRIPTION;
+        public static string OPTIONS_GRAPHICS_PARTICLES;
+        public static string OPTIONS_GRAPHICS_PARTICLES_DESCRIPTION;
+        public static string OPTIONS_GRAPHICS_TEXTUREQUALITY;
+        public static string OPTIONS_GRAPHICS_TEXTUREQUALITY_DESCRIPTION;
+        public static string OPTIONS_GRAPHICS_ANTIALIASING;
+        public static string OPTIONS_GRAPHICS_ANTIALIASING_DESCRIPTION;
+        public static string OPTIONS_GRAPHICS_DRAWDISTANCE;
+        public static string OPTIONS_GRAPHICS_DRAWDISTANCE_DESCRIPTION;
+        public static string OPTIONS_GRAPHICS_SHADOWQUALITY;
+        public static string OPTIONS_GRAPHICS_SHADOWQUALITY_DESCRIPTION;
+        public static string OPTIONS_GRAPHICS_MOTIONBLUR;
+        public static string OPTIONS_GRAPHICS_MOTIONBLUR_DESCRIPTION;
+        public static string OPTIONS_GRAPHICS_CARDENTS;
+        public static string OPTIONS_GRAPHICS_CARDENTS_DESCRIPTION;
+        public static string OPTIONS_GRAPHICS_DETAILEDLIGHTING;
+        public static string OPTIONS_GRAPHICS_DETAILEDLIGHTING_DESCRIPTION;
+
         public static string OPTIONS_PROFILES_TITLE;
         public static string OPTIONS_PROFILES_ADD;
         public static string OPTIONS_PROFILES_RENAME;
@@ -243,6 +294,9 @@ namespace Distance.Translator
         public static string OPTIONS_REPLAYS_BRIGHTNESS;
         public static string OPTIONS_REPLAYS_NAMESVISIBLE;
         public static string OPTIONS_REPLAYS_PLAYBACKSPEED;
+
+        public static string WARNING_GRAPHICS_DEGRADEPERFORMANCE;
+        public static string WARNING_GRAPHICS_BONUSEFFECT;
     }
 
     public static partial class Language
@@ -257,7 +311,7 @@ namespace Distance.Translator
             LANGUAGE_AUTHOR = GetLine("language.author", "Refract Studios");
 
             PLUGIN_MENU_NAME = GetLine("plugin.menu.name", "Language");
-            PLUGIN_MENU_TITLE = GetLine("plugin.menu.title", "Language Settings");
+            PLUGIN_MENU_TITLE = GetLine("plugin.menu.title", "Language Settings", true);
             PLUGIN_MENU_LANGUAGE = GetLine("plugin.menu.language", "Language", true);
             PLUGIN_MENU_LANGUAGE_DESCRIPTION = GetLine("plugin.menu.language.description", "The language displayed by the game.");
             PLUGIN_MENU_LANGUAGE_UPDATE = GetLine("plugin.menu.language.update", "Refresh language", true);
@@ -466,6 +520,57 @@ namespace Distance.Translator
             CONTROLS_MENU_RATELEVEL = GetLine("controls.menu.ratelevel", "Menu Rate Level");
             CONTROLS_MENU_SORTING = GetLine("controls.menu.sorting", "Menu Sorting");
             CONTROLS_MENU_TOGGLEVISIBILITY = GetLine("controls.menu.togglevisibility", "Toggle Menu Visibility");
+            
+            OPTIONS_GRAPHICS_TITLE = GetLine("options.graphics.title", "Graphics Options", true);
+            OPTIONS_GRAPHICS_VIDEOSETTINGS = GetLine("options.graphics.videosettings", "Video Settings", true);
+            OPTIONS_GRAPHICS_FULLSCREEN = GetLine("options.graphics.fullscreen", "Fullscreen:", true);
+            OPTIONS_GRAPHICS_FULLSCREEN_DESCRIPTION = GetLine("options.graphics.fullscreen.description", "Whether the game runs in fullscreen or in windowed mode");
+            OPTIONS_GRAPHICS_RESOLUTION = GetLine("options.graphics.resolution", "Resolution:", true);
+            OPTIONS_GRAPHICS_RESOLUTION_DESCRIPTION = GetLine("options.graphics.resolution.description", "Adjusts the screen resolution");
+            OPTIONS_GRAPHICS_VSYNC = GetLine("options.graphics.vsync", "Vsync:", true);
+            OPTIONS_GRAPHICS_VSYNC_DESCRIPTION = GetLine("options.graphics.vsync.description", "Reduces visual tearing by synchronizing the frame rate of the game with your monitor refresh rate. Enabling this may degrade graphics performance.");
+            OPTIONS_GRAPHICS_BRIGHTNESS = GetLine("options.graphics.brightness", "Brightness:", true);
+            OPTIONS_GRAPHICS_BRIGHTNESS_DESCRIPTION = GetLine("options.graphics.brightness.description", "Adjusts the overall screen brightness");
+            OPTIONS_GRAPHICS_BONUSEFFECTS = GetLine("options.graphics.bonuseffects", "Bonus Effects", true);
+            OPTIONS_GRAPHICS_OUTLINES = GetLine("options.graphics.outlines", "Stylized Outlines:", true);
+            OPTIONS_GRAPHICS_OUTLINES_DESCRIPTION = GetLine("options.graphics.outlines.description", "Increases saturation and adds bold outlines to objects.");
+            OPTIONS_GRAPHICS_FILMNOIR = GetLine("options.graphics.filmnoir", "Film Noir:", true);
+            OPTIONS_GRAPHICS_FILMNOIR_DESCRIPTION = GetLine("options.graphics.filmnoir.description", "Adds a stylistic black and white filter to the screen.");
+            OPTIONS_GRAPHICS_LETTERBOX = GetLine("options.graphics.letterbox", "Cinematic Letterbox:", true);
+            OPTIONS_GRAPHICS_LETTERBOX_DESCRIPTION = GetLine("options.graphics.letterbox.description", "Locks the in-game aspect ratio to give the game a more cinematic feel.");
+            OPTIONS_GRAPHICS_ADVANCED = GetLine("options.graphics.advanced", "Advanced", true);
+            OPTIONS_GRAPHICS_BLOOM = GetLine("options.graphics.bloom", "Bloom:", true);
+            OPTIONS_GRAPHICS_BLOOM_DESCRIPTION = GetLine("options.graphics.bloom.description", "Adds the signature effect to the screen along with high-dynamic-range lighting (HDR).");
+            OPTIONS_GRAPHICS_FILMGRAIN = GetLine("options.graphics.filmgrain", "Film Grain:", true);
+            OPTIONS_GRAPHICS_FILMGRAIN_DESCRIPTION = GetLine("options.graphics.filmgrain.description", "Adds a subtle film static effect.");
+            OPTIONS_GRAPHICS_VIGNETTING = GetLine("options.graphics.vignetting", "Vignetting:", true);
+            OPTIONS_GRAPHICS_VIGNETTING_DESCRIPTION = GetLine("options.graphics.vignetting.description", "Darkens edges of the screen and enables a dynamic chromatic aberration based on car impacts.");
+            OPTIONS_GRAPHICS_RADIALBLUR = GetLine("options.graphics.radialblur", "Radial Blur:", true);
+            OPTIONS_GRAPHICS_RADIALBLUR_DESCRIPTION = GetLine("options.graphics.radialblur.description", "Blurs the edges of the screen based on the car's speed.\nHelps with the sense of speed");
+            OPTIONS_GRAPHICS_SUNSHAFTS = GetLine("options.graphics.sunshafts", "Sun Shafts:", true);
+            OPTIONS_GRAPHICS_SUNSHAFTS_DESCRIPTION = GetLine("options.graphics.sunshafts.description", "Simulates radial light scattering by adding volumetric rays of light within the world.");
+            OPTIONS_GRAPHICS_REFLECTIONS = GetLine("options.graphics.reflections", "Real-Time Reflections:", true);
+            OPTIONS_GRAPHICS_REFLECTIONS_DESCRIPTION = GetLine("options.graphics.reflections.description", "Adds dynamic reflections to the exterior of the car.");
+            OPTIONS_GRAPHICS_ANISOTROPICFILTERING = GetLine("options.graphics.anisotropicfiltering", "Anisotropic Filtering:", true);
+            OPTIONS_GRAPHICS_ANISOTROPICFILTERING_DESCRIPTION = GetLine("options.graphics.anisotropicfiltering.description", "Enhances image quality for objects in the distance.");
+            OPTIONS_GRAPHICS_DEPTHOFFIELD = GetLine("options.graphics.depthoffield", "Depth Of Field:", true);
+            OPTIONS_GRAPHICS_DEPTHOFFIELD_DESCRIPTION = GetLine("options.graphics.depthoffield.description", "Blurs objects in the distance to simulate a camera lens.\nEnabling this may degrade graphics performance.");
+            OPTIONS_GRAPHICS_PARTICLES = GetLine("options.graphics.particles", "Particles:", true);
+            OPTIONS_GRAPHICS_PARTICLES_DESCRIPTION = GetLine("options.graphics.particles.description", "Adds particles in the environment such as sparks or clouds or smoke.", true);
+            OPTIONS_GRAPHICS_TEXTUREQUALITY = GetLine("options.graphics.texturequality", "Texture Quality:", true);
+            OPTIONS_GRAPHICS_TEXTUREQUALITY_DESCRIPTION = GetLine("options.graphics.texturequality.description", "Turning down quality may improve the game's memory footprint but will significantly degrade image quality.");
+            OPTIONS_GRAPHICS_ANTIALIASING = GetLine("options.graphics.antialiasing", "Anti-Aliasing:", true);
+            OPTIONS_GRAPHICS_ANTIALIASING_DESCRIPTION = GetLine("options.graphics.antialiasing.description", "Smooths edges of geometry to help eliminate the appearance jagged edges.");
+            OPTIONS_GRAPHICS_DRAWDISTANCE = GetLine("options.graphics.drawdistance", "Draw Distance:", true);
+            OPTIONS_GRAPHICS_DRAWDISTANCE_DESCRIPTION = GetLine("options.graphics.drawdistance.description", "Adjusts how far into the distance objects are rendered.\nIncreasing this may significantly degrade graphics performance.");
+            OPTIONS_GRAPHICS_SHADOWQUALITY = GetLine("options.graphics.shadowquality", "Shadow Quality:", true);
+            OPTIONS_GRAPHICS_SHADOWQUALITY_DESCRIPTION = GetLine("options.graphics.shadowquality.description", "Adjusts the draw distance and smoothness of shadows.\nIncreasing this may significantly degrade graphics performance.");
+            OPTIONS_GRAPHICS_MOTIONBLUR = GetLine("options.graphics.motionblur", "Motion Blur:", true);
+            OPTIONS_GRAPHICS_MOTIONBLUR_DESCRIPTION = GetLine("options.graphics.motionblur.description", "Adds a blur to moving objects which gives their motion a more realistic feel.");
+            OPTIONS_GRAPHICS_CARDENTS = GetLine("options.graphics.cardents", "Car Dents:", true);
+            OPTIONS_GRAPHICS_CARDENTS_DESCRIPTION = GetLine("options.graphics.cardents.description", "Allows the car to be procedurally deformed according to the speed and angle of impacts.");
+            OPTIONS_GRAPHICS_DETAILEDLIGHTING = GetLine("options.graphics.detailedlighting", "Detailed Lighting:", true);
+            OPTIONS_GRAPHICS_DETAILEDLIGHTING_DESCRIPTION = GetLine("options.graphics.detailedlighting.description", "Improves the quality of environment lighting by enabling additional lights.");
 
             OPTIONS_PROFILES_TITLE = GetLine("options.profiles.title", "Profile Options", true);
             OPTIONS_PROFILES_ADD = GetLine("options.profiles.add", "Add profile", true);
@@ -488,6 +593,9 @@ namespace Distance.Translator
             OPTIONS_REPLAYS_BRIGHTNESS = GetLine("options.replays.brightness", "Ghosts Brightness:", true);
             OPTIONS_REPLAYS_NAMESVISIBLE = GetLine("options.replays.namesvisible", "Ghosts Names Visible:", true);
             OPTIONS_REPLAYS_PLAYBACKSPEED = GetLine("options.replays.playbackspeed", "Playback Speed Affects Music:", true);
+            
+            WARNING_GRAPHICS_DEGRADEPERFORMANCE = GetLine("warning.graphics.degradeperformance", "Enabling this may dramatically degrade graphics performance.");
+            WARNING_GRAPHICS_BONUSEFFECT = GetLine("warning.graphics.bonuseffect", "This is only a fun bonus effect and not required!");
         }
 
         public static void Apply()
@@ -546,10 +654,17 @@ namespace Distance.Translator
                     CurrentPlugin.Log.Exception(VirusSpirit);
                     CurrentPlugin.Log.Error("Impossible to find the translation key for \"" + Line + "\" in \"" + CurrentPlugin.Config.GetItem<String>("LanguageFile") + ".json\"");
                 }
-                result = Default;
+                result = null;
             }
             if ((result == "") || (result == null) || (result == string.Empty)) {
-                result = Default;
+                if (Default != "")
+                {
+                    result = Default;
+                }
+                else
+                {
+                    result = $"#{Line}";
+                }
             }
             if (uppercase) result = result.ToUpperInvariant();
             if (aestheticspaces > 0)
@@ -593,6 +708,7 @@ namespace Distance.Translator
             {
                 CurrentPlugin.LangDump[Line] = Default;
             }
+            Console.WriteLine($"#LOAD(\"{Line}\")");
             return result;
         }
     }

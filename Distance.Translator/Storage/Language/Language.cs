@@ -587,7 +587,7 @@ namespace Distance.Translator
             OPTIONS_GRAPHICS_DEPTHOFFIELD = GetLine("options.graphics.depthoffield", "Depth Of Field:", true);
             OPTIONS_GRAPHICS_DEPTHOFFIELD_DESCRIPTION = GetLine("options.graphics.depthoffield.description", "Blurs objects in the distance to simulate a camera lens.\nEnabling this may degrade graphics performance.");
             OPTIONS_GRAPHICS_PARTICLES = GetLine("options.graphics.particles", "Particles:", true);
-            OPTIONS_GRAPHICS_PARTICLES_DESCRIPTION = GetLine("options.graphics.particles.description", "Adds particles in the environment such as sparks or clouds or smoke.", true);
+            OPTIONS_GRAPHICS_PARTICLES_DESCRIPTION = GetLine("options.graphics.particles.description", "Adds particles in the environment such as sparks or clouds or smoke.");
             OPTIONS_GRAPHICS_TEXTUREQUALITY = GetLine("options.graphics.texturequality", "Texture Quality:", true);
             OPTIONS_GRAPHICS_TEXTUREQUALITY_DESCRIPTION = GetLine("options.graphics.texturequality.description", "Turning down quality may improve the game's memory footprint but will significantly degrade image quality.");
             OPTIONS_GRAPHICS_ANTIALIASING = GetLine("options.graphics.antialiasing", "Anti-Aliasing:", true);

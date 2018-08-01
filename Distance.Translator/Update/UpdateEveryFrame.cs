@@ -51,16 +51,28 @@ namespace Distance.Translator
                     {
                         GameObject.Find("OptionsFrontRoot/Panel - Options/Panel - Controls/Panel - MenuTitle/UILabel - Description").GetComponentsInChildren<UILabel>()[0].text = String.Format(Language.OPTIONS_CONTROLS_SUBTITLE, G.Sys.ProfileManager_.CurrentProfile_.Name_);
                     } catch (Exception ONION) { }
+                    //try
+                    //{
+                    //    GameObject MENUTITLE_GO = GameObject.Find("Panel - Main/DistanceTitle");
+                    //    if (MENUTITLE_GO != null)
+                    //    {
+                    //        Transform MENUTITLE_TR = MENUTITLE_GO.GetComponent<Transform>();
+                    //        if (MENUTITLE_TR != null)
+                    //        {
+                    //            //MENUTITLE_TR.RotateAround(MENUTITLE_TR.position, Vector3.forward, 20 * Time.fixedDeltaTime);
+                    //            MENUTITLE_TR.eulerAngles = new Vector3(0,0,0);
+                    //        }
+                    //    }
+                    //} finally { }
                     try
                     {
-                        GameObject MENUTITLE_GO = GameObject.Find("Panel - Main/DistanceTitle");
-                        if (MENUTITLE_GO != null)
+                        GameObject WORKSHOP_HIGHLIGHT_GO = GameObject.Find("MainMenuFrontRoot/UI Root/Panel - Main/Window Content - Workshop/Header Label");
+                        if (WORKSHOP_HIGHLIGHT_GO != null && WORKSHOP_HIGHLIGHT_GO.HasComponent<UILabel>())
                         {
-                            Transform MENUTITLE_TR = MENUTITLE_GO.GetComponent<Transform>();
-                            if (MENUTITLE_TR != null)
+                            UILabel WORKSHOP_HIGHLIGHT = WORKSHOP_HIGHLIGHT_GO.GetComponent<UILabel>();
+                            if (WORKSHOP_HIGHLIGHT != null)
                             {
-                                //MENUTITLE_TR.RotateAround(MENUTITLE_TR.position, Vector3.forward, 20 * Time.fixedDeltaTime);
-                                MENUTITLE_TR.eulerAngles = new Vector3(0,0,0);
+                                Translate.WorkshopHighlight(ref WORKSHOP_HIGHLIGHT);
                             }
                         }
                     } finally { }

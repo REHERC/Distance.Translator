@@ -37,6 +37,9 @@ namespace Distance.Translator
 
         public static string MAINMENU_PRESSKEY;
 
+        public static string MAINMENU_WORKSHOP_HIGHLIGHT;
+        public static string MAINMENU_WORKSHOP_HIGHLIGHT_LOADING;
+
         public static string MENUBUTTON_ADVENTURE;
         public static string MENUBUTTON_ARCADE;
         public static string MENUBUTTON_MULTIPLAYER;
@@ -288,6 +291,10 @@ namespace Distance.Translator
         public static string OPTIONS_GRAPHICS_TEXTUREQUALITY_HIGH;
         public static string OPTIONS_GRAPHICS_TEXTUREQUALITY_ULTRA;
 
+        public static string OPTIONS_GRAPHICS_ANTIALIASING_OFF;
+        public static string OPTIONS_GRAPHICS_ANTIALIASING_FXAAFAST;
+        public static string OPTIONS_GRAPHICS_ANTIALIASING_FXAAQUALITY;
+        
         public static string OPTIONS_GRAPHICS_DRAWDISTANCE_NEAR;
         public static string OPTIONS_GRAPHICS_DRAWDISTANCE_MEDIUM;
         public static string OPTIONS_GRAPHICS_DRAWDISTANCE_FAR;
@@ -336,8 +343,7 @@ namespace Distance.Translator
         {
             SharedSettings.CURRENT_LANGUAGE_FILE = CurrentPlugin.Config.GetItem<String>("LanguageFile");
             CurrentPlugin.Lang = new Settings($@"Languages\{SharedSettings.CURRENT_LANGUAGE_FILE}");
-
-
+            
             LANGUAGE_NAME = GetLine("language.name","English");
             LANGUAGE_AUTHOR = GetLine("language.author", "Refract Studios");
 
@@ -345,7 +351,7 @@ namespace Distance.Translator
             PLUGIN_MENU_TITLE = GetLine("plugin.menu.title", "Language Settings", true);
             PLUGIN_MENU_LANGUAGE = GetLine("plugin.menu.language", "Language", true);
             PLUGIN_MENU_LANGUAGE_DESCRIPTION = GetLine("plugin.menu.language.description", "The language displayed by the game.");
-            PLUGIN_MENU_LANGUAGE_UPDATE = GetLine("plugin.menu.language.update", "Refresh language", true);
+            PLUGIN_MENU_LANGUAGE_UPDATE = GetLine("plugin.menu.language.update", "Refresh language:", true);
             PLUGIN_MENU_LANGUAGE_UPDATE_DESCRIPTION = GetLine("plugin.menu.language.update.description", "Reload the language displayed by the game.");
             PLUGIN_MENU_LANGUAGE_UPDATE_DIALOG_TITLE = GetLine("plugin.menu.language.update.dialog.title", "Reload Language", true);
             PLUGIN_MENU_LANGUAGE_UPDATE_DIALOG_MESSAGE = GetLine("plugin.menu.language.update.dialog.message", "This operation can take some time on slow computers.");
@@ -366,7 +372,10 @@ namespace Distance.Translator
             HEADER_DESCRIPTION = GetLine("header.description", "Description", true);
 
             MAINMENU_PRESSKEY = GetLine("mainmenu.presskey", "Press any button to start", true,1);
-            
+
+            MAINMENU_WORKSHOP_HIGHLIGHT = GetLine("mainmenu.workshophighlight", "[96B0FF]Workshop Highlight[-] - {0} Levels And Counting", true);
+            MAINMENU_WORKSHOP_HIGHLIGHT_LOADING = GetLine("mainmenu.workshophighlight.loading", "Loading...", true);
+
             MENUBUTTON_ADVENTURE = GetLine("menubutton.adventure", "Adventure",true);
             MENUBUTTON_ARCADE = GetLine("menubutton.arcade", "Arcade",true);
             MENUBUTTON_MULTIPLAYER = GetLine("menubutton.multiplayer", "Multiplayer",true);
@@ -464,7 +473,7 @@ namespace Distance.Translator
             OPTIONS_GENERAL_BOOMBOX_BLOOM = GetLine("options.general.boombox.bloom", "Boom Box Bloom Intensity:", true);
             OPTIONS_GENERAL_BOOMBOX_SHAKE = GetLine("options.general.boombox.shake", "Boom Box Shake Intensity:", true);
             OPTIONS_GENERAL_VISUALIZER = GetLine("options.general.visualizer", "Car Screen Visualizer:", true);
-            OPTIONS_GENERAL_VISUALIZER_OFF = GetLine("options.general.visualizer.off", "off");
+            OPTIONS_GENERAL_VISUALIZER_OFF = GetLine("options.general.visualizer.off", "Off");
             OPTIONS_GENERAL_VISUALIZER_CIRCLE = GetLine("options.general.visualizer.circle", "Circle");
             OPTIONS_GENERAL_VISUALIZER_BARS = GetLine("options.general.visualizer.bars", "Bars");
             OPTIONS_GENERAL_SHUFFLELEVELS = GetLine("options.general.shufflelevels", "Shuffle Levels:", true);
@@ -618,6 +627,10 @@ namespace Distance.Translator
             OPTIONS_GRAPHICS_TEXTUREQUALITY_HIGH = GetLine("options.graphics.texturequality.high", "High");
             OPTIONS_GRAPHICS_TEXTUREQUALITY_ULTRA = GetLine("options.graphics.texturequality.ultra", "Ultra");
 
+            OPTIONS_GRAPHICS_ANTIALIASING_OFF = GetLine("options.graphics.antialiasing.off", "Off");
+            OPTIONS_GRAPHICS_ANTIALIASING_FXAAFAST = GetLine("options.graphics.antialiasing.fxaafast", "FXAA Fast");
+            OPTIONS_GRAPHICS_ANTIALIASING_FXAAQUALITY = GetLine("options.graphics.antialiasing.fxaaquality", "FXAA Quality");
+
             OPTIONS_GRAPHICS_DRAWDISTANCE_NEAR = GetLine("options.graphics.drawdistance.near", "Near");
             OPTIONS_GRAPHICS_DRAWDISTANCE_MEDIUM = GetLine("options.graphics.drawdistance.medium", "Medium");
             OPTIONS_GRAPHICS_DRAWDISTANCE_FAR = GetLine("options.graphics.drawdistance.far", "Far");
@@ -770,7 +783,7 @@ namespace Distance.Translator
             {
                 CurrentPlugin.LangDump[Line] = Default;
             }
-            Console.WriteLine($"\"{Line}\"");
+            //Console.WriteLine($"\"{Line}\"");
             return result;
         }
     }

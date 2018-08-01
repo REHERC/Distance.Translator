@@ -1,6 +1,4 @@
-﻿using System;
-using Harmony;
-using UnityEngine;
+﻿using Harmony;
 
 namespace Distance.Translator
 {
@@ -12,7 +10,6 @@ namespace Distance.Translator
             public static void Postfix(UIPanel __instance)
             {
                 Translate.UIPanel(__instance);
-                //ObjectManager.AddPanel(Util.GameObjectPath(__instance.transform));
             }
         }
     }

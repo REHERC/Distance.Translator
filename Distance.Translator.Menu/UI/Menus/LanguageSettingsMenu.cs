@@ -28,7 +28,7 @@ namespace Spectrum.Menu.Menus
                      , LanguageKeys.PLUGIN_MENU_LANGUAGE_DESCRIPTION
                      , LanguageManager.Languages.ToArray());
 
-            TweakBool(LanguageKeys.PLUGIN_MENU_RAINBOWMODE
+            /*TweakBool(LanguageKeys.PLUGIN_MENU_RAINBOWMODE
                      , SharedSettings.RAINBOW_MODE
                      , (bool value) => 
                      {
@@ -36,7 +36,8 @@ namespace Spectrum.Menu.Menus
                          IPCAntenna.SendSetting("DistanceTranslator", "config.rainbow", value);
                      }
                      , LanguageKeys.PLUGIN_MENU_RAINBOWMODE_DESCRIPTION);
-            
+            */
+
             TweakAction(LanguageKeys.PLUGIN_MENU_LANGUAGE_UPDATE
                        , () => 
                        {

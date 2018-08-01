@@ -1,5 +1,4 @@
 ﻿using System;
-using UnityEngine;
 
 namespace Distance.Translator
 {
@@ -11,51 +10,72 @@ namespace Distance.Translator
             {
                 if (__instance.gameObject.HasComponent<UIEventListener>() && __instance.gameObject.transform.parent.gameObject.name == "Drop-down List")
                 {
-                    // Translate dropdown currently selected item
-                    switch (__instance.gameObject.transform.parent.parent.parent.gameObject.name)
-                    {
-                        case "Panel - Audio":
-                            Translate.AnnouncerOptionsTranslate(ref __instance);
-                            break;
-                        case "Panel - Options":
-                            //General menu
-                            Translate.UnitsTranslate(ref __instance);
-
-                            // Replay menu
-                            Translate.GhostTypeTranslate(ref __instance);
-                            Translate.VisualizerTranslate(ref __instance);
-                            break;
-                    }
-                    /*switch (__instance.gameObject.transform.parent.parent.parent.parent.gameObject.name)
-                    {
-                        case "Panel - Graphics":
-
-                            //TODO: Add a switch case for the graphics options menu and select the dropdown name to avoid conficts
-                            break;
-                    }*/
-                    // Translate dropdown items
-
+                    DropDown(ref __instance, UIPopupList.current.name);
                 }
-
-                switch (__instance.gameObject.transform.parent.parent.name)
+                if (__instance.transform.parent.parent.HasComponent<UIExPopupList>() && __instance.gameObject.name == "PopupLabel")
                 {
-                    case "Announcer Options":
-                        Translate.AnnouncerOptionsTranslate(ref __instance);
-                        break;
-                    case "UNITS":
-                        Translate.UnitsTranslate(ref __instance);
-                        break;
-                    case "CAR SCREEN VISUALIZER":
-                        Translate.VisualizerTranslate(ref __instance);
-                        break;
-                    case "GHOSTS IN ARCADE TYPE":
-                        Translate.GhostTypeTranslate(ref __instance);
-                        break;
-                    }
+                    DropDown(ref __instance, __instance.transform.parent.parent.name);
+                }
             }
             catch (Exception SWOOSHYBOI)
             {
                 
+            }
+        }
+
+        private static void DropDown(ref UILabel __instance,string name)
+        {
+            switch (name)
+            {
+                case "Announcer Options":
+                    Translate.AnnouncerOptionsTranslate(ref __instance);
+                    break;
+                case "UNITS":
+                    Translate.UnitsTranslate(ref __instance);
+                    break;
+                case "CAR SCREEN VISUALIZER":
+                    Translate.VisualizerTranslate(ref __instance);
+                    break;
+                case "GHOSTS IN ARCADE TYPE":
+                    Translate.GhostTypeTranslate(ref __instance);
+                    break;
+                case "Fullscreen":
+                case "StylizedOutlines":
+                case "FilmNoir":
+                case "CinematicLetterbox":
+                case "Bloom":
+                case "FilmGrain":
+                case "Vignetting":
+                case "RadialBlur":
+                case "SunShafts":
+                case "DepthOfField":
+                case "Particles":
+                case "MotionBlur":
+                case "CarDents":
+                case "Detailed Lighting":
+                    Translate.GenericOnOff(ref __instance);
+                    break;
+                case "AnisotropicFiltering":
+                    Translate.AbnisotropicFiltering(ref __instance);
+                    break;
+                case "DrawDistance":
+                    Translate.DrawDistance(ref __instance);
+                    break;
+                case "RealTimeReflections":
+                    Translate.RealTimeReflections(ref __instance);
+                    break;
+                case "ShadowQuality":
+                    Translate.ShadowQuality(ref __instance);
+                    break;
+                case "TextureQuality":
+                    Translate.TextureQuality(ref __instance);
+                    break;
+                case "AntiAliasing":
+                    Translate.AntiAliasing(ref __instance);
+                    break;
+                case "VSync":
+                    Translate.VSync(ref __instance);
+                    break;
             }
         }
     }

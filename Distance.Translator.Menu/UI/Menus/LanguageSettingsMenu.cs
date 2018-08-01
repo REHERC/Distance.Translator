@@ -24,6 +24,8 @@ namespace Spectrum.Menu.Menus
                      {
                          SharedSettings.CURRENT_LANGUAGE = lang;
                          IPCAntenna.SendSetting("DistanceTranslator", "config.language", lang);
+                         IPCAntenna.SendCommand("DistanceTranslator", "language-reload");
+
                      }
                      , LanguageKeys.PLUGIN_MENU_LANGUAGE_DESCRIPTION
                      , LanguageManager.Languages.ToArray());
@@ -41,7 +43,7 @@ namespace Spectrum.Menu.Menus
             TweakAction(LanguageKeys.PLUGIN_MENU_LANGUAGE_UPDATE
                        , () => 
                        {
-                           Scene scene = SceneManager.GetActiveScene();
+                           /*Scene scene = SceneManager.GetActiveScene();
                            if (scene.name == "MainMenu")
                            {
                                G.Sys.MenuPanelManager_.ShowOkCancel(LanguageKeys.PLUGIN_MENU_LANGUAGE_UPDATE_DIALOG_MESSAGE, LanguageKeys.PLUGIN_MENU_LANGUAGE_UPDATE_DIALOG_TITLE, () =>
@@ -52,7 +54,7 @@ namespace Spectrum.Menu.Menus
                            else
                            {
                                G.Sys.MenuPanelManager_.ShowError(LanguageKeys.PLUGIN_MENU_LANGUAGE_UPDATE_DIALOG_UNAVAILABLE_MESSAGE,LanguageKeys.PLUGIN_MENU_LANGUAGE_UPDATE_DIALOG_UNAVAILABLE_TITLE);
-                           }
+                           }*/
                        }
                        , LanguageKeys.PLUGIN_MENU_LANGUAGE_UPDATE_DESCRIPTION);
                        

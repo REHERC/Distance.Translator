@@ -675,8 +675,12 @@ namespace Distance.Translator
 
         public static void Apply()
         {
-            Scene scene = SceneManager.GetActiveScene();
-            SceneManager.LoadScene(scene.name);
+            // Old way of force reloading the every component to reload language
+            //Scene scene = SceneManager.GetActiveScene();
+            //SceneManager.LoadScene(scene.name);
+
+            // New prettier/faster way of reloading things
+            TranslateTaskManager.Reset();
         }
 
         // List of colors (in order) used in the rainbow effect (colors from the randomize button in the garage menu)

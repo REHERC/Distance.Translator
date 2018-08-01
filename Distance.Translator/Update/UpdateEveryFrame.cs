@@ -20,6 +20,9 @@ namespace Distance.Translator
         }
 
         private static void Bois() {
+            TranslateTaskManager.Run();
+
+            /*
             Scene scene = SceneManager.GetActiveScene();
             switch (scene.name)
             {
@@ -78,6 +81,7 @@ namespace Distance.Translator
                     } finally { }
                     break;
             }
+            */
         }
     }
 }

@@ -16,8 +16,8 @@ namespace Distance.Translator
         public void Initialize(IManager manager, string ipcIdentifier)
         {
             Console.WriteLine($"Initializing ... ({ipcIdentifier})");
-            ObjectManager.Initialize();
             CurrentPlugin.Initialize();
+            TranslateTaskManager.Initialize();
             IPCAntenna.initialize(manager,ipcIdentifier);
             CurrentPlugin.Log.Info("Initialization done!");
             PrintLogo();
@@ -42,10 +42,12 @@ namespace Distance.Translator
             CurrentPlugin.Log.Info("Subscribing to Events ...");
             Events.Scene.StartLoad.Subscribe((data) =>
             {
-                ObjectManager.Initialize();
+                TranslateTaskManager.Reset();
             });
             Events.Scene.LoadFinish.Subscribe((data) =>
             {
+                TranslateTaskManager.Reset();
+
                 if (data.sceneName == "MainMenu")
                 {
                     Spectrum.Interop.Game.Game.WatermarkText += (SharedSettings.MENUPLUGIN_DETECTED) ? "\nDISTANCE TRANSLATOR+" : "\nDISTANCE TRANSLATOR";
@@ -57,7 +59,7 @@ namespace Distance.Translator
 
         public void PrintLogo()
         {
-            foreach(string line in BootLogo.GetText().Split(Environment.NewLine[0]))
+            foreach (string line in BootLogo.GetText().Split(Environment.NewLine[0]))
             {
                 CurrentPlugin.Log.Info(line);
             }

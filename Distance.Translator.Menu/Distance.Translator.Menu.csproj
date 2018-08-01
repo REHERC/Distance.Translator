@@ -74,7 +74,6 @@
     <Compile Include="Photon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Storage\CurrentPlugin.cs" />
-    <Compile Include="Storage\Language\Language.cs" />
     <Compile Include="Storage\Language\LanguageManager.cs" />
     <Compile Include="Storage\SharedSettings.cs" />
     <Compile Include="UI\Menus\LanguageSettingsMenu.cs" />

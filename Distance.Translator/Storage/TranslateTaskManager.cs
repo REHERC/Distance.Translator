@@ -17,6 +17,7 @@ namespace Distance.Translator
             Translations.Add(new MainmenuGraphics() { CanRun = true });
             Translations.Add(new MainmenuProfiles() { CanRun = true });
             Translations.Add(new MainmenuReplay() { CanRun = true });
+            Translations.Add(new MainmenuLanguage() { CanRun = true });
         }
 
         public static void Run()

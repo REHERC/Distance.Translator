@@ -66,7 +66,6 @@ namespace Distance.Translator
                         {
                             case "language-reload":
                                 Language.Initialize();
-                                SendTranslations();
                                 Language.Apply();
                                 break;
                         }
@@ -94,35 +93,10 @@ namespace Distance.Translator
                             LanguageManager.SendLanguages();
 
                             SendSetting(OPTIONS_MENU_IPC, "config.rainbow", CurrentPlugin.Config.GetItem<bool>("Rainbow"));
-
-                            SendTranslations();
                         }
                         break;
                 }
             }
-        }
-    }
-
-    public static partial class IPCAntenna
-    {
-        public static void SendTranslations()
-        {
-            SendTranslation(OPTIONS_MENU_IPC, "header.description", Language.HEADER_DESCRIPTION);
-
-            SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.name", Language.PLUGIN_MENU_NAME);
-            SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.title", Language.PLUGIN_MENU_TITLE);
-            SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.language", Language.PLUGIN_MENU_LANGUAGE);
-            SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.language.description", Language.PLUGIN_MENU_LANGUAGE_DESCRIPTION);
-
-            SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.language.update", Language.PLUGIN_MENU_LANGUAGE_UPDATE);
-            SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.language.update.description", Language.PLUGIN_MENU_LANGUAGE_UPDATE_DESCRIPTION);
-            SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.language.update.dialog.title", Language.PLUGIN_MENU_LANGUAGE_UPDATE_DIALOG_TITLE);
-            SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.language.update.dialog.message", Language.PLUGIN_MENU_LANGUAGE_UPDATE_DIALOG_MESSAGE);
-            SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.language.update.dialog.unavailable.title", Language.PLUGIN_MENU_LANGUAGE_UPDATE_DIALOG_UNAVAILABLE_TITLE);
-            SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.language.update.dialog.unavailable.message", Language.PLUGIN_MENU_LANGUAGE_UPDATE_DIALOG_UNAVAILABLE_MESSAGE);
-
-            SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.rainbowmode", Language.PLUGIN_MENU_RAINBOWMODE);
-            SendTranslation(OPTIONS_MENU_IPC, "plugin.menu.rainbowmode.description", Language.PLUGIN_MENU_RAINBOWMODE_DESCRIPTION);
         }
     }
 }

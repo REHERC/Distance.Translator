@@ -53,50 +53,6 @@ namespace Distance.Translator.Menu
                         SharedSettings.MAINPLUGIN_DETECTED = true;
                         Patcher.Patch();
                         break;
-                    case "translate":
-                        switch (data["key"].ToString())
-                        {
-                            case "header.description":
-                                LanguageKeys.HEADER_DESCRIPTION = (string)data["value"].ToString();
-                                break;
-                            case "plugin.menu.name":
-                                LanguageKeys.PLUGIN_MENU_NAME = (string)data["value"].ToString();
-                                break;
-                            case "plugin.menu.title":
-                                LanguageKeys.PLUGIN_MENU_TITLE = (string)data["value"].ToString();
-                                break;
-                            case "plugin.menu.language":
-                                LanguageKeys.PLUGIN_MENU_LANGUAGE = (string)data["value"].ToString().TrimEnd(':');
-                                break;
-                            case "plugin.menu.language.description":
-                                LanguageKeys.PLUGIN_MENU_LANGUAGE_DESCRIPTION = (string)data["value"].ToString();
-                                break;
-                            case "plugin.menu.language.update":
-                                LanguageKeys.PLUGIN_MENU_LANGUAGE_UPDATE = (string)data["value"].ToString();
-                                break;
-                            case "plugin.menu.language.update.description":
-                                LanguageKeys.PLUGIN_MENU_LANGUAGE_UPDATE_DESCRIPTION = (string)data["value"].ToString();
-                                break;
-                            case "plugin.menu.language.update.dialog.title":
-                                LanguageKeys.PLUGIN_MENU_LANGUAGE_UPDATE_DIALOG_TITLE = (string)data["value"].ToString();
-                                break;
-                            case "plugin.menu.language.update.dialog.message":
-                                LanguageKeys.PLUGIN_MENU_LANGUAGE_UPDATE_DIALOG_MESSAGE = (string)data["value"].ToString();
-                                break;
-                            case "plugin.menu.language.update.dialog.unavailable.title":
-                                LanguageKeys.PLUGIN_MENU_LANGUAGE_UPDATE_DIALOG_UNAVAILABLE_TITLE = (string)data["value"].ToString();
-                                break;
-                            case "plugin.menu.language.update.dialog.unavailable.message":
-                                LanguageKeys.PLUGIN_MENU_LANGUAGE_UPDATE_DIALOG_UNAVAILABLE_MESSAGE = (string)data["value"].ToString();
-                                break;
-                            case "plugin.menu.rainbowmode":
-                                LanguageKeys.PLUGIN_MENU_RAINBOWMODE = (string)data["value"].ToString().TrimEnd(':');
-                                break;
-                            case "plugin.menu.rainbowmode.description":
-                                LanguageKeys.PLUGIN_MENU_RAINBOWMODE_DESCRIPTION = (string)data["value"].ToString();
-                                break;
-                        }
-                        break;
                     case "setting":
                         switch (data["setting"].ToString())
                         {

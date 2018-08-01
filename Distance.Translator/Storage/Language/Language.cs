@@ -14,15 +14,7 @@ namespace Distance.Translator
         public static string PLUGIN_MENU_NAME;
         public static string PLUGIN_MENU_TITLE;
         public static string PLUGIN_MENU_LANGUAGE;
-        public static string PLUGIN_MENU_LANGUAGE_DESCRIPTION;
-        public static string PLUGIN_MENU_LANGUAGE_UPDATE;
-        public static string PLUGIN_MENU_LANGUAGE_UPDATE_DESCRIPTION;
-        public static string PLUGIN_MENU_LANGUAGE_UPDATE_DIALOG_TITLE;
-        public static string PLUGIN_MENU_LANGUAGE_UPDATE_DIALOG_MESSAGE;
-        public static string PLUGIN_MENU_LANGUAGE_UPDATE_DIALOG_UNAVAILABLE_TITLE;
-        public static string PLUGIN_MENU_LANGUAGE_UPDATE_DIALOG_UNAVAILABLE_MESSAGE;
         public static string PLUGIN_MENU_RAINBOWMODE;
-        public static string PLUGIN_MENU_RAINBOWMODE_DESCRIPTION;
 
         public static string BUTTON_APPLY;
         public static string BUTTON_BACK;
@@ -347,18 +339,10 @@ namespace Distance.Translator
             LANGUAGE_NAME = GetLine("language.name","English");
             LANGUAGE_AUTHOR = GetLine("language.author", "Refract Studios");
 
-            PLUGIN_MENU_NAME = GetLine("plugin.menu.name", "Language");
+            PLUGIN_MENU_NAME = GetLine("plugin.menu.name", "Language:");
             PLUGIN_MENU_TITLE = GetLine("plugin.menu.title", "Language Settings", true);
             PLUGIN_MENU_LANGUAGE = GetLine("plugin.menu.language", "Language", true);
-            PLUGIN_MENU_LANGUAGE_DESCRIPTION = GetLine("plugin.menu.language.description", "The language displayed by the game.");
-            PLUGIN_MENU_LANGUAGE_UPDATE = GetLine("plugin.menu.language.update", "Refresh language:", true);
-            PLUGIN_MENU_LANGUAGE_UPDATE_DESCRIPTION = GetLine("plugin.menu.language.update.description", "Reload the language displayed by the game.");
-            PLUGIN_MENU_LANGUAGE_UPDATE_DIALOG_TITLE = GetLine("plugin.menu.language.update.dialog.title", "Reload Language", true);
-            PLUGIN_MENU_LANGUAGE_UPDATE_DIALOG_MESSAGE = GetLine("plugin.menu.language.update.dialog.message", "This operation can take some time on slow computers.");
-            PLUGIN_MENU_LANGUAGE_UPDATE_DIALOG_UNAVAILABLE_TITLE = GetLine("plugin.menu.language.update.dialog.unavailable.title", "Reload Language", true);
-            PLUGIN_MENU_LANGUAGE_UPDATE_DIALOG_UNAVAILABLE_MESSAGE = GetLine("plugin.menu.language.update.dialog.unavailable.message", "This feature isn't available in game mode.");
             PLUGIN_MENU_RAINBOWMODE = GetLine("plugin.menu.rainbowmode", "Rainbow Mode", true);
-            PLUGIN_MENU_RAINBOWMODE_DESCRIPTION = GetLine("plugin.menu.rainbowmode.description", "Applies a rainbow-like effect to some texts of the game.");
 
             BUTTON_BACK = GetLine("button.back", "Back");
             BUTTON_APPLY = GetLine("button.apply", "Apply");

@@ -83,12 +83,14 @@
     <Compile Include="Patches\Harmony\TrickClassifier\GetTrickPartName.cs" />
     <Compile Include="Patches\Translate\Generic\Translate.DropDown.cs" />
     <Compile Include="Patches\Translate\Generic\Translate.Options.Controls.ListingTable.cs" />
+    <Compile Include="Patches\Translate\Specific\Labels\Translate.MenuTitles.cs" />
     <Compile Include="Patches\Translate\Menus\TranslateTask.MainMenu.Audio.cs" />
-    <Compile Include="Patches\Translate\Menus\TranslateTask.mainMenu.Controls.cs" />
+    <Compile Include="Patches\Translate\Menus\TranslateTask.MainMenu.Controls.cs" />
     <Compile Include="Patches\Translate\Menus\TranslateTask.MainMenu.General.cs" />
     <Compile Include="Patches\Translate\Menus\TranslateTask.MainMenu.Graphics.cs" />
+    <Compile Include="Patches\Translate\Menus\TranslateTask.MainMenu.Language.cs" />
     <Compile Include="Patches\Translate\Menus\TranslateTask.MainMenu.Profiles.cs" />
-    <Compile Include="Patches\Translate\Menus\TranslateTask.mainMenu.Replay.cs" />
+    <Compile Include="Patches\Translate\Menus\TranslateTask.MainMenu.Replay.cs" />
     <Compile Include="Patches\Translate\Specific\Drop Down Lists\Translate.AnisotropicFiltering.cs" />
     <Compile Include="Patches\Translate\Specific\Drop Down Lists\Translate.AntiAliasing.cs" />
     <Compile Include="Patches\Translate\Specific\Drop Down Lists\Translate.VSync.cs" />

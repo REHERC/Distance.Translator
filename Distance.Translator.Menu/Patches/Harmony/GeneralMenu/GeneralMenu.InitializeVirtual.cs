@@ -13,7 +13,7 @@ namespace Distance.Translator.Menu
         {
             public static void Postfix(OptionsMenuLogic __instance)
             {
-                var LanguageSettingsObject = new GameObject("LanguageSettings");
+                var LanguageSettingsObject = new GameObject("Panel - Language");
                 var LanguageMenuController = LanguageSettingsObject.AddComponent<LanguageSettingsMenu>();
                 LanguageMenuController.SetManager(CurrentPlugin._manager);
 

@@ -11,6 +11,7 @@ namespace Distance.Translator
             {
                 Translate.DropDown(ref __instance);
                 Translate.ControlsListingTable(ref __instance);
+                Translate.MenuTitles(ref __instance);
             }
         }
     }

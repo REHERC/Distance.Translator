@@ -11,6 +11,13 @@ namespace Distance.Translator
         {
             Translations = new List<TranslateTask>();
             Translations.Clear();
+            
+            Translations.Add(new Watermark() { CanRun = true });
+
+            Translations.Add(new Mainmenu() { CanRun = true });
+
+            Translations.Add(new SubmenuOptions() { CanRun = true });
+            
             Translations.Add(new MainmenuAudio() { CanRun = true });
             Translations.Add(new MainmenuGeneral() { CanRun = true });
             Translations.Add(new MainmenuControls() { CanRun = true });

@@ -19,11 +19,9 @@ namespace Distance.Translator
         {
             if (GameObject.Find("OptionsFrontRoot/Panel - Options/Language/Options") != null)
             {
-                GameObject.Find("OptionsFrontRoot/Panel - Options/Language/MenuTitleTemplate/UILabel - Title").GetComponentsInChildren<UILabel>()[0].text = Language.PLUGIN_MENU_TITLE;
-                GameObject.Find("OptionsFrontRoot/Panel - Options/Language/Options/OptionsTable/PLUGIN MENU LANGUAGE").GetComponentsInChildren<UILabel>()[0].text = Language.PLUGIN_MENU_LANGUAGE;
-
-                GameObject.Find("OptionsFrontRoot/Panel - Options/Language/Options/DescriptionArea").DeactivateAndDestroy();
-
+                GameObject.Find("OptionsFrontRoot/Panel - Options/Language/MenuTitleTemplate/UILabel - Title").GetComponent<UILabel>().text = Language.PLUGIN_MENU_TITLE;
+                GameObject.Find("OptionsFrontRoot/Panel - Options/Language/Options/OptionsTable/PLUGIN MENU LANGUAGE/NameLabel").GetComponent<UILabel>().text = Language.PLUGIN_MENU_LANGUAGE;
+                
                 CanRun = false;
             }
         }

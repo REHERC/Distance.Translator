@@ -339,9 +339,9 @@ namespace Distance.Translator
             LANGUAGE_NAME = GetLine("language.name","English");
             LANGUAGE_AUTHOR = GetLine("language.author", "Refract Studios");
 
-            PLUGIN_MENU_NAME = GetLine("plugin.menu.name", "Language:");
+            PLUGIN_MENU_NAME = GetLine("plugin.menu.name", "Language");
             PLUGIN_MENU_TITLE = GetLine("plugin.menu.title", "Language Settings", true);
-            PLUGIN_MENU_LANGUAGE = GetLine("plugin.menu.language", "Language", true);
+            PLUGIN_MENU_LANGUAGE = GetLine("plugin.menu.language", "Language:", true);
             PLUGIN_MENU_RAINBOWMODE = GetLine("plugin.menu.rainbowmode", "Rainbow Mode", true);
 
             BUTTON_BACK = GetLine("button.back", "Back");
@@ -667,6 +667,18 @@ namespace Distance.Translator
             TranslateTaskManager.Reset();
         }
 
+        public static string GetWatermarkExtension()
+        {
+            string WATERMARK = "";
+
+            WATERMARK += (SharedSettings.MENUPLUGIN_DETECTED) ? "\nDISTANCE TRANSLATOR+" : "\nDISTANCE TRANSLATOR";
+            WATERMARK += " ([00DDFF]" + Language.LANGUAGE_NAME.ToUpperInvariant() + "[-] - [FF9000]" + Language.LANGUAGE_AUTHOR.ToUpper() + "[-])";
+
+            return WATERMARK;
+        }
+
+
+
         // List of colors (in order) used in the rainbow effect (colors from the randomize button in the garage menu)
         public static List<string> Rainbow = new List<String>(){
             "F70001",
@@ -683,20 +695,57 @@ namespace Distance.Translator
             "language.author",
             "plugin.menu.rainbowmode.description",
             "plugin.menu.language.description",
+
             "options.audio.announcersettings.allmodes",
             "options.audio.announcersettings.arcadeonly",
             "options.audio.announcersettings.stuntonly",
             "options.audio.announcersettings.disabled",
+
             "options.general.units.metric",
             "options.general.units.imperial",
+
             "options.general.visualizer.off",
             "options.general.visualizer.circle",
             "options.general.visualizer.bars",
+
             "options.replays.type.disabled",
             "options.replays.type.local",
             "options.replays.type.friends",
             "options.replays.type.nearmyranking",
             "options.replays.type.globalbest",
+
+            "options.graphics.reflections.off",
+            "options.graphics.reflections.low",
+            "options.graphics.reflections.medium",
+            "options.graphics.reflections.high",
+            "options.graphics.reflections.ultra",
+
+            "options.graphics.anisotropicfiltering.off",
+            "options.graphics.anisotropicfiltering.partial",
+            "options.graphics.anisotropicfiltering.full",
+
+            "options.graphics.texturequality.low",
+            "options.graphics.texturequality.medium",
+            "options.graphics.texturequality.high",
+            "options.graphics.texturequality.ultra",
+
+            "options.graphics.antialiasing.off",
+            "options.graphics.antialiasing.fxaafast",
+            "options.graphics.antialiasing.fxaaquality",
+
+            "options.graphics.drawdistance.near",
+            "options.graphics.drawdistance.medium",
+            "options.graphics.drawdistance.far",
+
+            "options.graphics.shadowquality.off",
+            "options.graphics.shadowquality.low",
+            "options.graphics.shadowquality.medium",
+            "options.graphics.shadowquality.high",
+            "options.graphics.shadowquality.ultra",
+
+            "options.generic.enabled",
+            "options.generic.on",
+            "options.generic.off"
         };
         
         public static string GetLine(String Line,String Default, bool uppercase = false,int aestheticspaces = 0,bool rainbow = false)
@@ -714,7 +763,7 @@ namespace Distance.Translator
             {
                 if (Line != "nothing" && VirusSpirit.Message != "default language")
                 {
-                    CurrentPlugin.Log.Exception(VirusSpirit);
+                    //CurrentPlugin.Log.Exception(VirusSpirit);
                     CurrentPlugin.Log.Error("Impossible to find the translation key for \"" + Line + "\" in \"" + CurrentPlugin.Config.GetItem<String>("LanguageFile") + ".json\"");
                 }
                 result = null;

@@ -34,7 +34,7 @@ namespace Distance.Translator
                         if (ProfileTable != null)
                         {
                             // Add the "(selected)" suffix on the currently selected profile item in the list
-                            foreach (ProfilesMenuProfileButton Profile in ProfileTable.GetComponentsInChildren<ProfilesMenuProfileButton>())
+                            foreach (ProfilesMenuProfileButton Profile in ProfileTable.GetComponent<ProfilesMenuProfileButton>())
                             {
                                 if (!(Profile.transform.name == "ProfileButtonBlueprint"))
                                 {
@@ -47,12 +47,12 @@ namespace Distance.Translator
                                 }
                             }
                             // Set the current profile name on the edit header
-                            GameObject.Find("OptionsFrontRoot/Panel - Options/Panel - Profiles/Anchor - Center/Panel - EditProfile/EditSelectedProfileLabel").GetComponentsInChildren<UILabel>()[0].text = "[c][848484]" + String.Format(Language.OPTIONS_PROFILES_EDIT, "[-][/c]" + G.Sys.ProfileManager_.CurrentProfile_.Name_);
+                            GameObject.Find("OptionsFrontRoot/Panel - Options/Panel - Profiles/Anchor - Center/Panel - EditProfile/EditSelectedProfileLabel").GetComponent<UILabel>().text = "[c][848484]" + String.Format(Language.OPTIONS_PROFILES_EDIT, "[-][/c]" + G.Sys.ProfileManager_.CurrentProfile_.Name_);
                         }
                     } catch (Exception ONION) { }
                     try
                     {
-                        GameObject.Find("OptionsFrontRoot/Panel - Options/Panel - Controls/Panel - MenuTitle/UILabel - Description").GetComponentsInChildren<UILabel>()[0].text = String.Format(Language.OPTIONS_CONTROLS_SUBTITLE, G.Sys.ProfileManager_.CurrentProfile_.Name_);
+                        GameObject.Find("OptionsFrontRoot/Panel - Options/Panel - Controls/Panel - MenuTitle/UILabel - Description").GetComponent<UILabel>().text = String.Format(Language.OPTIONS_CONTROLS_SUBTITLE, G.Sys.ProfileManager_.CurrentProfile_.Name_);
                     } catch (Exception ONION) { }
                     //try
                     //{

@@ -1,5 +1,6 @@
 ﻿using Distance.Translator.Menu;
 using Spectrum.Menu.UI;
+using UnityEngine;
 
 namespace Spectrum.Menu.Menus
 {
@@ -26,6 +27,12 @@ namespace Spectrum.Menu.Menus
                      }
                      , "PLUGIN MENU LANGUAGE DESCRIPTION"
                      , LanguageManager.Languages.ToArray());
+            
+            GameObject DescriptionArea = GameObject.Find("OptionsFrontRoot/Panel - Options/Language/Options/DescriptionArea");
+            if (DescriptionArea != null)
+            {
+                DescriptionArea.Destroy();
+            }
         }
 
         public override void OnPanelPop()

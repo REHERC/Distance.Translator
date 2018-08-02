@@ -1,4 +1,5 @@
-﻿using Harmony;
+﻿using System;
+using Harmony;
 
 namespace Distance.Translator
 {
@@ -9,9 +10,17 @@ namespace Distance.Translator
         {
             public static void Postfix(UILabel __instance)
             {
-                Translate.DropDown(ref __instance);
-                Translate.ControlsListingTable(ref __instance);
-                Translate.MenuTitles(ref __instance);
+                try
+                {
+                    Translate.DropDown(ref __instance);
+                    Translate.ControlsListingTable(ref __instance);
+                    Translate.MenuTitles(ref __instance);
+                }
+                catch (Exception BEARD)
+                {
+                    
+                }
+                
             }
         }
     }

@@ -4,6 +4,7 @@ using Harmony;
 using Spectrum.API.Interfaces.Plugins;
 using Spectrum.API.Interfaces.Systems;
 using Spectrum.API.IPC;
+
 namespace Distance.Translator
 {
     public partial class Photon : IPlugin,IIPCEnabled,IUpdatable
@@ -17,13 +18,11 @@ namespace Distance.Translator
         {
             Console.WriteLine($"Initializing ... ({ipcIdentifier})");
             CurrentPlugin.Initialize();
-            TranslateTaskManager.Initialize();
+            TranslationManager.Initialize();
             IPCAntenna.initialize(manager,ipcIdentifier);
             CurrentPlugin.Log.Info("Initialization done!");
             PrintLogo();
-            string LanguageFile = CurrentPlugin.Config.GetItem<string>("LanguageFile");
-            CurrentPlugin.Log.Warning("Currently using \"" + LanguageFile + (LanguageFile == ":default:" ? "\"" : ".json\""));
-            CurrentPlugin.Log.Warning(Language.LANGUAGE_NAME + " by " + Language.LANGUAGE_AUTHOR);
+            
             try
             {
                 CurrentPlugin.Log.Info("Instantiating Harmony Patcher ...");
@@ -42,11 +41,11 @@ namespace Distance.Translator
             CurrentPlugin.Log.Info("Subscribing to Events ...");
             Events.Scene.StartLoad.Subscribe((data) =>
             {
-                TranslateTaskManager.Reset();
+                TranslationManager.Reset();
             });
             Events.Scene.LoadFinish.Subscribe((data) =>
             {
-                TranslateTaskManager.Reset();
+                TranslationManager.Reset();
 
                 if (data.sceneName == "MainMenu")
                 {

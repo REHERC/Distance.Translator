@@ -20,7 +20,7 @@ namespace Distance.Translator
         }
 
         private static void Bois() {
-            TranslateTaskManager.Run();
+            TranslationManager.Run();
 
             /*
             Scene scene = SceneManager.GetActiveScene();

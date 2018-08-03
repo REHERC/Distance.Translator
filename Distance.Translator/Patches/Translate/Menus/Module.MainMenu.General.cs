@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Distance.Translator
 {
-    class MainmenuGeneral : TranslateTask
+    class MainmenuGeneral : TranslateModule
     {
         private bool _CanRun;
         public bool CanRun

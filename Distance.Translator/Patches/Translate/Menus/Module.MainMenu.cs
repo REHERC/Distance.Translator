@@ -2,7 +2,7 @@
 
 namespace Distance.Translator
 {
-    class Mainmenu : TranslateTask
+    class Mainmenu : TranslateModule
     {
         private bool _CanRun;
         public bool CanRun

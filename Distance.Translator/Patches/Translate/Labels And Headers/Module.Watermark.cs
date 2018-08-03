@@ -1,9 +1,8 @@
-﻿using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine.SceneManagement;
 
 namespace Distance.Translator
 {
-    class Watermark : TranslateTask
+    class Watermark : TranslateModule
     {
         private bool _CanRun;
         public bool CanRun

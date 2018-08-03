@@ -8,6 +8,8 @@ namespace Distance.Translator
 {
     public static partial class Language
     {
+        // UI Widgets text settings
+
         public static string LANGUAGE_NAME;
         public static string LANGUAGE_AUTHOR;
 
@@ -335,7 +337,9 @@ namespace Distance.Translator
         {
             SharedSettings.CURRENT_LANGUAGE_FILE = CurrentPlugin.Config.GetItem<String>("LanguageFile");
             CurrentPlugin.Lang = new Settings($@"Languages\{SharedSettings.CURRENT_LANGUAGE_FILE}");
-            
+
+            // UI Widgets text settings
+
             LANGUAGE_NAME = GetLine("language.name","English");
             LANGUAGE_AUTHOR = GetLine("language.author", "Refract Studios");
 
@@ -655,6 +659,12 @@ namespace Distance.Translator
 
             WARNING_GRAPHICS_DEGRADEPERFORMANCE = GetLine("warning.graphics.degradeperformance", "Enabling this may dramatically degrade graphics performance.");
             WARNING_GRAPHICS_BONUSEFFECT = GetLine("warning.graphics.bonuseffect", "This is only a fun bonus effect and not required!");
+            
+
+
+            //string LanguageFile = CurrentPlugin.Config.GetItem<string>("LanguageFile");
+            //CurrentPlugin.Log.Warning("Currently using \"" + LanguageFile + (LanguageFile == ":default:" ? "\"" : ".json\""));
+            //CurrentPlugin.Log.Warning(Language.LANGUAGE_NAME + " by " + Language.LANGUAGE_AUTHOR);
         }
 
         public static void Apply()
@@ -664,23 +674,24 @@ namespace Distance.Translator
             //SceneManager.LoadScene(scene.name);
 
             // New prettier/faster way of reloading things
-            TranslateTaskManager.Reset();
+            TranslationManager.Reset();
         }
 
         public static string GetWatermarkExtension()
         {
             string WATERMARK = "";
 
-            WATERMARK += (SharedSettings.MENUPLUGIN_DETECTED) ? "\nDISTANCE TRANSLATOR+" : "\nDISTANCE TRANSLATOR";
+            WATERMARK += "\n";
+            
+            WATERMARK += (SharedSettings.MENUPLUGIN_DETECTED) ? "DISTANCE TRANSLATOR+" : "DISTANCE TRANSLATOR";
+            WATERMARK += (CurrentPlugin.BETA_BUILD) ? " [C02020]BETA[-] " : "";
             WATERMARK += " ([00DDFF]" + Language.LANGUAGE_NAME.ToUpperInvariant() + "[-] - [FF9000]" + Language.LANGUAGE_AUTHOR.ToUpper() + "[-])";
 
             return WATERMARK;
         }
-
-
-
+        
         // List of colors (in order) used in the rainbow effect (colors from the randomize button in the garage menu)
-        public static List<string> Rainbow = new List<String>(){
+        public static List<string> Rainbow = new List<string>(){
             "F70001",
             "FEA700",
             "FFFF00",
@@ -763,8 +774,7 @@ namespace Distance.Translator
             {
                 if (Line != "nothing" && VirusSpirit.Message != "default language")
                 {
-                    //CurrentPlugin.Log.Exception(VirusSpirit);
-                    CurrentPlugin.Log.Error("Impossible to find the translation key for \"" + Line + "\" in \"" + CurrentPlugin.Config.GetItem<String>("LanguageFile") + ".json\"");
+                    CurrentPlugin.Log.Error("Impossible to find the key for \"" + Line + "\" in \"" + CurrentPlugin.Config.GetItem<string>("LanguageFile") + ".json\"");
                 }
                 result = null;
             }
@@ -821,6 +831,32 @@ namespace Distance.Translator
                 CurrentPlugin.LangDump[Line] = Default;
             }
             //Console.WriteLine($"\"{Line}\"");
+            return result;
+        }
+
+        public static int GetInt(String Line, int Default)
+        {
+            int result = 0;
+            try
+            {
+                if (CurrentPlugin.Config.GetItem<string>("LanguageFile") == ":default:")
+                {
+                    throw new Exception("default language");
+                }
+                result = CurrentPlugin.Lang.GetItem<int>(Line);
+            }
+            catch (Exception VirusSpirit)
+            {
+                if (Line != "nothing" && VirusSpirit.Message != "default language")
+                {
+                    CurrentPlugin.Log.Error("Impossible to find the key for \"" + Line + "\" in \"" + CurrentPlugin.Config.GetItem<int>("LanguageFile") + ".json\"");
+                }
+                result = Default;
+            }
+            if (CurrentPlugin.Config.GetItem<bool>("Dump"))
+            {
+                CurrentPlugin.LangDump[Line] = Default;
+            }
             return result;
         }
     }

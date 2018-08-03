@@ -2,7 +2,7 @@
 
 namespace Distance.Translator
 {
-    public interface TranslateTask
+    public interface TranslateModule
     {
         string Name { get; }
 

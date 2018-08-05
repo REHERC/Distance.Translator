@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Distance.Translator
 {
@@ -17,18 +18,30 @@ namespace Distance.Translator
 
         public void Run()
         {
-            if (GameObject.Find("MainMenuFrontRoot/UI Root/Panel - Main/OptionsButtonsPanel/OptionsButtonsTable") != null)
+            string PathPrefix = "";
+            Scene scene = SceneManager.GetActiveScene();
+            switch (scene.name)
             {
-                GameObject.Find("MainMenuFrontRoot/UI Root/Panel - Main/OptionsButtonsPanel/OptionsButtonsTable/Audio/UILabel").GetComponent<UILabel>().text = Language.OPTIONS_AUDIO;
-                GameObject.Find("MainMenuFrontRoot/UI Root/Panel - Main/OptionsButtonsPanel/OptionsButtonsTable/General/UILabel").GetComponent<UILabel>().text = Language.OPTIONS_GENERAL;
-                GameObject.Find("MainMenuFrontRoot/UI Root/Panel - Main/OptionsButtonsPanel/OptionsButtonsTable/Controls/UILabel").GetComponent<UILabel>().text = Language.OPTIONS_CONTROLS;
-                GameObject.Find("MainMenuFrontRoot/UI Root/Panel - Main/OptionsButtonsPanel/OptionsButtonsTable/Graphics/UILabel").GetComponent<UILabel>().text = Language.OPTIONS_GRAPHICS;
-                GameObject.Find("MainMenuFrontRoot/UI Root/Panel - Main/OptionsButtonsPanel/OptionsButtonsTable/Profiles/UILabel").GetComponent<UILabel>().text = Language.OPTIONS_PROFILES;
-                GameObject.Find("MainMenuFrontRoot/UI Root/Panel - Main/OptionsButtonsPanel/OptionsButtonsTable/VR Options/UILabel").GetComponent<UILabel>().text = Language.OPTIONS_VR;
-                GameObject.Find("MainMenuFrontRoot/UI Root/Panel - Main/OptionsButtonsPanel/OptionsButtonsTable/Replay/UILabel").GetComponent<UILabel>().text = Language.OPTIONS_REPLAY;
-                GameObject.Find("MainMenuFrontRoot/UI Root/Panel - Main/OptionsButtonsPanel/OptionsButtonsTable/Cheats/UILabel").GetComponent<UILabel>().text = Language.OPTIONS_CHEATS;
+                case "MainMenu":
+                    PathPrefix = "MainMenuFrontRoot/UI Root/Panel - Main/OptionsButtonsPanel/OptionsButtonsTable";
+                    break;
+                case "GameMode":
+                    PathPrefix = "PauseMenuRoot/Panel - Main/OptionsButtonsPanel/OptionsButtons";
+                    break;
+            }
 
-                GameObject.Find("MainMenuFrontRoot/UI Root/Panel - Main/OptionsButtonsPanel/OptionsButtonsTable/Language/UILabel").GetComponent<UILabel>().text = Language.PLUGIN_MENU_NAME;
+            if (GameObject.Find(PathPrefix) != null)
+            {
+                GameObject.Find(PathPrefix + "/Audio/UILabel").GetComponent<UILabel>().text = Language.OPTIONS_AUDIO;
+                GameObject.Find(PathPrefix + "/General/UILabel").GetComponent<UILabel>().text = Language.OPTIONS_GENERAL;
+                GameObject.Find(PathPrefix + "/Controls/UILabel").GetComponent<UILabel>().text = Language.OPTIONS_CONTROLS;
+                GameObject.Find(PathPrefix + "/Graphics/UILabel").GetComponent<UILabel>().text = Language.OPTIONS_GRAPHICS;
+                GameObject.Find(PathPrefix + "/Profiles/UILabel").GetComponent<UILabel>().text = Language.OPTIONS_PROFILES;
+                GameObject.Find(PathPrefix + "/VR Options/UILabel").GetComponent<UILabel>().text = Language.OPTIONS_VR;
+                GameObject.Find(PathPrefix + "/Replay/UILabel").GetComponent<UILabel>().text = Language.OPTIONS_REPLAY;
+                GameObject.Find(PathPrefix + "/Cheats/UILabel").GetComponent<UILabel>().text = Language.OPTIONS_CHEATS;
+
+                GameObject.Find(PathPrefix + "/Language/UILabel").GetComponent<UILabel>().text = Language.PLUGIN_MENU_NAME;
 
                 CanRun = false;
             }

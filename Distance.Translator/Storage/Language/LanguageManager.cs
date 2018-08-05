@@ -31,8 +31,9 @@ namespace Distance.Translator
             string PluginDir = FS.RootDirectory;
             Settings Language;
 
+            Languages.Add(new LanguageInfo("[F0A010]Plugin Debug Language[-]", "", ":debug:"));
             Languages.Add(new LanguageInfo("English", "Refract Studios", ":default:"));
-            foreach (string LanguageFile in Directory.GetFiles(PluginDir + "\\Settings\\Languages","*.json"))
+            foreach (string LanguageFile in Directory.GetFiles(PluginDir + @"\Settings\Languages","*.json"))
             {
                 string file = LanguageFile.Split('\\').Last();
                 file = file.Substring(0,file.Length - 5);

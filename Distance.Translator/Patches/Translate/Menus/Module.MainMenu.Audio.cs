@@ -27,11 +27,11 @@ namespace Distance.Translator
                 GameObject.Find("OptionsFrontRoot/Panel - Options/Panel - Audio/Anchor - Center/VolumeOptions/Announcer/NameLabel").GetComponent<UILabel>().text = Language.OPTIONS_AUDIO_ANNOUNCER;
                 GameObject.Find("OptionsFrontRoot/Panel - Options/Panel - Audio/Anchor - Center/VolumeOptions/Music/NameLabel").GetComponent<UILabel>().text = Language.OPTIONS_AUDIO_MUSIC;
                 GameObject.Find("OptionsFrontRoot/Panel - Options/Panel - Audio/Anchor - Center/VolumeOptions/Announcer Options/NameLabel").GetComponent<UILabel>().text = Language.OPTIONS_AUDIO_ANNOUNCERSETTINGS;
-                GameObject.Find("OptionsFrontRoot/Panel - Options/Panel - Audio/Anchor - Center/VolumeOptions/Custom Music Group/EnableCustomMusic").GetComponent<UILabel>().text = Language.OPTIONS_AUDIO_CUSTOMMUSIC;
-                GameObject.Find("OptionsFrontRoot/Panel - Options/Panel - Audio/Anchor - Center/VolumeOptions/Custom Music Group/UIPanel - CustomMusicPanel/CustomMusicPath").GetComponent<UILabel>().text = Language.OPTIONS_AUDIO_CUSTOMMUSIC_FOLDER;
-                GameObject.Find("OptionsFrontRoot/Panel - Options/Panel - Audio/Anchor - Center/VolumeOptions/Custom Music Group/UIPanel - CustomMusicPanel/SelectATrack").GetComponent<UILabel>().text = Language.OPTIONS_AUDIO_CUSTOMMUSIC_TRACK;
-                GameObject.Find("OptionsFrontRoot/Panel - Options/Panel - Audio/Anchor - Center/VolumeOptions/Custom Music Group/UIPanel - CustomMusicPanel/Shuffle").GetComponent<UILabel>().text = Language.OPTIONS_AUDIO_CUSTOMMUSIC_SHUFFLETRACKS;
-                GameObject.Find("OptionsFrontRoot/Panel - Options/Panel - Audio/Anchor - Center/VolumeOptions/Custom Music Group/UIPanel - CustomMusicPanel/Loop").GetComponent<UILabel>().text = Language.OPTIONS_AUDIO_CUSTOMMUSIC_LOOPTRACKS;
+                GameObject.Find("OptionsFrontRoot/Panel - Options/Panel - Audio/Anchor - Center/VolumeOptions/Custom Music Group/EnableCustomMusic/NameLabel").GetComponent<UILabel>().text = Language.OPTIONS_AUDIO_CUSTOMMUSIC;
+                GameObject.Find("OptionsFrontRoot/Panel - Options/Panel - Audio/Anchor - Center/VolumeOptions/Custom Music Group/UIPanel - CustomMusicPanel/CustomMusicPath/NameLabel").GetComponent<UILabel>().text = Language.OPTIONS_AUDIO_CUSTOMMUSIC_FOLDER;
+                GameObject.Find("OptionsFrontRoot/Panel - Options/Panel - Audio/Anchor - Center/VolumeOptions/Custom Music Group/UIPanel - CustomMusicPanel/SelectATrack/NameLabel").GetComponent<UILabel>().text = Language.OPTIONS_AUDIO_CUSTOMMUSIC_TRACK;
+                GameObject.Find("OptionsFrontRoot/Panel - Options/Panel - Audio/Anchor - Center/VolumeOptions/Custom Music Group/UIPanel - CustomMusicPanel/Shuffle/NameLabel").GetComponent<UILabel>().text = Language.OPTIONS_AUDIO_CUSTOMMUSIC_SHUFFLETRACKS;
+                GameObject.Find("OptionsFrontRoot/Panel - Options/Panel - Audio/Anchor - Center/VolumeOptions/Custom Music Group/UIPanel - CustomMusicPanel/Loop/NameLabel").GetComponent<UILabel>().text = Language.OPTIONS_AUDIO_CUSTOMMUSIC_LOOPTRACKS;
                 GameObject.Find("OptionsFrontRoot/Panel - Options/Panel - Audio/MenuTitleTemplate/UILabel - Title").GetComponent<UILabel>().text = Language.OPTIONS_AUDIO_TITLE;
 
                 CanRun = false;

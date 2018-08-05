@@ -47,6 +47,8 @@ namespace Distance.Translator
             {
                 TranslationManager.Reset();
 
+                CurrentPlugin.Log.Error($"Loaded scene : {data.sceneName}");
+
                 if (data.sceneName == "MainMenu")
                 {
                     Spectrum.Interop.Game.Game.WatermarkText += "\n";

@@ -66,7 +66,14 @@ namespace Distance.Translator.Menu
                         string lang_author = (string)data["author"].ToString();
                         string lang_file = (string)data["file"].ToString();
                         bool lang_current = (bool)data["current"];
-                        LanguageManager.Languages.Add(new KeyValuePair<string, string>($"{lang_name} [AADC98]({lang_author})[-]", lang_file));
+                        if (lang_author != "")
+                        {
+                            LanguageManager.Languages.Add(new KeyValuePair<string, string>($"{lang_name} [AADC98]({lang_author})[-]", lang_file));
+                        }
+                        else
+                        {
+                            LanguageManager.Languages.Add(new KeyValuePair<string, string>($"{lang_name}", lang_file));
+                        }
                         if (lang_current) { SharedSettings.CURRENT_LANGUAGE = lang_file; }
                         break;
                 }

@@ -71,6 +71,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Build\Build Informations\BuildInfo.cs" />
     <Compile Include="IPC\IPCAntenna.cs" />
     <Compile Include="Patches\Harmony\ControlsMenu\ControlsMenu.UpdateCurrentSchemeNameLabel.cs" />
     <Compile Include="Patches\Harmony\Enable Menus\ENABLE CHEATS MENU\EnableCheats.cs" />
@@ -80,6 +81,8 @@
     <Compile Include="Patches\Harmony\MenuDescriptionLabel\MenuDescriptionLabel.SetText.cs" />
     <Compile Include="Patches\Harmony\MessagePanelLogic\MessagePanelLogic.ShowMessage.cs" />
     <Compile Include="Patches\Harmony\NGUI.UIWidget\NGUI.UIWidget.OnUpdate.cs" />
+    <Compile Include="Patches\Harmony\OnlineMenuLogic\OnlineMenuLogic.LoadingBoxConnecting.cs" />
+    <Compile Include="Patches\Harmony\OnlineMenuLogic\OnlineMenuLogic.LoadingBoxRefresh.cs" />
     <Compile Include="Patches\Harmony\PauseMenuLogic\PauseMenuLogic.Start.cs" />
     <Compile Include="Patches\Harmony\TrickClassifier\GetTrickPartName.cs" />
     <Compile Include="Patches\Translate\Generic\Translate.DropDown.cs" />
@@ -89,6 +92,9 @@
     <Compile Include="Patches\Translate\Labels And Headers\Module.WorkshopHighlight.cs" />
     <Compile Include="Patches\Translate\Menus\Module.MainMenu.cs" />
     <Compile Include="Patches\Translate\Menus\Module.MainMenu.Idle.cs" />
+    <Compile Include="Patches\Translate\Menus\Module.Menu.Online.cs" />
+    <Compile Include="Patches\Translate\Menus\Module.Menu.Trackmogrify.cs" />
+    <Compile Include="Patches\Translate\Pause Menu\Module.PauseMenu.cs" />
     <Compile Include="Patches\Translate\Menus\Module.SubMenu.Adventure.cs" />
     <Compile Include="Patches\Translate\Menus\Module.SubMenu.Arcade.cs" />
     <Compile Include="Patches\Translate\Menus\Module.SubMenu.Multiplayer.cs" />
@@ -128,6 +134,9 @@
     <Compile Include="Patches\Harmony\Unity.UILabel\Unity.UILabel.Update.cs" />
     <Compile Include="Update\UpdateEveryFrame.cs" />
     <None Include="THE TRASH CAN" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="..\Distance.Translator.Shared\Distance.Translator.Shared.projitems" Label="Shared" />

@@ -6,8 +6,6 @@ namespace Distance.Translator
 {
     public static class CurrentPlugin
     {
-        public const bool BETA_BUILD = true;
-
         public static void Initialize()
         {
             Log = new Logger("Distance.Translator.log");

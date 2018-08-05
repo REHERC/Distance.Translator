@@ -2,14 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 using Spectrum.API.Configuration;
-using UnityEngine.SceneManagement;
 
 namespace Distance.Translator
 {
     public static partial class Language
     {
-        // UI Widgets text settings
-
         public static string LANGUAGE_NAME;
         public static string LANGUAGE_AUTHOR;
 
@@ -50,6 +47,7 @@ namespace Distance.Translator
         public static string MENUBUTTON_RESTART;
         public static string MENUBUTTON_RESUME;
         public static string MENUBUTTON_SPECTATE;
+        public static string MENUBUTTON_TRICKS;
 
         public static string ADVENTURE_PREVIEW;
         public static string ADVENTURE_PREVIEW_DESCRIPTION;
@@ -325,6 +323,35 @@ namespace Distance.Translator
         public static string OPTIONS_REPLAYS_NAMESVISIBLE;
         public static string OPTIONS_REPLAYS_PLAYBACKSPEED;
 
+        public static string TRACKMOGRIFY_SEED;
+        public static string TRACKMOGRIFY_RECENT;
+        public static string TRACKMOGRIFY_TOPRATED;
+
+        public static string MULTIPLAYER_ONLINE_TITLE;
+        public static string MULTIPLAYER_ONLINE_FINDGAME;
+        public static string MULTIPLAYER_ONLINE_SERVERNAME;
+        public static string MULTIPLAYER_ONLINE_MODE;
+        public static string MULTIPLAYER_ONLINE_PLAYERS;
+        public static string MULTIPLAYER_ONLINE_PING;
+        public static string MULTIPLAYER_ONLINE_STATUS;
+        public static string MULTIPLAYER_ONLINE_STATUS_PUBLIC;
+        public static string MULTIPLAYER_ONLINE_STATUS_PRIVATE;
+        public static string MULTIPLAYER_ONLINE_STATUS_FULL;
+        public static string MULTIPLAYER_ONLINE_BUILD;
+        public static string MULTIPLAYER_ONLINE_REFRESH;
+        public static string MULTIPLAYER_ONLINE_SERVERS_HIDEFULL;
+        public static string MULTIPLAYER_ONLINE_SERVERS_HIDEPRIVATE;
+        public static string MULTIPLAYER_ONLINE_SERVERS_HIDEINCOMPATIBLE;
+        public static string MULTIPLAYER_ONLINE_HOSTGAME;
+        public static string MULTIPLAYER_ONLINE_NEWGAME;
+        public static string MULTIPLAYER_ONLINE_JOINGAME;
+        public static string MULTIPLAYER_ONLINE_IPADDRESS;
+        public static string MULTIPLAYER_ONLINE_PORT;
+        public static string MULTIPLAYER_ONLINE_PASSWORD;
+        public static string MULTIPLAYER_ONLINE_CONNECT;
+        public static string MULTIPLAYER_ONLINE_REFRESHING;
+        public static string MULTIPLAYER_ONLINE_CONNECTING;
+
         public static string WARNING_PREFIX;
 
         public static string WARNING_GRAPHICS_DEGRADEPERFORMANCE;
@@ -337,11 +364,9 @@ namespace Distance.Translator
         {
             SharedSettings.CURRENT_LANGUAGE_FILE = CurrentPlugin.Config.GetItem<String>("LanguageFile");
             CurrentPlugin.Lang = new Settings($@"Languages\{SharedSettings.CURRENT_LANGUAGE_FILE}");
-
-            // UI Widgets text settings
-
+            
             LANGUAGE_NAME = GetLine("language.name","English");
-            LANGUAGE_AUTHOR = GetLine("language.author", "Refract Studios");
+            LANGUAGE_AUTHOR = GetLine("language.author", "Refract");
 
             PLUGIN_MENU_NAME = GetLine("plugin.menu.name", "Language");
             PLUGIN_MENU_TITLE = GetLine("plugin.menu.title", "Language Settings", true);
@@ -382,7 +407,8 @@ namespace Distance.Translator
             MENUBUTTON_GOLOBBY = GetLine("menubutton.golobby", "Back To Lobby", true);
             MENUBUTTON_NEXTLEVEL = GetLine("menubutton.nextlevel", "Next Level", true);
             MENUBUTTON_SPECTATE = GetLine("menubutton.spectate", "Spectate", true);
-            
+            MENUBUTTON_TRICKS = GetLine("menubutton.tricks", "Tricks", true);
+
             ADVENTURE_PREVIEW = GetLine("adventure.preview", "Preview");
             ADVENTURE_PREVIEW_DESCRIPTION = GetLine("adventure.preview.description", "Early version of Adventure mode. Final campaign coming when Distance exits Beta.");
 
@@ -655,13 +681,41 @@ namespace Distance.Translator
             OPTIONS_GENERIC_ON = GetLine("options.generic.on", "On");
             OPTIONS_GENERIC_OFF = GetLine("options.generic.off", "Off");
 
+            TRACKMOGRIFY_SEED = GetLine("trackmogrify.seed", "Trackmogrify Seed:", true);
+            TRACKMOGRIFY_RECENT = GetLine("trackmogrify.recent", "My Recent:", true);
+            TRACKMOGRIFY_TOPRATED = GetLine("trackmogrify.toprated", "Top Rated Seeds:", true);
+            
+            MULTIPLAYER_ONLINE_TITLE = GetLine("multiplayer.online.title", "Online", true);
+            MULTIPLAYER_ONLINE_FINDGAME = GetLine("multiplayer.online.findgame", "Find A Game", true);
+            MULTIPLAYER_ONLINE_SERVERNAME = GetLine("multiplayer.online.servername", "Server Name", true);
+            MULTIPLAYER_ONLINE_MODE = GetLine("multiplayer.online.mode", "Mode", true);
+            MULTIPLAYER_ONLINE_PLAYERS = GetLine("multiplayer.online.players", "Players", true);
+            MULTIPLAYER_ONLINE_PING = GetLine("multiplayer.online.ping", "Ping", true);
+            MULTIPLAYER_ONLINE_STATUS = GetLine("multiplayer.online.status", "Status", true);
+            MULTIPLAYER_ONLINE_STATUS_PUBLIC = GetLine("multiplayer.online.status.public", "Public");
+            MULTIPLAYER_ONLINE_STATUS_PRIVATE = GetLine("multiplayer.online.status.private", "Private");
+            MULTIPLAYER_ONLINE_STATUS_FULL = GetLine("multiplayer.online.status.full", "Full");
+            MULTIPLAYER_ONLINE_BUILD = GetLine("multiplayer.online.build", "Build", true);
+            MULTIPLAYER_ONLINE_REFRESH = GetLine("multiplayer.online.refresh", "Refresh", true);
+            MULTIPLAYER_ONLINE_SERVERS_HIDEFULL = GetLine("multiplayer.online.servers.hidefull", "Hide Full Servers", true);
+            MULTIPLAYER_ONLINE_SERVERS_HIDEPRIVATE = GetLine("multiplayer.online.servers.hideprivate", "Hide Private Servers", true);
+            MULTIPLAYER_ONLINE_SERVERS_HIDEINCOMPATIBLE = GetLine("multiplayer.online.servers.hideincompatible", "", true);
+            MULTIPLAYER_ONLINE_HOSTGAME = GetLine("multiplayer.online.hostgame", "Host Your Own Server", true);
+            MULTIPLAYER_ONLINE_NEWGAME = GetLine("multiplayer.online.newgame", "Start A New Game", true);
+            MULTIPLAYER_ONLINE_JOINGAME = GetLine("multiplayer.online.joingame", "Directly Join A Game Via IP", true);
+            MULTIPLAYER_ONLINE_IPADDRESS = GetLine("multiplayer.online.ipaddress", "IP Address:", true);
+            MULTIPLAYER_ONLINE_PORT = GetLine("multiplayer.online.port", "Port:", true);
+            MULTIPLAYER_ONLINE_PASSWORD = GetLine("multiplayer.online.password", "Password:", true);
+            MULTIPLAYER_ONLINE_CONNECT = GetLine("multiplayer.online.connect", "Connect", true);
+            MULTIPLAYER_ONLINE_REFRESHING = GetLine("multiplayer.online.refreshing", "Refreshing servers...");
+            MULTIPLAYER_ONLINE_CONNECTING = GetLine("multiplayer.online.connecting", "Attempting to join server...");
+
             WARNING_PREFIX = GetLine("warning.prefix", "Warning: ");
 
             WARNING_GRAPHICS_DEGRADEPERFORMANCE = GetLine("warning.graphics.degradeperformance", "Enabling this may dramatically degrade graphics performance.");
             WARNING_GRAPHICS_BONUSEFFECT = GetLine("warning.graphics.bonuseffect", "This is only a fun bonus effect and not required!");
             
-
-
+            
             //string LanguageFile = CurrentPlugin.Config.GetItem<string>("LanguageFile");
             //CurrentPlugin.Log.Warning("Currently using \"" + LanguageFile + (LanguageFile == ":default:" ? "\"" : ".json\""));
             //CurrentPlugin.Log.Warning(Language.LANGUAGE_NAME + " by " + Language.LANGUAGE_AUTHOR);
@@ -683,8 +737,8 @@ namespace Distance.Translator
 
             WATERMARK += "\n";
             
-            WATERMARK += (SharedSettings.MENUPLUGIN_DETECTED) ? "DISTANCE TRANSLATOR+" : "DISTANCE TRANSLATOR";
-            WATERMARK += (CurrentPlugin.BETA_BUILD) ? " [C02020]BETA[-] " : "";
+            WATERMARK += (SharedSettings.MENUPLUGIN_DETECTED) ? "TRANSLATOR+" : "TRANSLATOR";
+            WATERMARK += (BuildInfo.IsBetaBuild()) ? " [E01010]BETA[-] " : "";
             WATERMARK += " ([00DDFF]" + Language.LANGUAGE_NAME.ToUpperInvariant() + "[-] - [FF9000]" + Language.LANGUAGE_AUTHOR.ToUpper() + "[-])";
 
             return WATERMARK;
@@ -764,17 +818,32 @@ namespace Distance.Translator
             string result = "";
             try
             {
-                if (CurrentPlugin.Config.GetItem<string>("LanguageFile") == ":default:")
+                switch (CurrentPlugin.Config.GetItem<string>("LanguageFile"))
                 {
-                    throw new Exception("default language");
+                    case ":default:":
+                        throw new Exception("default language");
+                    case ":debug:":
+                        throw new Exception("debug language");
                 }
                 result = CurrentPlugin.Lang.GetItem<string>(Line);
             }
             catch (Exception VirusSpirit)
             {
-                if (Line != "nothing" && VirusSpirit.Message != "default language")
+
+                if (Line != "nothing")
                 {
-                    CurrentPlugin.Log.Error("Impossible to find the key for \"" + Line + "\" in \"" + CurrentPlugin.Config.GetItem<string>("LanguageFile") + ".json\"");
+                    switch (VirusSpirit.Message)
+                    {
+                        case "debug language":
+                            result = Line;
+                            return result;
+                        case "default language":
+                            break;
+                        default:
+                            CurrentPlugin.Log.Error("Impossible to find the key for \"" + Line + "\" in \"" + CurrentPlugin.Config.GetItem<string>("LanguageFile") + ".json\"");
+
+                            break;
+                    }
                 }
                 result = null;
             }

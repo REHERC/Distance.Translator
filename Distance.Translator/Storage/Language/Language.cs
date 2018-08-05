@@ -736,7 +736,6 @@ namespace Distance.Translator
             string WATERMARK = "";
 
             WATERMARK += "\n";
-            
             WATERMARK += (SharedSettings.MENUPLUGIN_DETECTED) ? "TRANSLATOR+" : "TRANSLATOR";
             WATERMARK += (BuildInfo.IsBetaBuild()) ? " [E01010]BETA[-] " : "";
             WATERMARK += " ([00DDFF]" + Language.LANGUAGE_NAME.ToUpperInvariant() + "[-] - [FF9000]" + Language.LANGUAGE_AUTHOR.ToUpper() + "[-])";

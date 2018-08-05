@@ -4,6 +4,7 @@ using Harmony;
 using Spectrum.API.Interfaces.Plugins;
 using Spectrum.API.Interfaces.Systems;
 using Spectrum.API.IPC;
+using UnityEngine;
 
 namespace Distance.Translator
 {
@@ -46,8 +47,6 @@ namespace Distance.Translator
             Events.Scene.LoadFinish.Subscribe((data) =>
             {
                 TranslationManager.Reset();
-
-                CurrentPlugin.Log.Error($"Loaded scene : {data.sceneName}");
 
                 if (data.sceneName == "MainMenu")
                 {

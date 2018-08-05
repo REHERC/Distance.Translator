@@ -26,8 +26,11 @@ namespace Distance.Translator
                     PathPrefix = "MainMenuFrontRoot/UI Root/Panel - Main/OptionsButtonsPanel/OptionsButtonsTable";
                     break;
                 case "GameMode":
-                    PathPrefix = "PauseMenuRoot/Panel - Main/OptionsButtonsPanel/OptionsButtons";
+                    PathPrefix = "PauseMenuRoot/Panel - Main/NewOptionsButtonsPanel/NewOptionsButtons";
                     break;
+                default:
+                    CanRun = false;
+                    return;
             }
 
             if (GameObject.Find(PathPrefix) != null)
@@ -36,12 +39,16 @@ namespace Distance.Translator
                 GameObject.Find(PathPrefix + "/General/UILabel").GetComponent<UILabel>().text = Language.OPTIONS_GENERAL;
                 GameObject.Find(PathPrefix + "/Controls/UILabel").GetComponent<UILabel>().text = Language.OPTIONS_CONTROLS;
                 GameObject.Find(PathPrefix + "/Graphics/UILabel").GetComponent<UILabel>().text = Language.OPTIONS_GRAPHICS;
-                GameObject.Find(PathPrefix + "/Profiles/UILabel").GetComponent<UILabel>().text = Language.OPTIONS_PROFILES;
                 GameObject.Find(PathPrefix + "/VR Options/UILabel").GetComponent<UILabel>().text = Language.OPTIONS_VR;
                 GameObject.Find(PathPrefix + "/Replay/UILabel").GetComponent<UILabel>().text = Language.OPTIONS_REPLAY;
                 GameObject.Find(PathPrefix + "/Cheats/UILabel").GetComponent<UILabel>().text = Language.OPTIONS_CHEATS;
 
                 GameObject.Find(PathPrefix + "/Language/UILabel").GetComponent<UILabel>().text = Language.PLUGIN_MENU_NAME;
+
+                if (GameObject.Find(PathPrefix + "/Profiles/UILabel") != null)
+                {
+                    GameObject.Find(PathPrefix + "/Profiles/UILabel").GetComponent<UILabel>().text = Language.OPTIONS_PROFILES;
+                }
 
                 CanRun = false;
             }

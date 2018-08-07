@@ -33,6 +33,11 @@ namespace Distance.Translator
                     GameObject.Find("MainMenuFrontRoot/UI Root/Panel - Main/MainButtonsPanel/MainButtons/Options").GetComponentInChildren<UILabel>().text = Language.MENUBUTTON_OPTIONS;
                     GameObject.Find("MainMenuFrontRoot/UI Root/Panel - Main/MainButtonsPanel/MainButtons/Quit").GetComponentInChildren<UILabel>().text = Language.MENUBUTTON_QUIT;
 
+                    GameObject.Find("MainMenuFrontRoot/UI Root/Panel - Main/MainButtonsPanel/MainButtons/Quit").GetComponentInChildren<UILabel>().text = Language.MENUBUTTON_QUIT;
+
+                    GameObject.Find("MainMenuFrontRoot/UI Root/Panel - Main/DistanceTitle").GetComponent<UILabel>().text = Language.MAINMENU_GAMETITLE;
+                    GameObject.Find("MainMenuFrontRoot/UI Root/Panel - Main/DistanceTitle/BetaTag").GetComponent<UILabel>().text = Language.MAINMENU_BETATAG;
+                    
                     CanRun = false;
                 }
             }

@@ -1,8 +1,4 @@
-﻿using System;
-using UnityEngine;
-using UnityEngine.SceneManagement;
-
-namespace Distance.Translator
+﻿namespace Distance.Translator
 {
     public static partial class UpdateEveryFrame
     {

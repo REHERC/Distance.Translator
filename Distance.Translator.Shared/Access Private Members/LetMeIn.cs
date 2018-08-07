@@ -40,12 +40,40 @@ namespace Distance.Translator
             field.SetValue(obj, value, null);
         }
 
-        public static T CallPrivateMethod<T>(this object obj, string name, params object[] param)
+        public static T CallPrivateFunction<T>(this object obj, string name, params object[] param)
         {
             BindingFlags flags = BindingFlags.Instance | BindingFlags.NonPublic;
             Type type = obj.GetType();
             MethodInfo method = type.GetMethod(name, flags);
             return (T)method.Invoke(obj, param);
         }
+
+        public static void CallPrivateMethod(this object obj, string name, params object[] param)
+        {
+            BindingFlags flags = BindingFlags.Instance | BindingFlags.NonPublic;
+            Type type = obj.GetType();
+            MethodInfo method = type.GetMethod(name, flags);
+            method.Invoke(obj, param);
+        }
+
+
+        /*
+        public static T CallGenericPrivateFunction<T>(this object obj, Type[] generic, string name, params object[] param)
+        {
+            BindingFlags flags = BindingFlags.Instance | BindingFlags.NonPublic;
+            Type type = obj.GetType();
+            MethodInfo method = type.GetMethod(name, flags);
+            MethodInfo genericmethod = method.MakeGenericMethod(generic);
+            return (T)genericmethod.Invoke(obj, param);
+        }
+
+        public static void CallGenericPrivateMethod(this object obj, Type[] generic, string name, params object[] param)
+        {
+            BindingFlags flags = BindingFlags.Instance | BindingFlags.NonPublic;
+            Type type = obj.GetType();
+            MethodInfo method = type.GetMethod(name, flags);
+            MethodInfo genericmethod = method.MakeGenericMethod(generic);
+            genericmethod.Invoke(obj, param);
+        }*/
     }
 }

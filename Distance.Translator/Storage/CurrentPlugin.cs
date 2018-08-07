@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
+using System.IO;
 using Spectrum.API.Configuration;
 using Spectrum.API.Logging;
+using Spectrum.API.Storage;
 
 namespace Distance.Translator
 {
@@ -37,7 +39,7 @@ namespace Distance.Translator
         {
             var DefaultConfig = new Dictionary<string, object>
             {
-                {"LanguageFile", "nothing"},
+                {"LanguageFile", ":default:"},
                 {"Rainbow", false},
                 {"Dump", false}
             };
@@ -49,8 +51,21 @@ namespace Distance.Translator
                     Config.Add(entry.Key, entry.Value);
                 }
             }
+
+            FileSystem Files = new FileSystem();
+            string Lang = Config.GetItem<string>("LanguageFile");
+            if (!DefaultLanguages.Contains(Lang) && !File.Exists($@"{Files.RootDirectory}\Settings\Languages\{Lang}.json"))
+            {
+                Config["LanguageFile"] = ":default:";
+            }
+
             Config.Save();
         }
+
+        public static List<string> DefaultLanguages = new List<string>() {
+            ":default:",
+            ":debug:"
+        };
 
         public static Logger Log;
         public static Settings Config;

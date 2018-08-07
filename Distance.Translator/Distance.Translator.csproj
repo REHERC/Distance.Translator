@@ -85,6 +85,7 @@
     <Compile Include="Patches\Harmony\OnlineMenuLogic\OnlineMenuLogic.LoadingBoxRefresh.cs" />
     <Compile Include="Patches\Harmony\PauseMenuLogic\PauseMenuLogic.Start.cs" />
     <Compile Include="Patches\Harmony\TrickClassifier\GetTrickPartName.cs" />
+    <Compile Include="Patches\Harmony\Unity.UIPanel\Unity.UIPanel.Awake.cs" />
     <Compile Include="Patches\Translate\Generic\Translate.DropDown.cs" />
     <Compile Include="Patches\Translate\Generic\Translate.Options.Controls.ListingTable.cs" />
     <Compile Include="Patches\Translate\GUI Buttons\Module.BackButton.cs" />

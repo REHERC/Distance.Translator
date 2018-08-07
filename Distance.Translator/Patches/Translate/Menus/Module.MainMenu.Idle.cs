@@ -24,7 +24,8 @@ namespace Distance.Translator
                 if (GameObject.Find("MainMenuFrontRoot/UI Root/Panel - Idle") != null)
                 {
                     GameObject.Find("MainMenuFrontRoot/UI Root/Panel - Idle/UIPanel - PressAnyButton/UILabel - PressAnyButton").GetComponent<UILabel>().text = Language.MAINMENU_PRESSKEY;
-                    
+                    GameObject.Find("MainMenuFrontRoot/UI Root/Panel - Idle/UIPanel - DistanceTitle/UILabel - DistanceTitle").GetComponent<UILabel>().text = Language.MAINMENU_GAMETITLE;
+
                     CanRun = false;
                 }
             }

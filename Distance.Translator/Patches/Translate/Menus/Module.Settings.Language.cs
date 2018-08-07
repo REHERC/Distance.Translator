@@ -32,7 +32,7 @@ namespace Distance.Translator
                     CanRun = false;
                     return;
             }
-
+            
             if (GameObject.Find(PathPrefix + "/Panel - Options/Language/Options") != null)
             {
                 GameObject.Find(PathPrefix + "/Panel - Options/Language/MenuTitleTemplate/UILabel - Title").GetComponent<UILabel>().text = Language.PLUGIN_MENU_TITLE;

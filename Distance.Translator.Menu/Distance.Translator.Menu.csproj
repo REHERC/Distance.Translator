@@ -70,22 +70,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IPC\IPCAntenna.cs" />
+    <Compile Include="Patches\Harmony\GeneralMenu\GeneralMenu.Extensions.cs" />
+    <Compile Include="Patches\Harmony\GeneralMenu\GeneralMenu.InitializeVirtual.cs" />
     <Compile Include="Patches\Patch.cs" />
     <Compile Include="Photon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Storage\CurrentPlugin.cs" />
     <Compile Include="Storage\Language\LanguageManager.cs" />
     <Compile Include="Storage\SharedSettings.cs" />
-    <Compile Include="UI\Menus\LanguageSettingsMenu.cs" />
-    <Compile Include="UI\OptionsSubmenu\MainOptionsSubmenuButton.cs" />
-    <Compile Include="UI\OptionsSubmenu\OptionsSubmenuButton.cs" />
-    <Compile Include="UI\OptionsSubmenu\PauseOptionsSubmenuButton.cs" />
-    <Compile Include="UI\SpectrumMenu.cs" />
+    <Compile Include="Update\UpdateEveryFrame.cs" />
   </ItemGroup>
   <ItemGroup />
-  <ItemGroup>
-    <Compile Include="Patches\Harmony\GeneralMenu\GeneralMenu.InitializeVirtual.cs" />
-  </ItemGroup>
   <Import Project="..\Distance.Translator.Shared\Distance.Translator.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -23,11 +23,13 @@ namespace Distance.Translator
         public static string BUTTON_CANCEL;
         public static string BUTTON_START;
         public static string BUTTON_DELETE;
+        
+        public static string MAINMENU_PRESSKEY;
+        public static string MAINMENU_GAMETITLE;
+        public static string MAINMENU_BETATAG;
 
         public static string HEADER_DESCRIPTION;
-
-        public static string MAINMENU_PRESSKEY;
-
+        
         public static string MAINMENU_WORKSHOP_HIGHLIGHT;
         public static string MAINMENU_WORKSHOP_HIGHLIGHT_LOADING;
 
@@ -382,10 +384,12 @@ namespace Distance.Translator
             BUTTON_START = GetLine("button.start", "Start");
             BUTTON_DELETE = GetLine("button.delete", "Delete");
 
-            HEADER_DESCRIPTION = GetLine("header.description", "Description", true);
-
             MAINMENU_PRESSKEY = GetLine("mainmenu.presskey", "Press any button to start", true,1);
+            MAINMENU_GAMETITLE = GetLine("mainmenu.gametitle#", "D  I  S  T  A  N  C  E");
+            MAINMENU_BETATAG = GetLine("mainmenu.betatag#", "BETA");
 
+            HEADER_DESCRIPTION = GetLine("header.description", "Description", true);
+            
             MAINMENU_WORKSHOP_HIGHLIGHT = GetLine("mainmenu.workshophighlight", "[96B0FF]Workshop Highlight[-] - {0} Levels And Counting", true);
             MAINMENU_WORKSHOP_HIGHLIGHT_LOADING = GetLine("mainmenu.workshophighlight.loading", "Loading...", true);
 
@@ -829,7 +833,7 @@ namespace Distance.Translator
             catch (Exception VirusSpirit)
             {
 
-                if (Line != "nothing")
+                if (Line != "nothing" && !Line.EndsWith("#"))
                 {
                     switch (VirusSpirit.Message)
                     {
@@ -840,7 +844,6 @@ namespace Distance.Translator
                             break;
                         default:
                             CurrentPlugin.Log.Error("Impossible to find the key for \"" + Line + "\" in \"" + CurrentPlugin.Config.GetItem<string>("LanguageFile") + ".json\"");
-
                             break;
                     }
                 }

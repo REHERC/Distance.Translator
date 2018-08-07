@@ -33,7 +33,7 @@ namespace Distance.Translator
                     return;
             }
 
-            if (GameObject.Find(PathPrefix) != null)
+            if (GameObject.Find(PathPrefix) != null && (scene.name == "MainMenu" ? GameObject.Find(PathPrefix + "/Language") != null : true))
             {
                 GameObject.Find(PathPrefix + "/Audio/UILabel").GetComponent<UILabel>().text = Language.OPTIONS_AUDIO;
                 GameObject.Find(PathPrefix + "/General/UILabel").GetComponent<UILabel>().text = Language.OPTIONS_GENERAL;
@@ -43,14 +43,15 @@ namespace Distance.Translator
                 GameObject.Find(PathPrefix + "/Replay/UILabel").GetComponent<UILabel>().text = Language.OPTIONS_REPLAY;
                 GameObject.Find(PathPrefix + "/Cheats/UILabel").GetComponent<UILabel>().text = Language.OPTIONS_CHEATS;
 
-                GameObject.Find(PathPrefix + "/Language/UILabel").GetComponent<UILabel>().text = Language.PLUGIN_MENU_NAME;
+                if (GameObject.Find(PathPrefix + "/Language") != null)
+                {
+                    GameObject.Find(PathPrefix + "/Language/UILabel").GetComponent<UILabel>().text = Language.PLUGIN_MENU_NAME;
+                }
 
-                if (GameObject.Find(PathPrefix + "/Profiles/UILabel") != null)
+                if (GameObject.Find(PathPrefix + "/Profiles") != null)
                 {
                     GameObject.Find(PathPrefix + "/Profiles/UILabel").GetComponent<UILabel>().text = Language.OPTIONS_PROFILES;
                 }
-
-                CanRun = false;
             }
         }
     }

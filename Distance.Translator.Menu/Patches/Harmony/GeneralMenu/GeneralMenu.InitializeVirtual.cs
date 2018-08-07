@@ -1,4 +1,5 @@
 ﻿using Harmony;
+using UnityEngine.SceneManagement;
 
 namespace Distance.Translator.Menu
 {
@@ -7,9 +8,13 @@ namespace Distance.Translator.Menu
         [HarmonyPatch(typeof(GeneralMenu), "InitializeVirtual")]
         internal class GeneralMenu_InitializeVirtual_Patch : GeneralMenu
         {
-            public static void Postfix(GeneralMenu __instance)
+            public static void Prefix(GeneralMenu __instance)
             {
-                __instance.TweakLanguage();
+                Scene scene = SceneManager.GetActiveScene();
+                if (scene.name == "MainMenu")
+                {
+                    __instance.TweakLanguage();
+                }
             }
         }
     }

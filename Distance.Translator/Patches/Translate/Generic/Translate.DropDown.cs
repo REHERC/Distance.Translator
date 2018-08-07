@@ -1,4 +1,5 @@
 ﻿using System;
+using UnityEngine;
 
 namespace Distance.Translator
 {
@@ -14,6 +15,12 @@ namespace Distance.Translator
                 }
                 if (__instance.transform.parent.parent.HasComponent<UIExPopupList>() && __instance.gameObject.name == "PopupLabel")
                 {
+                    // This code is here so when the language is changed, the general menu dropdown selected items gets updated
+
+                    GameObject Popup = __instance.transform.parent.parent.gameObject;
+                    string currentValue = Popup.GetComponent<UIExPopupList>().value;
+                    __instance.text = currentValue;
+                    
                     DropDown(ref __instance, __instance.transform.parent.parent.name);
                 }
             }

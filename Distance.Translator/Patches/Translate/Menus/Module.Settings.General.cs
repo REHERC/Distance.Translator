@@ -47,7 +47,8 @@ namespace Distance.Translator
                 GameObject.Find(PathPrefix + "/Panel - Options/General/Options/OptionsTable/CAR SCREEN VISUALIZER/NameLabel").GetComponent<UILabel>().text = Language.OPTIONS_GENERAL_VISUALIZER;
                 GameObject.Find(PathPrefix + "/Panel - Options/General/Options/OptionsTable/SHUFFLE LEVELS/NameLabel").GetComponent<UILabel>().text = Language.OPTIONS_GENERAL_SHUFFLELEVELS;
                 GameObject.Find(PathPrefix + "/Panel - Options/General/Options/OptionsTable/SHOW TRICK TEXT/NameLabel").GetComponent<UILabel>().text = Language.OPTIONS_GENERAL_SHOWTRICKTEXT;
-
+                GameObject.Find(PathPrefix + "/Panel - Options/General/Options/OptionsTable/LANGUAGE/NameLabel").GetComponent<UILabel>().text = Language.PLUGIN_MENU_LANGUAGE;
+                
                 CanRun = false;
             }
         }

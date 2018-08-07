@@ -1,5 +1,6 @@
 ﻿using System;
 using Harmony;
+using UnityEngine.SceneManagement;
 
 namespace Distance.Translator
 {
@@ -12,9 +13,13 @@ namespace Distance.Translator
             {
                 try
                 {
-                    Translate.DropDown(ref __instance);
-                    Translate.ControlsListingTable(ref __instance);
-                    Translate.MenuTitles(ref __instance);
+                    Scene scene = SceneManager.GetActiveScene();
+                    if (scene.name == "MainMenu" || scene.name == "GameMode" || !Game.isInEditor)
+                    {
+                        Translate.DropDown(ref __instance);
+                        Translate.ControlsListingTable(ref __instance);
+                        Translate.MenuTitles(ref __instance);
+                    }
                 }
                 catch (Exception BEARD)
                 {

@@ -6,11 +6,6 @@ namespace Distance.Translator.Menu
 {
     public static class GeneralMenu_Extensions
     {
-        public static void _TweakAction(this GeneralMenu __instance, string name, Action action, string description = null)
-        {
-            __instance.CallPrivateMethod("TweakAction", name, action, description);
-        }
-
         public static void TweakLanguage(this GeneralMenu __instance)
         {
             Type[] searchParameters = new Type[] {
@@ -48,10 +43,9 @@ namespace Distance.Translator.Menu
                             IPCAntenna.SendSetting("DistanceTranslator", "config.language", lang);
                             IPCAntenna.SendCommand("DistanceTranslator", "language-reload");
                         };
-
-
+                        
                         object[] args = {
-                            "PLUGIN MENU LANGUAGE",
+                            "LANGUAGE",
                             LangGet,
                             LangSet,
                             null,

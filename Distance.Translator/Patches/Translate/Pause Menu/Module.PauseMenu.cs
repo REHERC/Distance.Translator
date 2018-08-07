@@ -19,7 +19,7 @@ namespace Distance.Translator
         public void Run()
         {
             Scene scene = SceneManager.GetActiveScene();
-            if (scene.name == "GameMode")
+            if (scene.name == "GameMode" || (scene.name == "LevelEditor" && !Game.isInEditor))
             {
                 if (GameObject.Find("PauseMenuRoot/Panel - Main/MainButtonsPanel/MainButtons") != null)
                 {

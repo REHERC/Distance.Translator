@@ -32,7 +32,6 @@ namespace Distance.Translator
             Modules.Add(new MainmenuGraphics() { CanRun = true });
             Modules.Add(new MainmenuProfiles() { CanRun = true });
             Modules.Add(new MainmenuReplay() { CanRun = true });
-            Modules.Add(new MainmenuLanguage() { CanRun = true });
             
             Modules.Add(new OnlineMenu() { CanRun = true });
             Modules.Add(new TrackmogrifyMenu() { CanRun = true });

@@ -23,7 +23,6 @@ namespace Distance.Translator
             IPCAntenna.initialize(manager,ipcIdentifier);
             CurrentPlugin.Log.Info("Initialization done!");
             PrintLogo();
-            
             try
             {
                 CurrentPlugin.Log.Info("Instantiating Harmony Patcher ...");
@@ -42,16 +41,36 @@ namespace Distance.Translator
             CurrentPlugin.Log.Info("Subscribing to Events ...");
             Events.Scene.StartLoad.Subscribe((data) =>
             {
+                if (data.sceneName == "LevelEditor")
+                {
+                    Game.isInEditor = true;
+                }
+                else
+                {
+                    Game.isInEditor = false;
+                }
                 TranslationManager.Reset();
             });
             Events.Scene.LoadFinish.Subscribe((data) =>
             {
+                if (data.sceneName == "LevelEditor")
+                {
+                    Game.isInEditor = true;
+                }
+                else
+                {
+                    Game.isInEditor = false;
+                }
                 TranslationManager.Reset();
-
                 if (data.sceneName == "MainMenu")
                 {
                     Spectrum.Interop.Game.Game.WatermarkText += "\n";
                 }
+            });
+            Events.LevelEditor.PlayModeActiveChanged.Subscribe((data) =>
+            {
+                TranslationManager.Reset();
+                Game.isInEditor = !data.active_;
             });
             CurrentPlugin.Log.Info("Subscribed to Events!");
         }
@@ -66,6 +85,7 @@ namespace Distance.Translator
 
         public void Update()
         {
+            Console.Title = Game.isInEditor.ToString();
             UpdateEveryFrame.Swoosh();
         }
     }

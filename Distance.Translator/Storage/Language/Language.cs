@@ -9,11 +9,8 @@ namespace Distance.Translator
     {
         public static string LANGUAGE_NAME;
         public static string LANGUAGE_AUTHOR;
-
-        public static string PLUGIN_MENU_NAME;
-        public static string PLUGIN_MENU_TITLE;
+        
         public static string PLUGIN_MENU_LANGUAGE;
-        public static string PLUGIN_MENU_RAINBOWMODE;
 
         public static string BUTTON_APPLY;
         public static string BUTTON_BACK;
@@ -369,11 +366,8 @@ namespace Distance.Translator
             
             LANGUAGE_NAME = GetLine("language.name","English");
             LANGUAGE_AUTHOR = GetLine("language.author", "Refract");
-
-            PLUGIN_MENU_NAME = GetLine("plugin.menu.name", "Language");
-            PLUGIN_MENU_TITLE = GetLine("plugin.menu.title", "Language Settings", true);
+            
             PLUGIN_MENU_LANGUAGE = GetLine("plugin.menu.language", "Language:", true);
-            PLUGIN_MENU_RAINBOWMODE = GetLine("plugin.menu.rainbowmode", "Rainbow Mode", true);
 
             BUTTON_BACK = GetLine("button.back", "Back");
             BUTTON_APPLY = GetLine("button.apply", "Apply");

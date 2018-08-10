@@ -85,7 +85,6 @@ namespace Distance.Translator
 
         public void Update()
         {
-            Console.Title = Game.isInEditor.ToString();
             UpdateEveryFrame.Swoosh();
         }
     }

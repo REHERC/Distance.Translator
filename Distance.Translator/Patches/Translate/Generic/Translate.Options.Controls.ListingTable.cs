@@ -1,4 +1,5 @@
 ﻿using System;
+using UnityEngine.SceneManagement;
 
 namespace Distance.Translator
 {
@@ -10,7 +11,21 @@ namespace Distance.Translator
 
             try
             {
-                path = "OptionsFrontRoot/Panel - Options/Panel - Controls/MenuPanel/ControlsDefinitions/EditAreaButton/SubPanel/Controls Listing Table";
+                string PathPrefix = "";
+                Scene scene = SceneManager.GetActiveScene();
+                switch (scene.name)
+                {
+                    case "MainMenu":
+                        PathPrefix = "OptionsFrontRoot";
+                        break;
+                    case "GameMode":
+                        PathPrefix = "OptionsFrontRoot(Clone)";
+                        break;
+                    default:
+                        return;
+                }
+
+                path = PathPrefix + "/Panel - Options/Panel - Controls/MenuPanel/ControlsDefinitions/EditAreaButton/SubPanel/Controls Listing Table";
                 
                 if (Util.GameObjectPath(__instance.gameObject.transform.parent.parent) == path)
                 {
@@ -192,7 +207,7 @@ namespace Distance.Translator
                     }
                 }
 
-                path = "OptionsFrontRoot/Panel - Options/Panel - Controls/MenuPanel/ControlsDefinitions/EditAreaButton/BottomThingy";
+                path = PathPrefix + "/Panel - Options/Panel - Controls/MenuPanel/ControlsDefinitions/EditAreaButton/BottomThingy";
                 if (__instance != null && Util.GameObjectPath(__instance.gameObject.transform.parent) == path)
                 {
                     switch (__instance.name)

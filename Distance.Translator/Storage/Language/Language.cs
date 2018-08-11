@@ -142,6 +142,7 @@ namespace Distance.Translator
         public static string OPTIONS_CONTROLS_SCHEME_DELETE;
         public static string OPTIONS_CONTROLS_SCHEME_DUPLICATE;
         public static string OPTIONS_CONTROLS_SCHEME_RENAME;
+        public static string OPTIONS_CONTROLS_NEWSCHEMENAME;
         public static string OPTIONS_CONTROLS_INVERTY;
         public static string OPTIONS_CONTROLS_SELFRIGHTING;
         public static string OPTIONS_CONTROLS_LANDINGASSIST;
@@ -350,6 +351,17 @@ namespace Distance.Translator
         public static string MULTIPLAYER_ONLINE_REFRESHING;
         public static string MULTIPLAYER_ONLINE_CONNECTING;
 
+        public static string MULTIPLAYER_ONLINE_HOST_TITLE;
+        public static string MULTIPLAYER_ONLINE_HOST_SERVERNAME;
+        public static string MULTIPLAYER_ONLINE_HOST_SERVERNAME_HINT;
+        public static string MULTIPLAYER_ONLINE_HOST_MAXPLAYERS;
+        public static string MULTIPLAYER_ONLINE_HOST_MAXPLAYERS_NOTE;
+        public static string MULTIPLAYER_ONLINE_HOST_PRIVATE;
+        public static string MULTIPLAYER_ONLINE_HOST_PRIVATE_NOTE;
+        public static string MULTIPLAYER_ONLINE_HOST_PASSWORD;
+        public static string MULTIPLAYER_ONLINE_HOST_START;
+        public static string MULTIPLAYER_ONLINE_HOST_INFO;
+        
         public static string WARNING_PREFIX;
 
         public static string WARNING_GRAPHICS_DEGRADEPERFORMANCE;
@@ -498,6 +510,7 @@ namespace Distance.Translator
             OPTIONS_CONTROLS_SCHEME_DELETE = GetLine("options.controls.scheme.delete", "Delete", true);
             OPTIONS_CONTROLS_SCHEME_DUPLICATE = GetLine("options.controls.scheme.duplicate", "Duplicate", true);
             OPTIONS_CONTROLS_SCHEME_RENAME = GetLine("options.controls.scheme.rename", "Rename", true);
+            OPTIONS_CONTROLS_NEWSCHEMENAME = GetLine("options.controls.newschemename", "New Scheme Name:", true);
             OPTIONS_CONTROLS_INVERTY = GetLine("options.controls.inverty", "Invert Y (Flying):", true);
             OPTIONS_CONTROLS_SELFRIGHTING = GetLine("options.controls.selfrighting", "Tipped Over Self-Righting:", true);
             OPTIONS_CONTROLS_LANDINGASSIST = GetLine("options.controls.landingassist", "Flight Landing Assist:", true);
@@ -706,7 +719,19 @@ namespace Distance.Translator
             MULTIPLAYER_ONLINE_REFRESHING = GetLine("multiplayer.online.refreshing", "Refreshing servers...");
             MULTIPLAYER_ONLINE_CONNECTING = GetLine("multiplayer.online.connecting", "Attempting to join server...");
 
-            WARNING_PREFIX = GetLine("warning.prefix", "Warning: ");
+            MULTIPLAYER_ONLINE_HOST_TITLE = GetLine("multiplayer.online.host.title", "Host A Game", true);
+            MULTIPLAYER_ONLINE_HOST_SERVERNAME = GetLine("multiplayer.online.host.servername", "Server Name:", true);
+            MULTIPLAYER_ONLINE_HOST_SERVERNAME_HINT = GetLine("multiplayer.online.host.servername.hint", "enter text here...");
+            MULTIPLAYER_ONLINE_HOST_MAXPLAYERS = GetLine("multiplayer.online.host.maxplayers", "Max Players:", true);
+            MULTIPLAYER_ONLINE_HOST_MAXPLAYERS_NOTE = GetLine("multiplayer.online.host.maxplayers.note", "(limited to 2-12)");
+            MULTIPLAYER_ONLINE_HOST_PRIVATE = GetLine("multiplayer.online.host.private", "Private:", true);
+            MULTIPLAYER_ONLINE_HOST_PRIVATE_NOTE = GetLine("multiplayer.online.host.private.note", "(enables password protection)");
+            MULTIPLAYER_ONLINE_HOST_PASSWORD = GetLine("multiplayer.online.host.password", "Password:", true);
+            MULTIPLAYER_ONLINE_HOST_START = GetLine("multiplayer.online.host.start", "Start Server", true);
+            MULTIPLAYER_ONLINE_HOST_INFO = GetLine("multiplayer.online.host.info", "If you would like other people online to join your game, you have to make sure to forward [FF6A00]port 45671[-] through your router.\n\nUntil you do that, players most likely will not be able to join your game via the server browser or direct connection!Click one of these these links for instructions on how you can do this:");
+
+
+        WARNING_PREFIX = GetLine("warning.prefix", "Warning: ");
 
             WARNING_GRAPHICS_DEGRADEPERFORMANCE = GetLine("warning.graphics.degradeperformance", "Enabling this may dramatically degrade graphics performance.");
             WARNING_GRAPHICS_BONUSEFFECT = GetLine("warning.graphics.bonuseffect", "This is only a fun bonus effect and not required!");

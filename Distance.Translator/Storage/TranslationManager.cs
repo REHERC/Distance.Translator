@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
 
 namespace Distance.Translator
 {
@@ -16,16 +14,13 @@ namespace Distance.Translator
 
             Modules.Add(new Watermark() { CanRun = true });
             Modules.Add(new WorkshopHighlight() { CanRun = true });
-
             Modules.Add(new Mainmenu() { CanRun = true });
             Modules.Add(new MainmenuIdle() { CanRun = true });
-
             Modules.Add(new SubmenuAdventure() { CanRun = true });
             Modules.Add(new SubmenuArcade() { CanRun = true });
             Modules.Add(new SubmenuMultiplayer() { CanRun = true });
             Modules.Add(new SubmenuWorkshop() { CanRun = true });
             Modules.Add(new SubmenuOptions() { CanRun = true });
-
             Modules.Add(new MainmenuAudio() { CanRun = true });
             Modules.Add(new MainmenuGeneral() { CanRun = true });
             Modules.Add(new MainmenuControls() { CanRun = true });
@@ -33,16 +28,13 @@ namespace Distance.Translator
             Modules.Add(new MainmenuProfiles() { CanRun = true });
             Modules.Add(new MainmenuProfilesRefresh() { CanRun = true });
             Modules.Add(new MainmenuReplay() { CanRun = true });
-
             Modules.Add(new OnlineMenu() { CanRun = true });
             Modules.Add(new OnlineMenuRefresh() { CanRun = true });
+            Modules.Add(new OnlineHostMenu() { CanRun = true });
             Modules.Add(new TrackmogrifyMenu() { CanRun = true });
             Modules.Add(new PauseMenu() { CanRun = true });
-
             Modules.Add(new InputPrompt() { CanRun = true });
-
             Modules.Add(new GUIBackButton() { CanRun = true });
-
         }
 
         public static void Run()

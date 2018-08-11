@@ -21,7 +21,7 @@ namespace Distance.Translator
             Scene scene = SceneManager.GetActiveScene();
             if (scene.name == "MainMenu")
             {
-                if (GameObject.Find("OnlineMPFrontRoot/UI Root/Panel - OnlineMPFront/Panel - ServerBrowser/Anchor - Center") != null)
+                if (GameObject.Find("OnlineMPFrontRoot/UI Root/Panel - OnlineMPFront/Panel - ServerBrowser") != null)
                 {
                     GameObject.Find("OnlineMPFrontRoot/UI Root/Panel - OnlineMPFront/Panel - ServerBrowser/Anchor - Top Left/Container/UILabel - Mode Name").GetComponent<UILabel>().text = Language.MULTIPLAYER_ONLINE_TITLE;
                     

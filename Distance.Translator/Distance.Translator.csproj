@@ -74,7 +74,6 @@
     <Compile Include="Build\Build Informations\BuildInfo.cs" />
     <Compile Include="IPC\IPCAntenna.cs" />
     <Compile Include="Patches\Harmony\ControlsMenu\ControlsMenu.UpdateCurrentSchemeNameLabel.cs" />
-    <Compile Include="Patches\Harmony\DiscordController\DiscordController.OnEventPostLoad.cs" />
     <Compile Include="Patches\Harmony\Enable Menus\ENABLE CHEATS MENU\EnableCheats.cs" />
     <Compile Include="Patches\Harmony\Enable Menus\ENABLE EXPERIMENTAL MENU\EnableExperimental.cs" />
     <Compile Include="Patches\Harmony\Enable Menus\ENABLE PS4 GRAPHICS MENU\EnablePS4Graphics.cs" />
@@ -94,7 +93,8 @@
     <Compile Include="Patches\Translate\Menus\Module.MainMenu.cs" />
     <Compile Include="Patches\Translate\Menus\Module.MainMenu.Idle.cs" />
     <Compile Include="Patches\Translate\Menus\Module.Menu.Online.cs" />
-    <Compile Include="Patches\Translate\Menus\Module.Prompt.Online.Password.cs" />
+    <Compile Include="Patches\Translate\Menus\Module.Menu.Online.Refresh.cs" />
+    <Compile Include="Patches\Translate\Menus\Module.Prompt.Generic.cs" />
     <Compile Include="Patches\Translate\Menus\Module.Menu.Trackmogrify.cs" />
     <Compile Include="Patches\Translate\Menus\Module.Settings.Profiles.Refresh.cs" />
     <Compile Include="Patches\Translate\Pause Menu\Module.PauseMenu.cs" />

@@ -335,7 +335,6 @@ namespace Distance.Translator
         public static string MULTIPLAYER_ONLINE_STATUS;
         public static string MULTIPLAYER_ONLINE_STATUS_PUBLIC;
         public static string MULTIPLAYER_ONLINE_STATUS_PRIVATE;
-        public static string MULTIPLAYER_ONLINE_STATUS_FULL;
         public static string MULTIPLAYER_ONLINE_BUILD;
         public static string MULTIPLAYER_ONLINE_REFRESH;
         public static string MULTIPLAYER_ONLINE_SERVERS_HIDEFULL;
@@ -692,7 +691,6 @@ namespace Distance.Translator
             MULTIPLAYER_ONLINE_STATUS = GetLine("multiplayer.online.status", "Status", true);
             MULTIPLAYER_ONLINE_STATUS_PUBLIC = GetLine("multiplayer.online.status.public", "Public");
             MULTIPLAYER_ONLINE_STATUS_PRIVATE = GetLine("multiplayer.online.status.private", "Private");
-            MULTIPLAYER_ONLINE_STATUS_FULL = GetLine("multiplayer.online.status.full", "Full");
             MULTIPLAYER_ONLINE_BUILD = GetLine("multiplayer.online.build", "Build", true);
             MULTIPLAYER_ONLINE_REFRESH = GetLine("multiplayer.online.refresh", "Refresh", true);
             MULTIPLAYER_ONLINE_SERVERS_HIDEFULL = GetLine("multiplayer.online.servers.hidefull", "Hide Full Servers", true);

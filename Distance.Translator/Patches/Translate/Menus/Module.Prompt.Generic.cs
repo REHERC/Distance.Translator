@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 namespace Distance.Translator
 {
-    class OnlinePasswordPrompt : TranslateModule
+    class InputPrompt : TranslateModule
     {
         private bool _CanRun;
         public bool CanRun
@@ -14,7 +14,7 @@ namespace Distance.Translator
             { _CanRun = value; }
         }
 
-        public string Name => "Online Password Prompt";
+        public string Name => "Input Prompt";
 
         public void Run()
         {
@@ -23,14 +23,17 @@ namespace Distance.Translator
             {
                 if (GameObject.Find("InputPromptPanel/Panel") != null)
                 {
-                    GameObject.Find("InputPromptPanel/Panel/Name").GetComponent<UILabel>().text = "###";
-                   
-                    CanRun = false;
+                    UILabel label = GameObject.Find("InputPromptPanel/Panel/Name").GetComponent<UILabel>();
+                    switch (label.text.ToUpperInvariant())
+                    {
+                        case "PASSWORD:":
+                            label.text = "p";
+                            break;
+                        case "NEW SCHEME NAME:":
+                            label.text = "nsm";
+                            break;
+                    }
                 }
-            }
-            else
-            {
-                CanRun = false;
             }
         }
     }

@@ -32,6 +32,7 @@ namespace Distance.Translator
             Modules.Add(new OnlineMenuRefresh() { CanRun = true });
             Modules.Add(new OnlineHostMenu() { CanRun = true });
             Modules.Add(new TrackmogrifyMenu() { CanRun = true });
+            Modules.Add(new GarageMenu() { CanRun = true });
             Modules.Add(new PauseMenu() { CanRun = true });
             Modules.Add(new InputPrompt() { CanRun = true });
             Modules.Add(new GUIBackButton() { CanRun = true });

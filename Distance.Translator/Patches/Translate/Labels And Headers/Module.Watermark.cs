@@ -27,9 +27,9 @@ namespace Distance.Translator
                     for (int i = 0; i < Lines.Length; i++)
                     {
                         string Line = (i == 1) ? Language.GetWatermarkExtension() : Lines[i];
-                        Spectrum.Interop.Game.Game.WatermarkText += Line;
+                        //Spectrum.Interop.Game.Game.WatermarkText += Line;
                     }
-                    Spectrum.Interop.Game.Game.WatermarkText = Spectrum.Interop.Game.Game.WatermarkText.TrimEnd('\n');
+                    //Spectrum.Interop.Game.Game.WatermarkText = Spectrum.Interop.Game.Game.WatermarkText.TrimEnd('\n');
 
                     CanRun = false;
                 }

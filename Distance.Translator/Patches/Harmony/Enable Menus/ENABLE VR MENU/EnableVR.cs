@@ -5,8 +5,8 @@ namespace Distance.Translator
     public partial class Photon
     {
         // Only meant for translations purposes...
-        [HarmonyPatch(typeof(VROptionsMenu))]
-        [HarmonyPatch("DisplayInMenu")]
+        //[HarmonyPatch(typeof(VROptionsMenu))]
+        //[HarmonyPatch("DisplayInMenu")]
         internal class VROptionsMenu_DisplayInMenu_Patch : VROptionsMenu
         {
             static void Postfix(ref bool __result)

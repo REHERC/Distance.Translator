@@ -90,6 +90,7 @@
     <Compile Include="Patches\Translate\GUI Buttons\Module.BackButton.cs" />
     <Compile Include="Patches\Translate\Labels And Headers\Module.Watermark.cs" />
     <Compile Include="Patches\Translate\Labels And Headers\Module.WorkshopHighlight.cs" />
+    <Compile Include="Patches\Translate\Menus\Garage\Module.Menu.Garage.cs" />
     <Compile Include="Patches\Translate\Menus\Module.MainMenu.cs" />
     <Compile Include="Patches\Translate\Menus\Module.MainMenu.Idle.cs" />
     <Compile Include="Patches\Translate\Menus\Online\Module.Menu.Online.cs" />

@@ -350,6 +350,7 @@ namespace Distance.Translator
         public static string MULTIPLAYER_ONLINE_CONNECT;
         public static string MULTIPLAYER_ONLINE_REFRESHING;
         public static string MULTIPLAYER_ONLINE_CONNECTING;
+        public static string MULTIPLAYER_ONLINE_PASSWORDPROMPT;
 
         public static string MULTIPLAYER_ONLINE_HOST_TITLE;
         public static string MULTIPLAYER_ONLINE_HOST_SERVERNAME;
@@ -361,7 +362,18 @@ namespace Distance.Translator
         public static string MULTIPLAYER_ONLINE_HOST_PASSWORD;
         public static string MULTIPLAYER_ONLINE_HOST_START;
         public static string MULTIPLAYER_ONLINE_HOST_INFO;
-        
+
+        public static string GARAGE_TITLE;
+        public static string GARAGE_EDITING;
+        public static string GARAGE_CUSTOMIZECAR_TAB;
+        public static string GARAGE_CUSTOMIZECAR_EDITCOLORS;
+        public static string GARAGE_CUSTOMIZECAR_RANDOMIZE;
+        public static string GARAGE_CUSTOMIZECAR_SAVEPRESET;
+        public static string GARAGE_CUSTOMIZECAR_SAVEPRESET_PROMPT;
+        public static string GARAGE_GLOBALSTATS_TAB;
+        public static string GARAGE_TRICKS_TAB;
+        public static string GARAGE_MENULEVEL_TAB;
+
         public static string WARNING_PREFIX;
 
         public static string WARNING_GRAPHICS_DEGRADEPERFORMANCE;
@@ -718,6 +730,7 @@ namespace Distance.Translator
             MULTIPLAYER_ONLINE_CONNECT = GetLine("multiplayer.online.connect", "Connect", true);
             MULTIPLAYER_ONLINE_REFRESHING = GetLine("multiplayer.online.refreshing", "Refreshing servers...");
             MULTIPLAYER_ONLINE_CONNECTING = GetLine("multiplayer.online.connecting", "Attempting to join server...");
+            MULTIPLAYER_ONLINE_PASSWORDPROMPT = GetLine("multiplayer.online.passwordprompt", "Password:", true);
 
             MULTIPLAYER_ONLINE_HOST_TITLE = GetLine("multiplayer.online.host.title", "Host A Game", true);
             MULTIPLAYER_ONLINE_HOST_SERVERNAME = GetLine("multiplayer.online.host.servername", "Server Name:", true);
@@ -730,8 +743,18 @@ namespace Distance.Translator
             MULTIPLAYER_ONLINE_HOST_START = GetLine("multiplayer.online.host.start", "Start Server", true);
             MULTIPLAYER_ONLINE_HOST_INFO = GetLine("multiplayer.online.host.info", "If you would like other people online to join your game, you have to make sure to forward [FF6A00]port 45671[-] through your router.\n\nUntil you do that, players most likely will not be able to join your game via the server browser or direct connection!Click one of these these links for instructions on how you can do this:");
 
+            GARAGE_TITLE = GetLine("garage.title", "Garage", true);
+            GARAGE_EDITING = GetLine("garage.editing", "Editing: {0}");
+            GARAGE_CUSTOMIZECAR_TAB = GetLine("garage.customizecar.tab", "Customize Car", true);
+            GARAGE_CUSTOMIZECAR_EDITCOLORS = GetLine("garage.customizecar.editcolors", "Edit Colors", true);
+            GARAGE_CUSTOMIZECAR_RANDOMIZE = GetLine("garage.customizecar.randomize", "Randomize", true, 0, true);
+            GARAGE_CUSTOMIZECAR_SAVEPRESET = GetLine("garage.customizecar.savepreset", "Save As Preset", true);
+            GARAGE_CUSTOMIZECAR_SAVEPRESET_PROMPT = GetLine("garage.customizecar.savepreset.prompt", "Save Preset As:", true);
+            GARAGE_GLOBALSTATS_TAB = GetLine("garage.globalstats.tab", "Global Stats", true);
+            GARAGE_TRICKS_TAB = GetLine("garage.tricks.tab", "Tricks", true);
+            GARAGE_MENULEVEL_TAB = GetLine("garage.menulevel.tab", "Menu Level", true);
 
-        WARNING_PREFIX = GetLine("warning.prefix", "Warning: ");
+            WARNING_PREFIX = GetLine("warning.prefix", "Warning: ");
 
             WARNING_GRAPHICS_DEGRADEPERFORMANCE = GetLine("warning.graphics.degradeperformance", "Enabling this may dramatically degrade graphics performance.");
             WARNING_GRAPHICS_BONUSEFFECT = GetLine("warning.graphics.bonuseffect", "This is only a fun bonus effect and not required!");

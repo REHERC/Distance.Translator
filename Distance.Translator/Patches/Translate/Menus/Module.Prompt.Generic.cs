@@ -27,10 +27,10 @@ namespace Distance.Translator
                     switch (label.text.ToUpperInvariant())
                     {
                         case "PASSWORD:":
-                            label.text = "p";
+                            label.text = Language.MULTIPLAYER_ONLINE_PASSWORDPROMPT;
                             break;
                         case "NEW SCHEME NAME:":
-                            label.text = "nsm";
+                            label.text = Language.OPTIONS_CONTROLS_NEWSCHEMENAME;
                             break;
                     }
                 }

@@ -29,7 +29,7 @@ namespace Distance.Translator
                 HarmonyInstance Harmony = HarmonyInstance.Create("com.REHERC.DistanceTranslator");
                 CurrentPlugin.Log.Info("Harmony patcher instantiated!");
                 CurrentPlugin.Log.Info("Patching assemblies ...");
-                Harmony.PatchAll(Assembly.GetExecutingAssembly());
+                //Harmony.PatchAll(Assembly.GetExecutingAssembly());
                 CurrentPlugin.Log.Info("Assemblies patched!");
             }
             catch (Exception VirusSpirit)
@@ -64,7 +64,7 @@ namespace Distance.Translator
                 TranslationManager.Reset();
                 if (data.sceneName == "MainMenu")
                 {
-                    Spectrum.Interop.Game.Game.WatermarkText += "\n";
+                    //Spectrum.Interop.Game.Game.WatermarkText += "\n";
                 }
             });
             Events.LevelEditor.PlayModeActiveChanged.Subscribe((data) =>
@@ -85,7 +85,7 @@ namespace Distance.Translator
 
         public void Update()
         {
-            UpdateEveryFrame.Swoosh();
+            //UpdateEveryFrame.Swoosh();
         }
     }
 }

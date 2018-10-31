@@ -83,6 +83,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Harmony\MenuDescriptionLabel\MenuDescriptionLabel.SetText.cs" />
     <Compile Include="Storage\CurrentPlugin.cs" />
     <Compile Include="Data\PluginLogo.cs" />
     <Compile Include="Photon.cs" />
@@ -94,6 +95,7 @@
     <Compile Include="Translations\Modules\ArcadeSubMenuModule.cs" />
     <Compile Include="Translations\Modules\AudioSettingsModule.cs" />
     <Compile Include="Translations\Modules\GeneralSettingsModule.cs" />
+    <Compile Include="Translations\Modules\GraphicsSettingsModule.cs" />
     <Compile Include="Translations\Modules\IdleMenuModule.cs" />
     <Compile Include="Translations\Modules\InfoDisplayModule.cs" />
     <Compile Include="Translations\Modules\CustomizeModule.cs" />

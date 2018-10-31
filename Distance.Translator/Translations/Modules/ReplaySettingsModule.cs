@@ -35,7 +35,7 @@ namespace Distance.Translator
 
         public override void Run()
         {
-            GameObject.Find($"{MenuTitleTemplate()}/UILabel - Title").GetComponent<UILabel>().text = Language.GetLine("settings.replay.title"); // Can't patch here, use harmony instead
+            //GameObject.Find($"{MenuTitleTemplate()}/UILabel - Title").GetComponent<UILabel>().text = Language.GetLine("settings.replay.title"); // Can't patch here, use harmony instead
 
             GameObject.Find($"{Root()}/GHOSTS IN ARCADE TYPE/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.replay.arcadeghoststype");
             GameObject.Find($"{Root()}/GHOSTS IN ARCADE COUNT/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.replay.arcadeghostscount");

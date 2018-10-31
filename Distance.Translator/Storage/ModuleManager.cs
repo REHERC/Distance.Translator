@@ -22,6 +22,8 @@ namespace Distance.Translator
             Modules.Add(new AudioSettingsModule());
             Modules.Add(new GeneralSettingsModule());
 
+            Modules.Add(new GraphicsSettingsModule());
+
             Modules.Add(new ReplaySettingsModule());
 
             ListModules();

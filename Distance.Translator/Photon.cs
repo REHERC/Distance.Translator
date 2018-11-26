@@ -1,9 +1,6 @@
 ﻿using System;
 using Spectrum.API.Interfaces.Plugins;
 using Spectrum.API.Interfaces.Systems;
-using UnityEngine;
-using Spectrum.Interop.Game;
-using UnityEngine.SceneManagement;
 using Harmony;
 using System.Reflection;
 

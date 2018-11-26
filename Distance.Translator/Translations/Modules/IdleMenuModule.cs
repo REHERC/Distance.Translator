@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using static Distance.Translator.Extensions.StringExtensions;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -21,7 +18,7 @@ namespace Distance.Translator
 
         public override void Run()
         {
-            GameObject.Find($"{Root}/UIPanel - PressAnyButton/UILabel - PressAnyButton").GetComponent<UILabel>().text = Language.GetLine("mainmenu.pressanybutton");
+            GameObject.Find($"{Root}/UIPanel - PressAnyButton/UILabel - PressAnyButton").GetComponent<UILabel>().text = Language.GetLine("mainmenu.pressanybutton").UP().SPACE(2);
 
             Disable();
         }

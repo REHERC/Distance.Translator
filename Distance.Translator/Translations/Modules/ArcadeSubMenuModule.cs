@@ -22,8 +22,8 @@ namespace Distance.Translator
             GameObject.Find($"{Root}/Challenge/UILabel").GetComponent<UILabel>().text = Language.GetLine("gamemode.challenge");
             GameObject.Find($"{Root}/Challenge").GetComponent<SetMenuDescriptionOnHover>().SetText(Language.GetLine("gamemode.challenge.description"));
             GameObject.Find($"{Root}/Stunt/UILabel").GetComponent<UILabel>().text = Language.GetLine("gamemode.stunt");
-            GameObject.Find($"{Root}/Stunt").GetComponent<SetMenuDescriptionOnHover>().SetText(Language.GetLine("gamemode.stunt"));
-            GameObject.Find($"{Root}/Trackmogrify/UILabel").GetComponent<UILabel>().text = Language.GetLine("gamemode.trackmogrify.description");
+            GameObject.Find($"{Root}/Stunt").GetComponent<SetMenuDescriptionOnHover>().SetText(Language.GetLine("gamemode.stunt.description"));
+            GameObject.Find($"{Root}/Trackmogrify/UILabel").GetComponent<UILabel>().text = Language.GetLine("gamemode.trackmogrify");
             GameObject.Find($"{Root}/Trackmogrify").GetComponent<SetMenuDescriptionOnHover>().SetText(Language.GetLine("gamemode.trackmogrify.description"));
 
             Disable();

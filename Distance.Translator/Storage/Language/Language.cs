@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using Spectrum.API.Configuration;
+using static Distance.Translator.CurrentPlugin;
 
 namespace Distance.Translator
 {
@@ -9,7 +7,12 @@ namespace Distance.Translator
     {
         public static string GetLine(string key)
         {
-            return $"{key}";
+            //return $"{key}";
+            bool issubtitle = key.StartsWith("subtitles.");
+
+            Settings source = issubtitle ? Subtitles_Language : Gui_Language;
+
+            return source.GetItem<string>(key);
         }
     }
 }

@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Reflection.Emit;
-using System.Text;
 using Harmony;
 
 namespace Distance.Translator.Harmony
 {
-    [HarmonyPatch(typeof(MenuDescriptionLabel), "SetText")]
+    //[HarmonyPatch(typeof(MenuDescriptionLabel), "SetText")]
     public class MenuDescriptionLabel__SetText__Patch
     {
         static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)

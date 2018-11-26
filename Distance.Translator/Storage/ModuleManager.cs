@@ -9,22 +9,23 @@ namespace Distance.Translator
         
         public static void Initialize()
         {
-            Modules = new List<TranslateModule>();
+            Modules = new List<TranslateModule>
+            {
+                new MainMenuModule(),
+                new IdleMenuModule(),
 
-            Modules.Add(new MainMenuModule());
-            Modules.Add(new IdleMenuModule());
+                new ArcadeSubMenuModule(),
+                new MultiplayerSubMenuModule(),
+                new WorkshopSubMenuModule(),
+                new OptionsSubMenuModule(),
 
-            Modules.Add(new ArcadeSubMenuModule());
-            Modules.Add(new MultiplayerSubMenuModule());
-            Modules.Add(new WorkshopSubMenuModule());
-            Modules.Add(new OptionsSubMenuModule());
+                new AudioSettingsModule(),
+                new GeneralSettingsModule(),
 
-            Modules.Add(new AudioSettingsModule());
-            Modules.Add(new GeneralSettingsModule());
+                new GraphicsSettingsModule(),
 
-            Modules.Add(new GraphicsSettingsModule());
-
-            Modules.Add(new ReplaySettingsModule());
+                new ReplaySettingsModule()
+            };
 
             ListModules();
         }

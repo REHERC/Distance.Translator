@@ -1,4 +1,4 @@
-﻿using System;
+﻿using static Distance.Translator.Extensions.StringExtensions;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -38,16 +38,16 @@ namespace Distance.Translator
         {
             GameObject.Find($"{MenuTitleTemplate()}/UILabel - Title").GetComponent<UILabel>().text = Language.GetLine("settings.audio.title");
 
-            GameObject.Find($"{Root()}/MASTER/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.master");
-            GameObject.Find($"{Root()}/CAR/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.car");
-            GameObject.Find($"{Root()}/ENVIRONMENT/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.environment");
-            GameObject.Find($"{Root()}/OBSTACLES/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.obstacles");
-            GameObject.Find($"{Root()}/MENUS/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.menus");
-            GameObject.Find($"{Root()}/MUSIC/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.music");
-            GameObject.Find($"{Root()}/ANNOUNCER/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.announcer");
-            GameObject.Find($"{Root()}/ANNOUNCER SETTINGS/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.announcersettings");
-            GameObject.Find($"{Root()}/SUBTITLES/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.subtitles");
-            GameObject.Find($"{Root()}/SUBTITLES SIZE/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.subtitlessize");
+            GameObject.Find($"{Root()}/MASTER/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.master").UP();
+            GameObject.Find($"{Root()}/CAR/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.car").UP();
+            GameObject.Find($"{Root()}/ENVIRONMENT/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.environment").UP();
+            GameObject.Find($"{Root()}/OBSTACLES/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.obstacles").UP();
+            GameObject.Find($"{Root()}/MENUS/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.menus").UP();
+            GameObject.Find($"{Root()}/MUSIC/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.music").UP();
+            GameObject.Find($"{Root()}/ANNOUNCER/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.announcer").UP();
+            GameObject.Find($"{Root()}/ANNOUNCER SETTINGS/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.announcersettings").UP();
+            GameObject.Find($"{Root()}/SUBTITLES/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.subtitles").UP();
+            GameObject.Find($"{Root()}/SUBTITLES SIZE/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.subtitlessize").UP();
             
             Disable();
         }

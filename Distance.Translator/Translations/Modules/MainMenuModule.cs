@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using static Distance.Translator.Extensions.StringExtensions;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -21,14 +18,14 @@ namespace Distance.Translator
 
         public override void Run()
         {
-            GameObject.Find($"{Root}/Campaign/UILabel").GetComponent<UILabel>().text = Language.GetLine("mainmenu.campaign");
-            GameObject.Find($"{Root}/Arcade/UILabel").GetComponent<UILabel>().text = Language.GetLine("mainmenu.arcade");
-            GameObject.Find($"{Root}/Multiplayer/UILabel").GetComponent<UILabel>().text = Language.GetLine("mainmenu.multiplayer");
-            GameObject.Find($"{Root}/Level Editor/UILabel").GetComponent<UILabel>().text = Language.GetLine("mainmenu.leveleditor");
-            GameObject.Find($"{Root}/Steam Workshop/UILabel").GetComponent<UILabel>().text = Language.GetLine("mainmenu.workshop");
-            GameObject.Find($"{Root}/Garage/UILabel").GetComponent<UILabel>().text = Language.GetLine("mainmenu.garage");
-            GameObject.Find($"{Root}/Options/UILabel").GetComponent<UILabel>().text = Language.GetLine("mainmenu.options");
-            GameObject.Find($"{Root}/Quit/UILabel").GetComponent<UILabel>().text = Language.GetLine("mainmenu.quit");
+            GameObject.Find($"{Root}/Campaign/UILabel").GetComponent<UILabel>().text = G.Sys.OptionsManager_.CheatSettings_.SettingsFlags_.IsSet(ECheat.CampaignPlus) ? Language.GetLine("mainmenu.campaignplus").UP() : Language.GetLine("mainmenu.campaign").UP();
+            GameObject.Find($"{Root}/Arcade/UILabel").GetComponent<UILabel>().text = Language.GetLine("mainmenu.arcade").UP();
+            GameObject.Find($"{Root}/Multiplayer/UILabel").GetComponent<UILabel>().text = Language.GetLine("mainmenu.multiplayer").UP();
+            GameObject.Find($"{Root}/Level Editor/UILabel").GetComponent<UILabel>().text = Language.GetLine("mainmenu.leveleditor").UP();
+            GameObject.Find($"{Root}/Steam Workshop/UILabel").GetComponent<UILabel>().text = Language.GetLine("mainmenu.workshop").UP();
+            GameObject.Find($"{Root}/Garage/UILabel").GetComponent<UILabel>().text = Language.GetLine("mainmenu.garage").UP();
+            GameObject.Find($"{Root}/Options/UILabel").GetComponent<UILabel>().text = Language.GetLine("mainmenu.options").UP();
+            GameObject.Find($"{Root}/Quit/UILabel").GetComponent<UILabel>().text = Language.GetLine("mainmenu.quit").UP();
             
             Disable();
         }

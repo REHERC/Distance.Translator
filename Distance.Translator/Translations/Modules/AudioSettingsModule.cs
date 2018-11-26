@@ -48,7 +48,8 @@ namespace Distance.Translator
             GameObject.Find($"{Root()}/ANNOUNCER SETTINGS/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.announcersettings").UP();
             GameObject.Find($"{Root()}/SUBTITLES/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.subtitles").UP();
             GameObject.Find($"{Root()}/SUBTITLES SIZE/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.subtitlessize").UP();
-            
+            GameObject.Find($"{Root()}/SUBTITLES LANGUAGE/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.subtitleslanguage").UP();
+
             Disable();
         }
     }

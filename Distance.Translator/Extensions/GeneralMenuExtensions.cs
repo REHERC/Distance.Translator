@@ -8,14 +8,6 @@ namespace Distance.Translator.Extensions
     {
         public static void CreateLanguageDropdown(this GeneralMenu __instance)
         {
-
-            Action ActionDone = delegate ()
-            {
-
-            };
-
-            __instance.CallPrivateMethod("TweakAction", "name", ActionDone, "description");
-
             Type[] searchParameters = new Type[] {
                 typeof(string),
                 typeof(Func<string>),
@@ -55,15 +47,15 @@ namespace Distance.Translator.Extensions
                         };
 
                         object[] args = {
-                            "LANGUAGE",
+                            "INTERFACE LANGUAGE",
                             LangGet,
                             LangSet,
-                            null,
+                            "",
                             new Dictionary<string, string>()
                             {
                                 {"English", "EN-en"},
                                 {"Français", "FR-fr"},
-                            }
+                            }.ToArray()
 
                             //LanguageManager.Languages.ToArray()
                         };

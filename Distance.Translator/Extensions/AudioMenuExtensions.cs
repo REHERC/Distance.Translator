@@ -47,15 +47,15 @@ namespace Distance.Translator.Extensions
                         };
 
                         object[] args = {
-                            "LANGUAGE",
+                            "SUBTITLES LANGUAGE",
                             LangGet,
                             LangSet,
-                            null,
+                            "",
                             new Dictionary<string, string>()
                             {
                                 {"English", "EN-en"},
                                 {"Français", "FR-fr"},
-                            }
+                            }.ToArray()
 
                             //LanguageManager.Languages.ToArray()
                         };
@@ -66,7 +66,6 @@ namespace Distance.Translator.Extensions
                     }
                 }
             }
-
         }
     }
 }

@@ -49,7 +49,8 @@ namespace Distance.Translator
             GameObject.Find($"{Root()}/SHUFFLE LEVELS/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.general.shufflelevels").UP();
             GameObject.Find($"{Root()}/SHOW TRICK TEXT/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.general.showtricktext").UP();
             GameObject.Find($"{Root()}/SPLIT-SCREEN CAMERA SPLIT/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.general.camerasplit").UP();
-            
+            GameObject.Find($"{Root()}/INTERFACE LANGUAGE/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.general.language").UP();
+
             Disable();
         }
     }

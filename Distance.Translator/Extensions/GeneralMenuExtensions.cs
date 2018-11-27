@@ -35,15 +35,14 @@ namespace Distance.Translator.Extensions
 
                         Func<string> LangGet = delegate
                         {
-                            return "EN-en"; //SharedSettings.CURRENT_LANGUAGE;
+                            return CurrentPlugin.Configuration["InterfaceLanguage"].ToString();
                         };
 
                         Action<string> LangSet = delegate (string lang)
                         {
-
-                            //SharedSettings.CURRENT_LANGUAGE = lang;
-                            //IPCAntenna.SendSetting("DistanceTranslator", "config.language", lang);
-                            //IPCAntenna.SendCommand("DistanceTranslator", "language-reload");
+                            CurrentPlugin.Configuration["InterfaceLanguage"] = lang;
+                            CurrentPlugin.Configuration.Save();
+                            ModuleManager.ResetAll();
                         };
 
                         object[] args = {
@@ -53,7 +52,7 @@ namespace Distance.Translator.Extensions
                             "",
                             new Dictionary<string, string>()
                             {
-                                {"English", "EN-en"},
+                                {"English", ":default:"},
                                 {"Français", "FR-fr"},
                             }.ToArray()
 

@@ -1,6 +1,9 @@
-﻿using System;
+﻿using Spectrum.Interop.Game;
+using System;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
-namespace Distance.Translator
+namespace Distance.Translator.Modules
 {
     class SubtitlesModule : TranslateModule
     {
@@ -13,7 +16,6 @@ namespace Distance.Translator
 
         public override void Run()
         {
-            /*
             try
             {
                 if (Game.CurrentMode == Spectrum.Interop.Game.GameMode.Adventure && SceneManager.GetActiveScene().name == "GameMode")
@@ -27,7 +29,7 @@ namespace Distance.Translator
                             switch (Subtitles.text.ToLowerInvariant())
                             {
                                 case "[999999](intercom)[-] the array is our new home.":
-                                    Subtitles.text = "[999999](Intercom)[-] h.";
+                                    //Subtitles.text = "[999999](Intercom)[-] h.";
                                     break;
                             }
                         }
@@ -38,7 +40,6 @@ namespace Distance.Translator
             {
 
             }
-            */
         }
     }
 }

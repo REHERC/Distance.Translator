@@ -1,5 +1,6 @@
 ﻿using Spectrum.API.Configuration;
 using Spectrum.API.Logging;
+using System.Collections.Generic;
 
 namespace Distance.Translator
 {
@@ -20,6 +21,23 @@ namespace Distance.Translator
             };
 
             Configuration = new Settings("Config");
+
+            Dictionary<string, object> DefaultSettings = new Dictionary<string, object>()
+            {
+                {"InterfaceLanguage", ":default:"},
+                {"SubtitlesLanguage", ":default:"},
+                {"Debug", false}
+            };
+            
+            foreach (KeyValuePair<string, object> item in DefaultSettings)
+            {
+                if (!Configuration.ContainsKey<string>(item.Key))
+                {
+                    Configuration[item.Key] = item.Value;
+                }
+            }
+
+            Configuration.Save();
 
             Gui_Language = new Settings("Languages/En-en");
             Subtitles_Language = new Settings("Languages/En-en");

@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Distance.Translator
+namespace Distance.Translator.Modules
 {
     class GeneralSettingsModule : TranslateModule
     {

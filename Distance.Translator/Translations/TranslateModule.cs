@@ -1,4 +1,4 @@
-﻿namespace Distance.Translator
+﻿namespace Distance.Translator.Modules
 {
     public partial class TranslateModule
     {

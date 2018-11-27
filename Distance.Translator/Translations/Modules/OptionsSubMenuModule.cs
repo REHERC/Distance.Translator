@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Distance.Translator
+namespace Distance.Translator.Modules
 {
     public partial class OptionsSubMenuModule : TranslateModule
     {

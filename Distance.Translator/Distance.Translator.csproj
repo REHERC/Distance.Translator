@@ -86,6 +86,7 @@
     <Compile Include="Storage\Flags.cs" />
     <Compile Include="Storage\Language\Language.cs" />
     <Compile Include="Storage\ModuleManager.cs" />
+    <Compile Include="TODO.cs" />
     <Compile Include="Translations\Modules\ArcadeSubMenuModule.cs" />
     <Compile Include="Translations\Modules\AudioSettingsModule.cs" />
     <Compile Include="Translations\Modules\GeneralSettingsModule.cs" />

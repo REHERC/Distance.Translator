@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Distance.Translator
+namespace Distance.Translator.Modules
 {
     class InfoDisplayModule : TranslateModule
     {

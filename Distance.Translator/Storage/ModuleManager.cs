@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Distance.Translator.Modules;
+using System;
 using System.Collections.Generic;
 
 namespace Distance.Translator

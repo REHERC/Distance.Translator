@@ -16,24 +16,12 @@
             CanRun = false;
         }
 
-        public bool IsEnabled()
-        {
-            return CanRun && IsValidContext();
-        }
+        public bool IsEnabled() => CanRun && IsValidContext();
 
-        public virtual bool IsValidContext()
-        {
-            return true;
-        }
+        public virtual bool IsValidContext() => true;
 
-        public virtual void Run()
-        {
+        public virtual void Run() {}
 
-        }
-
-        public virtual void Initialize()
-        {
-
-        }
+        public virtual void Initialize() {}
     }
 }

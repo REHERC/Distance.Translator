@@ -1,4 +1,5 @@
-﻿using Distance.Translator;
+﻿using static Distance.Translator.CurrentPlugin;
+using Distance.Translator;
 using System;
 using System.Collections.Generic;
 using System.Reflection;
@@ -41,9 +42,10 @@ namespace Distance.Translator.Extensions
 
                         Action<string> LangSet = delegate (string lang)
                         {
-                            CurrentPlugin.Configuration["SubtitlesLanguage"] = lang;
-                            CurrentPlugin.Configuration.Save();
-                            ModuleManager.ResetAll();
+                            Configuration["SubtitlesLanguage"] = lang;
+                            Configuration.Save();
+
+                            Language.Reload();
                         };
 
                         object[] args = {
@@ -51,11 +53,7 @@ namespace Distance.Translator.Extensions
                             LangGet,
                             LangSet,
                             "",
-                            new Dictionary<string, string>()
-                            {
-                                {"English", ":default:"},
-                                {"Français", "FR-fr"},
-                            }.ToArray()
+                            LanguageFiles.ToArray()
 
                             //LanguageManager.Languages.ToArray()
                         };

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using static Distance.Translator.CurrentPlugin;
+using System;
 using System.Collections.Generic;
 using System.Reflection;
 
@@ -42,7 +43,8 @@ namespace Distance.Translator.Extensions
                         {
                             CurrentPlugin.Configuration["InterfaceLanguage"] = lang;
                             CurrentPlugin.Configuration.Save();
-                            ModuleManager.ResetAll();
+
+                            Language.Reload();
                         };
 
                         object[] args = {
@@ -50,11 +52,14 @@ namespace Distance.Translator.Extensions
                             LangGet,
                             LangSet,
                             "",
+                            LanguageFiles.ToArray()
+                            
+                            /*
                             new Dictionary<string, string>()
                             {
                                 {"English", ":default:"},
                                 {"Français", "FR-fr"},
-                            }.ToArray()
+                            }.ToArray()*/
 
                             //LanguageManager.Languages.ToArray()
                         };

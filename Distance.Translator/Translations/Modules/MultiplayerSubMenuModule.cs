@@ -19,7 +19,7 @@ namespace Distance.Translator.Modules
         {
             GameObject.Find($"{Root}/Online/UILabel").GetComponent<UILabel>().text = Language.GetLine("multiplayer.online");
             GameObject.Find($"{Root}/Split-Screen/UILabel").GetComponent<UILabel>().text = Language.GetLine("multiplayer.splitscreen");
-
+            
             Disable();
         }
     }

@@ -16,6 +16,8 @@ namespace Distance.Translator
                 new IdleMenuModule(),
 
                 new ArcadeSubMenuModule(),
+
+                new TrackmogrifyPanelModule(),
                 new MultiplayerSubMenuModule(),
                 new WorkshopSubMenuModule(),
                 new OptionsSubMenuModule(),

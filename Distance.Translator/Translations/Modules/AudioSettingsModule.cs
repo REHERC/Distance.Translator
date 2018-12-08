@@ -6,7 +6,7 @@ namespace Distance.Translator.Modules
 {
     class AudioSettingsModule : TranslateModule
     {
-        string Root()
+        public static string Root()
         {
             Scene scene = SceneManager.GetActiveScene();
             if (scene.name == "MainMenu")
@@ -16,7 +16,7 @@ namespace Distance.Translator.Modules
             return "OptionsFrontRoot/Panel - Options/Audio/Options/OptionsTable";
         }
 
-        string MenuTitleTemplate()
+        public static string MenuTitleTemplate()
         {
             Scene scene = SceneManager.GetActiveScene();
             if (scene.name == "MainMenu")

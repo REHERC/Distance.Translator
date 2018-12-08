@@ -1,4 +1,5 @@
-﻿using System;
+﻿using static Distance.Translator.CurrentPlugin;
+using System;
 using Spectrum.API.Interfaces.Plugins;
 using Spectrum.API.Interfaces.Systems;
 using Harmony;
@@ -30,6 +31,15 @@ namespace Distance.Translator
             {
                 CurrentPlugin.Log.Error("Failed to patch the assemblies!");
                 CurrentPlugin.Log.Exception(Archaic);
+            }
+
+            if (Configuration["Debug"] is true)
+            {
+                CurrentPlugin.Log.Info("Binding hotkeys actions ...");
+                manager.Hotkeys.Bind(Configuration.GetItem<string>("ReloadLanguageHotkey"), () => {
+                    Language.Reload();
+                });
+                CurrentPlugin.Log.Success("Hotkeys actions added!");
             }
             //"I love me a good toggle" ~ torcht 2018
         }

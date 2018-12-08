@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Markdown files", "Markdown files", "{8650C898-6F55-4DBC-B682-10A16AFEA359}"
 	ProjectSection(SolutionItems) = preProject
@@ -11,6 +11,11 @@ EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Distance.Translator.Shared", "Distance.Translator.Shared\Distance.Translator.Shared.shproj", "{0374D78A-6C00-4172-B7D2-04FC222212F2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Distance.Translator", "Distance.Translator\Distance.Translator.csproj", "{6934DD79-1929-4315-BFF8-6F510E21690E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Include", "Include", "{12EF7119-5447-4A4D-8F87-79698EC90F84}"
+	ProjectSection(SolutionItems) = preProject
+		Include\En-en.json = Include\En-en.json
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
@@ -29,5 +34,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AEBDD290-F4FD-4755-82D7-29D7DFFF6184}
 	EndGlobalSection
 EndGlobal

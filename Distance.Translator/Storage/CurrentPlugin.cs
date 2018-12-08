@@ -33,7 +33,8 @@ namespace Distance.Translator
             {
                 {"InterfaceLanguage", "EN-en"},
                 {"SubtitlesLanguage", "EN-en"},
-                {"Debug", false}
+                {"Debug", false},
+                {"ReloadLanguageHotkey", "LeftControl+Alpha1"}
             };
             
             foreach (KeyValuePair<string, object> item in DefaultSettings)

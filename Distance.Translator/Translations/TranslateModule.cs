@@ -24,4 +24,13 @@
 
         public virtual void Initialize() {}
     }
+
+    public partial class DynamicTranslateModule
+    {
+        public virtual string Name { get; set; }
+
+        public virtual bool Run(ref UILabel instance) => true;
+
+        public virtual void Reset(ref UILabel instance) { }
+    }
 }

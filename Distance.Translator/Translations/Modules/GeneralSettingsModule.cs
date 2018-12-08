@@ -6,7 +6,7 @@ namespace Distance.Translator.Modules
 {
     class GeneralSettingsModule : TranslateModule
     {
-        string Root()
+        public static string Root()
         {
             Scene scene = SceneManager.GetActiveScene();
             if (scene.name == "MainMenu")
@@ -16,7 +16,7 @@ namespace Distance.Translator.Modules
             return "OptionsFrontRoot/Panel - Options/General/Options/OptionsTable";
         }
 
-        string MenuTitleTemplate()
+        public static string MenuTitleTemplate()
         {
             Scene scene = SceneManager.GetActiveScene();
             if (scene.name == "MainMenu")
@@ -26,7 +26,7 @@ namespace Distance.Translator.Modules
             return "OptionsFrontRoot/Panel - Options/General/MenuTitleTemplate";
         }
 
-        public override string Name => "Audio Settings";
+        public override string Name => "General Settings";
 
         public override bool IsValidContext()
         {

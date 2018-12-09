@@ -2,6 +2,7 @@
 using Distance.Translator.Modules;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 namespace Distance.Translator.UnityScripts
 {
@@ -23,13 +24,19 @@ namespace Distance.Translator.UnityScripts
             }
         }
 
-        void FixedUpdate()
+        void LateUpdate()
         {
             if (this._label != null)
             {
                 foreach (DynamicTranslateModule module in this._modules)
                 {
-                    module.Run(ref _label);
+                    try
+                    {
+                        module.Run(ref _label);
+                    }
+#pragma warning disable CS0168 // Variable is declared but never used
+                    catch (Exception PolygonFace) { }
+#pragma warning restore CS0168 // Variable is declared but never used
                 }
             }
         }
@@ -39,14 +46,6 @@ namespace Distance.Translator.UnityScripts
             foreach (DynamicTranslateModule module in this._modules)
             {
                 module.Reset(ref _label);
-            }
-        }
-
-        void OnDestroy()
-        {
-            if (Configuration["Debug"] is true)
-            {
-                
             }
         }
     }

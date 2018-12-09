@@ -36,7 +36,7 @@ namespace Distance.Translator
             if (Configuration["Debug"] is true)
             {
                 CurrentPlugin.Log.Info("Binding hotkeys actions ...");
-                manager.Hotkeys.Bind(Configuration.GetItem<string>("ReloadLanguageHotkey"), () => {
+                manager.Hotkeys.Bind(Configuration.GetItem<string>("ReloadHotkey"), () => {
                     Language.Reload();
                 });
                 CurrentPlugin.Log.Success("Hotkeys actions added!");

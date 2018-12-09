@@ -1,4 +1,6 @@
-﻿namespace Distance.Translator.Modules
+﻿using UnityEngine;
+
+namespace Distance.Translator.Modules
 {
     public partial class TranslateModule
     {
@@ -31,6 +33,18 @@
 
         public virtual bool Run(ref UILabel instance) => true;
 
-        public virtual void Reset(ref UILabel instance) { }
+        public virtual void Reset(ref UILabel instance) {
+            
+        }
+
+        public void ResetDropDown(ref UILabel instance)
+        {
+            GameObject go = instance.transform.parent.parent.gameObject;
+            UIExPopupList list = go?.GetComponent<UIExPopupList>();
+            if (list != null)
+            {
+                instance.text = list.value;
+            }
+        }
     }
 }

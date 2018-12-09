@@ -1,5 +1,8 @@
-﻿using Spectrum.API.Configuration;
-using static Distance.Translator.CurrentPlugin;
+﻿using static Distance.Translator.CurrentPlugin;
+using Spectrum.API.Configuration;
+using System;
+using System.IO;
+using System.Security.Permissions;
 
 namespace Distance.Translator
 {
@@ -7,12 +10,11 @@ namespace Distance.Translator
     {
         public static string GetLine(string key)
         {
-            //return $"{key}";
             bool issubtitle = key.StartsWith("subtitles.");
 
             Settings source = issubtitle ? Subtitles_Language : Gui_Language;
 
-            return source.GetItem<string>(key);
+            return source.ContainsKey(key) ? source.GetItem<string>(key) : $"{key}";
         }
 
         public static void Reload()
@@ -24,8 +26,43 @@ namespace Distance.Translator
 
         public static void Load()
         {
+            if (Configuration["Debug"] is true)
+            {
+                Log.Info("Loading languages");
+            }
+
             Gui_Language = new Settings($"Languages/{Configuration["InterfaceLanguage"].ToString()}");
             Subtitles_Language = new Settings($"Languages/{Configuration["SubtitlesLanguage"].ToString()}");
+        }
+
+        public static FileSystemWatcher FileWatch;
+
+        public static void InitWatcher()
+        {
+            FileWatch = new FileSystemWatcher
+            {
+                Path = LanguageFilesPath
+            };
+
+            FileWatch.Changed += new FileSystemEventHandler(LanguageFileUpdated);
+
+            FileWatch.EnableRaisingEvents = true;
+        }
+
+        public static void LanguageFileUpdated(object source, FileSystemEventArgs e)
+        {
+            string InterfaceLanguagePath = $@"{LanguageFilesPath}\{Configuration.GetItem<string>("InterfaceLanguage")}.json";
+            string SubtitlesLanguagePath = $@"{LanguageFilesPath}\{Configuration.GetItem<string>("SubtitlesLanguage")}.json";
+            
+            if (e.FullPath == InterfaceLanguagePath
+            ||  e.FullPath == SubtitlesLanguagePath)
+            {
+                if (Configuration["Debug"] is true)
+                {
+                    Log.Warning("Language file modification detected !");
+                }
+                Reload();
+            }
         }
     }
 }

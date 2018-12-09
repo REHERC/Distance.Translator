@@ -16,16 +16,6 @@ namespace Distance.Translator.Modules
             return "OptionsFrontRoot/Panel - Options/General/Options/OptionsTable";
         }
 
-        public static string MenuTitleTemplate()
-        {
-            Scene scene = SceneManager.GetActiveScene();
-            if (scene.name == "MainMenu")
-            {
-                return "OptionsFrontRoot/Panel - Options/General/MenuTitleTemplate";
-            }
-            return "OptionsFrontRoot/Panel - Options/General/MenuTitleTemplate";
-        }
-
         public override string Name => "General Settings";
 
         public override bool IsValidContext()
@@ -36,8 +26,6 @@ namespace Distance.Translator.Modules
 
         public override void Run()
         {
-            GameObject.Find($"{MenuTitleTemplate()}/UILabel - Title").GetComponent<UILabel>().text = Language.GetLine("settings.general.title"); // Can't patch here, use harmony instead
-
             GameObject.Find($"{Root()}/UNITS/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.general.units").UP();
             GameObject.Find($"{Root()}/WORKSHOP RATING PRIVACY MODE/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.general.ratingprivacy").UP();
             GameObject.Find($"{Root()}/WORKSHOP LEVEL AUTO-DOWNLOAD/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.general.autodownload").UP();

@@ -14,10 +14,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Distance.Translator", "Dist
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Include", "Include", "{12EF7119-5447-4A4D-8F87-79698EC90F84}"
 	ProjectSection(SolutionItems) = preProject
-		Include\En-en.json = Include\En-en.json
+		..\..\Steam\steamapps\common\Distance\Distance_Data\Spectrum\Plugins\Distance Translator\Settings\Languages\En-en.json = ..\..\Steam\steamapps\common\Distance\Distance_Data\Spectrum\Plugins\Distance Translator\Settings\Languages\En-en.json
 	EndProjectSection
 EndProject
 Global
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
+	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Distance.Translator.Shared\Distance.Translator.Shared.projitems*{0374d78a-6c00-4172-b7d2-04fc222212f2}*SharedItemsImports = 13
 		Distance.Translator.Shared\Distance.Translator.Shared.projitems*{6934dd79-1929-4315-bff8-6f510e21690e}*SharedItemsImports = 4

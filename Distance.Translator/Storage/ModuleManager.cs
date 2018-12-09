@@ -13,7 +13,9 @@ namespace Distance.Translator
         public static Dictionary<string, Type> DynamicModules;
         public static Dictionary<string, Func<UILabel, DynamicTranslateModule>> DynamicChecks;
 
+#pragma warning disable CA1009
         public static event Action OnResetAll;
+#pragma warning restore CA1009
 
         public static void Initialize()
         {
@@ -40,9 +42,10 @@ namespace Distance.Translator
             DynamicModules = new Dictionary<string, Type>();
 
             foreach (var module in from module in new List<Type>() {
-                typeof(GeneralUnitsDropDownModule),
-                typeof(GeneralVisualizerDropDownModule),
-                typeof(GeneralCameraSplitDropDownModule)
+                typeof(GeneralUnitsModule),
+                typeof(GeneralVisualizerModule),
+                typeof(GeneralCameraSplitModule),
+                typeof(GeneralTitleModule)
             } where module.IsSubclassOf(typeof(DynamicTranslateModule)) select module) {
                 DynamicTranslateModule module_instance = Activator.CreateInstance(module) as DynamicTranslateModule;
                 DynamicModules.Add(module_instance.Name, module);
@@ -51,10 +54,14 @@ namespace Distance.Translator
             DynamicChecks = new Dictionary<string, Func<UILabel, DynamicTranslateModule>>() {
                 {"General Settings Units Drop-Down", (UILabel instance) => { return ModuleChecks.General_Units_DropDown(ref instance); }},
                 {"General Settings Car Screen Visualizer Drop-Down", (UILabel instance) => { return ModuleChecks.General_Visualizer_DropDown(ref instance); }},
-                {"General Settings Split-Screen Camera Split Drop-Down", (UILabel instance) => { return ModuleChecks.General_CameraSplit_DropDown(ref instance); }}
+                {"General Settings Split-Screen Camera Split Drop-Down", (UILabel instance) => { return ModuleChecks.General_CameraSplit_DropDown(ref instance); }},
+                {"General Settings Title", (UILabel instance) => { return ModuleChecks.General_Title(ref instance); }}
             };
             
-            ListModules();
+            if (Configuration["Debug"] is true)
+            {
+                ListModules();
+            }
         }
 
         private static void ListModules()
@@ -65,32 +72,23 @@ namespace Distance.Translator
             foreach (TranslateModule Module in Modules)
             {
                 Log.Success($"   - \"{Module.Name}\"");
-                if (Configuration["Debug"] is true)
-                {
-                    Log.Info($"{Module.GetType().FullName}");
-                    Console.WriteLine();
-                }
+                Log.Info($"{Module.GetType().FullName}");
+                Console.WriteLine();
             }
             Log.Warning($"  {DynamicModules.Count} Type reference modules (dynamic) :");
             foreach (var Module in DynamicModules)
             {
                 Log.Success($"   - \"{Module.Key}\"");
-                if (Configuration["Debug"] is true)
-                {
-                    Log.Info($"{Module.Value.FullName}");
-                    Console.WriteLine();
-                }
+                Log.Info($"{Module.Value.FullName}");
+                Console.WriteLine();
             }
             Log.Warning($"  {DynamicChecks.Count} Dynamic modules context checks :");
             foreach (var Check in DynamicChecks)
             {
                 Log.Success($"   - \"{Check.Key} (Check function)\"");
-                if (Configuration["Debug"] is true)
-                {
-                    Log.Info($"{Check.Value.Method.Name}");
-                    Log.Info($"{Check.Value.Method.ReflectedType.FullName}");
-                    Console.WriteLine();
-                }
+                Log.Info($"{Check.Value.Method.Name}");
+                Log.Info($"{Check.Value.Method.ReflectedType.FullName}");
+                Console.WriteLine();
             }
             Log.SuccessColor = ConsoleColor.Green;
         }

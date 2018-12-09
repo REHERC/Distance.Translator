@@ -34,7 +34,8 @@ namespace Distance.Translator
                 {"InterfaceLanguage", "EN-en"},
                 {"SubtitlesLanguage", "EN-en"},
                 {"Debug", false},
-                {"ReloadLanguageHotkey", "LeftControl+Alpha1"}
+                {"ReloadHotkey", "LeftControl+Alpha1"},
+                {"DynamicReload", false}
             };
             
             foreach (KeyValuePair<string, object> item in DefaultSettings)
@@ -45,14 +46,21 @@ namespace Distance.Translator
 
             MakeLanguageList();
 
+            if (Configuration["DynamicReload"] is true)
+            {
+                Language.InitWatcher();
+            }
+
             Language.Load();
         }
+
+        public static string LanguageFilesPath;
 
         public static void MakeLanguageList()
         {
             LanguageFiles = new Dictionary<string, string>();
 
-            string LanguageFilesPath = $@"{Plugin.RootDirectory}\Settings\Languages";
+            LanguageFilesPath = $@"{Plugin.RootDirectory}\Settings\Languages";
             
             foreach (string file in Directory.GetFiles(LanguageFilesPath, "*.json"))
             {

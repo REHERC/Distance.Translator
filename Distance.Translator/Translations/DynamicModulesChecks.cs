@@ -1,4 +1,5 @@
 ﻿using static Distance.Translator.Extensions.StringExtensions;
+using System.Collections.Generic;
 
 namespace Distance.Translator.Modules
 {
@@ -8,7 +9,7 @@ namespace Distance.Translator.Modules
         {
             if (DropDown(ref instance, "UNITS"))
             {
-                return new GeneralUnitsDropDownModule();
+                return new GeneralUnitsModule();
             }
             return null;
         }
@@ -17,7 +18,7 @@ namespace Distance.Translator.Modules
         {
             if (DropDown(ref instance, "CAR SCREEN VISUALIZER"))
             {
-                return new GeneralVisualizerDropDownModule();
+                return new GeneralVisualizerModule();
             }
             return null;
         }
@@ -26,7 +27,41 @@ namespace Distance.Translator.Modules
         {
             if (DropDown(ref instance, "SPLIT-SCREEN CAMERA SPLIT"))
             {
-                return new GeneralCameraSplitDropDownModule();
+                return new GeneralCameraSplitModule();
+            }
+            return null;
+        }
+
+        public static DynamicTranslateModule General_Title(ref UILabel instance)
+        {
+            if (IsParentableTo(Util.GameObjectPath(instance.transform), GetRoot(new Dictionary<string, string>(){
+                {"default", "OptionsFrontRoot/Panel - Options/General/MenuTitleTemplate"},
+                {"mainmenu", "OptionsFrontRoot/Panel - Options/General/MenuTitleTemplate"}
+            }
+            )))
+            {
+                System.Console.WriteLine(Util.GameObjectPath(instance.transform));
+                if (instance.transform.name == "UILabel - Title")
+                {
+                    return new GeneralTitleModule();
+                }
+            }
+            return null;
+        }
+
+        public static DynamicTranslateModule Replay_Title(ref UILabel instance)
+        {
+            if (IsParentableTo(Util.GameObjectPath(instance.transform), GetRoot(new Dictionary<string, string>(){
+                {"default", "OptionsFrontRoot/Panel - Options/Replay/MenuTitleTemplate"},
+                {"mainmenu", "OptionsFrontRoot/Panel - Options/Replay/MenuTitleTemplate"}
+            }
+            )))
+            {
+                System.Console.WriteLine(Util.GameObjectPath(instance.transform));
+                if (instance.transform.name == "UILabel - Title")
+                {
+                    return new ReplayTitleModule();
+                }
             }
             return null;
         }

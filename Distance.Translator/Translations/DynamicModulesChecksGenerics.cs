@@ -1,6 +1,8 @@
 ﻿using static Distance.Translator.Extensions.StringExtensions;
 using UnityEngine;
 using System;
+using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 namespace Distance.Translator.Modules
 {
@@ -33,10 +35,8 @@ namespace Distance.Translator.Modules
             switch (_DropDown(ref instance))
             {
                 case DropDownMode.List:
-                    Console.WriteLine("LIST");
                     return _DropDown(instance.transform, name.UP());
                 case DropDownMode.Context:
-                    Console.WriteLine("CONTEXT");
                     return UIPopupList.current.name.UP() == name.UP();
             }
             return false;
@@ -54,6 +54,17 @@ namespace Distance.Translator.Modules
             if (tr.StartsWith(path))
                 return true;
             return false;
+        }
+
+        public static string GetRoot(Dictionary<string,string> values)
+        {
+            Scene scene = SceneManager.GetActiveScene();
+            
+            if (values.ContainsKey(scene.name.DOWN()))
+                return values[scene.name.DOWN()];
+            if (values.ContainsKey("default"))
+                return values["default"];
+            return "";
         }
     }
 }

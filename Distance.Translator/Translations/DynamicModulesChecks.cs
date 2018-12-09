@@ -32,6 +32,15 @@ namespace Distance.Translator.Modules
             return null;
         }
 
+        public static DynamicTranslateModule Replay_GhostType_DropDown(ref UILabel instance)
+        {
+            if (DropDown(ref instance, "GHOSTS IN ARCADE TYPE"))
+            {
+                return new ReplayGhostTypeModule();
+            }
+            return null;
+        }
+
         public static DynamicTranslateModule General_Title(ref UILabel instance)
         {
             if (IsParentableTo(Util.GameObjectPath(instance.transform), GetRoot(new Dictionary<string, string>(){

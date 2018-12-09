@@ -45,7 +45,8 @@ namespace Distance.Translator
                 typeof(GeneralUnitsModule),
                 typeof(GeneralVisualizerModule),
                 typeof(GeneralCameraSplitModule),
-                typeof(GeneralTitleModule)
+                typeof(GeneralTitleModule),
+                typeof(ReplayTitleModule)
             } where module.IsSubclassOf(typeof(DynamicTranslateModule)) select module) {
                 DynamicTranslateModule module_instance = Activator.CreateInstance(module) as DynamicTranslateModule;
                 DynamicModules.Add(module_instance.Name, module);
@@ -55,7 +56,9 @@ namespace Distance.Translator
                 {"General Settings Units Drop-Down", (UILabel instance) => { return ModuleChecks.General_Units_DropDown(ref instance); }},
                 {"General Settings Car Screen Visualizer Drop-Down", (UILabel instance) => { return ModuleChecks.General_Visualizer_DropDown(ref instance); }},
                 {"General Settings Split-Screen Camera Split Drop-Down", (UILabel instance) => { return ModuleChecks.General_CameraSplit_DropDown(ref instance); }},
-                {"General Settings Title", (UILabel instance) => { return ModuleChecks.General_Title(ref instance); }}
+                {"Replay Settings Ghost Type Drop-Down Drop-Down", (UILabel instance) => { return ModuleChecks.Replay_GhostType_DropDown(ref instance); }},
+                {"General Settings Title", (UILabel instance) => { return ModuleChecks.General_Title(ref instance); }},
+                {"Replay Settings Title", (UILabel instance) => { return ModuleChecks.Replay_Title(ref instance); }}
             };
             
             if (Configuration["Debug"] is true)

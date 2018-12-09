@@ -91,6 +91,7 @@
     <Compile Include="Translations\Dynamic Modules\Drop Down\GeneralVisualizerModule.cs" />
     <Compile Include="Translations\Dynamic Modules\Drop Down\GeneralCameraSplitModule.cs" />
     <Compile Include="Translations\Dynamic Modules\Drop Down\GeneralUnitsModule.cs" />
+    <Compile Include="Translations\Dynamic Modules\Drop Down\ReplayGhostTypeModule.cs" />
     <Compile Include="Translations\Dynamic Modules\Menu Title\GeneralTitleModule.cs" />
     <Compile Include="Translations\Dynamic Modules\Menu Title\ReplayTitleModule.cs" />
     <Compile Include="Translations\DynamicModulesChecksGenerics.cs" />

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using static Distance.Translator.Extensions.StringExtensions;
+using UnityEngine;
 
 namespace Distance.Translator.Modules
 {
@@ -31,11 +32,14 @@ namespace Distance.Translator.Modules
     {
         public virtual string Name { get; set; }
 
+        public virtual void Init(ref UILabel instance)
+        {
+            this._state = instance.text.UP();
+        }
+
         public virtual bool Run(ref UILabel instance) => true;
 
-        public virtual void Reset(ref UILabel instance) {
-            
-        }
+        public virtual void Reset(ref UILabel instance) { }
 
         public void ResetDropDown(ref UILabel instance)
         {
@@ -46,5 +50,7 @@ namespace Distance.Translator.Modules
                 instance.text = list.value;
             }
         }
+        
+        protected string _state = "";
     }
 }

@@ -4,12 +4,12 @@
     {
         public static string UP(this string input)
         {
-            return input.ToUpperInvariant();
+            return input.ToUpperInvariant().ToUpper();
         }
 
         public static string DOWN(this string input)
         {
-            return input.ToLowerInvariant();
+            return input.ToLowerInvariant().ToLower();
         }
 
         public static string SPACE(this string input, int spacing)
@@ -19,15 +19,10 @@
             {
                 result += c;
                 for (int i = 0;i < spacing; i++)
-                {
                     result += " ";
-                }
             }
             while (result.EndsWith(" "))
-            {
                 result = result.TrimEnd(' ');
-            }
-
             return result;
         }
     }

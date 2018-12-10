@@ -6,9 +6,14 @@ namespace Distance.Translator.Modules
     {
         public override string Name => "Replay Settings Ghost Type Drop-Down";
 
+        public override void Init(ref UILabel instance)
+        {
+            base.Init(ref instance);
+        }
+
         public override bool Run(ref UILabel instance)
         {
-            switch (instance.text.UP())
+            switch (this._state)
             {
                 case "DISABLED":
                     instance.text = Language.GetLine("settings.replay.type.disabled");

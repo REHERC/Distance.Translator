@@ -45,6 +45,7 @@ namespace Distance.Translator
                 typeof(GeneralUnitsModule),
                 typeof(GeneralVisualizerModule),
                 typeof(GeneralCameraSplitModule),
+                typeof(ReplayGhostTypeModule),
                 typeof(GeneralTitleModule),
                 typeof(ReplayTitleModule)
             } where module.IsSubclassOf(typeof(DynamicTranslateModule)) select module) {

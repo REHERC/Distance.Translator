@@ -5,7 +5,7 @@ using Harmony;
 
 namespace Distance.Translator.Harmony
 {
-    //[HarmonyPatch(typeof(MenuDescriptionLabel), "SetText")]
+    [HarmonyPatch(typeof(MenuDescriptionLabel), "SetText")]
     public class MenuDescriptionLabel__SetText__Patch
     {
         static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
@@ -17,7 +17,7 @@ namespace Distance.Translator.Harmony
                 {
                     if (codes[i].operand.ToString() == "Warning: ")
                     {
-                        codes[i].operand = Language.GetLine("miscellaneous.description.warning");
+                        codes[i].operand = "";
                     }
                 }
             }

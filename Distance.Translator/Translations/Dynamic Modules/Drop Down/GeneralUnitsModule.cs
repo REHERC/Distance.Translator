@@ -6,9 +6,14 @@ namespace Distance.Translator.Modules
     {
         public override string Name => "General Settings Units Drop-Down";
 
+        public override void Init(ref UILabel instance)
+        {
+            base.Init(ref instance);
+        }
+
         public override bool Run(ref UILabel instance)
         {
-            switch (instance.text.UP())
+            switch (this._state)
             {
                 case "IMPERIAL":
                     instance.text = Language.GetLine("settings.general.units.imperial");

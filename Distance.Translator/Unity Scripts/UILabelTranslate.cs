@@ -15,12 +15,18 @@ namespace Distance.Translator.UnityScripts
         {
             this._label = this.gameObject.GetComponent<UILabel>();
             this._modules = new List<DynamicTranslateModule>(GetModules());
-            
-            ModuleManager.OnResetAll += this.Reset;
+
+            ModuleManager.OnResetAll += this.Reset;  
 
             if (this._modules.Count == 0)
             {
                 UnityEngine.Object.Destroy(this.gameObject.GetComponent<UILabelTranslate>());
+                return;
+            }
+
+            foreach (DynamicTranslateModule module in this._modules)
+            {
+                module.Init(ref _label);
             }
         }
 

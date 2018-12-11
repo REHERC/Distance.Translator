@@ -67,11 +67,7 @@ namespace Distance.Translator
                 string filename = Path.GetFileNameWithoutExtension(file);
                 Settings lang = new Settings($"Languages/{filename}");
                 
-                bool flag_show = lang.ContainsKey("language.showindebugonly") 
-                    ? lang.GetItem<bool>("language.flags.showindebugonly") == Configuration.GetItem<bool>("Debug")
-                    : true;
-
-                if (flag_show && lang.ContainsKey<string>("language.name"))
+                if (lang.ContainsKey<string>("language.name"))
                 {
                     string langname = $"{lang["language.name"].ToString()}";
 

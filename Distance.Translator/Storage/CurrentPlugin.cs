@@ -66,10 +66,24 @@ namespace Distance.Translator
             {
                 string filename = Path.GetFileNameWithoutExtension(file);
                 Settings lang = new Settings($"Languages/{filename}");
+                
+                bool flag_show = lang.ContainsKey("language.showindebugonly") 
+                    ? lang.GetItem<bool>("language.flags.showindebugonly") == Configuration.GetItem<bool>("Debug")
+                    : true;
 
-                if (lang.ContainsKey<string>("language.name") && lang.ContainsKey<string>("language.author"))
+                if (flag_show && lang.ContainsKey<string>("language.name"))
                 {
-                    string langname = $"{lang["language.name"].ToString()} [007d96]({lang["language.author"].ToString()})[-]";
+                    string langname = $"{lang["language.name"].ToString()}";
+
+                    langname += lang.ContainsKey<string>("language.author") ? $" ([007d96]{lang["language.author"].ToString()}[-])" : "";
+
+                    if (Configuration["Debug"] is true)
+                    {
+                        Log.SuccessColor = System.ConsoleColor.Gray;
+                        Log.Success($"{langname} ({filename})");
+                        Log.SuccessColor = System.ConsoleColor.Green;
+                    }
+
                     LanguageFiles.Add(langname, filename);
                 }
             }

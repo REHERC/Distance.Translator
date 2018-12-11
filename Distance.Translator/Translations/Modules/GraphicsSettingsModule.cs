@@ -38,6 +38,11 @@ namespace Distance.Translator.Modules
         {
             GameObject.Find($"{MenuTitleTemplate()}/UILabel - Title").GetComponent<UILabel>().text = Language.GetLine("settings.graphics.title");
 
+            GameObject.Find($"{Root()}/APPLY BACK/Apply/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.graphics.buttons.apply").UP();
+            GameObject.Find($"{Root()}/APPLY BACK/Back/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.graphics.buttons.back").UP();
+            
+            GameObject.Find($"{Root()}/DescriptionArea/Title").GetComponent<UILabel>().text = Language.GetLine("settings.graphics.desctiption.header").UP();
+
             GameObject.Find($"{Root()}/VideoSettingsCategory/Title").GetComponent<UILabel>().text = Language.GetLine("settings.graphics.videosettings.title").UP();
             GameObject.Find($"{Root()}/VideoSettingsCategory/Fullscreen/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.graphics.videosettings.fullscreen").UP();
             GameObject.Find($"{Root()}/VideoSettingsCategory/Fullscreen").GetComponent<SetMenuDescriptionOnHover>().SetText(Language.GetLine("settings.graphics.videosettings.fullscreen.description"));

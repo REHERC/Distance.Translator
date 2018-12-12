@@ -203,6 +203,15 @@ namespace Distance.Translator.Modules
             return null;
         }
 
+        public static DynamicTranslateModule Profile_Edit_Header(ref UILabel instance)
+        {
+            if (IsParentableTo(Util.GameObjectPath(instance.transform), "OptionsFrontRoot/Panel - Options/Panel - Profiles/Anchor - Center/Panel - EditProfile/EditSelectedProfileLabel"))
+            {
+                return new ProfileEditHeaderModule();
+            }
+            return null;
+        }
+
         public static DynamicTranslateModule General_Title(ref UILabel instance)
         {
             if (IsParentableTo(Util.GameObjectPath(instance.transform), GetRoot(new Dictionary<string, string>(){
@@ -227,7 +236,6 @@ namespace Distance.Translator.Modules
             }
             )))
             {
-                System.Console.WriteLine(Util.GameObjectPath(instance.transform));
                 if (instance.transform.name == "UILabel - Title")
                 {
                     return new ReplayTitleModule();

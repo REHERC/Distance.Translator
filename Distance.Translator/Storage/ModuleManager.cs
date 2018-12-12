@@ -2,15 +2,13 @@
 using Distance.Translator.Modules;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace Distance.Translator
 {
-    public static class ModuleManager
+    public static partial class ModuleManager
     {
         public static List<TranslateModule> Modules;
-
-        public static Dictionary<string, Type> DynamicModules;
+        
         public static Dictionary<string, Func<UILabel, DynamicTranslateModule>> DynamicChecks;
 
 #pragma warning disable CA1009
@@ -33,46 +31,10 @@ namespace Distance.Translator
 
                 new AudioSettingsModule(),
                 new GeneralSettingsModule(),
-
                 new GraphicsSettingsModule(),
-
+                new ProfileSettingsModule(),
                 new ReplaySettingsModule()
             };
-
-            DynamicModules = new Dictionary<string, Type>();
-
-            foreach (var module in from module in new List<Type>() {
-                typeof(GeneralUnitsModule),
-                typeof(GeneralVisualizerModule),
-                typeof(GeneralCameraSplitModule),
-
-                typeof(ReplayGhostTypeModule),
-                
-                typeof(GraphicsFullscreenModule),
-                typeof(GraphicsVsyncModule),
-                typeof(GraphicsLetterboxModule),
-                typeof(GraphicsBloomModule),
-                typeof(GraphicsFilmGrainModule),
-                typeof(GraphicsVignettingModule),
-                typeof(GraphicsRadialBlurModule),
-                typeof(GraphicsSunShaftsModule),
-                typeof(GraphicsReflectionsModule),
-                typeof(GraphicsAnisotropicModule),
-                typeof(GraphicsParticlesModule),
-                typeof(GraphicsTextureQualityModule),
-                typeof(GraphicsAntiAliasingModule),
-                typeof(GraphicsDrawDistanceModule),
-                typeof(GraphicsShadowQualityModule),
-                typeof(GraphicsMotionBlurModule),
-                typeof(GraphicsCarDentsModule),
-                typeof(GraphicsLightingModule),
-
-                typeof(GeneralTitleModule),
-                typeof(ReplayTitleModule)
-            } where module.IsSubclassOf(typeof(DynamicTranslateModule)) select module) {
-                DynamicTranslateModule module_instance = Activator.CreateInstance(module) as DynamicTranslateModule;
-                DynamicModules.Add(module_instance.Name, module);
-            }
 
             DynamicChecks = new Dictionary<string, Func<UILabel, DynamicTranslateModule>>() {
                 {"General Settings Units Drop-Down", (UILabel instance) => { return ModuleChecks.General_Units_DropDown(ref instance); }},
@@ -100,6 +62,7 @@ namespace Distance.Translator
                 {"Graphics Settings Car Dents Drop-Down", (UILabel instance) => { return ModuleChecks.Graphics_CarDents_DropDown(ref instance); }},
                 {"Graphics Settings Detailed Lighting Drop-Down", (UILabel instance) => { return ModuleChecks.Graphics_Lighting_DropDown(ref instance); }},
 
+                {"Profile Settings Edit Header", (UILabel instance) => { return ModuleChecks.Profile_Edit_Header(ref instance); }},
                 
                 {"General Settings Title", (UILabel instance) => { return ModuleChecks.General_Title(ref instance); }},
                 {"Replay Settings Title", (UILabel instance) => { return ModuleChecks.Replay_Title(ref instance); }}
@@ -114,25 +77,18 @@ namespace Distance.Translator
         private static void ListModules()
         {
             Log.SuccessColor = ConsoleColor.Cyan;
-            Log.Warning($"Currently loaded elements : {Modules.Count + DynamicModules.Count + DynamicChecks.Count}");
+            Log.Warning($"Currently loaded elements : {Modules.Count + DynamicChecks.Count}");
             Log.Warning($"  {Modules.Count} Class modules (static) :");
             foreach (TranslateModule Module in Modules)
             {
                 Log.Success($"   - \"{Module.Name}\"");
                 Log.Info($"{Module.GetType().FullName}");
             }
-            Log.Warning($"  {DynamicModules.Count} Type reference modules (dynamic) :");
-            foreach (var Module in DynamicModules)
-            {
-                Log.Success($"   - \"{Module.Key}\"");
-                Log.Info($"{Module.Value.FullName}");
-            }
-            Log.Warning($"  {DynamicChecks.Count} Dynamic modules context checks :");
+            Log.Warning($"  {DynamicChecks.Count} Type reference modules (dynamic) :");
             foreach (var Check in DynamicChecks)
             {
-                Log.Success($"   - \"{Check.Key} (Check function)\"");
-                Log.Info($"{Check.Value.Method.Name}");
-                Log.Info($"{Check.Value.Method.ReflectedType.FullName}");
+                Log.Success($"   - \"{Check.Key}\"");
+                Log.Info($"{Check.Value.Method.ReflectedType.FullName}.{Check.Value.Method.Name}");
             }
             Log.SuccessColor = ConsoleColor.Green;
         }
@@ -145,6 +101,8 @@ namespace Distance.Translator
                 Module.Initialize();
                 Module.Enable();
             }
+            foreach (Action ResetModule in ResetModules)
+                ResetModule();
         }
 
         public static void UpdateAll()

@@ -78,6 +78,7 @@
     <Compile Include="Harmony\AudioMenu\AudioMenu.InitializeVirtual.cs" />
     <Compile Include="Harmony\GeneralMenu\GeneralMenu.InitializeVirtual.cs" />
     <Compile Include="Harmony\MenuDescriptionLabel\MenuDescriptionLabel.SetText.cs" />
+    <Compile Include="Harmony\ProfilesMenuProfileButton\ProfilesMenuProfileButton.SetName.cs" />
     <Compile Include="Harmony\UILabel\UILabel.OnStart.cs" />
     <Compile Include="Storage\CurrentPlugin.cs" />
     <Compile Include="Data\PluginLogo.cs" />
@@ -87,6 +88,7 @@
     <Compile Include="Storage\Flags.cs" />
     <Compile Include="Storage\Language\Language.cs" />
     <Compile Include="Storage\ModuleManager.cs" />
+    <Compile Include="Storage\ModuleManager_Reset.cs" />
     <Compile Include="TODO.cs" />
     <Compile Include="Translations\Dynamic Modules\Drop Down\GeneralVisualizerModule.cs" />
     <Compile Include="Translations\Dynamic Modules\Drop Down\GeneralCameraSplitModule.cs" />
@@ -112,6 +114,7 @@
     <Compile Include="Translations\Dynamic Modules\Drop Down\ReplayGhostTypeModule.cs" />
     <Compile Include="Translations\Dynamic Modules\Menu Title\GeneralTitleModule.cs" />
     <Compile Include="Translations\Dynamic Modules\Menu Title\ReplayTitleModule.cs" />
+    <Compile Include="Translations\Dynamic Modules\Require Data\ProfileEditHeaderModule.cs" />
     <Compile Include="Translations\DynamicModulesChecksGenerics.cs" />
     <Compile Include="Translations\DynamicModulesChecks.cs" />
     <Compile Include="Translations\Modules\ArcadeSubMenuModule.cs" />
@@ -125,13 +128,14 @@
     <Compile Include="Translations\Modules\MultiplayerSubMenuModule.cs" />
     <Compile Include="Translations\Modules\OptionsSubMenuModule.cs" />
     <Compile Include="Translations\Modules\PauseMenuModule.cs" />
+    <Compile Include="Translations\Modules\ProfileSettingsModule.cs" />
     <Compile Include="Translations\Modules\ReplaySettingsModule.cs" />
     <Compile Include="Translations\Modules\SubtitlesModule.cs" />
     <Compile Include="Translations\Modules\TrackmogrifyPanelModule.cs" />
     <Compile Include="Translations\Modules\WorkshopSubMenuModule.cs" />
     <Compile Include="Translations\TranslateModule.cs" />
-    <Compile Include="Unity Scripts\UILabelTranslate.cs" />
-    <Compile Include="Unity Scripts\UILabelTranslate_Initialize.cs" />
+    <Compile Include="Unity Scripts\UILabelTranslate\UILabelTranslate.cs" />
+    <Compile Include="Unity Scripts\UILabelTranslate\UILabelTranslate_Initialize.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="..\Distance.Translator.Shared\Distance.Translator.Shared.projitems" Label="Shared" />

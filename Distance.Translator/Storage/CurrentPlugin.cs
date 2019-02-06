@@ -47,9 +47,7 @@ namespace Distance.Translator
             MakeLanguageList();
 
             if (Configuration["DynamicReload"] is true)
-            {
                 Language.InitWatcher();
-            }
 
             Language.Load();
         }

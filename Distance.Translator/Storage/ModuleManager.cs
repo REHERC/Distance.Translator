@@ -69,9 +69,7 @@ namespace Distance.Translator
             };
             
             if (Configuration["Debug"] is true)
-            {
                 ListModules();
-            }
         }
 
         private static void ListModules()
@@ -110,7 +108,6 @@ namespace Distance.Translator
             foreach(TranslateModule Module in Modules)
             {
                 if (Module.IsEnabled())
-                {
                     try
                     {
                         Module.Run();
@@ -118,7 +115,6 @@ namespace Distance.Translator
 #pragma warning disable CS0168 // Variable is declared but never used
                     catch (Exception ThatsTooBad) { }
 #pragma warning restore CS0168 // Variable is declared but never used
-                }
             }
         }
     }

@@ -46,9 +46,7 @@ namespace Distance.Translator.Modules
             GameObject go = instance.transform.parent.parent.gameObject;
             UIExPopupList list = go?.GetComponent<UIExPopupList>();
             if (list != null)
-            {
                 instance.text = list.value;
-            }
         }
         
         protected string _state = "";

@@ -20,7 +20,6 @@ namespace Distance.Translator.Extensions
             MethodInfo[] methods = typeof(GeneralMenu).GetMethods(BindingFlags.NonPublic | BindingFlags.Instance);
 
             foreach (MethodInfo method in methods)
-            {
                 if (method.Name == "TweakEnum")
                 {
                     MethodInfo genericMethod = method.MakeGenericMethod(typeof(string));
@@ -28,12 +27,8 @@ namespace Distance.Translator.Extensions
                     if (methodParameters.Length == searchParameters.Length)
                     {
                         for (int index = 0; index < searchParameters.Length; index++)
-                        {
                             if (methodParameters[index].ParameterType != searchParameters[index])
-                            {
                                 continue;
-                            }
-                        }
 
                         Func<string> LangGet = delegate
                         {
@@ -54,8 +49,6 @@ namespace Distance.Translator.Extensions
                             LangSet,
                             "",
                             LanguageFiles.ToArray()
-
-                            //LanguageManager.Languages.ToArray()
                         };
 
                         genericMethod.Invoke(__instance, args);
@@ -63,7 +56,6 @@ namespace Distance.Translator.Extensions
                         return;
                     }
                 }
-            }
         }
     }
 }

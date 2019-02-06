@@ -48,10 +48,6 @@ namespace Distance.Translator
         public void Update()
         {
             ModuleManager.UpdateAll();
-
-
-
-            
         }
     }
 }

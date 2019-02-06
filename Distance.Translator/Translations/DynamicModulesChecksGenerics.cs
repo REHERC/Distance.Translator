@@ -20,13 +20,9 @@ namespace Distance.Translator.Modules
         {
             GameObject go = instance.gameObject;
             if (go.HasComponent<UIEventListener>() && go.transform.parent.name == "Drop-down List")
-            {
                 return DropDownMode.Context;
-            }
             if (go.transform.parent.parent.HasComponent<UIExPopupList>() && go.name == "PopupLabel")
-            {
                 return DropDownMode.List;
-            }
             return DropDownMode.None;
         }
 

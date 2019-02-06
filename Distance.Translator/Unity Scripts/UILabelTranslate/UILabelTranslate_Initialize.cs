@@ -14,9 +14,7 @@ namespace Distance.Translator.UnityScripts
                 DynamicTranslateModule module = Check.Value(this._label);
 
                 if (module != null)
-                {
                     yield return module;
-                }
             }
         }
     }

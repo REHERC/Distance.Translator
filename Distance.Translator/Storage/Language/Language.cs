@@ -27,9 +27,7 @@ namespace Distance.Translator
         public static void Load()
         {
             if (Configuration["Debug"] is true)
-            {
                 Log.Info("Loading languages");
-            }
 
             Gui_Language = new Settings($"Languages/{Configuration["InterfaceLanguage"].ToString()}");
             Subtitles_Language = new Settings($"Languages/{Configuration["SubtitlesLanguage"].ToString()}");
@@ -58,9 +56,7 @@ namespace Distance.Translator
             ||  e.FullPath == SubtitlesLanguagePath)
             {
                 if (Configuration["Debug"] is true)
-                {
                     Log.Warning("Language file modification detected !");
-                }
                 Reload();
             }
         }

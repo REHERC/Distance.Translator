@@ -25,17 +25,13 @@ namespace Distance.Translator.UnityScripts
             }
 
             foreach (DynamicTranslateModule module in this._modules)
-            {
                 module.Init(ref _label);
-            }
         }
 
         void LateUpdate()
         {
             if (this._label != null)
-            {
                 foreach (DynamicTranslateModule module in this._modules)
-                {
                     try
                     {
                         module.Run(ref _label);
@@ -43,16 +39,12 @@ namespace Distance.Translator.UnityScripts
 #pragma warning disable CS0168 // Variable is declared but never used
                     catch (Exception PolygonFace) { }
 #pragma warning restore CS0168 // Variable is declared but never used
-                }
-            }
         }
 
         void Reset()
         {
             foreach (DynamicTranslateModule module in this._modules)
-            {
                 module.Reset(ref _label);
-            }
         }
     }
 }

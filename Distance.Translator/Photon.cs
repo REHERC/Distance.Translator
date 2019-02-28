@@ -44,7 +44,6 @@ namespace Distance.Translator
             //"I love me a good toggle" ~ torcht 2018
         }
         
-
         public void Update()
         {
             ModuleManager.UpdateAll();

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>f05784bf-c073-4ed0-b201-96b12197c349</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Spectrum.Menu</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Menu.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\OptionsSubmenu\MainOptionsSubmenuButton.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\OptionsSubmenu\OptionsSubmenuButton.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\OptionsSubmenu\PauseOptionsSubmenuButton.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\SpectrumMenu.cs" />
+  </ItemGroup>
+</Project>

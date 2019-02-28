@@ -10,9 +10,7 @@ namespace Distance.Translator.Modules
         {
             Scene scene = SceneManager.GetActiveScene();
             if (scene.name == "MainMenu")
-            {
                 return "OptionsFrontRoot/Panel - Options/Audio/Options/OptionsTable";
-            }
             return "OptionsFrontRoot/Panel - Options/Audio/Options/OptionsTable";
         }
 
@@ -20,9 +18,7 @@ namespace Distance.Translator.Modules
         {
             Scene scene = SceneManager.GetActiveScene();
             if (scene.name == "MainMenu")
-            {
                 return "OptionsFrontRoot/Panel - Options/Audio/MenuTitleTemplate";
-            }
             return "OptionsFrontRoot/Panel - Options/Audio/MenuTitleTemplate";
         }
 

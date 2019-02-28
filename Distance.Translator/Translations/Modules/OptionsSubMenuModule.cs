@@ -9,9 +9,7 @@ namespace Distance.Translator.Modules
         {
             Scene scene = SceneManager.GetActiveScene();
             if (scene.name == "MainMenu")
-            {
                 return "MainMenuFrontRoot/UI Root/Panel - Main/OptionsButtonsPanel/OptionsButtonsTable";
-            }
             return "PauseMenuRoot/Panel - Main/NewOptionsButtonsPanel/NewOptionsButtons";
         }
 

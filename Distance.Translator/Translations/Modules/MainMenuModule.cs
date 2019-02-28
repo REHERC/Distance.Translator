@@ -23,9 +23,7 @@ namespace Distance.Translator.Modules
             GameObject.Find($"{Root}/Multiplayer/UILabel").GetComponent<UILabel>().text = Language.GetLine("mainmenu.multiplayer").UP();
             GameObject.Find($"{Root}/Level Editor/UILabel").GetComponent<UILabel>().text = Language.GetLine("mainmenu.leveleditor").UP();
             if (G.Sys.GameManager_.IsSteamBuild_)
-            {
                 GameObject.Find($"{Root}/Steam Workshop/UILabel").GetComponent<UILabel>().text = Language.GetLine("mainmenu.workshop").UP();
-            }
             GameObject.Find($"{Root}/Garage/UILabel").GetComponent<UILabel>().text = Language.GetLine("mainmenu.garage").UP();
             GameObject.Find($"{Root}/Options/UILabel").GetComponent<UILabel>().text = Language.GetLine("mainmenu.options").UP();
             GameObject.Find($"{Root}/Quit/UILabel").GetComponent<UILabel>().text = Language.GetLine("mainmenu.quit").UP();

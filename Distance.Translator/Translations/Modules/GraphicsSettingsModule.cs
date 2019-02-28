@@ -10,9 +10,7 @@ namespace Distance.Translator.Modules
         {
             Scene scene = SceneManager.GetActiveScene();
             if (scene.name == "MainMenu")
-            {
                 return "OptionsFrontRoot/Panel - Options/Panel - Graphics/Anchor - Center";
-            }
             return "OptionsFrontRoot/Panel - Options/Panel - Graphics/Anchor - Center";
         }
 
@@ -20,9 +18,7 @@ namespace Distance.Translator.Modules
         {
             Scene scene = SceneManager.GetActiveScene();
             if (scene.name == "MainMenu")
-            {
                 return "OptionsFrontRoot/Panel - Options/Panel - Graphics/Panel - MenuTitle";
-            }
             return "OptionsFrontRoot/Panel - Options/Panel - Graphics/Panel - MenuTitle";
         }
 

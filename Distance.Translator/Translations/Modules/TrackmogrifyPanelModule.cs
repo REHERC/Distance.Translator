@@ -10,9 +10,7 @@ namespace Distance.Translator.Modules
         {
             Scene scene = SceneManager.GetActiveScene();
             if (scene.name == "MainMenu")
-            {
                 return "TrackmogrifyInputMenu/Panel(16:9)/Create a Profile Input";
-            }
             return "TrackmogrifyInputMenu/Panel(16:9)/Create a Profile Input";
         }
 

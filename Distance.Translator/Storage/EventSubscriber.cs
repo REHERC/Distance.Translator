@@ -14,7 +14,7 @@
             {
                 ModuleManager.ResetAll();
             });
-            Events.LevelEditor.PlayModeActiveChanged.Subscribe((data) =>
+            Events.Game.LevelLoaded.Subscribe((data) =>
             {
                 ModuleManager.ResetAll();
                 //Flags.LevelEditor = !data.active_;

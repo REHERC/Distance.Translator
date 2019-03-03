@@ -13,6 +13,7 @@ namespace Distance.Translator
         {
             Console.WriteLine($"Initializing ... ({ipcIdentifier})");
             CurrentPlugin.Initialize();
+            Menu.Create<LanguageMenu>();
             EventSubscriber.Initialize();
             Flags.Initialize();
             ModuleManager.Initialize();
@@ -41,6 +42,7 @@ namespace Distance.Translator
                 });
                 CurrentPlugin.Log.Success("Hotkeys actions added!");
             }
+            
             //"I love me a good toggle" ~ torcht 2018
         }
         

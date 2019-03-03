@@ -75,11 +75,11 @@
     <Compile Include="Extensions\AudioMenuExtensions.cs" />
     <Compile Include="Extensions\GeneralMenuExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
-    <Compile Include="Harmony\AudioMenu\AudioMenu.InitializeVirtual.cs" />
     <Compile Include="Harmony\GeneralMenu\GeneralMenu.InitializeVirtual.cs" />
     <Compile Include="Harmony\MenuDescriptionLabel\MenuDescriptionLabel.SetText.cs" />
     <Compile Include="Harmony\ProfilesMenuProfileButton\ProfilesMenuProfileButton.SetName.cs" />
     <Compile Include="Harmony\UILabel\UILabel.OnStart.cs" />
+    <Compile Include="LanguageMenu.cs" />
     <Compile Include="Storage\CurrentPlugin.cs" />
     <Compile Include="Data\PluginLogo.cs" />
     <Compile Include="Photon.cs" />

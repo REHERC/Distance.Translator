@@ -1,4 +1,5 @@
 ﻿using Spectrum.API.Interfaces.Systems;
+using UnityEngine;
 
 public abstract class SpectrumMenu : SuperMenu
 {
@@ -11,7 +12,7 @@ public abstract class SpectrumMenu : SuperMenu
 
     public SpectrumMenu()
     {
-        menuBlueprint_ = Util.FindByName("SuperMenuBlueprint");
+        menuBlueprint_ = Menu.menuBlueprint;
     }
 
     public void SetManager(IManager manager)

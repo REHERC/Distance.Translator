@@ -93,14 +93,22 @@ namespace Distance.Translator
 
         public static void ResetAll()
         {
-            OnResetAll();
-            foreach (TranslateModule Module in Modules)
+            try
+            {
+                OnResetAll();
+            }
+            catch (Exception) { }
+            if (Modules != null) foreach (TranslateModule Module in Modules)
             {
                 Module.Initialize();
                 Module.Enable();
             }
-            foreach (Action ResetModule in ResetModules)
-                ResetModule();
+            if (ResetModules != null) foreach (Action ResetModule in ResetModules)
+                try
+                {
+                    ResetModule();
+                }
+                catch (Exception) { }
         }
 
         public static void UpdateAll()

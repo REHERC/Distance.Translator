@@ -11,65 +11,24 @@ namespace Distance.Translator.Harmony
     {
         static void Postfix(GeneralMenu __instance)
         {
-            __instance.TweakEnum<string>("INTERFACE LANGUAGE",
-                () =>
+            Menu.menuBlueprint = __instance.menuBlueprint_;
+            
+            __instance.TweakAction("LANGUAGE SETTINGS", () => {
+                foreach (var component in __instance.PanelObject_.GetComponents<LanguageMenu>())
+                    component.Destroy();
+                
+                LanguageMenu menu = __instance.PanelObject_.AddComponent<LanguageMenu>();
+
+                menu.MenuPanel = MenuPanel.Create(menu.PanelObject_, true, true, false, true, false, false);
+
+                menu.MenuPanel.onPanelPop_ += () =>
                 {
-                    return CurrentPlugin.Configuration["InterfaceLanguage"].ToString();
-                },
-                (value) =>
-                {
-                    CurrentPlugin.Configuration["InterfaceLanguage"] = value;
-                    CurrentPlugin.Configuration.Save();
-                    Language.Reload();
-                },
-                "",
-                LanguageFiles.ToArray()
-            );
+                    __instance.PanelObject_.SetActive(true);
+                };
 
-            //GameObject options = Util.FindByName($"{Menu.GetOptionsRoot()}/Panel - Options");
-            //MenuPanel panel = options.GetComponent<MenuPanel>();
-            //panel.ClearBottomLeftButtons();
-
-            //panel.SetBottomLeftButton(InputAction.MenuSpecial_2, "TEST");
-
-            //panel.Push();
-
-            //MenuPanel menuPanel = MenuPanel.Create(__instance.PanelObject_, false, false, false, true, false, true);
-            //menuPanel.backgroundOpacity_ = 0.75f;
-            //menuPanel.dontDisableOnPop_ = true;
-            //menuPanel.ClearBottomLeftButtons();
-            //menuPanel.SetBottomLeftButton(InputAction.MenuSpecial_2, "TEST");
-            //menuPanel.selectOnPush_ = __instance.PanelObject_;
-
-            //__instance.CreateLanguageDropdown();
-
-            G.Sys.MenuPanelManager_.SetBottomLeftActionButton(InputAction.MenuPageLeft, "PREVIOUS");
-            G.Sys.MenuPanelManager_.SetBottomLeftActionButton(InputAction.MenuPageRight, "NEXT");
-
-            AddButtonAction(InputAction.MenuPageLeft, (sender) => {
-                G.Sys.MenuPanelManager_.ShowError("InputAction.MenuPageLeft", "PREVIOUS BUTTON CLICKED");
+                __instance.PanelObject_.SetActive(false);
+                G.Sys.MenuPanelManager_.Push(menu.MenuPanel);
             });
-
-            AddButtonAction(InputAction.MenuPageRight, (sender) => {
-                G.Sys.MenuPanelManager_.ShowError("InputAction.MenuPageRight", "NEXT BUTTON CLICKED");
-            });
-        }
-
-        public static void AddButtonAction(InputAction a, UIEventListener.VoidDelegate d)
-        {
-            GameObject container = GameObject.Find("BackButton/Panel/BottomLeftButtons");
-            foreach (GameObject button in container.GetChildren())
-            {
-                //if (button.HasComponent<UIExBlueprint>())
-                //    continue;
-                ControlsBasedUITexture control = button.GetComponent<ControlsBasedUITexture>();
-                if (control)
-                    if (control.inputAction_ == a)
-                    {
-                        UIEventListener listener = UIEventListener.Get(button);
-                        listener.onClick = d;
-                    }
-            }
         }
     }
 }

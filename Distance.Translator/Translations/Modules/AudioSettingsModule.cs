@@ -50,7 +50,7 @@ namespace Distance.Translator.Modules
             GameObject.Find($"{Root()}/Left - VolumeOptions/Subtitles Options/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.subtitles.size").UP();
             GameObject.Find($"{Root()}/Right - CustomMusic/Custom Music Group/EnableCustomMusic/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.custommusic.enable").UP();
             GameObject.Find($"{Root()}/Right - CustomMusic/Custom Music Group/UIPanel - CustomMusicPanel/CustomMusicPath/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.custommusic.folder").UP();
-            GameObject.Find($"{Root()}/Right - CustomMusic/Custom Music Group/UIPanel - CustomMusicPanel/CustomMusicPath").GetComponent<UIExInput>().defaultText = Language.GetLine("settings.audio.custommusic.folder.type").UP();
+            GameObject.Find($"{Root()}/Right - CustomMusic/Custom Music Group/UIPanel - CustomMusicPanel/CustomMusicPath").GetComponent<UIExInput>().defaultText = Language.GetLine("settings.audio.custommusic.folder.type");
             GameObject.Find($"{Root()}/Right - CustomMusic/Custom Music Group/UIPanel - CustomMusicPanel/Subdirectories/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.custommusic.subdirectories").UP();
             GameObject.Find($"{Root()}/Right - CustomMusic/Custom Music Group/UIPanel - CustomMusicPanel/SelectATrack/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.custommusic.selecttrack").UP();
             GameObject.Find($"{Root()}/Right - CustomMusic/Custom Music Group/UIPanel - CustomMusicPanel/Shuffle/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.custommusic.shuffle").UP();

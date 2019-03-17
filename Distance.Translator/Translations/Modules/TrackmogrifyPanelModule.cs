@@ -27,7 +27,7 @@ namespace Distance.Translator.Modules
             GameObject.Find($"{Root()}/UILabel - Message").GetComponent<UILabel>().text = Language.GetLine("trackmogrify.seed").UP();
             GameObject.Find($"{Root()}/Track Name Input").GetComponent<UIExInput>().defaultText = Language.GetLine("trackmogrify.seed.placeholder");
             GameObject.Find($"{Root()}/RecentSeedsPanel/UILabel - Recent Seeds Header").GetComponent<UILabel>().text = Language.GetLine("trackmogrify.recent").UP();
-            GameObject.Find($"{Root()}/PopularSeedsPanel/UILabel - Popular Seeds Header").GetComponent<UILabel>().text = Language.GetLine("trackmogrify.recent").UP();
+            GameObject.Find($"{Root()}/PopularSeedsPanel/UILabel - Popular Seeds Header").GetComponent<UILabel>().text = Language.GetLine("trackmogrify.recommend").UP();
             
             Disable();
         }

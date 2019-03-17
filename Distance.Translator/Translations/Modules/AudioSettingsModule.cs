@@ -10,16 +10,16 @@ namespace Distance.Translator.Modules
         {
             Scene scene = SceneManager.GetActiveScene();
             if (scene.name == "MainMenu")
-                return "OptionsFrontRoot/Panel - Options/Audio/Options/OptionsTable";
-            return "OptionsFrontRoot/Panel - Options/Audio/Options/OptionsTable";
+                return "OptionsFrontRoot/Panel - Options/Panel - Audio/Anchor - Center";
+            return "OptionsFrontRoot/Panel - Options/Panel - Audio/Anchor - Center";
         }
 
         public static string MenuTitleTemplate()
         {
             Scene scene = SceneManager.GetActiveScene();
             if (scene.name == "MainMenu")
-                return "OptionsFrontRoot/Panel - Options/Audio/MenuTitleTemplate";
-            return "OptionsFrontRoot/Panel - Options/Audio/MenuTitleTemplate";
+                return "OptionsFrontRoot/Panel - Options/Panel - Audio/MenuTitleTemplate";
+            return "OptionsFrontRoot/Panel - Options/Panel - Audio/MenuTitleTemplate";
         }
 
         public override string Name => "Audio Settings";
@@ -34,19 +34,32 @@ namespace Distance.Translator.Modules
         {
             GameObject.Find($"{MenuTitleTemplate()}/UILabel - Title").GetComponent<UILabel>().text = Language.GetLine("settings.audio.title");
 
-            GameObject.Find($"{Root()}/MASTER/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.master").UP();
-            GameObject.Find($"{Root()}/CAR/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.car").UP();
-            GameObject.Find($"{Root()}/ENVIRONMENT/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.environment").UP();
-            GameObject.Find($"{Root()}/OBSTACLES/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.obstacles").UP();
-            GameObject.Find($"{Root()}/MENUS/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.menus").UP();
-            GameObject.Find($"{Root()}/MUSIC/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.music").UP();
-            GameObject.Find($"{Root()}/ANNOUNCER/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.announcer").UP();
-            GameObject.Find($"{Root()}/ANNOUNCER SETTINGS/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.announcersettings").UP();
-            GameObject.Find($"{Root()}/SUBTITLES/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.subtitles").UP();
-            GameObject.Find($"{Root()}/SUBTITLES SIZE/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.subtitlessize").UP();
-            GameObject.Find($"{Root()}/SUBTITLES LANGUAGE/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.subtitleslanguage").UP();
+            GameObject.Find($"{Root()}/Left - VolumeOptions/Master/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.master").UP();
+            GameObject.Find($"{Root()}/Left - VolumeOptions/Car/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.car").UP();
+            GameObject.Find($"{Root()}/Left - VolumeOptions/Environment/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.environment").UP();
+            GameObject.Find($"{Root()}/Left - VolumeOptions/Obstacles/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.obstacles").UP();
+            GameObject.Find($"{Root()}/Left - VolumeOptions/Menus/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.menus").UP();
+            GameObject.Find($"{Root()}/Left - VolumeOptions/Music/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.music").UP();
+            GameObject.Find($"{Root()}/Left - VolumeOptions/Announcer/Announcer Slider/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.announcer").UP();
+            GameObject.Find($"{Root()}/Left - VolumeOptions/Announcer/Announcer Options/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.announcer.options").UP();
+            GameObject.Find($"{Root()}/Left - VolumeOptions/Announcer/Announcer Tricks/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.announcer.tricks").UP();
+            GameObject.Find($"{Root()}/Left - VolumeOptions/Announcer/Announcer Death/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.announcer.death").UP();
+            GameObject.Find($"{Root()}/Left - VolumeOptions/Announcer/Announcer Checkpoints/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.announcer.checkpoints").UP();
+            GameObject.Find($"{Root()}/Left - VolumeOptions/Announcer/Announcer Mode/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.announcer.mode").UP();
+            GameObject.Find($"{Root()}/Left - VolumeOptions/Subtitles/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.subtitles").UP();
+            GameObject.Find($"{Root()}/Left - VolumeOptions/Subtitles Options/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.subtitles.size").UP();
+            GameObject.Find($"{Root()}/Right - CustomMusic/Custom Music Group/EnableCustomMusic/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.custommusic.enable").UP();
+            GameObject.Find($"{Root()}/Right - CustomMusic/Custom Music Group/UIPanel - CustomMusicPanel/CustomMusicPath/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.custommusic.folder").UP();
+            GameObject.Find($"{Root()}/Right - CustomMusic/Custom Music Group/UIPanel - CustomMusicPanel/CustomMusicPath").GetComponent<UIExInput>().defaultText = Language.GetLine("settings.audio.custommusic.folder.type").UP();
+            GameObject.Find($"{Root()}/Right - CustomMusic/Custom Music Group/UIPanel - CustomMusicPanel/Subdirectories/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.custommusic.subdirectories").UP();
+            GameObject.Find($"{Root()}/Right - CustomMusic/Custom Music Group/UIPanel - CustomMusicPanel/SelectATrack/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.custommusic.selecttrack").UP();
+            GameObject.Find($"{Root()}/Right - CustomMusic/Custom Music Group/UIPanel - CustomMusicPanel/Shuffle/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.custommusic.shuffle").UP();
+            GameObject.Find($"{Root()}/Right - CustomMusic/Custom Music Group/UIPanel - CustomMusicPanel/Loop/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.custommusic.loop").UP();
 
             Disable();
+
+            //TODO: Add dynamic checks for subtitles and announcer dropdowns.
+            //TODO: Add dynamic checks for "No folder specified" and "{0} tracks found"
         }
     }
 }

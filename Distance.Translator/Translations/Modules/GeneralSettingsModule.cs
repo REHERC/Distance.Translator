@@ -28,15 +28,15 @@ namespace Distance.Translator.Modules
             GameObject.Find($"{Root()}/WORKSHOP RATING PRIVACY MODE/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.general.ratingprivacy").UP();
             GameObject.Find($"{Root()}/WORKSHOP LEVEL AUTO-DOWNLOAD/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.general.autodownload").UP();
             GameObject.Find($"{Root()}/ENABLE MENU ANIMATIONS/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.general.menuanimations").UP();
-            GameObject.Find($"{Root()}/ENABLE BOOM BOX MODE/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.general.boombox").UP();
-            GameObject.Find($"{Root()}/BOOM BOX BLOOM INTENSITY/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.general.boomboxbloom").UP();
-            GameObject.Find($"{Root()}/BOOM BOX SHAKE INTENSITY/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.general.boomboxshake").UP();
+            GameObject.Find($"{Root()}/ENABLE BOOMBOX MODE/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.general.boombox").UP();
+            GameObject.Find($"{Root()}/BOOMBOX BLOOM INTENSITY/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.general.boomboxbloom").UP();
+            GameObject.Find($"{Root()}/BOOMBOX SHAKE INTENSITY/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.general.boomboxshake").UP();
             GameObject.Find($"{Root()}/CAR SCREEN VISUALIZER/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.general.visualizer").UP();
             GameObject.Find($"{Root()}/SHUFFLE LEVELS/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.general.shufflelevels").UP();
             GameObject.Find($"{Root()}/SHOW TRICK TEXT/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.general.showtricktext").UP();
             GameObject.Find($"{Root()}/SPLIT-SCREEN CAMERA SPLIT/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.general.camerasplit").UP();
-            GameObject.Find($"{Root()}/INTERFACE LANGUAGE/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.general.language").UP();
-
+            GameObject.Find($"{Root()}/LANGUAGE SETTINGS/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.general.languagesettings").UP();
+            
             Disable();
         }
     }

@@ -50,6 +50,11 @@ namespace Distance.Translator
             Controller.Menu = this;
         }
 
+        void Update()
+        {
+            
+        }
+
         public override void OnPanelPop()
         {
             Controller.Destroy();
@@ -63,7 +68,6 @@ namespace Distance.Translator
             void Start()
             {
                 im = G.Sys.InputManager_;
-                Log.Success("LanguageMenuController Start");
             }
 
             void Update()

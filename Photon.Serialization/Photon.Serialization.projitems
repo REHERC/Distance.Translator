@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>642f37d0-f7e1-4fce-b3f9-7a02e698d366</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Photon.Serialization</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Formats\Bin\BinGeneric.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Formats\Json\JsonGeneric.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Formats\Xml\XmlGeneric.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Serializer\ISerializer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Serializer\Serializer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Serializer\SerializerType.cs" />
+  </ItemGroup>
+</Project>

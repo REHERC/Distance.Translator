@@ -20,7 +20,7 @@ namespace Distance.Translator.UnityScripts
 
             if (this._modules.Count == 0)
             {
-                UnityEngine.Object.Destroy(this.gameObject.GetComponent<UILabelTranslate>());
+                Destroy(this.gameObject.GetComponent<UILabelTranslate>());
                 return;
             }
 
@@ -34,6 +34,7 @@ namespace Distance.Translator.UnityScripts
                 foreach (DynamicTranslateModule module in this._modules)
                     try
                     {
+                        module.Init(ref _label);
                         module.Run(ref _label);
                     }
 #pragma warning disable CS0168 // Variable is declared but never used

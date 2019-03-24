@@ -1,10 +1,12 @@
-﻿namespace Distance.Translator
+﻿using static Distance.Translator.CurrentPlugin;
+
+namespace Distance.Translator
 {
     public static class EventSubscriber
     {
         public static void Initialize()
         {
-            CurrentPlugin.Log.Info("Subscribing to Events ...");
+            Log.Info("Subscribing to Events ...");
 
             Events.Scene.StartLoad.Subscribe((data) =>
             {
@@ -19,8 +21,12 @@
                 ModuleManager.ResetAll();
                 //Flags.LevelEditor = !data.active_;
             });
+            Events.Plugins.SubtitleEvent.Subscribe((data) =>
+            {
+                Log.Warning($"{data}");
+            });
 
-            CurrentPlugin.Log.Success("Subscribed to Events!");
+            Log.Success("Subscribed to Events!");
         }
     }
 }

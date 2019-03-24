@@ -11,13 +11,15 @@
     <AssemblyName>Distance.Translator</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DefineConstants>TRACE;DEBUG;SERIALIZER_JSON SERIALIZER_XML SERIALIZER_BIN</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
@@ -43,6 +45,9 @@
     <Reference Include="JsonFx, Version=2.0.1209.2802, Culture=neutral, PublicKeyToken=315052dd637f8a52, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\Steam\steamapps\common\Distance\Distance_Data\Spectrum\JsonFx.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net35\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Spectrum.API, Version=1.0.51.5909, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -72,6 +77,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Events\SubtitleEvent.cs" />
     <Compile Include="Extensions\AudioMenuExtensions.cs" />
     <Compile Include="Extensions\GeneralMenuExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
@@ -89,6 +95,11 @@
     <Compile Include="Storage\Language\Language.cs" />
     <Compile Include="Storage\ModuleManager.cs" />
     <Compile Include="Storage\ModuleManager_Reset.cs" />
+    <Compile Include="T4\Subtitle\SubtitleIdentifiers.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SubtitleIdentifiers.tt</DependentUpon>
+    </Compile>
     <Compile Include="TODO.cs" />
     <Compile Include="Translations\Dynamic Modules\Drop Down\GeneralVisualizerModule.cs" />
     <Compile Include="Translations\Dynamic Modules\Drop Down\GeneralCameraSplitModule.cs" />
@@ -137,10 +148,27 @@
     <Compile Include="Unity Scripts\UILabelTranslate\UILabelTranslate.cs" />
     <Compile Include="Unity Scripts\UILabelTranslate\UILabelTranslate_Initialize.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="T4\Subtitle\SubtitleIdentifiers.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="T4\Subtitle\SubtitleIdentifiers.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SubtitleIdentifiers.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
   <Import Project="..\Distance.Translator.Shared\Distance.Translator.Shared.projitems" Label="Shared" />
   <Import Project="..\Spectrum.Menu\Spectrum.Menu.projitems" Label="Shared" />
+  <Import Project="..\Photon.Serialization\Photon.Serialization.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

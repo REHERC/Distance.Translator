@@ -20,10 +20,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Languages", "Languages", "{
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Spectrum.Menu", "Spectrum.Menu\Spectrum.Menu.shproj", "{F05784BF-C073-4ED0-B201-96B12197C349}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Photon.Serialization", "Photon.Serialization\Photon.Serialization.shproj", "{642F37D0-F7E1-4FCE-B3F9-7A02E698D366}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Distance.Translator.Shared\Distance.Translator.Shared.projitems*{0374d78a-6c00-4172-b7d2-04fc222212f2}*SharedItemsImports = 13
+		Photon.Serialization\Photon.Serialization.projitems*{642f37d0-f7e1-4fce-b3f9-7a02e698d366}*SharedItemsImports = 13
 		Distance.Translator.Shared\Distance.Translator.Shared.projitems*{6934dd79-1929-4315-bff8-6f510e21690e}*SharedItemsImports = 4
+		Photon.Serialization\Photon.Serialization.projitems*{6934dd79-1929-4315-bff8-6f510e21690e}*SharedItemsImports = 4
 		Spectrum.Menu\Spectrum.Menu.projitems*{6934dd79-1929-4315-bff8-6f510e21690e}*SharedItemsImports = 4
 		Spectrum.Menu\Spectrum.Menu.projitems*{f05784bf-c073-4ed0-b201-96b12197c349}*SharedItemsImports = 13
 	EndGlobalSection

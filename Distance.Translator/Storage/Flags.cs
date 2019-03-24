@@ -14,6 +14,8 @@ namespace Distance.Translator
         public static bool GameMode = false;
         public static bool EditorPlayMode = false;
         public static bool OfficialCampaign = false;
+        
+        public static string subtitle_id = "subtitles.empty";
     }
 
     public static partial class Flags

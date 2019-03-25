@@ -1,0 +1,46 @@
+﻿<#@ template  debug="true" hostSpecific="true" language="C#" #>
+<#@ output extension=".cs" #>
+<#@ Assembly Name="System.Core" #>
+<#@ Assembly Name="System.Windows.Forms" #>
+<#@ assembly name="$(SolutionDir)packages\Newtonsoft.Json.12.0.1\lib\net35\Newtonsoft.Json.dll" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Diagnostics" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Collections" #> 
+<#@ import namespace="System.Collections.Generic" #> 
+using System.Collections.Generic;
+
+namespace Distance.Translator.T4 
+{
+	public static class GeneratedDictionaries
+	{
+		<#
+			string file = Host.ResolvePath("Template.tt");
+			string directory = Path.GetDirectoryName(file) + Path.DirectorySeparatorChar + "Json" + Path.DirectorySeparatorChar;
+			foreach (string json_file in Directory.GetFiles(directory, "*.json")) {
+				this.Write("public static Dictionary<string, string> " + Path.GetFileNameWithoutExtension(json_file) + " { get; } = new Dictionary<string, string>()");
+		
+				string contents = File.ReadAllText(json_file);
+				Dictionary<string, string> data = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, string>>(contents);
+				this.Write("{"); 
+				for (int i = 0; i < data.Count; i++) 
+				{
+					this.Write("\n\t\t\t{\"");
+					this.Write(data.ElementAt(i).Key);
+					this.Write("\",\"");
+					this.Write(data.ElementAt(i).Value);
+					this.Write("\"}");
+					if (i < data.Count - 1) {
+						this.Write(",");
+					}
+					else
+					{
+						this.Write("\n");
+					}
+				}
+				this.Write("\t\t};\n\n\t\t"); 
+			}
+		#>
+	}
+}

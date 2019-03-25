@@ -95,10 +95,10 @@
     <Compile Include="Storage\Language\Language.cs" />
     <Compile Include="Storage\ModuleManager.cs" />
     <Compile Include="Storage\ModuleManager_Reset.cs" />
-    <Compile Include="T4\Subtitle\SubtitleIdentifiers.cs">
+    <Compile Include="T4\GeneratedDictionaries\Template.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>SubtitleIdentifiers.tt</DependentUpon>
+      <DependentUpon>Template.tt</DependentUpon>
     </Compile>
     <Compile Include="TODO.cs" />
     <Compile Include="Translations\Dynamic Modules\Drop Down\GeneralVisualizerModule.cs" />
@@ -150,15 +150,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="T4\Subtitle\SubtitleIdentifiers.json" />
+    <None Include="T4\GeneratedDictionaries\Json\SubtitleBindings.json" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="T4\Subtitle\SubtitleIdentifiers.tt">
+    <Content Include="T4\GeneratedDictionaries\Template.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>SubtitleIdentifiers.cs</LastGenOutput>
+      <LastGenOutput>Template.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="..\Distance.Translator.Shared\Distance.Translator.Shared.projitems" Label="Shared" />

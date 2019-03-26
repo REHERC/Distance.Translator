@@ -10,7 +10,7 @@ namespace Distance.Translator
             () => {
                 foreach (var profilebutton in UnityEngine.Object.FindObjectsOfType<ProfilesMenuProfileButton>())
                 {
-                    profilebutton.CallPrivateMethod("SetName");
+                    profilebutton.SetName();
                 }
             }
         };

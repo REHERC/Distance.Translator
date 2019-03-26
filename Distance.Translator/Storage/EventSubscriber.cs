@@ -21,10 +21,6 @@ namespace Distance.Translator
                 ModuleManager.ResetAll();
                 //Flags.LevelEditor = !data.active_;
             });
-            Events.Plugins.SubtitleEvent.Subscribe((data) =>
-            {
-                Log.Warning($"{data}");
-            });
 
             Log.Success("Subscribed to Events!");
         }

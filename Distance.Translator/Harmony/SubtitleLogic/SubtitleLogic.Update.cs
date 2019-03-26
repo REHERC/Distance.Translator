@@ -1,29 +1,18 @@
 ﻿using Harmony;
-using UnityEngine;
 
 namespace Distance.Translator.Harmony
 {
-    //[HarmonyPatch(typeof(SubtitleLogic), "Update")]
+    [HarmonyPatch(typeof(SubtitleLogic), "Update")]
     public class SubtitleLogic__Update__Patch
     {
-        static string current = "";
-        static string last = "";
-
-        static void Prefix(SubtitleLogic __instance)
-        {
-            current = GetEventId(__instance);
-        }
-
         static void Postfix(SubtitleLogic __instance)
         {
-            if (current != last)
-
-            last = GetEventId(__instance);
-        }
-
-        static string GetEventId(SubtitleLogic __instance)
-        {
-            return $"{__instance.currentEmitter_.event_}_{__instance.currentEmitter_.currentPlayingID_}";
+            if (__instance.timer_ > 0)
+            {
+                string subtitle_csv_id = $"{SubtitleRes.strLabel}/{SubtitleRes.markerID}";
+                T4.GeneratedDictionaries.SubtitleBindings.TryGetValue(subtitle_csv_id, out string subtitle_json_id);
+                __instance.label_.text = Language.GetLine(subtitle_json_id);
+            }
         }
     }
 }

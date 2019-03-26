@@ -77,13 +77,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Events\SubtitleEvent.cs" />
     <Compile Include="Extensions\AudioMenuExtensions.cs" />
     <Compile Include="Extensions\GeneralMenuExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Harmony\GeneralMenu\GeneralMenu.InitializeVirtual.cs" />
     <Compile Include="Harmony\MenuDescriptionLabel\MenuDescriptionLabel.SetText.cs" />
     <Compile Include="Harmony\ProfilesMenuProfileButton\ProfilesMenuProfileButton.SetName.cs" />
+    <Compile Include="Harmony\SubtitleLogic\SubtitleLogic.Update.cs" />
+    <Compile Include="Harmony\SubtitleLogic\SubtitleLogic.OnSubtitleEvent.cs" />
     <Compile Include="Harmony\UILabel\UILabel.OnStart.cs" />
     <Compile Include="LanguageMenu.cs" />
     <Compile Include="Storage\CurrentPlugin.cs" />
@@ -160,6 +161,9 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Template.cs</LastGenOutput>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Events\" />
   </ItemGroup>
   <Import Project="..\Distance.Translator.Shared\Distance.Translator.Shared.projitems" Label="Shared" />
   <Import Project="..\Spectrum.Menu\Spectrum.Menu.projitems" Label="Shared" />

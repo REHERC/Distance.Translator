@@ -36,6 +36,16 @@ namespace Distance.Translator.Harmony
             SubtitleRes.markerID = data.markerID_;
             SubtitleRes.forceString = data.forceString_;
             SubtitleRes.emitter = data.emitter_;
+
+            if (G.Sys.GameManager_.ModeID_ != GameModeID.Adventure)
+                return;
+
+            AdventureMode mode = G.Sys.GameManager_.Mode_ as AdventureMode;
+            TimeSpan countdown = TimeSpan.FromSeconds(mode.GetCountdownTime());
+
+            SubtitleRes.countdownHours = countdown.Hours;
+            SubtitleRes.countdownMinutes = countdown.Minutes;
+            SubtitleRes.countdownSeconds = countdown.Seconds;
         }
     }
 
@@ -45,6 +55,10 @@ namespace Distance.Translator.Harmony
         public static uint markerID = 0;
         public static bool forceString = false;
         public static AmbientAudioObject emitter;
+
+        public static int countdownHours = 0;
+        public static int countdownMinutes = 0;
+        public static int countdownSeconds = 0;
     }
 
 }

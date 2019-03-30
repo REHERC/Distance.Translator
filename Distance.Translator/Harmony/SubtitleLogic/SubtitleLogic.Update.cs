@@ -24,15 +24,17 @@ namespace Distance.Translator.Harmony
                 else
                 {
                     csv_id = csv_id.Substring(0, csv_id.Length - 2);
-                    ScanForCountdownSubtitle(ref csv_id, ref display);
+                    ScanForCountdownSubtitle(ref csv_id, ref display, ref json_id);
                 }
+
+                SetFontSize(ref __instance, json_id);
                 __instance.label_.text = display;
             }
         }
 
-        static void ScanForCountdownSubtitle(ref string csv_id, ref string display)
+        static void ScanForCountdownSubtitle(ref string csv_id, ref string display, ref string json_id)
         {
-            if (G.Sys.GameManager_.ModeID_ != GameModeID.Adventure)
+            if (G.Sys.GameManager_.ModeID_ != GameModeID.Adventure) 
                 return;
 
             bool hours = csv_id.ToLowerInvariant().Contains($"{SubtitleRes.countdownHours} hours");
@@ -46,8 +48,28 @@ namespace Distance.Translator.Harmony
 
             if (hours is false && minutes is false && seconds is false)
                 return;
-            
+
+            json_id = line;
             display = string.Format(Language.GetLine(line), SubtitleRes.countdownHours, SubtitleRes.countdownMinutes, SubtitleRes.countdownSeconds);
+        }
+
+        static void SetFontSize(ref SubtitleLogic __instance, string json_id)
+        {
+            AudioSettings audio = G.Sys.OptionsManager_.Audio_;
+            float num = 1f;
+            switch (audio.SubtitlesFontSize_)
+            {
+                case SubtitlesFontSize.Small:
+                    num = 0.75f;
+                    break;
+                case SubtitlesFontSize.Large:
+                    num = 1.5f;
+                    break;
+                case SubtitlesFontSize.ExtraLarge:
+                    num = 2f;
+                    break;
+            }
+            __instance.label_.fontSize = (int)Math.Round((double)SubtitleRes.subtitlesDefaultScale * (double)num * (double)Language.GetFloat($"{json_id}#font.scale"));
         }
     } 
 }

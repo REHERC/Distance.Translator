@@ -20,6 +20,7 @@ namespace Distance.Translator
             Modules = new List<TranslateModule>
             {
                 new MainMenuModule(),
+                new PauseMenuModule(),
                 new IdleMenuModule(),
 
                 new ArcadeSubMenuModule(),

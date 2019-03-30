@@ -36,7 +36,8 @@
     <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="0Harmony">
+    <Reference Include="0Harmony, Version=1.2.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\Steam\steamapps\common\Distance\Distance_Data\Spectrum\Plugins\Distance Translator\Dependencies\0Harmony.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp_publicized">
@@ -83,6 +84,7 @@
     <Compile Include="Harmony\GeneralMenu\GeneralMenu.InitializeVirtual.cs" />
     <Compile Include="Harmony\MenuDescriptionLabel\MenuDescriptionLabel.SetText.cs" />
     <Compile Include="Harmony\ProfilesMenuProfileButton\ProfilesMenuProfileButton.SetName.cs" />
+    <Compile Include="Harmony\SubtitleLogic\SubtitleLogic.Start.cs" />
     <Compile Include="Harmony\SubtitleLogic\SubtitleLogic.Update.cs" />
     <Compile Include="Harmony\SubtitleLogic\SubtitleLogic.OnSubtitleEvent.cs" />
     <Compile Include="Harmony\UILabel\UILabel.OnStart.cs" />
@@ -96,6 +98,7 @@
     <Compile Include="Storage\Language\Language.cs" />
     <Compile Include="Storage\ModuleManager.cs" />
     <Compile Include="Storage\ModuleManager_Reset.cs" />
+    <Compile Include="Storage\SubtitleRes.cs" />
     <Compile Include="T4\GeneratedDictionaries\Template.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

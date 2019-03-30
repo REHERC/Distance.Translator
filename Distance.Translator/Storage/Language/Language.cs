@@ -16,6 +16,15 @@ namespace Distance.Translator
             return source.ContainsKey(key) ? source.GetItem<string>(key) : $"{key}";
         }
 
+        public static float GetFloat(string key, float default_value = 1.0f)
+        {
+            bool issubtitle = key.StartsWith("subtitles.");
+
+            Settings source = issubtitle ? Subtitles_Language : Gui_Language;
+
+            return source.ContainsKey(key) ? source.GetItem<float>(key) : default_value;
+        }
+
         public static void Reload()
         {
             Load();

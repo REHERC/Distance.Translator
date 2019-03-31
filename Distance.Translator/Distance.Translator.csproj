@@ -40,6 +40,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\Steam\steamapps\common\Distance\Distance_Data\Spectrum\Plugins\Distance Translator\Dependencies\0Harmony.dll</HintPath>
     </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>..\..\..\Steam\steamapps\common\Distance\Distance_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
     <Reference Include="Assembly-CSharp_publicized">
       <HintPath>..\..\..\Steam\steamapps\common\Distance\Distance_Data\Managed\publicized_assemblies\Assembly-CSharp_publicized.dll</HintPath>
     </Reference>
@@ -145,7 +148,6 @@
     <Compile Include="Translations\Modules\PauseMenuModule.cs" />
     <Compile Include="Translations\Modules\ProfileSettingsModule.cs" />
     <Compile Include="Translations\Modules\ReplaySettingsModule.cs" />
-    <Compile Include="Translations\Modules\SubtitlesModule.cs" />
     <Compile Include="Translations\Modules\TrackmogrifyPanelModule.cs" />
     <Compile Include="Translations\Modules\WorkshopSubMenuModule.cs" />
     <Compile Include="Translations\TranslateModule.cs" />

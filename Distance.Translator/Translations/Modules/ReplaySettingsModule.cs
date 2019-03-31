@@ -11,7 +11,7 @@ namespace Distance.Translator.Modules
             Scene scene = SceneManager.GetActiveScene();
             if (scene.name == "MainMenu")
                 return "OptionsFrontRoot/Panel - Options/Replay/Options/OptionsTable";
-            return "OptionsFrontRoot/Panel - Options/Replay/Options/OptionsTable";
+            return "OptionsFrontRoot(Clone)/Panel - Options/Replay/Options/OptionsTable";
         }
 
         public static string MenuTitleTemplate()
@@ -19,7 +19,7 @@ namespace Distance.Translator.Modules
             Scene scene = SceneManager.GetActiveScene();
             if (scene.name == "MainMenu")
                 return "OptionsFrontRoot/Panel - Options/Replay/MenuTitleTemplate";
-            return "OptionsFrontRoot/Panel - Options/Replay/MenuTitleTemplate";
+            return "OptionsFrontRoot(Clone)/Panel - Options/Replay/MenuTitleTemplate";
         }
 
         public override string Name => "Replay Settings";

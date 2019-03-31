@@ -11,7 +11,7 @@ namespace Distance.Translator.Modules
             Scene scene = SceneManager.GetActiveScene();
             if (scene.name == "MainMenu")
                 return "OptionsFrontRoot/Panel - Options/Panel - Graphics/Anchor - Center";
-            return "OptionsFrontRoot/Panel - Options/Panel - Graphics/Anchor - Center";
+            return "OptionsFrontRoot(Clone)/Panel - Options/Panel - Graphics/Anchor - Center";
         }
 
         public static string MenuTitleTemplate()
@@ -19,7 +19,7 @@ namespace Distance.Translator.Modules
             Scene scene = SceneManager.GetActiveScene();
             if (scene.name == "MainMenu")
                 return "OptionsFrontRoot/Panel - Options/Panel - Graphics/Panel - MenuTitle";
-            return "OptionsFrontRoot/Panel - Options/Panel - Graphics/Panel - MenuTitle";
+            return "OptionsFrontRoot(Clone)/Panel - Options/Panel - Graphics/Panel - MenuTitle";
         }
 
         public override string Name => "Grapics Settings";

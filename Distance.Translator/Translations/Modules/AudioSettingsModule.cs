@@ -11,7 +11,7 @@ namespace Distance.Translator.Modules
             Scene scene = SceneManager.GetActiveScene();
             if (scene.name == "MainMenu")
                 return "OptionsFrontRoot/Panel - Options/Panel - Audio/Anchor - Center";
-            return "OptionsFrontRoot/Panel - Options/Panel - Audio/Anchor - Center";
+            return "OptionsFrontRoot(Clone)/Panel - Options/Panel - Audio/Anchor - Center";
         }
 
         public static string MenuTitleTemplate()
@@ -19,7 +19,7 @@ namespace Distance.Translator.Modules
             Scene scene = SceneManager.GetActiveScene();
             if (scene.name == "MainMenu")
                 return "OptionsFrontRoot/Panel - Options/Panel - Audio/MenuTitleTemplate";
-            return "OptionsFrontRoot/Panel - Options/Panel - Audio/MenuTitleTemplate";
+            return "OptionsFrontRoot(Clone)/Panel - Options/Panel - Audio/MenuTitleTemplate";
         }
 
         public override string Name => "Audio Settings";

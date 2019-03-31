@@ -11,7 +11,7 @@ namespace Distance.Translator.Modules
             Scene scene = SceneManager.GetActiveScene();
             if (scene.name == "MainMenu")
                 return "OptionsFrontRoot/Panel - Options/General/Options/OptionsTable";
-            return "OptionsFrontRoot/Panel - Options/General/Options/OptionsTable";
+            return "OptionsFrontRoot(Clone)/Panel - Options/General/Options/OptionsTable";
         }
 
         public override string Name => "General Settings";

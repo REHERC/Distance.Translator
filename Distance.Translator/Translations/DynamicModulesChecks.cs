@@ -169,8 +169,9 @@ namespace Distance.Translator.Modules
         public static DynamicTranslateModule General_Title(ref UILabel instance)
         {
             if (IsParentableTo(Util.GameObjectPath(instance.transform), GetRoot(new Dictionary<string, string>(){
-                {"default", "OptionsFrontRoot/Panel - Options/General/MenuTitleTemplate"},
-                {"mainmenu", "OptionsFrontRoot/Panel - Options/General/MenuTitleTemplate"}
+                {"default", "OptionsFrontRoot(Clone)/Panel - Options/General/MenuTitleTemplate"},
+                {"mainmenu", "OptionsFrontRoot/Panel - Options/General/MenuTitleTemplate"},
+
             }
             )))
             {
@@ -183,7 +184,7 @@ namespace Distance.Translator.Modules
         public static DynamicTranslateModule Replay_Title(ref UILabel instance)
         {
             if (IsParentableTo(Util.GameObjectPath(instance.transform), GetRoot(new Dictionary<string, string>(){
-                {"default", "OptionsFrontRoot/Panel - Options/Replay/MenuTitleTemplate"},
+                {"default", "OptionsFrontRoot(Clone)/Panel - Options/Replay/MenuTitleTemplate"},
                 {"mainmenu", "OptionsFrontRoot/Panel - Options/Replay/MenuTitleTemplate"}
             }
             )))

@@ -81,13 +81,13 @@ namespace Distance.Translator
             foreach (TranslateModule Module in Modules)
             {
                 Log.Success($"   - \"{Module.Name}\"");
-                Log.Info($"{Module.GetType().FullName}");
+                //Log.Info($"{Module.GetType().FullName}");
             }
             Log.Warning($"  {DynamicChecks.Count} Type reference modules (dynamic) :");
             foreach (var Check in DynamicChecks)
             {
                 Log.Success($"   - \"{Check.Key}\"");
-                Log.Info($"{Check.Value.Method.ReflectedType.FullName}.{Check.Value.Method.Name}");
+                //Log.Info($"{Check.Value.Method.ReflectedType.FullName}.{Check.Value.Method.Name}");
             }
             Log.SuccessColor = ConsoleColor.Green;
         }

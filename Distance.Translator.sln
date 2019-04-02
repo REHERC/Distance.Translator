@@ -15,7 +15,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Languages", "Languages", "{12EF7119-5447-4A4D-8F87-79698EC90F84}"
 	ProjectSection(SolutionItems) = preProject
 		..\..\Steam\steamapps\common\Distance\Distance_Data\Spectrum\Plugins\Distance Translator\Settings\Languages\Debug.json = ..\..\Steam\steamapps\common\Distance\Distance_Data\Spectrum\Plugins\Distance Translator\Settings\Languages\Debug.json
-		..\..\Steam\steamapps\common\Distance\Distance_Data\Spectrum\Plugins\Distance Translator\Settings\Languages\En-en.json = ..\..\Steam\steamapps\common\Distance\Distance_Data\Spectrum\Plugins\Distance Translator\Settings\Languages\En-en.json
+		..\..\Steam\steamapps\common\Distance\Distance_Data\Spectrum\Plugins\Distance Translator\Settings\Languages\EN-en.json = ..\..\Steam\steamapps\common\Distance\Distance_Data\Spectrum\Plugins\Distance Translator\Settings\Languages\EN-en.json
+		..\..\Steam\steamapps\common\Distance\Distance_Data\Spectrum\Plugins\Distance Translator\Settings\Languages\FR-fr.json = ..\..\Steam\steamapps\common\Distance\Distance_Data\Spectrum\Plugins\Distance Translator\Settings\Languages\FR-fr.json
 	EndProjectSection
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Spectrum.Menu", "Spectrum.Menu\Spectrum.Menu.shproj", "{F05784BF-C073-4ED0-B201-96B12197C349}"

@@ -9,16 +9,25 @@ namespace Distance.Translator
     {
         public static string GetLine(string key)
         {
-            bool issubtitle = key.StartsWith("subtitles.");
+            bool issubtitle = key.StartsWith("subtitles");
 
             Settings source = issubtitle ? Subtitles_Language : Gui_Language;
 
             return source.ContainsKey(key) ? source.GetItem<string>(key) : $"{key}";
         }
 
+        public static bool GetBool(string key, bool default_value = false)
+        {
+            bool issubtitle = key.StartsWith("subtitles");
+
+            Settings source = issubtitle ? Subtitles_Language : Gui_Language;
+
+            return source.ContainsKey(key) ? source.GetItem<bool>(key) : default_value;
+        }
+
         public static float GetFloat(string key, float default_value = 1.0f)
         {
-            bool issubtitle = key.StartsWith("subtitles.");
+            bool issubtitle = key.StartsWith("subtitles");
 
             Settings source = issubtitle ? Subtitles_Language : Gui_Language;
 

@@ -27,8 +27,10 @@ namespace Distance.Translator.Harmony
                     ScanForCountdownSubtitle(ref csv_id, ref display, ref json_id);
                 }
 
-                SetFontSize(ref __instance, json_id);
-                __instance.label_.text = display;
+                if (Language.GetBool("subtitles#override.font.scale"))
+                    SetFontSize(ref __instance, json_id);
+                if (json_id != "" && json_id.Length > 0 && json_id != string.Empty && json_id != null)
+                    __instance.label_.text = display;
             }
         }
 

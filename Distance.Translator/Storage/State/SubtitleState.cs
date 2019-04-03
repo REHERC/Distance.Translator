@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Distance.Translator
+﻿namespace Distance.Translator
 {
-    public static class SubtitleRes
+    public static class SubtitleState
     {
         public static string strLabel = null;
         public static uint markerID = 0;

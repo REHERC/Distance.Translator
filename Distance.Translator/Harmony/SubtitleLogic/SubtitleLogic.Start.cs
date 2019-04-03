@@ -13,7 +13,7 @@ namespace Distance.Translator.Harmony
     {
         static void Postfix(SubtitleLogic __instance)
         {
-            SubtitleRes.subtitlesDefaultScale = __instance.label_.defaultFontSize;
+            SubtitleState.subtitlesDefaultScale = __instance.label_.defaultFontSize;
 
             if (Configuration["Debug"] is true && new List<string>(from argument in Environment.GetCommandLineArgs() select argument.DOWN()).Contains("-extract-subtitles"))
             {

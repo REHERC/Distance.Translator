@@ -85,6 +85,9 @@
     <Compile Include="Extensions\GeneralMenuExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Harmony\GeneralMenu\GeneralMenu.InitializeVirtual.cs" />
+    <Compile Include="Harmony\LoadingCustomMusic\LoadingCustomMusic.OnEventCustomMusicScanComplete.cs" />
+    <Compile Include="Harmony\LoadingCustomMusic\LoadingCustomMusic.OnEventCustomMusicScanStarted.cs" />
+    <Compile Include="Harmony\LoadingCustomMusic\LoadingCustomMusic.OnEventLoadingCustomMusic.cs" />
     <Compile Include="Harmony\MenuDescriptionLabel\MenuDescriptionLabel.SetText.cs" />
     <Compile Include="Harmony\ProfilesMenuProfileButton\ProfilesMenuProfileButton.SetName.cs" />
     <Compile Include="Harmony\SubtitleLogic\SubtitleLogic.Start.cs" />
@@ -101,7 +104,8 @@
     <Compile Include="Storage\Language\Language.cs" />
     <Compile Include="Storage\ModuleManager.cs" />
     <Compile Include="Storage\ModuleManager_Reset.cs" />
-    <Compile Include="Storage\SubtitleRes.cs" />
+    <Compile Include="Storage\State\CustomMusicState.cs" />
+    <Compile Include="Storage\State\SubtitleState.cs" />
     <Compile Include="T4\GeneratedDictionaries\Template.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

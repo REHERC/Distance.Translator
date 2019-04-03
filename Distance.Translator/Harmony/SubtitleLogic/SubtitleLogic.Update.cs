@@ -9,13 +9,13 @@ namespace Distance.Translator.Harmony
     {
         static void Postfix(SubtitleLogic __instance)
         {
+            string display, csv_id, json_id;
+            display = csv_id = json_id = "";
+
+            csv_id = $"{SubtitleState.strLabel}/{SubtitleState.markerID}";
+            
             if (__instance.timer_ > 0)
             {
-                string display, csv_id, json_id;
-                display = csv_id = json_id = "";
-
-                csv_id = $"{SubtitleRes.strLabel}/{SubtitleRes.markerID}";
-
                 if (GeneratedDictionaries.SubtitleBindings.ContainsKey(csv_id))
                 {
                     GeneratedDictionaries.SubtitleBindings.TryGetValue(csv_id, out json_id);
@@ -26,7 +26,7 @@ namespace Distance.Translator.Harmony
                     csv_id = csv_id.Substring(0, csv_id.Length - 2);
                     ScanForCountdownSubtitle(ref csv_id, ref display, ref json_id);
                 }
-
+                
                 if (Language.GetBool("subtitles#override.font.scale"))
                     SetFontSize(ref __instance, json_id);
                 if (json_id != "" && json_id.Length > 0 && json_id != string.Empty && json_id != null)
@@ -39,9 +39,9 @@ namespace Distance.Translator.Harmony
             if (G.Sys.GameManager_.ModeID_ != GameModeID.Adventure) 
                 return;
 
-            bool hours = csv_id.ToLowerInvariant().Contains($"{SubtitleRes.countdownHours} hours");
-            bool minutes = csv_id.ToLowerInvariant().Contains($"{SubtitleRes.countdownMinutes} minutes");
-            bool seconds = csv_id.ToLowerInvariant().Contains($"{SubtitleRes.countdownSeconds} seconds");
+            bool hours = csv_id.ToLowerInvariant().Contains($"{SubtitleState.countdownHours} hours");
+            bool minutes = csv_id.ToLowerInvariant().Contains($"{SubtitleState.countdownMinutes} minutes");
+            bool seconds = csv_id.ToLowerInvariant().Contains($"{SubtitleState.countdownSeconds} seconds");
 
             string line = "subtitles.cb_time"
                         + (hours ? "_hours" : string.Empty)
@@ -52,7 +52,7 @@ namespace Distance.Translator.Harmony
                 return;
 
             json_id = line;
-            display = string.Format(Language.GetLine(line), SubtitleRes.countdownHours, SubtitleRes.countdownMinutes, SubtitleRes.countdownSeconds);
+            display = string.Format(Language.GetLine(line), SubtitleState.countdownHours, SubtitleState.countdownMinutes, SubtitleState.countdownSeconds);
         }
 
         static void SetFontSize(ref SubtitleLogic __instance, string json_id)
@@ -71,7 +71,7 @@ namespace Distance.Translator.Harmony
                     num = 2f;
                     break;
             }
-            __instance.label_.fontSize = (int)Math.Round((double)SubtitleRes.subtitlesDefaultScale * (double)num * (double)Language.GetFloat($"{json_id}#font.scale"));
+            __instance.label_.fontSize = (int)Math.Round((double)SubtitleState.subtitlesDefaultScale * (double)num * (double)Language.GetFloat($"{json_id}#font.scale"));
         }
     } 
 }

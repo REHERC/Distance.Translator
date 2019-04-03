@@ -1,8 +1,6 @@
 ﻿using Events.Audio;
 using Harmony;
 using System;
-using System.Collections.Generic;
-using UnityEngine;
 
 namespace Distance.Translator.Harmony
 {
@@ -32,10 +30,10 @@ namespace Distance.Translator.Harmony
             if (__instance.distanceToCurrentEmitter_ > data.emitter_.MaxAttenuationSq_)
                 return;
 
-            SubtitleRes.strLabel = data.strLabel_;
-            SubtitleRes.markerID = data.markerID_;
-            SubtitleRes.forceString = data.forceString_;
-            SubtitleRes.emitter = data.emitter_;
+            SubtitleState.strLabel = data.strLabel_;
+            SubtitleState.markerID = data.markerID_;
+            SubtitleState.forceString = data.forceString_;
+            SubtitleState.emitter = data.emitter_;
 
             if (G.Sys.GameManager_.ModeID_ != GameModeID.Adventure)
                 return;
@@ -43,9 +41,9 @@ namespace Distance.Translator.Harmony
             AdventureMode mode = G.Sys.GameManager_.Mode_ as AdventureMode;
             TimeSpan countdown = TimeSpan.FromSeconds(mode.GetCountdownTime());
 
-            SubtitleRes.countdownHours = countdown.Hours;
-            SubtitleRes.countdownMinutes = countdown.Minutes;
-            SubtitleRes.countdownSeconds = countdown.Seconds;
+            SubtitleState.countdownHours = countdown.Hours;
+            SubtitleState.countdownMinutes = countdown.Minutes;
+            SubtitleState.countdownSeconds = countdown.Seconds;
         }
     }
 }

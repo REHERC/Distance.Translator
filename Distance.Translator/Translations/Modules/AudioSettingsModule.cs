@@ -57,9 +57,6 @@ namespace Distance.Translator.Modules
             GameObject.Find($"{Root()}/Right - CustomMusic/Custom Music Group/UIPanel - CustomMusicPanel/Loop/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.audio.custommusic.loop").UP();
 
             Disable();
-
-            //TODO: Add dynamic checks for subtitles and announcer dropdowns.
-            //TODO: Add dynamic checks for "No folder specified" and "{0} tracks found"
         }
     }
 }

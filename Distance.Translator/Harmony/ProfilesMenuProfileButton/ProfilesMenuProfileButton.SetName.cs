@@ -1,9 +1,11 @@
 ﻿using Distance.Translator.UnityScripts;
 using Harmony;
+using System;
 
 namespace Distance.Translator.Harmony
 {
-    [HarmonyPatch(typeof(ProfilesMenuProfileButton), "SetName")]
+    //TODO: Check why enabling this Harmony patche makes it throw an error
+    [HarmonyPatch(typeof(ProfilesMenuProfileButton), "SetName", new Type[] { })]
     public class ProfilesMenuProfileButton__SetName__Patch
     {
         static void Postfix(ProfilesMenuProfileButton __instance)

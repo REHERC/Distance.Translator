@@ -1,3 +1,1 @@
-﻿//TODO: Add all the drop-down classes and checks for the graphics menu
-//TODO: Translate the controls settings menu
-
+﻿// https://www.github.com/REHERC/Distance.Translator/projects/1

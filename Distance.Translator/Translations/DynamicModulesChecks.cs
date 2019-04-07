@@ -5,6 +5,20 @@ namespace Distance.Translator.Modules
 {
     public static partial class ModuleChecks
     {
+        public static DynamicTranslateModule Audio_Announcer_DropDown(ref UILabel instance)
+        {
+            if (DropDown(ref instance, "Announcer Options"))
+                return new AudioAnnouncerSettingsModule();
+            return null;
+        }
+
+        public static DynamicTranslateModule Audio_Subtitles_DropDown(ref UILabel instance)
+        {
+            if (DropDown(ref instance, "Subtitles Options"))
+                return new AudioSubtitlesSizeModule();
+            return null;
+        }
+
         public static DynamicTranslateModule General_Units_DropDown(ref UILabel instance)
         {
             if (DropDown(ref instance, "UNITS"))

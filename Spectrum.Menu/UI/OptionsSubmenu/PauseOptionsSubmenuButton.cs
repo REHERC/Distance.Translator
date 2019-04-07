@@ -9,7 +9,7 @@ public class PauseOptionsSubmenuButton : OptionsSubmenuButton
     protected override GameObject GetBlueprint()
     {
         var optionButtonsPanel = Util.FindByName("NewOptionsButtonsPanel");
-        var opbLogic = optionButtonsPanel?.GetComponent<UIPanel>();
+        //var opbLogic = optionButtonsPanel?.GetComponent<UIPanel>();
 
         var optionButtonsTable = optionButtonsPanel?.transform.Find("NewOptionsButtons");
         _buttonsTable = optionButtonsTable?.GetComponent<UITable>();

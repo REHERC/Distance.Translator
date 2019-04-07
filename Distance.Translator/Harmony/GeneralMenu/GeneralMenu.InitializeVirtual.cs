@@ -1,8 +1,4 @@
-﻿using static Distance.Translator.Extensions.GeneralMenuExtensions;
-using static Distance.Translator.CurrentPlugin;
-using Harmony;
-using UnityEngine;
-using System;
+﻿using Harmony;
 
 namespace Distance.Translator.Harmony
 {

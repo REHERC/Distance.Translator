@@ -8,7 +8,7 @@ namespace Distance.Translator.Harmony
     {
         static void Postfix(UILabel __instance)
         {
-            __instance.gameObject.AddComponent<Distance.Translator.UnityScripts.UILabelTranslate>();
+            __instance.gameObject.AddComponent<UILabelTranslate>();
         }
     }
 }

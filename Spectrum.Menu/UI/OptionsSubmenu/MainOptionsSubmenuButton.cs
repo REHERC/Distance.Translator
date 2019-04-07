@@ -9,7 +9,7 @@ public class MainOptionsSubmenuButton : OptionsSubmenuButton
     protected override GameObject GetBlueprint()
     {
         var optionButtonsPanel = Util.FindByName("OptionsButtonsPanel");
-        var opbLogic = optionButtonsPanel?.GetComponent<UIPanel>();
+        //var opbLogic = optionButtonsPanel?.GetComponent<UIPanel>();
 
         var optionButtonsTable = optionButtonsPanel?.transform.Find("OptionsButtonsTable");
         _buttonsTable = optionButtonsTable?.GetComponent<UITable>();

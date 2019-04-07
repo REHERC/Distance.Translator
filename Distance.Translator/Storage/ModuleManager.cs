@@ -38,11 +38,14 @@ namespace Distance.Translator
             };
 
             DynamicChecks = new Dictionary<string, Func<UILabel, DynamicTranslateModule>>() {
+                {"Audio Settings Announcer Drop-Down", (UILabel instance) => { return ModuleChecks.Audio_Announcer_DropDown(ref instance); }},
+                {"Audio Settings Subtitles Drop-Down", (UILabel instance) => { return ModuleChecks.Audio_Subtitles_DropDown(ref instance); }},
+
                 {"General Settings Units Drop-Down", (UILabel instance) => { return ModuleChecks.General_Units_DropDown(ref instance); }},
                 {"General Settings Car Screen Visualizer Drop-Down", (UILabel instance) => { return ModuleChecks.General_Visualizer_DropDown(ref instance); }},
                 {"General Settings Split-Screen Camera Split Drop-Down", (UILabel instance) => { return ModuleChecks.General_CameraSplit_DropDown(ref instance); }},
 
-                { "Replay Settings Ghost Type Drop-Down", (UILabel instance) => { return ModuleChecks.Replay_GhostType_DropDown(ref instance); }},
+                {"Replay Settings Ghost Type Drop-Down", (UILabel instance) => { return ModuleChecks.Replay_GhostType_DropDown(ref instance); }},
 
                 {"Graphics Settings Fullscreen Drop-Down", (UILabel instance) => { return ModuleChecks.Graphics_Fullscreen_DropDown(ref instance); }},
                 {"Graphics Settings Vsync Drop-Down", (UILabel instance) => { return ModuleChecks.Graphics_VSync_DropDown(ref instance); }},

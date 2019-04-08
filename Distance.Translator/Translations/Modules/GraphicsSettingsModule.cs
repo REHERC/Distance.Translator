@@ -27,7 +27,7 @@ namespace Distance.Translator.Modules
         public override bool IsValidContext()
         {
             Scene scene = SceneManager.GetActiveScene();
-            return (scene.name == "MainMenu" || scene.name == "GameMode");
+            return (scene.name == "MainMenu" || scene.name == "GameMode" || scene.name == "LevelEditor");
         }
 
         public override void Run()

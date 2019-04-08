@@ -34,6 +34,7 @@ namespace Distance.Translator
                 new GeneralSettingsModule(),
                 new GraphicsSettingsModule(),
                 new ProfileSettingsModule(),
+                new VRSettingsModule(),
                 new ReplaySettingsModule()
             };
 

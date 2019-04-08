@@ -156,6 +156,7 @@
     <Compile Include="Translations\Modules\ProfileSettingsModule.cs" />
     <Compile Include="Translations\Modules\ReplaySettingsModule.cs" />
     <Compile Include="Translations\Modules\TrackmogrifyPanelModule.cs" />
+    <Compile Include="Translations\Modules\VRSettingsModule.cs" />
     <Compile Include="Translations\Modules\WorkshopSubMenuModule.cs" />
     <Compile Include="Translations\TranslateModule.cs" />
     <Compile Include="Unity Scripts\UILabelTranslate\UILabelTranslate.cs" />

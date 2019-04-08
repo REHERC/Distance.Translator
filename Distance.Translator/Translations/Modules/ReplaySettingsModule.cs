@@ -27,13 +27,11 @@ namespace Distance.Translator.Modules
         public override bool IsValidContext()
         {
             Scene scene = SceneManager.GetActiveScene();
-            return (scene.name == "MainMenu" || scene.name == "GameMode");
+            return (scene.name == "MainMenu" || scene.name == "GameMode" || scene.name == "LevelEditor");
         }
 
         public override void Run()
         {
-            //GameObject.Find($"{MenuTitleTemplate()}/UILabel - Title").GetComponent<UILabel>().text = Language.GetLine("settings.replay.title"); // Can't patch here, use harmony instead
-
             GameObject.Find($"{Root()}/GHOSTS IN ARCADE TYPE/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.replay.type").UP();
             GameObject.Find($"{Root()}/GHOSTS IN ARCADE COUNT/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.replay.count").UP();
             GameObject.Find($"{Root()}/GHOST BRIGHTNESS/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.replay.brightness").UP();

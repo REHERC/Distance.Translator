@@ -208,5 +208,32 @@ namespace Distance.Translator.Modules
             }
             return null;
         }
+
+        public static DynamicTranslateModule VR_Title(ref UILabel instance)
+        {
+            if (IsParentableTo(Util.GameObjectPath(instance.transform), GetRoot(new Dictionary<string, string>(){
+                {"default", "OptionsFrontRoot(Clone)/Panel - Options/VR Options/MenuTitleTemplate"},
+                {"mainmenu", "OptionsFrontRoot/Panel - Options/VR Options/MenuTitleTemplate"}
+            }
+            )))
+            {
+                if (instance.transform.name == "UILabel - Title")
+                    return new VRTitleModule();
+            }
+            return null;
+        }
+
+        public static DynamicTranslateModule Audio_LoadingMusic_Label(ref UILabel instance)
+        {
+            if (IsParentableTo(Util.GameObjectPath(instance.transform), GetRoot(new Dictionary<string, string>(){
+                {"default", "OptionsFrontRoot(Clone)/Panel - Options/Panel - Audio/Anchor - Center/Right - CustomMusic/Custom Music Group/UIPanel - CustomMusicPanel/Loading/Info"},
+                {"mainmenu", "OptionsFrontRoot/Panel - Options/Panel - Audio/Anchor - Center/Right - CustomMusic/Custom Music Group/UIPanel - CustomMusicPanel/Loading/Info"}
+            }
+            )))
+            {
+                return new AudioLoadingMusicModule();
+            }
+            return null;
+        }
     }
 }

@@ -1,6 +1,5 @@
 ﻿using Events.Audio;
 using Harmony;
-using System;
 
 namespace Distance.Translator.Harmony
 {
@@ -9,7 +8,9 @@ namespace Distance.Translator.Harmony
     {
         static void Postfix(LoadingCustomMusic __instance, CustomMusicScanStarted.Data data)
         {
-
+            CustomMusicState.state = CustomMusicState.ScanState.Started;
+            CustomMusicState.scanningFolder = "";
+            CustomMusicState.fileCount = 0;
         }
     }
 }

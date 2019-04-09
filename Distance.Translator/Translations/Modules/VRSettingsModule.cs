@@ -32,8 +32,6 @@ namespace Distance.Translator.Modules
 
         public override void Run()
         {
-            GameObject.Find($"{MenuTitleTemplate()}/UILabel - Title").GetComponent<UILabel>().text = Language.GetLine("settings.vr.title");
-
             GameObject.Find($"{Root()}/Enable VR/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.vr.enable").UP();
             GameObject.Find($"{Root()}/Enable VR").GetComponent<SetMenuDescriptionOnHover>().SetText(Language.GetLine("settings.vr.enable.description"));
             GameObject.Find($"{Root()}/Camera Shake/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.vr.camerashake").UP();

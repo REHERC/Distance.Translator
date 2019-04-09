@@ -70,7 +70,10 @@ namespace Distance.Translator
                 {"Profile Settings Edit Header", (UILabel instance) => { return ModuleChecks.Profile_Edit_Header(ref instance); }},
                 
                 {"General Settings Title", (UILabel instance) => { return ModuleChecks.General_Title(ref instance); }},
-                {"Replay Settings Title", (UILabel instance) => { return ModuleChecks.Replay_Title(ref instance); }}
+                {"Replay Settings Title", (UILabel instance) => { return ModuleChecks.Replay_Title(ref instance); }},
+                {"VR Settings Title", (UILabel instance) => { return ModuleChecks.VR_Title(ref instance); }},
+
+                {"Audio Custom Music Loading Label", (UILabel instance) => { return ModuleChecks.Audio_LoadingMusic_Label(ref instance); }}
             };
             
             if (Configuration["Debug"] is true)

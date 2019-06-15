@@ -27,10 +27,17 @@ namespace Distance.Translator.T4
 				for (int i = 0; i < data.Count; i++) 
 				{
 					this.Write("\n\t\t\t{\"");
+					
 					this.Write(data.ElementAt(i).Key);
-					this.Write("\",\"");
+					this.Write("\",");
+					if (data.ElementAt(i).Value is string) {
+						this.Write("\"");
+					}
 					this.Write(data.ElementAt(i).Value);
-					this.Write("\"}");
+					if (data.ElementAt(i).Value is string) {
+						this.Write("\"");
+					}
+					this.Write("}");
 					if (i < data.Count - 1) {
 						this.Write(",");
 					}
@@ -39,8 +46,9 @@ namespace Distance.Translator.T4
 						this.Write("\n");
 					}
 				}
-				this.Write("\t\t};\n\n\t\t"); 
+				this.Write("\t\t};\n\t\t"); 
 			}
-		#>
+			this.Write("\n"); 
+#>
 	}
 }

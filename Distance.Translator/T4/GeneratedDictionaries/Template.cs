@@ -152,6 +152,6 @@ namespace Distance.Translator.T4
 			{"cb_enemy1_jan2018/1","subtitles.cb_enemy1.0"},
 			{"cb_enemy1_jan2018/2","subtitles.cb_enemy1.1"}
 		};
-
-			}
+		
+	}
 }

@@ -34,20 +34,17 @@ namespace Distance.Translator.Modules
             GameObject.Find($"{Root}/Quit/UILabel").GetComponent<UILabel>().text = Language.GetLine("pausemenu.quit").UP();
 
             GameObject.Find($"{MainRoot}/UILabel - Level Name").GetComponent<UILabel>().text = LevelName();
+
             GameObject.Find($"{MainRoot}/UILabel - Game Mode").GetComponent<UILabel>().text = ModeName();
-            
+
+            GameObject.Find($"{MainRoot}/UILabel - Mode Description").GetComponent<UILabel>().text = ModeDescription();
+
             GameObject.Find($"{PausedRoot}/UILabel - Paused").GetComponent<UILabel>().text = Language.GetLine("pausemenu.title").UP();
             GameObject.Find($"{PausedRoot}/UILabel - You Are The Host").GetComponent<UILabel>().text = Language.GetLine("pausemenu.hosting").UP();
-            
-            if (!G.Sys.GameManager_.SplitScreen_)
+
+            if (!G.Sys.GameManager_.SplitScreen_ && !G.Sys.GameManager_.IsLevelEditorMode_)
             {
                 GameObject.Find($"{InfoBoxRoot}/Panel - Level Info/UILabel - Level Info").GetComponent<UILabel>().text = LevelInfo();
-            }
-
-            GameObject InfoBox = GameObject.Find(InfoBoxRoot);
-            if (InfoBox != null && !InfoBox.activeInHierarchy)
-            {
-                GameObject.Find($"{InfoBoxRoot}/Panel - Level Info/UILabel - Mode Description").GetComponent<UILabel>().text = ModeDescription();
             }
 
             Disable();
@@ -55,17 +52,20 @@ namespace Distance.Translator.Modules
 
         public string LevelName()
         {
-            GameManager game_manager = G.Sys.GameManager_;
-            string level_path = G.Sys.GameManager_.LevelPath_;
-            GameMode mode = G.Sys.GameManager_.Mode_;
-            LevelInfo level_info = G.Sys.LevelSets_.GetLevelInfo(level_path);
-
-            string out_result = string.Format(Language.GetLine("levelinfo.levelname"), game_manager.LevelName_);
-            if (SteamworksManager.IsSteamBuild_ && level_info.levelType_ == LevelType.Workshop)
+            string out_result = "";
+            if (!G.Sys.GameManager_.IsLevelEditorMode_)
             {
-                out_result = string.Format(Language.GetLine("levelinfo.workshoplevelname"), game_manager.LevelName_, SteamworksManager.GetSteamName(level_info.workshopCreatorID_));
-            }
+                GameManager game_manager = G.Sys.GameManager_;
+                string level_path = G.Sys.GameManager_.LevelPath_;
+                GameMode mode = G.Sys.GameManager_.Mode_;
+                LevelInfo level_info = G.Sys.LevelSets_.GetLevelInfo(level_path);
 
+                out_result = string.Format(Language.GetLine("levelinfo.levelname"), game_manager.LevelName_);
+                if (SteamworksManager.IsSteamBuild_ && level_info.levelType_ == LevelType.Workshop)
+                    out_result = string.Format(Language.GetLine("levelinfo.workshoplevelname"), game_manager.LevelName_, SteamworksManager.GetSteamName(level_info.workshopCreatorID_));
+            }
+            else
+                out_result = string.Format(Language.GetLine("levelinfo.levelname"), G.Sys.LevelEditor_.WorkingLevel_.Settings_.LevelName_);
             return out_result;
         }
 

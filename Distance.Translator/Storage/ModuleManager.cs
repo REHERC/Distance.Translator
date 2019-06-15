@@ -129,7 +129,10 @@ namespace Distance.Translator
                         Module.Run();
                     }
 #pragma warning disable CS0168 // Variable is declared but never used
-                    catch (Exception ThatsTooBad) { }
+                    catch (Exception ThatsTooBad) {
+                        if (Configuration["Debug"] is true)
+                            Log.Exception(ThatsTooBad);
+                    }
 #pragma warning restore CS0168 // Variable is declared but never used
             }
         }

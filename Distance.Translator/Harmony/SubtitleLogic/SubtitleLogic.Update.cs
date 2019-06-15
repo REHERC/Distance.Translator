@@ -27,8 +27,6 @@ namespace Distance.Translator.Harmony
                     ScanForCountdownSubtitle(ref csv_id, ref display, ref json_id);
                 }
                 
-                if (Language.GetBool("subtitles#override.font.scale"))
-                    SetFontSize(ref __instance, json_id);
                 if (json_id != "" && json_id.Length > 0 && json_id != string.Empty && json_id != null)
                     __instance.label_.text = display;
             }
@@ -53,25 +51,6 @@ namespace Distance.Translator.Harmony
 
             json_id = line;
             display = string.Format(Language.GetLine(line), SubtitleState.countdownHours, SubtitleState.countdownMinutes, SubtitleState.countdownSeconds);
-        }
-
-        static void SetFontSize(ref SubtitleLogic __instance, string json_id)
-        {
-            AudioSettings audio = G.Sys.OptionsManager_.Audio_;
-            float num = 1f;
-            switch (audio.SubtitlesFontSize_)
-            {
-                case SubtitlesFontSize.Small:
-                    num = 0.75f;
-                    break;
-                case SubtitlesFontSize.Large:
-                    num = 1.5f;
-                    break;
-                case SubtitlesFontSize.ExtraLarge:
-                    num = 2f;
-                    break;
-            }
-            __instance.label_.fontSize = (int)Math.Round((double)SubtitleState.subtitlesDefaultScale * (double)num * (double)Language.GetFloat($"{json_id}#font.scale"));
         }
     } 
 }

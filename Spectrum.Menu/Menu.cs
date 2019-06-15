@@ -13,11 +13,6 @@ public static class Menu
 
     public static GameObject menuBlueprint;
     
-    public static void Create<T>() where T : SpectrumMenu, new()
-    {
-
-    }
-    
     private static void CreateMenu<T>(IManager manager, string settingsObjectName, string optionsFrontRootName, string mainMenuFrontRootName) where T : SpectrumMenu
     {
         menuBlueprint = Util.FindByName("SuperMenuBlueprint");

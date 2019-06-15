@@ -85,7 +85,6 @@
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Harmony\AudioManager\AudioManager.GetFilesInDirectory.cs" />
-    <Compile Include="Harmony\GeneralMenu\GeneralMenu.InitializeVirtual.cs" />
     <Compile Include="Harmony\LoadingCustomMusic\LoadingCustomMusic.OnEventCustomMusicScanComplete.cs" />
     <Compile Include="Harmony\LoadingCustomMusic\LoadingCustomMusic.OnEventCustomMusicScanStarted.cs" />
     <Compile Include="Harmony\LoadingCustomMusic\LoadingCustomMusic.OnEventLoadingCustomMusic.cs" />
@@ -96,7 +95,6 @@
     <Compile Include="Harmony\SubtitleLogic\SubtitleLogic.OnSubtitleEvent.cs" />
     <Compile Include="Harmony\UILabel\UILabel.OnStart.cs" />
     <Compile Include="Harmony\VROptionsMenu\VROptionsMenu.DisplayInMenu.cs" />
-    <Compile Include="LanguageMenu.cs" />
     <Compile Include="Storage\CurrentPlugin.cs" />
     <Compile Include="Data\PluginLogo.cs" />
     <Compile Include="Photon.cs" />

@@ -4,6 +4,8 @@ using Spectrum.API.Interfaces.Plugins;
 using Spectrum.API.Interfaces.Systems;
 using Harmony;
 using System.Reflection;
+using Spectrum.API.GUI.Data;
+using Spectrum.API.GUI.Controls;
 
 namespace Distance.Translator
 {
@@ -13,36 +15,61 @@ namespace Distance.Translator
         {
             Console.WriteLine($"Initializing ... ({ipcIdentifier})");
             CurrentPlugin.Initialize();
-            Menu.Create<LanguageMenu>();
             EventSubscriber.Initialize();
             Flags.Initialize();
             ModuleManager.Initialize();
-            CurrentPlugin.Log.Success("Initialization done!");
-            CurrentPlugin.Log.Info(PluginLogo.GetText());
+            Log.Success("Initialization done!");
+            Log.Info(PluginLogo.GetText());
             try
             {
-                CurrentPlugin.Log.Info("Instantiating Harmony Patcher ...");
+                Log.Info("Instantiating Harmony Patcher ...");
                 HarmonyInstance Harmony = HarmonyInstance.Create("com.REHERC.DistanceTranslator");
-                CurrentPlugin.Log.Success("Harmony patcher instantiated!");
-                CurrentPlugin.Log.Info("Patching assemblies ...");
+                Log.Success("Harmony patcher instantiated!");
+                Log.Info("Patching assemblies ...");
                 Harmony.PatchAll(Assembly.GetExecutingAssembly());
-                CurrentPlugin.Log.Success("Assemblies patched!");
+                Log.Success("Assemblies patched!");
             }
             catch (Exception Archaic)
             {
-                CurrentPlugin.Log.Error("Failed to patch the assemblies!");
-                CurrentPlugin.Log.Exception(Archaic);
+                Log.Error("Failed to patch the assemblies!");
+                Log.Exception(Archaic);
             }
 
             if (Configuration["Debug"] is true)
             {
-                CurrentPlugin.Log.Info("Binding hotkeys actions ...");
+                Log.Info("Binding hotkeys actions ...");
                 manager.Hotkeys.Bind(Configuration.GetItem<string>("ReloadHotkey"), () => {
                     Language.Reload();
                 });
-                CurrentPlugin.Log.Success("Hotkeys actions added!");
+                Log.Success("Hotkeys actions added!");
             }
-            
+
+            MenuTree SettingsMenu = new MenuTree("distancetranslator.main", "LANGUAGE SETTINGS");
+
+            SettingsMenu.Add(new ListBox<string>(MenuDisplayMode.Both, "distancetranslator.main.interfacelanguage", "INTERFACE LANGUAGE")
+                .WithGetter(() => Configuration["InterfaceLanguage"].ToString())
+                .WithSetter((value) =>
+                {
+                    Configuration["InterfaceLanguage"] = value;
+                    Configuration.Save();
+                    Language.Reload();
+                })
+                .WithEntries(LanguageFiles)
+            );
+
+            SettingsMenu.Add(new ListBox<string>(MenuDisplayMode.Both, "distancetranslator.main.subtitleslanguage", "SUBTITLES LANGUAGE")
+                .WithGetter(() => Configuration["SubtitlesLanguage"].ToString())
+                .WithSetter((value) =>
+                {
+                    Configuration["SubtitlesLanguage"] = value;
+                    Configuration.Save();
+                    Language.Reload();
+                })
+                .WithEntries(LanguageFiles)
+            );
+
+            manager.Menus.AddMenu(MenuDisplayMode.Both, SettingsMenu);
+
             //"I love me a good toggle" ~ torcht 2018
         }
         

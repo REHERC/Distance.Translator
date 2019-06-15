@@ -35,7 +35,7 @@ namespace Distance.Translator.Harmony
                         {
                             string value = __instance.subtitles_[key][marker];
                             string csv_id = $"{key}/{marker}";
-                            Distance.Translator.T4.GeneratedDictionaries.SubtitleBindings.TryGetValue(csv_id, out string json_id);
+                            T4.GeneratedDictionaries.SubtitleBindings.TryGetValue(csv_id, out string json_id);
 
                             if (!settings.ContainsKey(json_id ?? csv_id))
                                 settings.Add(json_id ?? csv_id, value);

@@ -11,9 +11,7 @@ namespace Distance.Translator.Modules
         private static bool _DropDown(Transform tr, string name)
         {
             UIExPopupList list = tr.parent.parent.gameObject.GetComponent<UIExPopupList>();
-            if (list.name.UP() == name.UP())
-                return true;
-            return false;
+            return list.name.UP() == name.UP();
         }
 
         private static DropDownMode _DropDown(ref UILabel instance)
@@ -47,9 +45,7 @@ namespace Distance.Translator.Modules
 
         public static bool IsParentableTo(string tr, string path)
         {
-            if (tr.StartsWith(path))
-                return true;
-            return false;
+            return tr.DOWN().StartsWith(path.DOWN());
         }
 
         public static string GetRoot(Dictionary<string,string> values)

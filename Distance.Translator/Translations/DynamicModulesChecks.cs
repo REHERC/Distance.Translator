@@ -185,7 +185,6 @@ namespace Distance.Translator.Modules
             if (IsParentableTo(Util.GameObjectPath(instance.transform), GetRoot(new Dictionary<string, string>(){
                 {"default", "OptionsFrontRoot(Clone)/Panel - Options/General/MenuTitleTemplate"},
                 {"mainmenu", "OptionsFrontRoot/Panel - Options/General/MenuTitleTemplate"},
-
             }
             )))
             {

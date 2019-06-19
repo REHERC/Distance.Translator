@@ -11,9 +11,7 @@ namespace Distance.Translator
         
         public static Dictionary<string, Func<UILabel, DynamicTranslateModule>> DynamicChecks;
 
-#pragma warning disable CA1009
         public static event Action OnResetAll;
-#pragma warning restore CA1009
 
         public static void Initialize()
         {
@@ -35,7 +33,8 @@ namespace Distance.Translator
                 new GraphicsSettingsModule(),
                 new ProfileSettingsModule(),
                 new VRSettingsModule(),
-                new ReplaySettingsModule()
+                new ReplaySettingsModule(),
+                new CheatSettingsModule()
             };
 
             DynamicChecks = new Dictionary<string, Func<UILabel, DynamicTranslateModule>>() {
@@ -128,12 +127,7 @@ namespace Distance.Translator
                     {
                         Module.Run();
                     }
-#pragma warning disable CS0168 // Variable is declared but never used
-                    catch (Exception ThatsTooBad) {
-                        if (Configuration["Debug"] is true)
-                            Log.Exception(ThatsTooBad);
-                    }
-#pragma warning restore CS0168 // Variable is declared but never used
+                    catch (Exception) { }
             }
         }
     }

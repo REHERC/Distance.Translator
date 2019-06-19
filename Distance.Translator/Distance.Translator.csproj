@@ -145,6 +145,7 @@
     <Compile Include="Translations\DynamicModulesChecks.cs" />
     <Compile Include="Translations\Modules\ArcadeSubMenuModule.cs" />
     <Compile Include="Translations\Modules\AudioSettingsModule.cs" />
+    <Compile Include="Translations\Modules\CheatSettingsModule.cs" />
     <Compile Include="Translations\Modules\GeneralSettingsModule.cs" />
     <Compile Include="Translations\Modules\GraphicsSettingsModule.cs" />
     <Compile Include="Translations\Modules\IdleMenuModule.cs" />
@@ -180,7 +181,6 @@
     <Folder Include="Events\" />
   </ItemGroup>
   <Import Project="..\Distance.Translator.Shared\Distance.Translator.Shared.projitems" Label="Shared" />
-  <Import Project="..\Spectrum.Menu\Spectrum.Menu.projitems" Label="Shared" />
   <Import Project="..\Photon.Serialization\Photon.Serialization.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

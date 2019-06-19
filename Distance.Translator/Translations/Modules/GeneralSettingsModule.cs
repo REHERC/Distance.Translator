@@ -35,7 +35,9 @@ namespace Distance.Translator.Modules
             GameObject.Find($"{Root()}/SHUFFLE LEVELS/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.general.shufflelevels").UP();
             GameObject.Find($"{Root()}/SHOW TRICK TEXT/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.general.showtricktext").UP();
             GameObject.Find($"{Root()}/SPLIT-SCREEN CAMERA SPLIT/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.general.camerasplit").UP();
-            GameObject.Find($"{Root()}/LANGUAGE SETTINGS/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.general.languagesettings").UP();
+            GameObject.Find($"{Root()}/SHOW SPEEDRUN TIMER/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.general.speedruntimer").UP();
+            GameObject.Find($"{Root()}/ENABLE SPEEDRUN OUTPUT LOG/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.general.speedrunlog").UP();
+            GameObject.Find($"{Root()}/CONFIGURE SPECTRUM PLUGINS/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.general.configureplugins").UP();
             
             Disable();
         }

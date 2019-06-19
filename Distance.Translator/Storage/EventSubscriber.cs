@@ -1,4 +1,5 @@
-﻿using static Distance.Translator.CurrentPlugin;
+﻿using System.Linq;
+using static Distance.Translator.CurrentPlugin;
 
 namespace Distance.Translator
 {
@@ -20,6 +21,11 @@ namespace Distance.Translator
             {
                 ModuleManager.ResetAll();
                 //Flags.LevelEditor = !data.active_;
+            });
+            Events.Cheats.CampaignPlusChanged.Subscribe((data) =>
+            {
+                foreach (var module in from item in ModuleManager.Modules where item.Name is "Main Menu" && item.IsValidContext() select item)
+                    module.Enable();
             });
 
             Log.Success("Subscribed to Events!");

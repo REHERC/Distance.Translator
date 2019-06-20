@@ -154,7 +154,7 @@ namespace Distance.Translator.Modules
                 string out_rating = string.Format(Language.GetLine("levelinfo.workshop.rating"), rating);
                 string out_vote = string.Format(Language.GetLine("levelinfo.workshop.vote"), vote);
 
-                out_result = $"{out_result}\n{out_rating}\n{out_vote}";
+                out_result += $"\n{out_result}\n{out_rating}\n{out_vote}";
             }
 
             return out_result;

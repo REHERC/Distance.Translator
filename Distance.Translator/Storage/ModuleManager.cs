@@ -17,24 +17,24 @@ namespace Distance.Translator
         {
             Modules = new List<TranslateModule>
             {
-                //new MainMenuModule(),
+                new MainMenuModule(),
                 new PauseMenuModule(),
-                //new IdleMenuModule(),
+                new IdleMenuModule(),
 
-                //new ArcadeSubMenuModule(),
+                new ArcadeSubMenuModule(),
 
-                //new TrackmogrifyPanelModule(),
-                //new MultiplayerSubMenuModule(),
-                //new WorkshopSubMenuModule(),
-                //new OptionsSubMenuModule(),
+                new TrackmogrifyPanelModule(),
+                new MultiplayerSubMenuModule(),
+                new WorkshopSubMenuModule(),
+                new OptionsSubMenuModule(),
 
-                //new AudioSettingsModule(),
-                //new GeneralSettingsModule(),
-                //new GraphicsSettingsModule(),
-                //new ProfileSettingsModule(),
-                //new VRSettingsModule(),
-                //new ReplaySettingsModule(),
-                //new CheatSettingsModule()
+                new AudioSettingsModule(),
+                new GeneralSettingsModule(),
+                new GraphicsSettingsModule(),
+                new ProfileSettingsModule(),
+                new VRSettingsModule(),
+                new ReplaySettingsModule(),
+                new CheatSettingsModule()
             };
 
             DynamicChecks = new Dictionary<string, Func<UILabel, DynamicTranslateModule>>() {

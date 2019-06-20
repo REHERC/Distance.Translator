@@ -44,9 +44,9 @@ namespace Distance.Translator
                 Log.Success("Hotkeys actions added!");
             }
 
-            MenuTree SettingsMenu = new MenuTree("distancetranslator.main", "LANGUAGE SETTINGS");
-
-            SettingsMenu.Add(new ListBox<string>(MenuDisplayMode.Both, "distancetranslator.main.interfacelanguage", "INTERFACE LANGUAGE")
+            manager.Menus.AddMenu(MenuDisplayMode.Both, new MenuTree("distancetranslator.main", "LANGUAGE SETTINGS")
+            {
+                new ListBox<string>(MenuDisplayMode.Both, "distancetranslator.main.interfacelanguage", "INTERFACE LANGUAGE")
                 .WithGetter(() => Configuration["InterfaceLanguage"].ToString())
                 .WithSetter((value) =>
                 {
@@ -54,10 +54,9 @@ namespace Distance.Translator
                     Configuration.Save();
                     Language.Reload();
                 })
-                .WithEntries(LanguageFiles)
-            );
+                .WithEntries(LanguageFiles),
 
-            SettingsMenu.Add(new ListBox<string>(MenuDisplayMode.Both, "distancetranslator.main.subtitleslanguage", "SUBTITLES LANGUAGE")
+                new ListBox<string>(MenuDisplayMode.Both, "distancetranslator.main.subtitleslanguage", "SUBTITLES LANGUAGE")
                 .WithGetter(() => Configuration["SubtitlesLanguage"].ToString())
                 .WithSetter((value) =>
                 {
@@ -66,9 +65,7 @@ namespace Distance.Translator
                     Language.Reload();
                 })
                 .WithEntries(LanguageFiles)
-            );
-
-            manager.Menus.AddMenu(MenuDisplayMode.Both, SettingsMenu);
+            });
 
             //"I love me a good toggle" ~ torcht 2018
         }

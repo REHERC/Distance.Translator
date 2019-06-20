@@ -49,7 +49,6 @@ namespace Distance.Translator.Modules
             GameObject.Find($"{Root()}/VideoSettingsCategory/BrightnessButton/UILabel").GetComponent<UILabel>().text = Language.GetLine("settings.graphics.videosettings.brightness").UP();
             GameObject.Find($"{Root()}/VideoSettingsCategory/BrightnessButton").GetComponent<SetMenuDescriptionOnHover>().SetText(Language.GetLine("settings.graphics.videosettings.brightness.description"));
 
-
             GameObject.Find($"{Root()}/BonusEffectsCategory/Title").GetComponent<UILabel>().text = Language.GetLine("settings.graphics.bonuseffects.title").UP();
             GameObject.Find($"{Root()}/BonusEffectsCategory/CinematicLetterbox/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.graphics.bonuseffects.letterbox").UP();
             GameObject.Find($"{Root()}/BonusEffectsCategory/CinematicLetterbox").GetComponent<SetMenuDescriptionOnHover>().SetText(Language.GetLine("settings.graphics.bonuseffects.letterbox.description"));

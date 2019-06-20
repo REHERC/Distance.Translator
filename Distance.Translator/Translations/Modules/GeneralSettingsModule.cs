@@ -25,8 +25,13 @@ namespace Distance.Translator.Modules
         public override void Run()
         {
             GameObject.Find($"{Root()}/UNITS/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.general.units").UP();
-            GameObject.Find($"{Root()}/WORKSHOP RATING PRIVACY MODE/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.general.ratingprivacy").UP();
-            GameObject.Find($"{Root()}/WORKSHOP LEVEL AUTO-DOWNLOAD/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.general.autodownload").UP();
+
+            if (G.Sys.GameManager_.IsSteamBuild_)
+            {
+                GameObject.Find($"{Root()}/WORKSHOP RATING PRIVACY MODE/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.general.ratingprivacy").UP();
+                GameObject.Find($"{Root()}/WORKSHOP LEVEL AUTO-DOWNLOAD/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.general.autodownload").UP();
+            }
+
             GameObject.Find($"{Root()}/ENABLE MENU ANIMATIONS/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.general.menuanimations").UP();
             GameObject.Find($"{Root()}/ENABLE BOOMBOX MODE/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.general.boombox").UP();
             GameObject.Find($"{Root()}/BOOMBOX BLOOM INTENSITY/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.general.boomboxbloom").UP();

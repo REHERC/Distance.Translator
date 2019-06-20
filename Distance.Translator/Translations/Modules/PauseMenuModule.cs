@@ -56,8 +56,8 @@ namespace Distance.Translator.Modules
             if (!G.Sys.GameManager_.IsLevelEditorMode_)
             {
                 GameManager game_manager = G.Sys.GameManager_;
-                string level_path = G.Sys.GameManager_.LevelPath_;
-                GameMode mode = G.Sys.GameManager_.Mode_;
+
+                string level_path = game_manager.LevelPath_;
                 LevelInfo level_info = G.Sys.LevelSets_.GetLevelInfo(level_path);
 
                 out_result = string.Format(Language.GetLine("levelinfo.levelname"), game_manager.LevelName_);
@@ -89,10 +89,13 @@ namespace Distance.Translator.Modules
 
         public string LevelInfo()
         {
-            string level_path = G.Sys.GameManager_.LevelPath_;
+            GameManager game_manager = G.Sys.GameManager_;
+
+            string level_path = game_manager.LevelPath_;
+            LevelInfo level_info = G.Sys.LevelSets_.GetLevelInfo(level_path);
+
             ProfileProgress progress = G.Sys.ProfileManager_.CurrentProfile_.Progress_;
             GameMode mode = G.Sys.GameManager_.Mode_;
-            LevelInfo level_info = G.Sys.LevelSets_.GetLevelInfo(level_path);
 
 
             string out_result = "";
@@ -124,12 +127,11 @@ namespace Distance.Translator.Modules
 
             out_result = $"{out_personal_best}\n{out_medal_earned}\n{out_difficulty}";
 
-
-            if (G.Sys.SteamworksManager_.UGC_.TryGetWorkshopLevelData(level_info.relativePath_, out WorkshopLevelInfo level_data))
+            if (level_info.levelType_ == LevelType.Workshop)
             {
                 string rating, vote;
                 rating = vote = "";
-                if (SteamworksManager.IsSteamBuild_)
+                if (SteamworksManager.IsSteamBuild_ && G.Sys.SteamworksManager_.UGC_.TryGetWorkshopLevelData(level_info.relativePath_, out WorkshopLevelInfo level_data))
                 {
                     rating = SteamworksUGC.GetWorkshopRatingText(level_data);
                     vote = Language.GetLine("levelinfo.workshop.vote.none");
@@ -154,7 +156,6 @@ namespace Distance.Translator.Modules
 
                 out_result = $"{out_result}\n{out_rating}\n{out_vote}";
             }
-            
 
             return out_result;
         }

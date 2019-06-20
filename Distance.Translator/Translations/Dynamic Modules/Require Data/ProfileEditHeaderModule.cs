@@ -8,7 +8,7 @@ namespace Distance.Translator.Modules
 
         public override bool Run(ref UILabel instance)
         {
-            instance.text = string.Format(Language.GetLine("settings.profiles.edit.title"), G.Sys.ProfileManager_.CurrentProfile_.DisplayName_);
+            instance.text = string.Format(Language.GetLine("settings.profiles.edit.title"), G.Sys.ProfileManager_.CurrentProfile_.Name_);
             return true;
         }
     }

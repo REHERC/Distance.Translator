@@ -17,29 +17,31 @@ namespace Distance.Translator
         {
             Modules = new List<TranslateModule>
             {
-                new MainMenuModule(),
+                //new MainMenuModule(),
                 new PauseMenuModule(),
-                new IdleMenuModule(),
+                //new IdleMenuModule(),
 
-                new ArcadeSubMenuModule(),
+                //new ArcadeSubMenuModule(),
 
-                new TrackmogrifyPanelModule(),
-                new MultiplayerSubMenuModule(),
-                new WorkshopSubMenuModule(),
-                new OptionsSubMenuModule(),
+                //new TrackmogrifyPanelModule(),
+                //new MultiplayerSubMenuModule(),
+                //new WorkshopSubMenuModule(),
+                //new OptionsSubMenuModule(),
 
-                new AudioSettingsModule(),
-                new GeneralSettingsModule(),
-                new GraphicsSettingsModule(),
-                new ProfileSettingsModule(),
-                new VRSettingsModule(),
-                new ReplaySettingsModule(),
-                new CheatSettingsModule()
+                //new AudioSettingsModule(),
+                //new GeneralSettingsModule(),
+                //new GraphicsSettingsModule(),
+                //new ProfileSettingsModule(),
+                //new VRSettingsModule(),
+                //new ReplaySettingsModule(),
+                //new CheatSettingsModule()
             };
 
             DynamicChecks = new Dictionary<string, Func<UILabel, DynamicTranslateModule>>() {
                 {"Audio Settings Announcer Drop-Down", (UILabel instance) => { return ModuleChecks.Audio_Announcer_DropDown(ref instance); }},
                 {"Audio Settings Subtitles Drop-Down", (UILabel instance) => { return ModuleChecks.Audio_Subtitles_DropDown(ref instance); }},
+                {"Audio Custom Music Loading Label", (UILabel instance) => { return ModuleChecks.Audio_LoadingMusic_Label(ref instance); }},
+                { "Audio Track Selection Label", (UILabel instance) => { return ModuleChecks.Audio_Track_Selector(ref instance); }},
 
                 {"General Settings Units Drop-Down", (UILabel instance) => { return ModuleChecks.General_Units_DropDown(ref instance); }},
                 {"General Settings Car Screen Visualizer Drop-Down", (UILabel instance) => { return ModuleChecks.General_Visualizer_DropDown(ref instance); }},
@@ -70,9 +72,7 @@ namespace Distance.Translator
                 
                 {"General Settings Title", (UILabel instance) => { return ModuleChecks.General_Title(ref instance); }},
                 {"Replay Settings Title", (UILabel instance) => { return ModuleChecks.Replay_Title(ref instance); }},
-                {"VR Settings Title", (UILabel instance) => { return ModuleChecks.VR_Title(ref instance); }},
-
-                {"Audio Custom Music Loading Label", (UILabel instance) => { return ModuleChecks.Audio_LoadingMusic_Label(ref instance); }}
+                {"VR Settings Title", (UILabel instance) => { return ModuleChecks.VR_Title(ref instance); }}
             };
             
             if (Configuration["Debug"] is true)

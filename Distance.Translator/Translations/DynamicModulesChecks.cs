@@ -19,6 +19,20 @@ namespace Distance.Translator.Modules
             return null;
         }
 
+        public static DynamicTranslateModule Audio_Track_Selector(ref UILabel instance)
+        {
+            if (IsParentableTo(Util.GameObjectPath(instance.transform), GetRoot(new Dictionary<string, string>(){
+                {"default", "OptionsFrontRoot(Clone)/Panel - Options/Panel - Audio/Anchor - Center/Right - CustomMusic/Custom Music Group/UIPanel - CustomMusicPanel/SelectATrack"},
+                {"mainmenu", "OptionsFrontRoot/Panel - Options/Panel - Audio/Anchor - Center/Right - CustomMusic/Custom Music Group/UIPanel - CustomMusicPanel/SelectATrack"},
+            }
+            )))
+            {
+                if (instance.transform.name == "Label")
+                    return new AudioTrackSelectionModule();
+            }
+            return null;
+        }
+
         public static DynamicTranslateModule General_Units_DropDown(ref UILabel instance)
         {
             if (DropDown(ref instance, "UNITS"))

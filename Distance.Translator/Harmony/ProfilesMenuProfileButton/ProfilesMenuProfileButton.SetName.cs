@@ -10,8 +10,8 @@ namespace Distance.Translator.Harmony
     {
         static void Postfix(ProfilesMenuProfileButton __instance)
         {
-            string profilename = __instance.GetPrivateField<string>("name_");
-            __instance.nameLabel_.text = !__instance.GetPrivateField<bool>("selected_")
+            string profilename = __instance.name_;
+            __instance.nameLabel_.text = !__instance.selected_
                 ? profilename
                 : string.Format(Language.GetLine("settings.profiles.select.item"), profilename);
             //if (!__instance.gameObject.HasComponent<ProfileButtonUpdate>())

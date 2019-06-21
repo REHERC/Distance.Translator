@@ -156,6 +156,7 @@
     <Compile Include="Translations\TranslateModule.cs" />
     <Compile Include="Unity Scripts\UILabelTranslate\UILabelTranslate.cs" />
     <Compile Include="Unity Scripts\UILabelTranslate\UILabelTranslate_Initialize.cs" />
+    <Compile Include="Util.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -173,7 +174,6 @@
   <ItemGroup>
     <Folder Include="Events\" />
   </ItemGroup>
-  <Import Project="..\Distance.Translator.Shared\Distance.Translator.Shared.projitems" Label="Shared" />
   <Import Project="..\Photon.Serialization\Photon.Serialization.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

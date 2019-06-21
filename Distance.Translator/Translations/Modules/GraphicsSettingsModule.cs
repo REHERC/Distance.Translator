@@ -52,7 +52,7 @@ namespace Distance.Translator.Modules
             GameObject.Find($"{Root()}/BonusEffectsCategory/Title").GetComponent<UILabel>().text = Language.GetLine("settings.graphics.bonuseffects.title").UP();
             GameObject.Find($"{Root()}/BonusEffectsCategory/CinematicLetterbox/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.graphics.bonuseffects.letterbox").UP();
             GameObject.Find($"{Root()}/BonusEffectsCategory/CinematicLetterbox").GetComponent<SetMenuDescriptionOnHover>().SetText(Language.GetLine("settings.graphics.bonuseffects.letterbox.description"));
-            GameObject.Find($"{Root()}/BonusEffectsCategory/CinematicLetterbox").GetComponent<SetMenuDescriptionOnHover>().SetPrivateField("warningText_", Language.GetLine("settings.graphics.bonuseffects.letterbox.warning"));
+            GameObject.Find($"{Root()}/BonusEffectsCategory/CinematicLetterbox").GetComponent<SetMenuDescriptionOnHover>().warningText_ = Language.GetLine("settings.graphics.bonuseffects.letterbox.warning");
 
             GameObject.Find($"{Root()}/AdvancedCategory/Title").GetComponent<UILabel>().text = Language.GetLine("settings.graphics.advanced.title").UP();
             GameObject.Find($"{Root()}/AdvancedCategory/Bloom/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.graphics.advanced.bloom").UP();
@@ -67,7 +67,7 @@ namespace Distance.Translator.Modules
             GameObject.Find($"{Root()}/AdvancedCategory/SunShafts").GetComponent<SetMenuDescriptionOnHover>().SetText(Language.GetLine("settings.graphics.advanced.sunshafts.description"));
             GameObject.Find($"{Root()}/AdvancedCategory/RealTimeReflections/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.graphics.advanced.reflections").UP();
             GameObject.Find($"{Root()}/AdvancedCategory/RealTimeReflections").GetComponent<SetMenuDescriptionOnHover>().SetText(Language.GetLine("settings.graphics.advanced.reflections.description"));
-            GameObject.Find($"{Root()}/AdvancedCategory/RealTimeReflections").GetComponent<SetMenuDescriptionOnHover>().SetPrivateField("warningText_", Language.GetLine("settings.graphics.advanced.reflections.warning"));
+            GameObject.Find($"{Root()}/AdvancedCategory/RealTimeReflections").GetComponent<SetMenuDescriptionOnHover>().warningText_ = Language.GetLine("settings.graphics.advanced.reflections.warning");
             GameObject.Find($"{Root()}/AdvancedCategory/AnisotropicFiltering/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.graphics.advanced.anisotropic").UP();
             GameObject.Find($"{Root()}/AdvancedCategory/AnisotropicFiltering").GetComponent<SetMenuDescriptionOnHover>().SetText(Language.GetLine("settings.graphics.advanced.anisotropic.description"));
             GameObject.Find($"{Root()}/AdvancedCategory/DepthOfField/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.graphics.advanced.depthoffield").UP();

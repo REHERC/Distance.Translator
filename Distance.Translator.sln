@@ -8,8 +8,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Markdown files", "Markdown 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Distance.Translator.Shared", "Distance.Translator.Shared\Distance.Translator.Shared.shproj", "{0374D78A-6C00-4172-B7D2-04FC222212F2}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Distance.Translator", "Distance.Translator\Distance.Translator.csproj", "{6934DD79-1929-4315-BFF8-6F510E21690E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Languages", "Languages", "{12EF7119-5447-4A4D-8F87-79698EC90F84}"
@@ -23,9 +21,7 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Photon.Serialization", "Pho
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		Distance.Translator.Shared\Distance.Translator.Shared.projitems*{0374d78a-6c00-4172-b7d2-04fc222212f2}*SharedItemsImports = 13
 		Photon.Serialization\Photon.Serialization.projitems*{642f37d0-f7e1-4fce-b3f9-7a02e698d366}*SharedItemsImports = 13
-		Distance.Translator.Shared\Distance.Translator.Shared.projitems*{6934dd79-1929-4315-bff8-6f510e21690e}*SharedItemsImports = 4
 		Photon.Serialization\Photon.Serialization.projitems*{6934dd79-1929-4315-bff8-6f510e21690e}*SharedItemsImports = 4
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,0 +1,16 @@
+{
+  "FriendlyName": "Distance Language Modifier",
+  "Author": "Reherc",
+  "AuthorContact": "Github: @REHERC",
+  "CompatibleAPILevel": 6,
+  "IPCIdentifier": "DistanceTranslator",
+  "ModuleFileName": "Distance.Translator.dll",
+  "EntryClassName": "Photon",
+  "Priority": 10,
+  "Dependencies": [
+    "Spectrum.Interop.dll",
+    "Newtonsoft.Json.dll",
+    "0Harmony.dll"
+  ],
+  "SkipLoad": false
+}

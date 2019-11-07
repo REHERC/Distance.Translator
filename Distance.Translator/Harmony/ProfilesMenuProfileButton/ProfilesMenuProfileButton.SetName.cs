@@ -4,7 +4,7 @@ using System;
 
 namespace Distance.Translator.Harmony
 {
-    //TODO: Check why enabling this Harmony patche makes it throw an error
+    //TODO: Check why enabling this Harmony patch makes it throw an error
     [HarmonyPatch(typeof(ProfilesMenuProfileButton), "SetName", new Type[] { })]
     public class ProfilesMenuProfileButton__SetName__Patch
     {

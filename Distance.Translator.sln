@@ -19,6 +19,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Languages", "Languages", "{
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Photon.Serialization", "Photon.Serialization\Photon.Serialization.shproj", "{642F37D0-F7E1-4FCE-B3F9-7A02E698D366}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Referenced Assemblies", "Referenced Assemblies", "{B6C8065E-9EF9-49DC-B4F0-F950D6E70E55}"
+	ProjectSection(SolutionItems) = preProject
+		Referenced Assemblies\Assembly-CSharp-firstpass.dll = Referenced Assemblies\Assembly-CSharp-firstpass.dll
+		Referenced Assemblies\Assembly-CSharp.dev.dll = Referenced Assemblies\Assembly-CSharp.dev.dll
+		Referenced Assemblies\Spectrum.API.dll = Referenced Assemblies\Spectrum.API.dll
+		..\CustomCampaign\Referenced Assemblies\Spectrum.Interop.dll = ..\CustomCampaign\Referenced Assemblies\Spectrum.Interop.dll
+		Referenced Assemblies\UnityEngine.dll = Referenced Assemblies\UnityEngine.dll
+		Referenced Assemblies\UnityEngine.UI.dll = Referenced Assemblies\UnityEngine.UI.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Include", "Include", "{308DF29D-01FF-42C5-939D-0AA0F3DCAAC5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Spectrum", "Spectrum", "{38202E73-E6B9-432D-8932-1D8A1F265A55}"
+	ProjectSection(SolutionItems) = preProject
+		Include\Spectrum\plugin.json = Include\Spectrum\plugin.json
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Photon.Serialization\Photon.Serialization.projitems*{642f37d0-f7e1-4fce-b3f9-7a02e698d366}*SharedItemsImports = 13
@@ -36,6 +53,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{38202E73-E6B9-432D-8932-1D8A1F265A55} = {308DF29D-01FF-42C5-939D-0AA0F3DCAAC5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AEBDD290-F4FD-4755-82D7-29D7DFFF6184}

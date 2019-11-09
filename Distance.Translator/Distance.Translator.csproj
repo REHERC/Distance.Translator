@@ -157,6 +157,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="T4\GeneratedDictionaries\Json\ControlsMenu.json" />
     <None Include="T4\GeneratedDictionaries\Json\SubtitleBindings.json" />
   </ItemGroup>
   <ItemGroup>

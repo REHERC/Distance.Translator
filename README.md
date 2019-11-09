@@ -10,7 +10,7 @@
 
 
 # Download the mod
-> You can download the mod from the [Releases page](https://github.com/REHERC/Distance.T/releases/latest)
+> You can download the mod from the [Releases page](https://github.com/REHERC/Distance.Translator/releases/latest)
 
 # Unstable builds [![Build status](https://ci.appveyor.com/api/projects/status/4s986d3b0tpyfdga?svg=true)](https://ci.appveyor.com/project/REHERC/distance-translator)
 > You can download unstable builds from the [AppVeyor artifacts page](https://ci.appveyor.com/project/REHERC/distance-translator/build/artifacts)

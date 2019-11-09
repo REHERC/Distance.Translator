@@ -19,7 +19,7 @@ namespace Distance.Translator
             Flags.Initialize();
             ModuleManager.Initialize();
             Log.Success("Initialization done!");
-            Log.Info(PluginLogo.GetText());
+            Log.Info(PluginSplashScreen.GetText());
 
             manager.Menus.AddMenu(MenuDisplayMode.Both, new MenuTree("distancetranslator.main", "LANGUAGE SETTINGS")
             {

@@ -6,6 +6,7 @@ namespace Distance.Translator.T4
 {
 	public static class GeneratedDictionaries
 	{
+		public static Dictionary<string, string> ControlsMenu { get; } = new Dictionary<string, string>(){		};
 		public static Dictionary<string, string> SubtitleBindings { get; } = new Dictionary<string, string>(){
 			{"cb_happy_chime/0","subtitles.cb_happy_chime"},
 			{"City Broadcast Error Chime v2/0","subtitles.cb_error_chime"},

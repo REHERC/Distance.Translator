@@ -30,6 +30,7 @@ namespace Distance.Translator
 
                 new AudioSettingsModule(),
                 new GeneralSettingsModule(),
+                new ControlsSettingsModule(),
                 new GraphicsSettingsModule(),
                 new ProfileSettingsModule(),
                 new VRSettingsModule(),
@@ -41,7 +42,7 @@ namespace Distance.Translator
                 {"Audio Settings Announcer Drop-Down", (UILabel instance) => { return ModuleChecks.Audio_Announcer_DropDown(ref instance); }},
                 {"Audio Settings Subtitles Drop-Down", (UILabel instance) => { return ModuleChecks.Audio_Subtitles_DropDown(ref instance); }},
                 {"Audio Custom Music Loading Label", (UILabel instance) => { return ModuleChecks.Audio_LoadingMusic_Label(ref instance); }},
-                { "Audio Track Selection Label", (UILabel instance) => { return ModuleChecks.Audio_Track_Selector(ref instance); }},
+                {"Audio Track Selection Label", (UILabel instance) => { return ModuleChecks.Audio_Track_Selector(ref instance); }},
 
                 {"General Settings Units Drop-Down", (UILabel instance) => { return ModuleChecks.General_Units_DropDown(ref instance); }},
                 {"General Settings Car Screen Visualizer Drop-Down", (UILabel instance) => { return ModuleChecks.General_Visualizer_DropDown(ref instance); }},

@@ -1,8 +1,6 @@
 # Distance Translator
 > **A Spectrum plugin meant to allow peoples to translate the game with custom language files**
 ![Repository logo](repository_thumbnail.png)
-
-# Status
 > ![GitHub last commit](https://img.shields.io/github/last-commit/reherc/distance.translator)
 > [![Build status](https://ci.appveyor.com/api/projects/status/4s986d3b0tpyfdga?svg=true)](https://ci.appveyor.com/project/REHERC/distance-translator)
 > [![Releases](https://img.shields.io/badge/Releases-Downloads-yellow.svg)](https://github.com/REHERC/Distance.Translator/releases)
@@ -10,17 +8,19 @@
 > [![Discord server](https://img.shields.io/discord/556851052427870227?color=7289da&label=Discord&style=flat&logo=discord&logoColor=inactive)](https://discord.gg/VT5t4dH)
 
 # Download the mod
+## Stable builds
 > You can download the mod from the [Releases page](https://github.com/REHERC/Distance.Translator/releases/latest)
 
-# Unstable builds
+## Unstable builds
 > You can download unstable builds from the [AppVeyor artifacts page](https://ci.appveyor.com/project/REHERC/distance-translator/build/artifacts)
 
-# Technologies used
+# Special thanks
+## Technologies used
 > [![Harmony GitHub repository](https://img.shields.io/static/v1?label=GitHub&message=Pardeike/Harmony&color=green)](https://github.com/Pardeike/Harmony)
 > [![Harmony GitHub repository](https://img.shields.io/static/v1?label=GitHub&message=Ciastex/Spectrum&color=green)](https://github.com/Ciastex/Spectrum)
 > [![Harmony GitHub repository](https://img.shields.io/static/v1?label=GitHub&message=JamesNK/Newtonsoft.Json&color=green)](https://github.com/JamesNK/Newtonsoft.Json)
 
-# Special thanks
+## Contributors
 > Big thanks to all of you<br>
 > ![Technical help: Ciastex (vdd)](https://img.shields.io/static/v1?label=Technical%20help&message=Ciastex&color=650782)<br>
 > ![Technical help: Nico (larnin)](https://img.shields.io/static/v1?label=Technical%20help&message=Nico&color=650782)<br>

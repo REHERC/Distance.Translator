@@ -95,6 +95,11 @@
     <Compile Include="Storage\ModuleManager_Reset.cs" />
     <Compile Include="Storage\State\CustomMusicState.cs" />
     <Compile Include="Storage\State\SubtitleState.cs" />
+    <Compile Include="T4\Build Properties\Template.cs">
+      <DependentUpon>Template.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="T4\GeneratedDictionaries\Template.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -136,6 +141,7 @@
     <Compile Include="Translations\Modules\ArcadeSubMenuModule.cs" />
     <Compile Include="Translations\Modules\AudioSettingsModule.cs" />
     <Compile Include="Translations\Modules\CheatSettingsModule.cs" />
+    <Compile Include="Translations\Modules\ControlsSettingsModule.cs" />
     <Compile Include="Translations\Modules\GeneralSettingsModule.cs" />
     <Compile Include="Translations\Modules\GraphicsSettingsModule.cs" />
     <Compile Include="Translations\Modules\IdleMenuModule.cs" />
@@ -164,6 +170,10 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="T4\Build Properties\Template.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Template.cs</LastGenOutput>
+    </Content>
     <Content Include="T4\GeneratedDictionaries\Template.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Template.cs</LastGenOutput>

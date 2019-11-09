@@ -20,29 +20,6 @@ namespace Distance.Translator
             ModuleManager.Initialize();
             Log.Success("Initialization done!");
             Log.Info(PluginLogo.GetText());
-            try
-            {
-                Log.Info("Instantiating Harmony Patcher ...");
-                HarmonyInstance Harmony = HarmonyInstance.Create("com.REHERC.DistanceTranslator");
-                Log.Success("Harmony patcher instantiated!");
-                Log.Info("Patching assemblies ...");
-                Harmony.PatchAll(Assembly.GetExecutingAssembly());
-                Log.Success("Assemblies patched!");
-            }
-            catch (Exception Archaic)
-            {
-                Log.Error("Failed to patch the assemblies!");
-                Log.Exception(Archaic);
-            }
-
-            if (Configuration["Debug"] is true)
-            {
-                Log.Info("Binding hotkeys actions ...");
-                manager.Hotkeys.Bind(Configuration.GetItem<string>("ReloadHotkey"), () => {
-                    Language.Reload();
-                });
-                Log.Success("Hotkeys actions added!");
-            }
 
             manager.Menus.AddMenu(MenuDisplayMode.Both, new MenuTree("distancetranslator.main", "LANGUAGE SETTINGS")
             {
@@ -66,6 +43,30 @@ namespace Distance.Translator
                 })
                 .WithEntries(LanguageFiles)
             });
+
+            try
+            {
+                Log.Info("Instantiating Harmony Patcher ...");
+                HarmonyInstance Harmony = HarmonyInstance.Create("com.REHERC.DistanceTranslator");
+                Log.Success("Harmony patcher instantiated!");
+                Log.Info("Patching assemblies ...");
+                Harmony.PatchAll(Assembly.GetExecutingAssembly());
+                Log.Success("Assemblies patched!");
+            }
+            catch (Exception Archaic)
+            {
+                Log.Error("Failed to patch the assemblies!");
+                Log.Exception(Archaic);
+            }
+
+            if (Configuration["Debug"] is true)
+            {
+                Log.Info("Binding hotkeys actions ...");
+                manager.Hotkeys.Bind(Configuration.GetItem<string>("ReloadHotkey"), () => {
+                    Language.Reload();
+                });
+                Log.Success("Hotkeys actions added!");
+            }
 
             //"I love me a good toggle" ~ torcht 2018
         }

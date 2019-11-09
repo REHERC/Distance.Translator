@@ -12,9 +12,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Distance.Translator", "Dist
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Languages", "Languages", "{12EF7119-5447-4A4D-8F87-79698EC90F84}"
 	ProjectSection(SolutionItems) = preProject
-		..\..\Steam\steamapps\common\Distance\Distance_Data\Spectrum\Plugins\Distance Translator\Settings\Languages\Debug.json = ..\..\Steam\steamapps\common\Distance\Distance_Data\Spectrum\Plugins\Distance Translator\Settings\Languages\Debug.json
-		..\..\Steam\steamapps\common\Distance\Distance_Data\Spectrum\Plugins\Distance Translator\Settings\Languages\EN-en.json = ..\..\Steam\steamapps\common\Distance\Distance_Data\Spectrum\Plugins\Distance Translator\Settings\Languages\EN-en.json
-		..\..\Steam\steamapps\common\Distance\Distance_Data\Spectrum\Plugins\Distance Translator\Settings\Languages\FR-fr.json = ..\..\Steam\steamapps\common\Distance\Distance_Data\Spectrum\Plugins\Distance Translator\Settings\Languages\FR-fr.json
+		Include\Languages\Debug.json = Include\Languages\Debug.json
+		Include\Languages\EN-en.json = Include\Languages\EN-en.json
+		Include\Languages\FR-fr.json = Include\Languages\FR-fr.json
 	EndProjectSection
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Photon.Serialization", "Photon.Serialization\Photon.Serialization.shproj", "{642F37D0-F7E1-4FCE-B3F9-7A02E698D366}"
@@ -36,6 +36,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Spectrum", "Spectrum", "{38
 		Include\Spectrum\plugin.json = Include\Spectrum\plugin.json
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GitHub", "GitHub", "{EEBD073B-ABE7-45A9-B62D-ADCA1F6CF938}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE = LICENSE
+		README.md = README.md
+		repository_thumbnail.png = repository_thumbnail.png
+		SPECTRUM_LICENSE.md = SPECTRUM_LICENSE.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Photon.Serialization\Photon.Serialization.projitems*{642f37d0-f7e1-4fce-b3f9-7a02e698d366}*SharedItemsImports = 13
@@ -55,6 +63,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{12EF7119-5447-4A4D-8F87-79698EC90F84} = {308DF29D-01FF-42C5-939D-0AA0F3DCAAC5}
 		{38202E73-E6B9-432D-8932-1D8A1F265A55} = {308DF29D-01FF-42C5-939D-0AA0F3DCAAC5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution

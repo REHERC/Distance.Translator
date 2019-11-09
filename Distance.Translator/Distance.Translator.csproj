@@ -206,11 +206,14 @@ SET PACKAGES=$(SolutionDir)Build\Distance Translator\
 
 CALL :MAKEDIR "%25PACKAGES%25"
 CALL :MAKEDIR "%25PACKAGES%25\Dependencies"
+CALL :MAKEDIR "%25PACKAGES%25\Settings\Languages"
 
 CALL :COPY "%25BUILD%25Distance.Translator.dll" "%25PACKAGES%25"
 CALL :COPY "%25BUILD%25Spectrum.Interop.dll" "%25PACKAGES%25\Dependencies"
 CALL :COPY "%25BUILD%250Harmony.dll" "%25PACKAGES%25\Dependencies"
 CALL :COPY "%25BUILD%25Newtonsoft.Json.dll" "%25PACKAGES%25\Dependencies"
+CALL :COPY "%25INCLUDE%25\Languages\*.json" "%25PACKAGES%25\Settings\Languages"
+
 CALL :COPY "%25INCLUDE%25\Spectrum\plugin.json" "%25PACKAGES%25"
 
 EXIT 0

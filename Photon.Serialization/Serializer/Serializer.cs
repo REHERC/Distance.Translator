@@ -1,4 +1,5 @@
-﻿using System;
+﻿#pragma warning disable CS0162
+using System;
 
 namespace Photon.Serialization
 {

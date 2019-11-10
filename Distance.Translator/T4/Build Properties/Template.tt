@@ -14,7 +14,7 @@ namespace Distance.Translator.T4
 	public static class BuildProperties
 	{
 		<#
-			this.Write("public static ulong BuildNumber => " + DateTime.Now.ToString("yyyymmddHHmmss") + ";\n"); 
+			this.Write("public static ulong BuildNumber => " + DateTime.Now.ToString("yyyyMMddHHmmss") + ";\n"); 
 		#>
 	}
 }

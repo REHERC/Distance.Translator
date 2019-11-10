@@ -34,7 +34,7 @@ namespace Distance.Translator.Modules
 
         public virtual void Init(ref UILabel instance)
         {
-            this._state = instance.text.UP();
+            _state = instance.text.UP();
         }
 
         public virtual bool Run(ref UILabel instance) => true;

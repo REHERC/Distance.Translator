@@ -74,6 +74,9 @@
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Harmony\AudioManager\AudioManager.GetFilesInDirectory.cs" />
+    <Compile Include="Harmony\ControlsMenuActionEntry\ControlsMenuActionEntry.Init.cs" />
+    <Compile Include="Harmony\ControlsMenu\ControlsMenu.Initialize.cs" />
+    <Compile Include="Harmony\ControlsMenu\ControlsMenu.UpdateCurrentSchemeNameLabel.cs" />
     <Compile Include="Harmony\LoadingCustomMusic\LoadingCustomMusic.OnEventCustomMusicScanComplete.cs" />
     <Compile Include="Harmony\LoadingCustomMusic\LoadingCustomMusic.OnEventCustomMusicScanStarted.cs" />
     <Compile Include="Harmony\LoadingCustomMusic\LoadingCustomMusic.OnEventLoadingCustomMusic.cs" />
@@ -157,6 +160,7 @@
     <Compile Include="Translations\Modules\VRSettingsModule.cs" />
     <Compile Include="Translations\Modules\WorkshopSubMenuModule.cs" />
     <Compile Include="Translations\TranslateModule.cs" />
+    <Compile Include="Unity Scripts\ControlsMenu\UpdateActionEntry.cs" />
     <Compile Include="Unity Scripts\UILabelTranslate\UILabelTranslate.cs" />
     <Compile Include="Unity Scripts\UILabelTranslate\UILabelTranslate_Initialize.cs" />
     <Compile Include="Util.cs" />

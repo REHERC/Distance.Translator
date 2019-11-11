@@ -25,6 +25,7 @@ namespace Distance.Translator
 
                 new TrackmogrifyPanelModule(),
                 new MultiplayerSubMenuModule(),
+                new OnlineMultiplayerSubMenuModule(),
                 new WorkshopSubMenuModule(),
                 new OptionsSubMenuModule(),
 
@@ -73,7 +74,11 @@ namespace Distance.Translator
                 
                 {"General Settings Title", (UILabel instance) => { return ModuleChecks.General_Title(ref instance); }},
                 {"Replay Settings Title", (UILabel instance) => { return ModuleChecks.Replay_Title(ref instance); }},
-                {"VR Settings Title", (UILabel instance) => { return ModuleChecks.VR_Title(ref instance); }}
+                {"VR Settings Title", (UILabel instance) => { return ModuleChecks.VR_Title(ref instance); }},
+                
+                {"Controls Tabs", (UILabel instance) => { return ModuleChecks.Controls_Tabs(ref instance); }},
+                {"Controls Help", (UILabel instance) => { return ModuleChecks.Controls_Help(ref instance); }},
+                {"Controls Title", (UILabel instance) => { return ModuleChecks.Controls_Title(ref instance); }}
             };
             
             if (Configuration["Debug"] is true)

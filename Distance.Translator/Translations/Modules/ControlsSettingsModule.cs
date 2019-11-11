@@ -43,7 +43,7 @@ namespace Distance.Translator.Modules
         public override void Run()
         {
             GameObject.Find($"{MenuTitleTemplate()}/UILabel - Title").GetComponent<UILabel>().text = Language.GetLine("settings.controls.title");
-            GameObject.Find($"{MenuTitleTemplate()}/UILabel - Description").GetComponent<UILabel>().text = string.Format(Language.GetLine("settings.controls.description"), G.Sys.ProfileManager_.CurrentProfile_.Name_);
+            GameObject.Find($"{MenuTitleTemplate()}/UILabel - Description").GetComponent<UILabel>().text = "";
             
             GameObject.Find($"{BasicOptions()}/DeviceAndSchemeOptions/Device Scheme Options/DevicePopup/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.controls.general.device").UP();
             GameObject.Find($"{BasicOptions()}/DeviceAndSchemeOptions/Device Scheme Options/SchemePopup/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.controls.general.scheme").UP();
@@ -64,13 +64,6 @@ namespace Distance.Translator.Modules
             GameObject.Find($"{BasicOptions()}/TogglesAndSliders/FlightSensitivityY/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.controls.general.pitchsensitivity").UP();
             GameObject.Find($"{BasicOptions()}/TogglesAndSliders/Digital Input Smoothing/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.controls.general.inputsmoothing").UP();
             
-            GameObject.Find($"{ControlsDefinitions()}/TopTabs/ControlPageTabSubPanel/PageTabsTable/1000/Name").GetComponent<UILabel>().text = Language.GetLine("settings.controls.tabs.basic");
-            GameObject.Find($"{ControlsDefinitions()}/TopTabs/ControlPageTabSubPanel/PageTabsTable/1001/Name").GetComponent<UILabel>().text = Language.GetLine("settings.controls.tabs.flight");
-            GameObject.Find($"{ControlsDefinitions()}/TopTabs/ControlPageTabSubPanel/PageTabsTable/1002/Name").GetComponent<UILabel>().text = Language.GetLine("settings.controls.tabs.camera");
-            GameObject.Find($"{ControlsDefinitions()}/TopTabs/ControlPageTabSubPanel/PageTabsTable/1003/Name").GetComponent<UILabel>().text = Language.GetLine("settings.controls.tabs.menu");
-
-            GameObject.Find($"{ControlsDefinitions()}/EditAreaButton/BottomThingy/HelpLabel").GetComponent<UILabel>().text = Language.GetLine("settings.controls.info.help");
-
             Disable();
         }
     }

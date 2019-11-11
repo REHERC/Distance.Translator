@@ -92,6 +92,9 @@
   "workshop.unsubscribe.description": "Unsubscribe to every one of your subscriptions.",
 
   "multiplayer.online": "Online",
+  "multiplayer.online.quickjoin": "Quick Join",
+  "multiplayer.online.browse": "Browse",
+  "multiplayer.online.host": "Host",
   "multiplayer.splitscreen": "Split-Screen",
 
   "options.audio": "Audio",
@@ -577,6 +580,8 @@
   "controls.menuspecial1": "Menu Special 1",
   "controls.menuspecial2": "Menu Special 2",
   "controls.menuspecial3": "Menu Special 3",
-  "controls.togglemenuvivibility": "Toggle Menu Visibility",
-  "controls.invalid": "Invalid"
+  "controls.togglemenuvisibility": "Toggle Menu Visibility",
+  "controls.invalid": "Invalid",
+  "controls.special.notset": "(Not Set)",
+  "controls.special.invalidid": "(Invalid ID)"
 }

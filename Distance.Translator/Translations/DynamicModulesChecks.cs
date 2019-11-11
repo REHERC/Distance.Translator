@@ -248,5 +248,44 @@ namespace Distance.Translator.Modules
             }
             return null;
         }
+
+        public static DynamicTranslateModule Controls_Tabs(ref UILabel instance)
+        {
+            if (IsParentableTo(Util.GameObjectPath(instance.transform), GetRoot(new Dictionary<string, string>(){
+                {"default", "OptionsFrontRoot(Clone)/Panel - Options/Panel - Controls/MenuPanel/ControlsDefinitions/TopTabs/ControlPageTabSubPanel/PageTabsTable"},
+                {"mainmenu", "OptionsFrontRoot/Panel - Options/Panel - Controls/MenuPanel/ControlsDefinitions/TopTabs/ControlPageTabSubPanel/PageTabsTable"}
+            }
+            )) && instance.name == "Name")
+            {
+                return new ControlsTabsModule();
+            }
+            return null;
+        }
+
+        public static DynamicTranslateModule Controls_Help(ref UILabel instance)
+        {
+            if (IsParentableTo(Util.GameObjectPath(instance.transform), GetRoot(new Dictionary<string, string>(){
+                {"default", "OptionsFrontRoot(Clone)/Panel - Options/Panel - Controls/MenuPanel/ControlsDefinitions/EditAreaButton/BottomThingy/HelpLabel"},
+                {"mainmenu", "OptionsFrontRoot/Panel - Options/Panel - Controls/MenuPanel/ControlsDefinitions/EditAreaButton/BottomThingy/HelpLabel"}
+            }
+            )))
+            {
+                return new ControlsHelpModule();
+            }
+            return null;
+        }
+
+        public static DynamicTranslateModule Controls_Title(ref UILabel instance)
+        {
+            if (IsParentableTo(Util.GameObjectPath(instance.transform), GetRoot(new Dictionary<string, string>(){
+                {"default", "OptionsFrontRoot(Clone)/Panel - Options/Panel - Controls/Panel - MenuTitle/UILabel - Description"},
+                {"mainmenu", "OptionsFrontRoot/Panel - Options/Panel - Controls/Panel - MenuTitle/UILabel - Description"}
+            }
+            )))
+            {
+                return new ControlsTitleModule();
+            }
+            return null;
+        }
     }
 }

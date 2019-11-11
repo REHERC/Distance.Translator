@@ -43,7 +43,6 @@ namespace Distance.Translator.Modules
         public override void Run()
         {
             GameObject.Find($"{MenuTitleTemplate()}/UILabel - Title").GetComponent<UILabel>().text = Language.GetLine("settings.controls.title");
-            GameObject.Find($"{MenuTitleTemplate()}/UILabel - Description").GetComponent<UILabel>().text = "";
             
             GameObject.Find($"{BasicOptions()}/DeviceAndSchemeOptions/Device Scheme Options/DevicePopup/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.controls.general.device").UP();
             GameObject.Find($"{BasicOptions()}/DeviceAndSchemeOptions/Device Scheme Options/SchemePopup/NameLabel").GetComponent<UILabel>().text = Language.GetLine("settings.controls.general.scheme").UP();
